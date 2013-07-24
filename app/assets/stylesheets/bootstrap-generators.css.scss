@@ -1,0 +1,41 @@
+$iconSpritePath: '';
+$iconWhiteSpritePath: '';
+@import "bootstrap-variables";
+@import "bootstrap.scss";
+@import "responsive";
+
+@media (min-width: 980px) {
+	body {
+	  padding-top: $navbarHeight + 20px;
+	  padding-bottom: 40px;
+	}
+}
+
+@media (max-width: 768px) {
+	.row-fluid {
+		text-align:center;
+	}
+	textarea { margin:auto; }
+}
+
+.page-header {
+  a.btn {
+    float: right;
+  }
+
+  a.btn + a.btn {
+    margin-right: 8px;
+  }
+}
+
+[class^="icon-"] {
+  background-image:none;
+}
+
+a.brand.image > img { height: 45px; }
+
+.center { text-align:center; }
+.error > * { color: $errorColor !important; }
+.error > * > input { &:focus { color: $errorColor !important; } }
+.error > * > input { color: $errorColor !important; }
+.error > .controls > * { border-color: $errorColor !important; }

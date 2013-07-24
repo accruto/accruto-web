@@ -1,0 +1,60 @@
+@import "bootstrap-variables";
+@import "mixins";
+
+// Remove shadows from links
+a {
+	text-shadow: none !important;
+}
+
+// Remove shadows from navbar
+.navbar-inner {
+	box-shadow: none !important;
+	background-image: none;
+	background: $navbarBackground;
+}
+
+.nav.nav-top {
+	float:right !important;
+}
+
+.nav.nav-top li a {
+	padding: {
+		left: 2em;
+		right: 2em;
+	};
+}
+
+.nav.nav-top > .active > a {
+	box-shadow: 0 0px 0px rgba(0, 0, 0, 0) !important;
+	background: $navbarActiveBackground;
+}
+
+.nav.nav-top > .active > a:hover, .nav.nav-top > li > a:hover {
+	background: $navbarHoverBackground;
+	color: $navbarLinkColorHover;
+}
+
+.navbar-inverse {
+	.nav.nav-top > .active > a {
+		box-shadow: 0 0px 0px rgba(0, 0, 0, 0) !important;
+		background: $navbarInverseLinkBackgroundActive;
+		color: $navbarInverseLinkColorActive
+	}
+
+	.nav.nav-top > .active > a:hover, .nav.nav-top > li > a:hover {
+		background: $navbarInverseLinkBackgroundHover;
+		color: $navbarInverseLinkColorHover;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-inner {
+		padding-bottom: 0px !important;
+	}
+
+	.nav.nav-top {
+		float:left !important;
+		width:100%;
+		margin: 0 !important;
+	}
+}

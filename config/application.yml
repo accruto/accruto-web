@@ -1,0 +1,13 @@
+# Mandrill
+SMTP_ADDRESS: smtp.mandrillapp.com
+SMTP_USERNAME: dev@accruto.com
+SMTP_PASSWORD: dzBUUTqDJEYqc3D_TRERMQ
+
+development:
+ SMTP_DOMAIN: http://localhost:3000
+
+staging:
+ SMTP_DOMAIN: http://staging.accruto.com
+
+production:
+ SMTP_DOMAIN: http://accruto.com
