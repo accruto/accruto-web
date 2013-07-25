@@ -6,3 +6,158 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-25 14:05:13 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (7.5ms)
+Compiled alerts.css  (952ms)  (pid 76222)
+Compiled bootstrap-generators.css  (7182ms)  (pid 76222)
+Compiled bootstrap-variables.css  (31ms)  (pid 76222)
+Compiled buttons.css  (253ms)  (pid 76222)
+Compiled dropdowns.css  (337ms)  (pid 76222)
+Compiled forms.css  (743ms)  (pid 76222)
+Compiled hero-unit.css  (136ms)  (pid 76222)
+Compiled navbar.css  (151ms)  (pid 76222)
+Compiled pages.css  (6ms)  (pid 76222)
+Compiled font-awesome.css  (140ms)  (pid 76222)
+Compiled application.css  (10586ms)  (pid 76222)
+Compiled jquery.js  (5ms)  (pid 76222)
+Compiled jquery_ujs.js  (0ms)  (pid 76222)
+Compiled bootstrap-transition.js  (0ms)  (pid 76222)
+Compiled bootstrap-alert.js  (0ms)  (pid 76222)
+Compiled bootstrap-modal.js  (0ms)  (pid 76222)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 76222)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 76222)
+Compiled bootstrap-tab.js  (0ms)  (pid 76222)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 76222)
+Compiled bootstrap-popover.js  (0ms)  (pid 76222)
+Compiled bootstrap-button.js  (0ms)  (pid 76222)
+Compiled bootstrap-collapse.js  (0ms)  (pid 76222)
+Compiled bootstrap-carousel.js  (0ms)  (pid 76222)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 76222)
+Compiled bootstrap-affix.js  (1ms)  (pid 76222)
+Compiled bootstrap.js  (861ms)  (pid 76222)
+Compiled pages.js  (249ms)  (pid 76222)
+Compiled application.js  (1393ms)  (pid 76222)
+Completed 200 OK in 12594ms (Views: 12533.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /application.css - 200 OK (47ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /alerts.css - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-generators.css - 200 OK (12ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-variables.css - 200 OK (4ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /buttons.css - 200 OK (5ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /dropdowns.css - 200 OK (3ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /hero-unit.css - 200 OK (4ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /navbar.css - 200 OK (4ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /forms.css - 200 OK (4ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /pages.css - 200 OK (7ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /font-awesome.css - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /jquery.js - 200 OK (11ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-transition.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-alert.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-modal.js - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /jquery_ujs.js - 200 OK (10ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-dropdown.js - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-scrollspy.js - 200 OK (9ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-tab.js - 200 OK (20ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-tooltip.js - 200 OK (8ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-popover.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-button.js - 200 OK (8ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-typeahead.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-carousel.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-collapse.js - 200 OK (11ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:27 +1000
+Served asset /bootstrap.js - 200 OK (38ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:27 +1000
+Served asset /pages.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:27 +1000
+Served asset /bootstrap-affix.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:27 +1000
+Served asset /application.js - 200 OK (121ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml

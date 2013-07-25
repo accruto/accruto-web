@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to jobs_path, :class => 'btn' do %>
+    <i class="icon-list-alt"></i>
+    Back
+  <% end %>
+  <%= link_to edit_job_path(@job), :class => 'btn btn-primary' do %>
+    <i class="icon-pencil icon-white"></i>
+    Edit
+  <% end %>
+  <h1>Listing jobs</h1>
+</div>
+
+<dl>
+  <dt>Title:</dt>
+  <dd><%= @job.title %></dd>
+
+  <dt>Address:</dt>
+  <dd><%= @job.address_id %></dd>
+
+  <dt>Posted at:</dt>
+  <dd><%= @job.posted_at %></dd>
+
+  <dt>Expires at:</dt>
+  <dd><%= @job.expires_at %></dd>
+
+  <dt>Type:</dt>
+  <dd><%= @job.type %></dd>
+
+  <dt>Company:</dt>
+  <dd><%= @job.company_id %></dd>
+
+  <dt>External link:</dt>
+  <dd><%= @job.external_link %></dd>
+
+</dl>

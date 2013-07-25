@@ -1,4 +1,7 @@
 Accruto::Application.routes.draw do
+  resources :jobs
+
+
   get "pages/stylesheet"
   get "pages/home"
   get "pages/about"
