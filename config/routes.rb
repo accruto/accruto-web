@@ -11,10 +11,17 @@ Accruto::Application.routes.draw do
   root :to => 'pages#home'
 end
 #== Route Map
-# Generated on 07 Jul 2013 20:46
+# Generated on 25 Jul 2013 16:52
 #
-#       pages_home GET /pages/home(.:format)       pages#home
-#      pages_about GET /pages/about(.:format)      pages#about
-#        pages_faq GET /pages/faq(.:format)        pages#faq
-#    pages_contact GET /pages/contact(.:format)    pages#contact
-#             root     /                           pages#home
+#                  POST   /jobs(.:format)             jobs#create
+#          new_job GET    /jobs/new(.:format)         jobs#new
+#         edit_job GET    /jobs/:id/edit(.:format)    jobs#edit
+#              job GET    /jobs/:id(.:format)         jobs#show
+#                  PUT    /jobs/:id(.:format)         jobs#update
+#                  DELETE /jobs/:id(.:format)         jobs#destroy
+# pages_stylesheet GET    /pages/stylesheet(.:format) pages#stylesheet
+#       pages_home GET    /pages/home(.:format)       pages#home
+#      pages_about GET    /pages/about(.:format)      pages#about
+#        pages_faq GET    /pages/faq(.:format)        pages#faq
+#    pages_contact GET    /pages/contact(.:format)    pages#contact
+#             root        /                           pages#home

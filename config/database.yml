@@ -6,10 +6,10 @@ development:
   password:
   host: localhost
 
-staging:
+test:
   adapter: postgresql
   encoding: utf8
-  database: accruto-staging
+  database: accruto-test
   username: johnkuehyoongfook
   password:
   host: localhost
