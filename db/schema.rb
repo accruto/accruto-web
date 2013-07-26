@@ -11,6 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20130725054250) do
+
+  create_table "jobs", :force => true do |t|
+    t.string   "title"
+    t.integer  "address_id"
+    t.datetime "posted_at"
+    t.datetime "expires_at"
+    t.string   "type"
+    t.integer  "company_id"
+    t.string   "external_link"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
 end

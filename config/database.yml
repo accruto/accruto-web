@@ -2,14 +2,7 @@ development:
   adapter: postgresql
   encoding: utf8
   database: accruto
-  username: johnkuehyoongfook
+  username: Katie
   password:
   host: localhost
 
-staging:
-  adapter: postgresql
-  encoding: utf8
-  database: accruto-staging
-  username: johnkuehyoongfook
-  password:
-  host: localhost
