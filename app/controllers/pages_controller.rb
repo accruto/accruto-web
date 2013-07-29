@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def home
+  	@job = Job.new
   end
 
   def about

@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="align-center">
+<h1>Accruto</h1>
+<%= simple_form_for @job, class: 'form-inline' do |f| %>
+	<div class="row-fluid">
+		<div class="span4">
+			<label>Job title?</label><br>
+			<input type="text" />
+		</div>
+		<div class="span4">
+			<label>Where?</label><br>
+			<input type="text" />
+		</div>
+		<div class="span4">
+			<%= f.button :submit, "Search" %>
+		</div>
+	</div>
+<% end %>
+</div>

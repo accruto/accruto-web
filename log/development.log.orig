@@ -1,0 +1,1586 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-25 14:05:13 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (7.5ms)
+Compiled alerts.css  (952ms)  (pid 76222)
+Compiled bootstrap-generators.css  (7182ms)  (pid 76222)
+Compiled bootstrap-variables.css  (31ms)  (pid 76222)
+Compiled buttons.css  (253ms)  (pid 76222)
+Compiled dropdowns.css  (337ms)  (pid 76222)
+Compiled forms.css  (743ms)  (pid 76222)
+Compiled hero-unit.css  (136ms)  (pid 76222)
+Compiled navbar.css  (151ms)  (pid 76222)
+Compiled pages.css  (6ms)  (pid 76222)
+Compiled font-awesome.css  (140ms)  (pid 76222)
+Compiled application.css  (10586ms)  (pid 76222)
+Compiled jquery.js  (5ms)  (pid 76222)
+Compiled jquery_ujs.js  (0ms)  (pid 76222)
+Compiled bootstrap-transition.js  (0ms)  (pid 76222)
+Compiled bootstrap-alert.js  (0ms)  (pid 76222)
+Compiled bootstrap-modal.js  (0ms)  (pid 76222)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 76222)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 76222)
+Compiled bootstrap-tab.js  (0ms)  (pid 76222)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 76222)
+Compiled bootstrap-popover.js  (0ms)  (pid 76222)
+Compiled bootstrap-button.js  (0ms)  (pid 76222)
+Compiled bootstrap-collapse.js  (0ms)  (pid 76222)
+Compiled bootstrap-carousel.js  (0ms)  (pid 76222)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 76222)
+Compiled bootstrap-affix.js  (1ms)  (pid 76222)
+Compiled bootstrap.js  (861ms)  (pid 76222)
+Compiled pages.js  (249ms)  (pid 76222)
+Compiled application.js  (1393ms)  (pid 76222)
+Completed 200 OK in 12594ms (Views: 12533.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /application.css - 200 OK (47ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /alerts.css - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-generators.css - 200 OK (12ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-variables.css - 200 OK (4ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /buttons.css - 200 OK (5ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /dropdowns.css - 200 OK (3ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /hero-unit.css - 200 OK (4ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /navbar.css - 200 OK (4ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /forms.css - 200 OK (4ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /pages.css - 200 OK (7ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /font-awesome.css - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /jquery.js - 200 OK (11ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-transition.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-alert.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-modal.js - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /jquery_ujs.js - 200 OK (10ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-dropdown.js - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-scrollspy.js - 200 OK (9ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-tab.js - 200 OK (20ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-tooltip.js - 200 OK (8ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-popover.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-button.js - 200 OK (8ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-typeahead.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-carousel.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:26 +1000
+Served asset /bootstrap-collapse.js - 200 OK (11ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:27 +1000
+Served asset /bootstrap.js - 200 OK (38ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:27 +1000
+Served asset /pages.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:27 +1000
+Served asset /bootstrap-affix.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 14:05:27 +1000
+Served asset /application.js - 200 OK (121ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+<<<<<<< HEAD
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-25 16:36:15 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Compiled jobs.js  (234ms)  (pid 76222)
+Compiled application.js  (300ms)  (pid 76222)
+Completed 200 OK in 661ms (Views: 583.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /hero-unit.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /jobs.js - 200 OK (4ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:16 +1000
+Served asset /application.js - 304 Not Modified (55ms)
+
+
+Started GET "/pages/stylesheet" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Processing by PagesController#stylesheet as HTML
+  Rendered pages/stylesheet.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 248ms (Views: 198.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:24 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:25 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 16:36:25 +1000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-07-25 16:36:25 +1000
+Served asset /fontawesome-webfont.woff - 200 OK (92ms)
+Connecting to database specified by database.yml
+  [1m[36m (2.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateJobs (20130725054250)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (50.9ms)[0m  [1mCREATE TABLE "jobs" ("id" serial primary key, "title" character varying(255), "address_id" integer, "posted_at" timestamp, "expires_at" timestamp, "type" character varying(255), "company_id" integer, "external_link" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130725054250')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (121.4ms)[0m  DROP DATABASE IF EXISTS "accruto-test"
+  [1m[36m (267.2ms)[0m  [1mCREATE DATABASE "accruto-test" ENCODING = 'utf8'[0m
+  [1m[35m (8.5ms)[0m  CREATE TABLE "jobs" ("id" serial primary key, "title" character varying(255), "address_id" integer, "posted_at" timestamp, "expires_at" timestamp, "type" character varying(255), "company_id" integer, "external_link" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (3.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (3.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130725054250')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/jobs" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.7ms)[0m  [1mSELECT "jobs".* FROM "jobs" [0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 392ms (Views: 256.5ms | ActiveRecord: 24.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:48 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:49 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:49 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:49 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:49 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:49 +1000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-07-25 17:11:49 +1000
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2013-07-25 17:11:51 +1000
+Processing by JobsController#new as HTML
+  Rendered jobs/_form.html.erb (362.9ms)
+  Rendered jobs/new.html.erb within layouts/application (374.6ms)
+Completed 200 OK in 605ms (Views: 535.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 17:11:52 +1000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2013-07-25 17:12:42 +1000
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HyLD+Xw1KyZ8i3pKwHyuV1emffWNpWj2BmUe4nOfHh0=", "job"=>{"title"=>"Painters", "address_id"=>"1", "posted_at(1i)"=>"2013", "posted_at(2i)"=>"7", "posted_at(3i)"=>"25", "posted_at(4i)"=>"07", "posted_at(5i)"=>"11", "expires_at(1i)"=>"2013", "expires_at(2i)"=>"7", "expires_at(3i)"=>"25", "expires_at(4i)"=>"07", "expires_at(5i)"=>"11", "type"=>"Fulltime", "company_id"=>"", "external_link"=>"http://jobview.careerone.com.au/GetJob.aspx?JobID=123977326&WT.mc_n=AFC_linkme"}, "commit"=>"Create Job"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered jobs/_form.html.erb (66.9ms)
+  Rendered jobs/new.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 329ms (Views: 255.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 17:12:43 +1000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2013-07-25 17:12:59 +1000
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HyLD+Xw1KyZ8i3pKwHyuV1emffWNpWj2BmUe4nOfHh0=", "job"=>{"title"=>"Painters", "address_id"=>"1", "posted_at(1i)"=>"2013", "posted_at(2i)"=>"7", "posted_at(3i)"=>"25", "posted_at(4i)"=>"07", "posted_at(5i)"=>"11", "expires_at(1i)"=>"2013", "expires_at(2i)"=>"7", "expires_at(3i)"=>"25", "expires_at(4i)"=>"07", "expires_at(5i)"=>"11", "type"=>"Fulltime", "company_id"=>"2", "external_link"=>"http://jobview.careerone.com.au/GetJob.aspx?JobID=123977326&WT.mc_n=AFC_linkme"}, "commit"=>"Create Job"}
+  [1m[35m (3.2ms)[0m  BEGIN
+  [1m[36mSQL (111.9ms)[0m  [1mINSERT INTO "jobs" ("address_id", "company_id", "created_at", "expires_at", "external_link", "posted_at", "title", "type", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address_id", 1], ["company_id", 2], ["created_at", Thu, 25 Jul 2013 07:13:00 UTC +00:00], ["expires_at", Thu, 25 Jul 2013 07:11:00 UTC +00:00], ["external_link", "http://jobview.careerone.com.au/GetJob.aspx?JobID=123977326&WT.mc_n=AFC_linkme"], ["posted_at", Thu, 25 Jul 2013 07:11:00 UTC +00:00], ["title", "Painters"], ["type", "Fulltime"], ["updated_at", Thu, 25 Jul 2013 07:13:00 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/jobs/1
+Completed 302 Found in 192ms (ActiveRecord: 116.9ms)
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2013-07-25 17:13:00 +1000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (3.0ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 10ms
+
+ActiveRecord::SubclassNotFound - The single-table inheritance mechanism failed to locate the subclass: 'Fulltime'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Job.inheritance_column to use another column for that information.:
+  activerecord (3.2.13) lib/active_record/inheritance.rb:143:in `rescue in find_sti_class'
+  activerecord (3.2.13) lib/active_record/inheritance.rb:136:in `find_sti_class'
+  activerecord (3.2.13) lib/active_record/inheritance.rb:62:in `instantiate'
+  activerecord (3.2.13) lib/active_record/querying.rb:38:in `block (2 levels) in find_by_sql'
+  activerecord (3.2.13) lib/active_record/querying.rb:38:in `block in find_by_sql'
+  activerecord (3.2.13) lib/active_record/explain.rb:41:in `logging_query_plan'
+  activerecord (3.2.13) lib/active_record/querying.rb:37:in `find_by_sql'
+  activerecord (3.2.13) lib/active_record/relation.rb:171:in `exec_queries'
+  activerecord (3.2.13) lib/active_record/relation.rb:160:in `block in to_a'
+  activerecord (3.2.13) lib/active_record/explain.rb:34:in `logging_query_plan'
+  activerecord (3.2.13) lib/active_record/relation.rb:159:in `to_a'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:380:in `find_first'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:122:in `first'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:338:in `find_one'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:314:in `find_with_ids'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:107:in `find'
+  activerecord (3.2.13) lib/active_record/querying.rb:5:in `find'
+  app/controllers/jobs_controller.rb:16:in `show'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:425:in `_run__3164541906143322621__process_action__261620399749881623__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__2922240312355559674__call__1191502215513311529__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70257621508540/variables" for 127.0.0.1 at 2013-07-25 17:13:00 +1000
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2013-07-25 17:13:10 +1000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.6ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 6ms
+
+ActiveRecord::SubclassNotFound - The single-table inheritance mechanism failed to locate the subclass: 'Fulltime'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Job.inheritance_column to use another column for that information.:
+  activerecord (3.2.13) lib/active_record/inheritance.rb:143:in `rescue in find_sti_class'
+  activerecord (3.2.13) lib/active_record/inheritance.rb:136:in `find_sti_class'
+  activerecord (3.2.13) lib/active_record/inheritance.rb:62:in `instantiate'
+  activerecord (3.2.13) lib/active_record/querying.rb:38:in `block (2 levels) in find_by_sql'
+  activerecord (3.2.13) lib/active_record/querying.rb:38:in `block in find_by_sql'
+  activerecord (3.2.13) lib/active_record/explain.rb:41:in `logging_query_plan'
+  activerecord (3.2.13) lib/active_record/querying.rb:37:in `find_by_sql'
+  activerecord (3.2.13) lib/active_record/relation.rb:171:in `exec_queries'
+  activerecord (3.2.13) lib/active_record/relation.rb:160:in `block in to_a'
+  activerecord (3.2.13) lib/active_record/explain.rb:34:in `logging_query_plan'
+  activerecord (3.2.13) lib/active_record/relation.rb:159:in `to_a'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:380:in `find_first'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:122:in `first'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:338:in `find_one'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:314:in `find_with_ids'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:107:in `find'
+  activerecord (3.2.13) lib/active_record/querying.rb:5:in `find'
+  app/controllers/jobs_controller.rb:16:in `show'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:425:in `_run__3164541906143322621__process_action__261620399749881623__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__2922240312355559674__call__1191502215513311529__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70257647956120/variables" for 127.0.0.1 at 2013-07-25 17:13:10 +1000
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2013-07-25 17:13:11 +1000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 6ms
+
+ActiveRecord::SubclassNotFound - The single-table inheritance mechanism failed to locate the subclass: 'Fulltime'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Job.inheritance_column to use another column for that information.:
+  activerecord (3.2.13) lib/active_record/inheritance.rb:143:in `rescue in find_sti_class'
+  activerecord (3.2.13) lib/active_record/inheritance.rb:136:in `find_sti_class'
+  activerecord (3.2.13) lib/active_record/inheritance.rb:62:in `instantiate'
+  activerecord (3.2.13) lib/active_record/querying.rb:38:in `block (2 levels) in find_by_sql'
+  activerecord (3.2.13) lib/active_record/querying.rb:38:in `block in find_by_sql'
+  activerecord (3.2.13) lib/active_record/explain.rb:41:in `logging_query_plan'
+  activerecord (3.2.13) lib/active_record/querying.rb:37:in `find_by_sql'
+  activerecord (3.2.13) lib/active_record/relation.rb:171:in `exec_queries'
+  activerecord (3.2.13) lib/active_record/relation.rb:160:in `block in to_a'
+  activerecord (3.2.13) lib/active_record/explain.rb:34:in `logging_query_plan'
+  activerecord (3.2.13) lib/active_record/relation.rb:159:in `to_a'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:380:in `find_first'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:122:in `first'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:338:in `find_one'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:314:in `find_with_ids'
+  activerecord (3.2.13) lib/active_record/relation/finder_methods.rb:107:in `find'
+  activerecord (3.2.13) lib/active_record/querying.rb:5:in `find'
+  app/controllers/jobs_controller.rb:16:in `show'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:425:in `_run__3164541906143322621__process_action__261620399749881623__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__2922240312355559674__call__1191502215513311529__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70257622611080/variables" for 127.0.0.1 at 2013-07-25 17:13:11 +1000
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateJobs (20130725054250)
+Migrating to ChangeTypeInJobs (20130725072015)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.5ms)[0m  [1mALTER TABLE "jobs" RENAME COLUMN "type" TO "job_type"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130725072015')
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (120.5ms)[0m  DROP DATABASE IF EXISTS "accruto-test"
+  [1m[36m (273.8ms)[0m  [1mCREATE DATABASE "accruto-test" ENCODING = 'utf8'[0m
+  [1m[35m (11.5ms)[0m  CREATE TABLE "jobs" ("id" serial primary key, "title" character varying(255), "address_id" integer, "posted_at" timestamp, "expires_at" timestamp, "job_type" character varying(255), "company_id" integer, "external_link" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130725072015')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130725054250')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-25 17:31:13 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 223ms (Views: 180.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:13 +1000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:13 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:13 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:13 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:13 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:13 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:13 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:13 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:13 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:13 +1000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /pages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:14 +1000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2013-07-25 17:31:18 +1000
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.4ms)[0m  SELECT "jobs".* FROM "jobs" 
+  Rendered jobs/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 350ms (Views: 184.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-07-25 17:31:19 +1000
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2013-07-25 17:31:44 +1000
+Processing by JobsController#new as HTML
+  Rendered jobs/_form.html.erb (52.1ms)
+  Rendered jobs/new.html.erb within layouts/application (54.2ms)
+Completed 200 OK in 359ms (Views: 312.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 17:31:45 +1000
+Served asset /application.js - 304 Not Modified (0ms)
+=======
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateJobs (20130725054250)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "jobs" ("id" serial primary key, "title" character varying(255), "address_id" integer, "posted_at" timestamp, "expires_at" timestamp, "type" character varying(255), "company_id" integer, "external_link" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130725054250')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+>>>>>>> cd841bdd38822c9867315eff4545580639445f7b

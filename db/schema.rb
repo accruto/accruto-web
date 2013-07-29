@@ -11,7 +11,44 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130725072015) do
+ActiveRecord::Schema.define(:version => 20130729021702) do
+
+  create_table "addresses", :force => true do |t|
+    t.string   "unit"
+    t.string   "street"
+    t.integer  "postcode"
+    t.string   "latitude"
+    t.string   "longitude"
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "job_categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "job_subcategories", :force => true do |t|
+    t.string   "name"
+    t.integer  "job_category_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "job_subcategories_jobs", :force => true do |t|
+    t.integer "job_subcategory_id"
+    t.integer "job_id"
+  end
 
   create_table "jobs", :force => true do |t|
     t.string   "title"

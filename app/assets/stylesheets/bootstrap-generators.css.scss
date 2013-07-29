@@ -34,7 +34,11 @@ $iconWhiteSpritePath: '';
 
 a.brand.image > img { height: 45px; }
 
-.center { text-align:center; }
+.align-center { text-align:center; }
+.align-left { text-align:left; }
+.align-right { text-align:right; }
+.clear-both { clear:both; }
+
 .error > * { color: $errorColor !important; }
 .error > * > input { &:focus { color: $errorColor !important; } }
 .error > * > input { color: $errorColor !important; }
