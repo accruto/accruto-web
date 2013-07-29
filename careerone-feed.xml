@@ -1,0 +1,93 @@
+<Job jobRefCode="3034250" inventoryType="transactional">
+  <CompanyReference companyId="4127839">
+	<CompanyXCode>xc1nis_advertiserx</CompanyXCode>
+	<CompanyName>Adelaide Advertiser</CompanyName>
+  </CompanyReference>
+  <Channel monsterId="168" />
+  <JobInformation>
+	<JobTitle>PAINTERS</JobTitle>
+	<JobType monsterId="1">Employee</JobType>
+	<JobStatus monsterId="4">Fulltime</JobStatus>
+	<IsHandinamic>false</IsHandinamic>
+	<Contact hideContactInfoField="true" hideEmailAddress="true" hideFax="true" hidePhone="true">
+	  <CompanyName>The Advertiser</CompanyName>
+	  <Phones>
+		<Phone phoneType="contact">1800555010</Phone>
+	  </Phones>
+	</Contact>
+	<PhysicalAddress>
+	  <StreetAddress />
+	  <StreetAddress2 />
+	  <City>Adelaide</City>
+	  <State>SA</State>
+	  <CountryCode>AU</CountryCode>
+	  <PostalCode>5000</PostalCode>
+	</PhysicalAddress>
+	<DisableApplyOnline>true</DisableApplyOnline>
+	<HideCompanyInfo>false</HideCompanyInfo>
+	<JobBody>&lt;b&gt; &lt;BR&gt; PAINTERS&lt;/b&gt;&lt;p&gt; required, must be qualified, white card essential. Phone Colin 0414 571 960&lt;p&gt;&lt;b&gt;This ad appeared in The Adelaide Advertiser on 31/MAR/10&lt;/b&gt;&lt;/p&gt;</JobBody>
+	<Openings>0</Openings>
+	<DesiredLanguages>
+	  <Language>
+		<LanguageName monsterId="27">English</LanguageName>
+	  </Language>
+	</DesiredLanguages>
+	<WorkingHoursPerWeek>0</WorkingHoursPerWeek>
+	<ExemptionStatus monsterId="0">Exempt</ExemptionStatus>
+	<JobSourceId monsterId="3" />
+  </JobInformation>
+  <JobPostings>
+	<JobPosting postingId="87217137" jobPostingRefCode="3034250" jobPostingState="active" desiredDuration="30">
+	  <InventoryPreference>
+		<PostingLocationGroup monsterId="877" />
+	  </InventoryPreference>
+	  <Location locationId="134">
+		<City>Adelaide &amp; Adelaide Hills</City>
+		<State>SA</State>
+		<CountryCode>AU</CountryCode>
+	  </Location>
+	  <Locations>
+		<Location locationId="134">
+		  <City>Adelaide &amp; Adelaide Hills</City>
+		  <State>SA</State>
+		  <CountryCode>AU</CountryCode>
+		</Location>
+	  </Locations>
+	  <JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
+	  <JobCategories>
+		<JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
+	  </JobCategories>
+	  <JobOccupations>
+		<JobOccupation monsterId="11809" categoryId="553">
+		  <Name>Flooring/Tiling/Painting/Wallpapering</Name>
+		</JobOccupation>
+		<JobOccupation monsterId="11903" categoryId="553">
+		  <Name>General/Other: Installation/Maintenance/Repair</Name>
+		</JobOccupation>
+	  </JobOccupations>
+	  <JobCity>Adelaide</JobCity>
+	  <BoardName monsterId="1">Monster</BoardName>
+	  <JobPostingDates>
+		<JobPostDate>2010-03-31T18:33:38-05:00</JobPostDate>
+		<JobActiveDate>2010-03-31T00:00:00-05:00</JobActiveDate>
+		<JobExpireDate>2010-04-30T00:00:00-05:00</JobExpireDate>
+		<JobModifiedDate>2010-03-31T18:33:44-05:00</JobModifiedDate>
+	  </JobPostingDates>
+	  <PhysicalAddress>
+		<StreetAddress />
+		<StreetAddress2 />
+		<City>Adelaide</City>
+		<State>SA</State>
+		<CountryCode>AU</CountryCode>
+		<PostalCode>5000</PostalCode>
+	  </PhysicalAddress>
+	  <DisplayTemplate monsterId="13971" />
+	  <PositionOpenings>0</PositionOpenings>
+	  <Industries>
+		<Industry>
+		  <IndustryName monsterId="13">Printing and Publishing</IndustryName>
+		</Industry>
+	  </Industries>
+	</JobPosting>
+  </JobPostings>
+</Job>

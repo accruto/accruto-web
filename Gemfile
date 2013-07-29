@@ -11,6 +11,8 @@ gem "font-awesome-rails", "~> 3.1.1.3"
 gem "figaro", "~> 0.7.0"
 gem "thin", "~> 1.5.1"
 gem "foreman", "~> 0.63.0"
+gem "nokogiri", "~> 1.6.0"
+gem "json", "~> 1.8.0"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

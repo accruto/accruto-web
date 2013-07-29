@@ -246,7 +246,9 @@ DEPENDENCIES
   guard-livereload (~> 1.4.0)
   guard-rspec (~> 3.0.2)
   jquery-rails
+  json (~> 1.8.0)
   launchy (~> 2.2.0)
+  nokogiri (~> 1.6.0)
   pg (~> 0.15.1)
   rack-livereload (~> 0.3.15)
   rails (= 3.2.13)
