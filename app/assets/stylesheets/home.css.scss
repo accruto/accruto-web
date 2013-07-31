@@ -1,0 +1,11 @@
+@import "bootstrap-variables";
+@import "mixins";
+
+.main-landing {
+	background-color: $blueBrandDark;
+}
+
+.main-search {
+	background-color: $yellow;
+	border: 1px solid $yellowDark;
+}

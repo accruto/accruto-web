@@ -20,6 +20,14 @@ $white:                 #fff !default;
 
 // Accent colors
 // -------------------------
+<<<<<<< HEAD
+$blue:                  #049cdb !default;
+$blueDark:              #0064cd !default;
+$blueLight:							#f4fcff !default;
+$green:                 #46a546 !default;
+$red:                   #9d261d !default;
+$yellow:                #ffc40d !default;
+=======
 $blueLight:            #f4fcff;
 $blue:                   #98e3ff;
 $blueDark:            #36b3e3;
@@ -33,6 +41,7 @@ $yellow:                #ffd510;
 $yellowLight:         #fbe380;
 $goldLight:            #f1eddf;
 $red:                     #ef4b4b;
+>>>>>>> 5f118ca6aaa6a6f5eed4063026dffca008a88a84
 $orange:                #f89406 !default;
 $pink:                  #c3325f !default;
 $purple:                #7a43b6 !default;
