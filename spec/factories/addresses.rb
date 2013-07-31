@@ -2,9 +2,10 @@
 
 FactoryGirl.define do
   factory :address do
-    unit "307"
     street "6, Belvoir Street"
-    postcode 2010
+    city "Sydney"
+    postcode 2000
+    state "NSW"
     latitude "23.2313"
     longitude "12.1231"
   end

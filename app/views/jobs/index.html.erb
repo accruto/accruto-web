@@ -6,7 +6,7 @@
   <h1>Listing jobs</h1>
 </div>
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped datatable">
   <thead>
     <tr>
       <th>Title</th>
@@ -15,7 +15,7 @@
       <th>Expires at</th>
       <th>Job Type</th>
       <th>Company</th>
-      <th>External link</th>
+      <th>External job id</th>
       <th></th>
       <th></th>
       <th></th>
@@ -26,12 +26,12 @@
 <% @jobs.each do |job| %>
     <tr>
       <td><%= job.title %></td>
-      <td><%= job.address_id %></td>
+      <td><%= job.address.city %> <%= job.address.postcode %>, <%= job.address.state %></td>
       <td><%= job.posted_at %></td>
       <td><%= job.expires_at %></td>
       <td><%= job.job_type %></td>
-      <td><%= job.company_id %></td>
-      <td><%= job.external_link %></td>
+      <td><%= job.company.name %></td>
+      <td><%= job.external_job_id %></td>
       <td><%= link_to 'Show', job %></td>
       <td><%= link_to 'Edit', edit_job_path(job) %></td>
       <td><%= link_to 'Destroy', job, confirm: 'Are you sure?', method: :delete %></td>

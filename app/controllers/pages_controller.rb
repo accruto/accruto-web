@@ -4,6 +4,7 @@ class PagesController < ApplicationController
 
   def home
   	@job = Job.new
+  	@jobs = Job.all
   end
 
   def about

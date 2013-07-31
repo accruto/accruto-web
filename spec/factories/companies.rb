@@ -2,7 +2,6 @@
 
 FactoryGirl.define do
   factory :company do
-  	association :address
     name "Shell Mobil Pty Ltd"
     phone "02 9394 3994"
   end

@@ -11,14 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130729021702) do
+ActiveRecord::Schema.define(:version => 20130730075746) do
 
   create_table "addresses", :force => true do |t|
-    t.string   "unit"
     t.string   "street"
+    t.string   "city"
     t.integer  "postcode"
-    t.string   "latitude"
-    t.string   "longitude"
+    t.string   "state"
+    t.float    "latitude"
+    t.float    "longitude"
     t.integer  "addressable_id"
     t.string   "addressable_type"
     t.datetime "created_at",       :null => false
@@ -57,9 +58,10 @@ ActiveRecord::Schema.define(:version => 20130729021702) do
     t.datetime "expires_at"
     t.string   "job_type"
     t.integer  "company_id"
-    t.string   "external_link"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.string   "external_job_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.text     "description"
   end
 
 end

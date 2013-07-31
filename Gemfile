@@ -13,6 +13,8 @@ gem "thin", "~> 1.5.1"
 gem "foreman", "~> 0.63.0"
 gem "nokogiri", "~> 1.6.0"
 gem "json", "~> 1.8.0"
+gem "recursive-open-struct", "~> 0.4.3"
+gem "jquery-datatables-rails", "~> 1.11.2"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -42,5 +44,7 @@ group :test do
   gem "capybara", "~> 2.0.2"
   gem "database_cleaner", "~> 0.9.1"
   gem "launchy", "~> 2.2.0"
+  gem "spork", "~> 0.9.2"
+  gem "guard-spork", "~> 1.5.1"
 end
 

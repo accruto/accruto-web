@@ -1,93 +1,1816 @@
-<Job jobRefCode="3034250" inventoryType="transactional">
-  <CompanyReference companyId="4127839">
-	<CompanyXCode>xc1nis_advertiserx</CompanyXCode>
-	<CompanyName>Adelaide Advertiser</CompanyName>
-  </CompanyReference>
-  <Channel monsterId="168" />
-  <JobInformation>
-	<JobTitle>PAINTERS</JobTitle>
-	<JobType monsterId="1">Employee</JobType>
-	<JobStatus monsterId="4">Fulltime</JobStatus>
-	<IsHandinamic>false</IsHandinamic>
-	<Contact hideContactInfoField="true" hideEmailAddress="true" hideFax="true" hidePhone="true">
-	  <CompanyName>The Advertiser</CompanyName>
-	  <Phones>
-		<Phone phoneType="contact">1800555010</Phone>
-	  </Phones>
-	</Contact>
-	<PhysicalAddress>
-	  <StreetAddress />
-	  <StreetAddress2 />
-	  <City>Adelaide</City>
-	  <State>SA</State>
-	  <CountryCode>AU</CountryCode>
-	  <PostalCode>5000</PostalCode>
-	</PhysicalAddress>
-	<DisableApplyOnline>true</DisableApplyOnline>
-	<HideCompanyInfo>false</HideCompanyInfo>
-	<JobBody>&lt;b&gt; &lt;BR&gt; PAINTERS&lt;/b&gt;&lt;p&gt; required, must be qualified, white card essential. Phone Colin 0414 571 960&lt;p&gt;&lt;b&gt;This ad appeared in The Adelaide Advertiser on 31/MAR/10&lt;/b&gt;&lt;/p&gt;</JobBody>
-	<Openings>0</Openings>
-	<DesiredLanguages>
-	  <Language>
-		<LanguageName monsterId="27">English</LanguageName>
-	  </Language>
-	</DesiredLanguages>
-	<WorkingHoursPerWeek>0</WorkingHoursPerWeek>
-	<ExemptionStatus monsterId="0">Exempt</ExemptionStatus>
-	<JobSourceId monsterId="3" />
-  </JobInformation>
-  <JobPostings>
-	<JobPosting postingId="87217137" jobPostingRefCode="3034250" jobPostingState="active" desiredDuration="30">
-	  <InventoryPreference>
-		<PostingLocationGroup monsterId="877" />
-	  </InventoryPreference>
-	  <Location locationId="134">
-		<City>Adelaide &amp; Adelaide Hills</City>
-		<State>SA</State>
-		<CountryCode>AU</CountryCode>
-	  </Location>
-	  <Locations>
-		<Location locationId="134">
-		  <City>Adelaide &amp; Adelaide Hills</City>
-		  <State>SA</State>
-		  <CountryCode>AU</CountryCode>
-		</Location>
-	  </Locations>
-	  <JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
-	  <JobCategories>
-		<JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
-	  </JobCategories>
-	  <JobOccupations>
-		<JobOccupation monsterId="11809" categoryId="553">
-		  <Name>Flooring/Tiling/Painting/Wallpapering</Name>
-		</JobOccupation>
-		<JobOccupation monsterId="11903" categoryId="553">
-		  <Name>General/Other: Installation/Maintenance/Repair</Name>
-		</JobOccupation>
-	  </JobOccupations>
-	  <JobCity>Adelaide</JobCity>
-	  <BoardName monsterId="1">Monster</BoardName>
-	  <JobPostingDates>
-		<JobPostDate>2010-03-31T18:33:38-05:00</JobPostDate>
-		<JobActiveDate>2010-03-31T00:00:00-05:00</JobActiveDate>
-		<JobExpireDate>2010-04-30T00:00:00-05:00</JobExpireDate>
-		<JobModifiedDate>2010-03-31T18:33:44-05:00</JobModifiedDate>
-	  </JobPostingDates>
-	  <PhysicalAddress>
-		<StreetAddress />
-		<StreetAddress2 />
-		<City>Adelaide</City>
-		<State>SA</State>
-		<CountryCode>AU</CountryCode>
-		<PostalCode>5000</PostalCode>
-	  </PhysicalAddress>
-	  <DisplayTemplate monsterId="13971" />
-	  <PositionOpenings>0</PositionOpenings>
-	  <Industries>
-		<Industry>
-		  <IndustryName monsterId="13">Printing and Publishing</IndustryName>
-		</Industry>
-	  </Industries>
-	</JobPosting>
-  </JobPostings>
-</Job>
+<?xml version="1.0" encoding="utf-8"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+	  <SOAP-ENV:Body>
+		<QueriesResponse xmlns="http://schemas.monster.com/Monster">
+		  <Jobs>
+			<Job jobRefCode="2156375" inventoryType="transactional">
+			  <CompanyReference companyId="4128535">
+				<CompanyXCode>xc1nis_heraldsunx</CompanyXCode>
+				<CompanyName>Herald Sun</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>YARD HAND/DETAILER</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideContactInfoField="true" hideEmailAddress="true" hideFax="true" hidePhone="true">
+				  <CompanyName>Herald Sun</CompanyName>
+				  <Phones>
+					<Phone phoneType="contact">1800555010</Phone>
+				  </Phones>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Melbourne</City>
+				  <State>VIC</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>3000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>true</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>YARD HAND/DETAILER  &lt;BR&gt; Required for prestigious car yard, 5 days, O/time avail., full- time. Must have licence and car. &lt;li&gt; 0419 343 800 &lt;BR&gt; &lt;BR&gt; &lt;br&gt;&lt;logo&gt;&lt;p&gt;&lt;b&gt;This ad appeared in the Herald Sun on 14/APR/10&lt;/b&gt;&lt;/p&gt;</JobBody>
+				<Openings>0</Openings>
+				<DesiredLanguages>
+				  <Language>
+					<LanguageName monsterId="27">English</LanguageName>
+				  </Language>
+				</DesiredLanguages>
+				<WorkingHoursPerWeek>0</WorkingHoursPerWeek>
+				<ExemptionStatus monsterId="0">Exempt</ExemptionStatus>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87473524" jobPostingRefCode="2156375" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="137">
+					<City>Melbourne</City>
+					<State>VIC</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="137">
+					  <City>Melbourne</City>
+					  <State>VIC</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="47">Manufacturing/Production/Operations</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="47">Manufacturing/Production/Operations</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11909" categoryId="47">
+					  <Name>General/Other: Production/Operations</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Melbourne</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-04-14T09:45:50-05:00</JobPostDate>
+					<JobActiveDate>2010-04-14T00:00:00-05:00</JobActiveDate>
+					<JobExpireDate>2010-05-14T00:00:00-05:00</JobExpireDate>
+					<JobModifiedDate>2010-04-14T09:45:51-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Melbourne</City>
+					<State>VIC</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>3000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13977" />
+				  <PositionOpenings>0</PositionOpenings>
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="85">Other/Not Classified</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="CO/100421100331/VICTORIAG" inventoryType="transactional">
+			  <CompanyReference companyId="4058292">
+				<CompanyXCode>xc1b_personalgx</CompanyXCode>
+				<CompanyName>Personnel Concept Group</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>Accountant- Business Services Manager- $120K- $107K - Balance?</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Salary>
+				  <Currency monsterId="4">AUD</Currency>
+				  <SalaryMin>105000</SalaryMin>
+				  <SalaryMax>129999</SalaryMax>
+				  <CompensationType monsterId="1">Per Year</CompensationType>
+				  <SalaryDescription>107,000 -120,000</SalaryDescription>
+				</Salary>
+				<Contact hideStreetAddress="true" hideStreetAddress2="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true">
+				  <CompanyName>BusinessServicesJobs</CompanyName>
+				  <Phones>
+					<Phone phoneType="contact">1300 88 32 11</Phone>
+				  </Phones>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Melbourne</City>
+				  <State>VIC</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode />
+				</PhysicalAddress>
+				<DisableApplyOnline>false</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;div style="text-align: center"&gt;&lt;strong&gt;&lt;span style="font-size: 14pt"&gt;&lt;span style="color: #ff0000"&gt;Accountant&lt;br /&gt;
+	&lt;span style="color: #0000ff"&gt;Business Services Manager&lt;br /&gt;
+	&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Develop more balance between your&amp;nbsp;career and home life as this firm is offering flexible hours&amp;nbsp;&lt;/li&gt;
+		&lt;li&gt;Family orientated company that believe the best way to manage their staff and achieve productivity is to allow the staff to go home&amp;nbsp;by 6pm every evening&lt;/li&gt;
+		&lt;li&gt;50 firm is based in the CBD and has&amp;nbsp;over 5 Partners&lt;/li&gt;
+		&lt;li&gt;Survived the GFC without losing any staff&amp;nbsp;are&amp;nbsp;now in the process of&amp;nbsp;their development plan&amp;nbsp;&lt;/li&gt;
+		&lt;li&gt;Expand with a further 3 Partners over the next 7 years&lt;/li&gt;
+		&lt;li&gt;Currently they are looking for&amp;nbsp;a Manager who would be&amp;nbsp;willing to fill one of the Partnership poisitions in the next 2 years &lt;br /&gt;
+		&lt;br /&gt;
+		&lt;em&gt;&lt;span style="color: #808080"&gt;10 years including time with a Big 4 and CA qualified.&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/em&gt;&lt;br /&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;strong&gt;&lt;span style="color: #0000ff"&gt;Being a National Leader in recruitment of Business Services professionals, I can provide you access to the best firms in Australia. Whether you are looking for an International affiliated firm or a boutique environment, I can connect you with the right person for your next career move. Give me a call for a confidential discussion.&lt;br /&gt;
+	&lt;br /&gt;
+	Victoria Gane&lt;br /&gt;
+	1300 88 32 11 or 0423 497 899 (after hours)&lt;br /&gt;
+	Victoria@BusinessServicesJobs.com.au&lt;/span&gt;&lt;/strong&gt;&lt;br /&gt;
+	&lt;br /&gt;
+	&lt;span style="color: #ff0000"&gt;Positions recently filled:&lt;br /&gt;
+	&lt;br /&gt;
+	&lt;br /&gt;
+	Business Services Senior Manager. $140,000 + Bonuses &lt;br /&gt;
+	Business Services Manager $110,000 &lt;br /&gt;
+	Business Services Junior Manager $95,000 &lt;br /&gt;
+	Business Services Senior $80,000&lt;br /&gt;
+	&lt;br /&gt;
+	www.BusinessServicesJobs.com.au&lt;/span&gt;&lt;br /&gt;</JobBody>
+				<LanguageOfJob monsterId="1">Aboriginal Dialects</LanguageOfJob>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87603505" jobPostingRefCode="CO/100421100331/VICTORIAG" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="137">
+					<City>Melbourne</City>
+					<State>VIC</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="137">
+					  <City>Melbourne</City>
+					  <State>VIC</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="1">Accounting/Finance/Insurance</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="1">Accounting/Finance/Insurance</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11724" categoryId="1">
+					  <Name>Audit</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11744" categoryId="1">
+					  <Name>Certified Public Accountant</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11981" categoryId="1">
+					  <Name>Tax Accounting</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Melbourne</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-04-20T19:05:56-05:00</JobPostDate>
+					<JobActiveDate>2010-04-20T19:05:56-05:00</JobActiveDate>
+					<JobExpireDate>2010-05-20T19:05:56-05:00</JobExpireDate>
+					<JobModifiedDate>2010-04-20T19:05:57-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Melbourne</City>
+					<State>VIC</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode />
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="14926" />
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="28">Accounting and Auditing Services</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="Q42475" inventoryType="transactional">
+			  <CompanyReference companyId="3978474">
+				<CompanyXCode>xca1a_4330eebe48d60x</CompanyXCode>
+				<CompanyName>Smart Teachers</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>Marine Studies Teacher/Coordinator</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Salary>
+				  <Currency monsterId="4">AUD</Currency>
+				  <CompensationType monsterId="1">Per Year</CompensationType>
+				</Salary>
+				<Contact hideContactInfoField="true" hideEmailAddress="true" hideFax="true" hidePhone="true">
+				  <CompanyName>Smart Teachers</CompanyName>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Rockhampton</City>
+				  <State>QLD</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>4700</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>true</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>A teacher/coordinator of Marine Studies is required at an excellent school in Rockhampton. This P-12, coeducational independent school is one of the oldest and most reputable in Queensland. The school is located on extensive grounds, developed over the years to create the modern, superbly resourced institution that it is today. The school's marine studies programme and maritime vocational training are offered in co-operation with the Australian Maritime University. Coxswain courses are conducted and are available to the general public as well as students. &lt;BR&gt;&lt;BR&gt;The successful candidate will be able to teach or coordinate Senior Marine Studies, Marine and Aquatic Practices, Certificate II in Recreational Studies and Middle School Marine Systems. Lessons will take place on campus and at the school’s waterfront outdoor education site.&lt;BR&gt;&lt;BR&gt;&lt;STRONG&gt;To Apply:&lt;BR&gt;&lt;BR&gt;&lt;/STRONG&gt;
+	&lt;LI&gt;Email your CV, quoting job reference 42475 to nbarton@smartteachers.com.au &lt;BR&gt;
+	&lt;LI&gt;Alternatively, please telephone Smart Teachers on 3112 8566 &lt;/LI&gt;</JobBody>
+				<AdditionalSearchKeywords>Q42475</AdditionalSearchKeywords>
+				<Openings>0</Openings>
+				<WorkingHoursPerWeek>0</WorkingHoursPerWeek>
+				<JobSourceId monsterId="6" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87100578" jobPostingRefCode="Q42475" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="48237">
+					<City>Rockhampton &amp; Central Coastal</City>
+					<State>QLD</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="48237">
+					  <City>Rockhampton &amp; Central Coastal</City>
+					  <State>QLD</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="3">Education/Training</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="3">Education/Training</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11851" categoryId="3">
+					  <Name>Junior/High School</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Rockhampton</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-03-25T19:28:55-05:00</JobPostDate>
+					<JobActiveDate>2010-03-25T19:28:54-05:00</JobActiveDate>
+					<JobExpireDate>2010-04-24T19:28:54-05:00</JobExpireDate>
+					<JobModifiedDate>2010-03-25T19:28:55-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Rockhampton</City>
+					<State>QLD</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>4700</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13500" />
+				  <PositionOpenings>0</PositionOpenings>
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="38">Education</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="3518314" inventoryType="transactional">
+			  <CompanyReference companyId="4054381">
+				<CompanyXCode>x1c1b_lloydhx</CompanyXCode>
+				<CompanyName>Lloyd Harrington Pty Ltd</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>Intermediate Accountant / Light Senior 45 t0 55k Package</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideStreetAddress="true" hideStreetAddress2="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true" hideFax="true" hideName="true" hidePhone="true">
+				  <CompanyName>Lloyd Harrington</CompanyName>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>North Sydney</City>
+				  <State>NSW</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>2000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>false</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;p&gt;Prestigious Sydney Accountancy Practic with 3 partners has a newly created vacancy for an intermediate / Light Senior Accountant&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; North Sydney Location&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; Out standing opportunity in an out standing organisation&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; Srrong Team Environment&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;Intermediate Accountant / Light Senior 45 t0 55k Package&lt;/p&gt;&lt;ul&gt;&lt;li&gt;North Sydney Location&lt;/li&gt;&lt;li&gt;Out standing opportunity in an      out standing organisation&lt;/li&gt;&lt;li&gt;Only apply if you have a      minimum 2 years Australian experience&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This prestigious Sydney Accountancy Practice with 3 partners has a newly created vacancy for an intermediate / Light Senior Accountant to join one of there progressive business services teams.&lt;/p&gt;&lt;p&gt;You will be trained and mentored by astute senior and supervisory staff and be given exposure to larger clients. Due to the size you have direct access to the partners and there knowledge.&lt;/p&gt;&lt;p&gt;CA studies are fully supported as is regular attendance to technical seminars and internal staff training.&lt;/p&gt;&lt;p&gt;The culture of the firm is professional and fun and can lead to overseas experiences if that is what you are after.&lt;/p&gt;&lt;p&gt;If you like working in a friendly, personal environment, possess excellent communication skills and are doing your CA, then look at this.&lt;/p&gt;&lt;p&gt;Do not miss this one!!!&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;Please email you details to..&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;center&gt;To apply online, please click on the appropriate link below. &lt;br&gt;Please visit www.lloydharrington.com.au to view more jobs.&lt;/center&gt; &lt;A HREF="http://www.adlogic.com.au/smejobsearch/jsponly/SubmitJobApplication.jsp?jobId=684552&amp;amp;advertiserId=4&amp;amp;recruiterIdPublicSearch=1844&amp;amp;storeId=1&amp;amp;jobAdId=3518314" style="display:none" id="custom_apply_url"&gt;Apply&lt;/A&gt;</JobBody>
+				<LanguageOfJob monsterId="27">English</LanguageOfJob>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87103824" jobPostingRefCode="3518314" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="128">
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="128">
+					  <City>Sydney</City>
+					  <State>NSW</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="1">Accounting/Finance/Insurance</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="1">Accounting/Finance/Insurance</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11893" categoryId="1">
+					  <Name>General/Other: Accounting/Finance</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="14867" categoryId="1">
+					  <Name>Corporate Accounting</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="15433" categoryId="1">
+					  <Name>Assistant &amp; Part-Qualified Accountants</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>North Sydney</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-03-26T02:28:32-05:00</JobPostDate>
+					<JobActiveDate>2010-03-25T22:21:04-05:00</JobActiveDate>
+					<JobExpireDate>2010-04-25T02:28:32-05:00</JobExpireDate>
+					<JobModifiedDate>2010-03-26T02:28:33-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>North Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>2000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13609" />
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="46">Staffing/Employment Agencies</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="3516223" inventoryType="transactional">
+			  <CompanyReference companyId="4059579">
+				<CompanyXCode>xc1b_gemteqx</CompanyXCode>
+				<CompanyName>Gemteq Executive</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>TERRITORY MANAGEMENT ROLE - GLOBAL MANUFACTURING COMPANY -        LEADING THE WAY</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideStreetAddress="true" hideStreetAddress2="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true" hideFax="true" hideName="true" hidePhone="true">
+				  <CompanyName>Gemteq</CompanyName>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>BRISBANE</City>
+				  <State>QLD</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>4000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>false</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;ul&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; Global manufacturing company&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; Suppliers of quality imaging products&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; Territory management role&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt;My client is a multinational manufacture and a leading supplier of quality imaging products to the colour printing, imaging and photography markets. Established for over 20 years, my client is looking for a  Brisbane based Territory Manager to assist in their QLD operations. &lt;/font&gt;&lt;/p&gt;&lt;p  &gt; &lt;font size="3" face="times new roman"&gt; &lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt;The successful candidate will be responsible for maintaining existing customer relationships and selling to big retail chains. (ie) Bing Lee, Harvey Norman, Domain....etc with wholesale sales involved as well. Your great interpersonal skills will help you develop new business and build a good rapport with these clients.&lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt; &lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt;My client is open to any type of technical sales experience background in fields such as computers, printers and IT peripherals in general. The ideal candidate will be able to kick goals and build strong rapport, while always maintaining a positive attitude and a hunger for success.&lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt; &lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt;On offer is a base salary of $55-$65K + OTE $90K + $15K Car allowance.&lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt;So if youre a person who loves customer service, and loves to be rewarded for your strong selling skills, please apply now. &lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt; &lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt; &lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt;To find out more information on this role, apply with your resume on word format to &lt;/font&gt;&lt;font size="3" face="times new roman"&gt;l.fogwell@gemteq.com.au&lt;/font&gt;&lt;font size="3" face="times new roman"&gt; or phone 8243 1946 for a more confidential discussion.&lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt; &lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt;Please note only short listed candidates will be shortlisted.&lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt; &lt;/font&gt;&lt;/p&gt;&lt;p   align="center"&gt;&lt;font size="3" face="times new roman"&gt; &lt;/font&gt;&lt;/p&gt;&lt;center&gt;Please apply below, or call Leana Fogwell on 02 8243 1946 for a confidential discussion.&lt;/center&gt; &lt;A HREF="http://www.adlogic.com.au/smejobsearch/jsponly/SubmitJobApplication.jsp?jobId=702663&amp;amp;advertiserId=73&amp;amp;recruiterIdPublicSearch=578&amp;amp;storeId=1&amp;amp;jobAdId=3516223" style="display:none" id="custom_apply_url"&gt;Apply&lt;/A&gt;</JobBody>
+				<LanguageOfJob monsterId="27">English</LanguageOfJob>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87079330" jobPostingRefCode="3516223" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="132">
+					<City>Brisbane</City>
+					<State>QLD</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="132">
+					  <City>Brisbane</City>
+					  <State>QLD</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="10">Sales/Retail/Business Development</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="10">Sales/Retail/Business Development</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11735" categoryId="10">
+					  <Name>Business Development/New Accounts</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11913" categoryId="10">
+					  <Name>General/Other: Sales/Business Development</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="12006" categoryId="10">
+					  <Name>Wholesale/Reselling Sales</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>BRISBANE</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-03-25T03:36:32-05:00</JobPostDate>
+					<JobActiveDate>2010-03-24T23:30:38-05:00</JobActiveDate>
+					<JobExpireDate>2010-04-24T03:36:32-05:00</JobExpireDate>
+					<JobModifiedDate>2010-03-29T17:29:34-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>BRISBANE</City>
+					<State>QLD</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>4000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="14334" />
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="28">Accounting and Auditing Services</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="3034250" inventoryType="transactional">
+			  <CompanyReference companyId="4127839">
+				<CompanyXCode>xc1nis_advertiserx</CompanyXCode>
+				<CompanyName>Adelaide Advertiser</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>PAINTERS</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideContactInfoField="true" hideEmailAddress="true" hideFax="true" hidePhone="true">
+				  <CompanyName>The Advertiser</CompanyName>
+				  <Phones>
+					<Phone phoneType="contact">1800555010</Phone>
+				  </Phones>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Adelaide</City>
+				  <State>SA</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>5000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>true</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;b&gt; &lt;BR&gt; PAINTERS&lt;/b&gt;&lt;p&gt; required, must be qualified, white card essential. Phone Colin 0414 571 960&lt;p&gt;&lt;b&gt;This ad appeared in The Adelaide Advertiser on 31/MAR/10&lt;/b&gt;&lt;/p&gt;</JobBody>
+				<Openings>0</Openings>
+				<DesiredLanguages>
+				  <Language>
+					<LanguageName monsterId="27">English</LanguageName>
+				  </Language>
+				</DesiredLanguages>
+				<WorkingHoursPerWeek>0</WorkingHoursPerWeek>
+				<ExemptionStatus monsterId="0">Exempt</ExemptionStatus>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87217137" jobPostingRefCode="3034250" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="134">
+					<City>Adelaide &amp; Adelaide Hills</City>
+					<State>SA</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="134">
+					  <City>Adelaide &amp; Adelaide Hills</City>
+					  <State>SA</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11809" categoryId="553">
+					  <Name>Flooring/Tiling/Painting/Wallpapering</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11903" categoryId="553">
+					  <Name>General/Other: Installation/Maintenance/Repair</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Adelaide</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-03-31T18:33:38-05:00</JobPostDate>
+					<JobActiveDate>2010-03-31T00:00:00-05:00</JobActiveDate>
+					<JobExpireDate>2010-04-30T00:00:00-05:00</JobExpireDate>
+					<JobModifiedDate>2010-03-31T18:33:44-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Adelaide</City>
+					<State>SA</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>5000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13971" />
+				  <PositionOpenings>0</PositionOpenings>
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="13">Printing and Publishing</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="2165949" inventoryType="transactional">
+			  <CompanyReference companyId="4128369">
+				<CompanyXCode>xc1nis_cumberlandx</CompanyXCode>
+				<CompanyName>Cumberland Newspapers</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>OFFICE ALL-ROUNDER</JobTitle>
+				<JobType monsterId="2">Temporary / Contract</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideContactInfoField="true" hideFax="true" hidePhone="true">
+				  <CompanyName>Cumberland Newspapers</CompanyName>
+				  <Phones>
+					<Phone phoneType="contact">1800555010</Phone>
+				  </Phones>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Sydney</City>
+				  <State>NSW</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>2000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>true</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;div&gt;&lt;b&gt;Office All-Rounder&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;Ingleburn based company requires the services of a mature-minded Office All- Rounder. A good general knowledge of debtors/creditors and experience with MYOB an advantage. General duties include handling incoming calls and data entry using MYOB &amp;amp; Excel.&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;A three month position with possibility for on going work.&lt;/div&gt;&lt;div&gt;Hours 10am to 2pm, Mon-Fri.&lt;/div&gt;&lt;div&gt;Approx start date 19th April 2010.&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;b&gt;To apply email your resume&lt;/b&gt; &lt;b&gt;to:&lt;/b&gt; &lt;b&gt;sue.transtarexpress@hotmail.com&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;/b&gt;</JobBody>
+				<Openings>0</Openings>
+				<DesiredLanguages>
+				  <Language>
+					<LanguageName monsterId="27">English</LanguageName>
+				  </Language>
+				</DesiredLanguages>
+				<WorkingHoursPerWeek>0</WorkingHoursPerWeek>
+				<ExemptionStatus monsterId="0">Exempt</ExemptionStatus>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87299713" jobPostingRefCode="2165949" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="128">
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="128">
+					  <City>Sydney</City>
+					  <State>NSW</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="2">Administrative/Clerical</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="2">Administrative/Clerical</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11770" categoryId="2">
+					  <Name>Data Entry/Order Processing</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11894" categoryId="2">
+					  <Name>General/Other: Administrative/Clerical</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11958" categoryId="2">
+					  <Name>Secretary/Executive Assistant</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Sydney</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-04-06T08:29:26-05:00</JobPostDate>
+					<JobActiveDate>2010-04-06T00:00:00-05:00</JobActiveDate>
+					<JobExpireDate>2010-05-06T00:00:00-05:00</JobExpireDate>
+					<JobModifiedDate>2010-04-06T08:29:32-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>2000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13973" />
+				  <PositionOpenings>0</PositionOpenings>
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="13">Printing and Publishing</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="3078105" inventoryType="transactional">
+			  <CompanyReference companyId="4127839">
+				<CompanyXCode>xc1nis_advertiserx</CompanyXCode>
+				<CompanyName>Adelaide Advertiser</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>STOREPERSONS</JobTitle>
+				<JobType monsterId="2">Temporary / Contract</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideContactInfoField="true" hideFax="true" hidePhone="true">
+				  <CompanyName>The Advertiser</CompanyName>
+				  <Phones>
+					<Phone phoneType="contact">1800555010</Phone>
+				  </Phones>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Adelaide</City>
+				  <State>SA</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>5000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>true</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;b&gt; &lt;BR&gt; STOREPERSONS &lt;BR&gt;&lt;/b&gt;&lt;p&gt; We require experienced storepersons for ongoing casual positions. The successful applicants will require a forklift licence, warehouse, logistics &amp;amp; pick &amp;amp; pack experience. Familiarity with R.F scanning and Start Track preferred. &lt;BR&gt;  &lt;BR&gt;  To apply for these positions please forward your resume to: &lt;BR&gt;  &lt;BR&gt; REXCO PEOPLE &lt;BR&gt; PO Box 60 Kensington Pk 5068 &lt;BR&gt; Ph: (08) 8332 7210 &lt;BR&gt; Fax: 8364 1548 &lt;BR&gt; Email; application@rexco.com.au &lt;BR&gt; Web: www.rexco.com.au &lt;BR&gt;&lt;p&gt;&lt;b&gt;This ad appeared in The Adelaide Advertiser on 3/APR/10&lt;/b&gt;&lt;/p&gt;</JobBody>
+				<Openings>0</Openings>
+				<DesiredLanguages>
+				  <Language>
+					<LanguageName monsterId="27">English</LanguageName>
+				  </Language>
+				</DesiredLanguages>
+				<WorkingHoursPerWeek>0</WorkingHoursPerWeek>
+				<ExemptionStatus monsterId="0">Exempt</ExemptionStatus>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87268100" jobPostingRefCode="3078105" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="134">
+					<City>Adelaide &amp; Adelaide Hills</City>
+					<State>SA</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="134">
+					  <City>Adelaide &amp; Adelaide Hills</City>
+					  <State>SA</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="5625">Logistics/Transportation</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="5625">Logistics/Transportation</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11906" categoryId="5625">
+					  <Name>General/Other: Logistics/Transportation</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11964" categoryId="5625">
+					  <Name>Shipping and Receiving/Warehousing</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11991" categoryId="5625">
+					  <Name>Train or Rail Operator</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Adelaide</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-04-03T07:21:38-05:00</JobPostDate>
+					<JobActiveDate>2010-04-03T00:00:00-05:00</JobActiveDate>
+					<JobExpireDate>2010-05-03T00:00:00-05:00</JobExpireDate>
+					<JobModifiedDate>2010-04-03T07:21:43-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Adelaide</City>
+					<State>SA</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>5000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13971" />
+				  <PositionOpenings>0</PositionOpenings>
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="13">Printing and Publishing</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="3551521" inventoryType="transactional">
+			  <CompanyReference companyId="4059864">
+				<CompanyXCode>xc1b_hughescastx</CompanyXCode>
+				<CompanyName>Hughes-Castell Pty Ltd</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>Dispute Resolution 3-4 years pae</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideStreetAddress="true" hideStreetAddress2="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true" hideFax="true" hideName="true" hidePhone="true">
+				  <CompanyName>Hughes Castell</CompanyName>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Sydney</City>
+				  <State>NSW</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>2000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>false</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;p&gt;Rare opportunity to join this leading international firm in their Dispute Resolution practice.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; One of Australia&amp;#39;s premier litigation practices&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; Work with multiple partners&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; Excellent salary&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Are you an ambitious and passionate litigator currently working at another highly regarded city firm? If so this could be the job for you! My client is looking for someone to work on a major matter with two of the firms most high profile partners. You will also work on other matters and the firm has particular expertise in construction and commercial dispute resolution, insolvency, corporate regulation, competition and trade practices. The right candidate will have strong academics, already be working in another recognised firm undertaking major litigation and be prepared to travel interstate. LB42639&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt; &lt;/p&gt; &lt;font  color="#000000"&gt;To apply online, please click on the appropriate link below. &lt;br&gt;Alternatively, for a confidential discussion, please contact &lt;br&gt;Lucy Brady on&lt;strong&gt; 02 9237 2333&lt;/strong&gt; or email &lt;strong&gt;lucy.brady@hughes-castell.com.au&lt;/strong&gt;, quoting Ref No. LB42639.&lt;/font&gt;  &lt;A HREF="http://www.adlogic.com.au/smejobsearch/jsponly/SubmitJobApplication.jsp?jobId=710625&amp;amp;advertiserId=4&amp;amp;recruiterIdPublicSearch=775&amp;amp;storeId=1&amp;amp;jobAdId=3551521" style="display:none" id="custom_apply_url"&gt;Apply&lt;/A&gt;</JobBody>
+				<LanguageOfJob monsterId="27">English</LanguageOfJob>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87460477" jobPostingRefCode="3551521" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="128">
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="128">
+					  <City>Sydney</City>
+					  <State>NSW</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="7">Legal</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="7">Legal</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11905" categoryId="7">
+					  <Name>General/Other: Legal</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Sydney</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-04-13T20:29:32-05:00</JobPostDate>
+					<JobActiveDate>2010-04-13T17:02:37-05:00</JobActiveDate>
+					<JobExpireDate>2010-05-13T20:29:32-05:00</JobExpireDate>
+					<JobModifiedDate>2010-04-13T20:29:33-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>2000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13814" />
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="46">Staffing/Employment Agencies</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="sg2032628" inventoryType="transactional">
+			  <CompanyReference companyId="5420741">
+				<CompanyXCode>xc1bgw_aureceex</CompanyXCode>
+				<CompanyName>AUREC</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>Java Developer</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Salary>
+				  <Currency monsterId="4">AUD</Currency>
+				  <SalaryMin>50000</SalaryMin>
+				  <SalaryMax>70000</SalaryMax>
+				  <CompensationType monsterId="1">Per Year</CompensationType>
+				</Salary>
+				<Contact hideStreetAddress="true" hideStreetAddress2="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true" hideFax="true" hideName="true" hidePhone="true">
+				  <CompanyName>AUREC</CompanyName>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>SYDNEY</City>
+				  <State>NSW</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>2000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>false</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;p&gt;This is the chance for you to take the next step in your JavaJ2EE development career, working and learning from some of the top developers in the business.&amp;#160; This tier 1 blue-chip company has 2 vacancies for Junior to Mid level developers.&lt;/p&gt;
+	&lt;p&gt;&amp;#160;&lt;/p&gt;
+	&lt;p&gt;In this role you will be working closely with the senior developers on Greenfield projects and enhancementsdevelopments to existing systems.&amp;#160; This is a challenging role as you will be working with a wide range of technologies and be dealing with both internal and external stakeholder therefore excellent communication skills are ESSENTIAL.&lt;/p&gt;
+	&lt;p&gt;&amp;#160;&lt;/p&gt;
+	&lt;p&gt;&lt;b&gt;Requirements&lt;/b&gt;&lt;/p&gt;
+	&lt;ul&gt;&lt;li&gt;2 years development experience&lt;/li&gt;
+	&lt;li&gt;JavaJ2EE programming skills&lt;/li&gt;
+	&lt;li&gt;JSP, Spring, JMS and Eclipse&lt;/li&gt;
+	&lt;li&gt;Strong Database skills  SQLOracle&lt;/li&gt;
+	&lt;li&gt;IT Degree or relevant&lt;/li&gt;
+	&lt;li&gt;Excellent communication skills&lt;/li&gt;
+	&lt;li&gt;Experience working in enterprise environments&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;p&gt;&amp;#160;&lt;/p&gt;
+	&lt;p&gt;It&amp;#146;s time for the next step - APPLY now.&amp;#160; Email: sgilmour@aurec.com or call 02 9993 1066.&lt;/p&gt;
+	&lt;p&gt;DUE TO HIGH LEVELS OF RESPONCE I WILL ONLY BE CONTACTING SUITIBLE CANDIDATES&lt;/p&gt;
+	</JobBody>
+				<LanguageOfJob monsterId="27">English</LanguageOfJob>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87580594" jobPostingRefCode="sg2032628" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="128">
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="128">
+					  <City>Sydney</City>
+					  <State>NSW</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="660">IT/Software Development</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="660">IT/Software Development</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11970" categoryId="660">
+					  <Name>Software/Web Development</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="12004" categoryId="660">
+					  <Name>Web Mastering</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>SYDNEY</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-04-19T21:59:33-05:00</JobPostDate>
+					<JobActiveDate>2010-04-19T15:44:23-05:00</JobActiveDate>
+					<JobExpireDate>2010-05-19T21:59:33-05:00</JobExpireDate>
+					<JobModifiedDate>2010-04-19T21:59:34-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>SYDNEY</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>2000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="12438" />
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="85">Other/Not Classified</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="3566374" inventoryType="transactional">
+			  <CompanyReference companyId="4059412">
+				<CompanyXCode>xc1b_workforcex</CompanyXCode>
+				<CompanyName>Workforce International Pty Ltd</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>Mechanical Fitter</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideStreetAddress="true" hideStreetAddress2="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true" hideFax="true" hideName="true" hidePhone="true">
+				  <CompanyName>Workforce International</CompanyName>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Sydney</City>
+				  <State>NSW</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>2000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>false</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;p&gt;Our client that manufacture a range of conveyor systems for the mining and material handling industry are looking for Trade Qualified staff.&lt;/p&gt;
+	&lt;p&gt; &lt;/p&gt;
+	&lt;p&gt;Our client is a large engineering company in Wetherill Park that manufacture a range of conveyor systems for the mining and material handling industry are looking for Trade Qualified staff.&lt;/p&gt;
+	&lt;p&gt;Working on a contract basis with this fantastic company you will need to have the following to be considered:&lt;/p&gt;
+	&lt;ul&gt;
+	&lt;li&gt;Trade Qualified as a Mechanical Fitter
+	&lt;/li&gt;&lt;li&gt;Able to work unsupervised
+	&lt;/li&gt;&lt;li&gt;Experience within the Engineering field
+	&lt;/li&gt;&lt;li&gt;Ability to read/work from drawings
+	&lt;/li&gt;&lt;li&gt;Produce high quality product
+	&lt;/li&gt;&lt;li&gt;High attention to detail
+	&lt;/li&gt;&lt;li&gt;Willing to work overtime&lt;/li&gt;&lt;/ul&gt;
+	&lt;p&gt;So if you are looking for a position with a good company, submit your resume online or call Workforce during business hours on 8788 6600.&lt;/p&gt;&lt;br&gt;&lt;br&gt;
+	&lt;p align="center"&gt;&lt;br&gt;To apply, please click on the appropriate link below. &lt;br&gt;&lt;strong&gt;Visit www.workforce.com.au to view available jobs or to register with us.&lt;/strong&gt;&lt;/p&gt; &lt;A HREF="http://www.adlogic.com.au/smejobsearch/jsponly/SubmitJobApplication.jsp?jobId=692499&amp;amp;advertiserId=4&amp;amp;recruiterIdPublicSearch=1667&amp;amp;storeId=1&amp;amp;jobAdId=3566374" style="display:none" id="custom_apply_url"&gt;Apply&lt;/A&gt;</JobBody>
+				<LanguageOfJob monsterId="27">English</LanguageOfJob>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87603740" jobPostingRefCode="3566374" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="128">
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="128">
+					  <City>Sydney</City>
+					  <State>NSW</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11903" categoryId="553">
+					  <Name>General/Other: Installation/Maintenance/Repair</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Sydney</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-04-20T19:28:15-05:00</JobPostDate>
+					<JobActiveDate>2010-04-20T11:49:45-05:00</JobActiveDate>
+					<JobExpireDate>2010-05-20T19:28:15-05:00</JobExpireDate>
+					<JobModifiedDate>2010-04-20T19:28:16-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>2000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13428" />
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="85">Other/Not Classified</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="el#12117" inventoryType="transactional">
+			  <CompanyReference companyId="6356434">
+				<CompanyXCode>xc1bgw_integralhx</CompanyXCode>
+				<CompanyName>Integral Human Resource Management</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>Senior Store Managers and Assistant Managers - This is the role you want!!!</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideContactInfoField="true">
+				  <CompanyName>Integral HRM</CompanyName>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Sydney</City>
+				  <State>NSW</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode />
+				</PhysicalAddress>
+				<DisableApplyOnline>false</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;ul&gt;&lt;li&gt;Celebrated national variety retail company&lt;/li&gt;&lt;li&gt;Competitive salary of up to $75k (Store Managers) and $50k (Assistant Managers&lt;/li&gt;&lt;li&gt;Opportunities to progress and learn new skills&lt;/li&gt;&lt;/ul&gt;&lt;p style="margin:0;"&gt;Our Client is &lt;b&gt;Australia&lt;/b&gt;&lt;b&gt;’s fastest growing specialised variety retailer&lt;/b&gt; with a strong history in providing amazing service and value for money for families right across Australia. Well known for their &lt;b&gt;high quality products&lt;/b&gt; and commitment to giving you the best of the best, they are also recognised as an &lt;b&gt;&lt;span style="text-decoration:underline"&gt;employer of choice&lt;/span&gt;&lt;/b&gt; in the retail world.&amp;nbsp; &lt;/p&gt; &lt;p style="text-align:center;margin:0;margin:0"&gt;&amp;nbsp;&lt;/p&gt; &lt;p style="margin:0;"&gt;&lt;i&gt;Sick of feeling like you’re just another number? Never suffer through that again! &lt;/i&gt;&amp;nbsp;This family focused, team oriented company have got what you’re looking for! &lt;i&gt;&lt;br&gt; &lt;/i&gt;&lt;br&gt; These varied roles would suit highly &lt;b&gt;experienced retail managers who thrive on driving sales and creating a team environment that is buzzing with excitement&lt;/b&gt;. Your main responsibility is to contribute towards the growth and profitability of the Company through effective implementation of Company Policy and guidelines.&lt;br&gt; &lt;br&gt; The ideal candidate should possess the ability to lead by example, and be able to demonstrate their experience with the following:&lt;/p&gt; &lt;b&gt; &lt;ul&gt; &lt;li&gt;Staff management, building a successful team &lt;/li&gt; &lt;li&gt;High volume &lt;b&gt;stock and merchandising&lt;/b&gt; management &lt;/li&gt; &lt;li&gt;Strong &lt;b&gt;customer service ethic &lt;/b&gt;&lt;/li&gt; &lt;li&gt;Achieving designated &lt;b&gt;sales and profit objectives &lt;/b&gt;&lt;/li&gt; &lt;li&gt;&lt;i&gt;Big Box or FMCG experience essential&lt;/i&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/b&gt;, building a successful team &lt;p style="margin:0;"&gt;In return for your passion &amp;amp; outstanding performance across all KPI’s, we will reward you with an &lt;b&gt;attractive remuneration package, generous staff discounts and extensive career progression opportunities!!!...&lt;/b&gt;&lt;br&gt; &lt;br&gt; Only those who are enthusiastic about managing a team who enjoy working in a busy and fun atmosphere need apply.&amp;nbsp; All applications are strictly confidential.&amp;nbsp; Please send your resume directly to elee@integralhrm.com to register your interest.&lt;/p&gt;</JobBody>
+				<LanguageOfJob monsterId="27">English</LanguageOfJob>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87128773" jobPostingRefCode="el#12117" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="128">
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="128">
+					  <City>Sydney</City>
+					  <State>NSW</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="15428">Retail</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="15428">Retail</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="15508" categoryId="15428">
+					  <Name>General/Other: Retail</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Sydney</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-03-26T19:01:05-05:00</JobPostDate>
+					<JobActiveDate>2010-03-26T19:01:05-05:00</JobActiveDate>
+					<JobExpireDate>2010-04-25T19:01:05-05:00</JobExpireDate>
+					<JobModifiedDate>2010-03-26T19:01:06-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode />
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="15601" />
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="17">Retail</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job inventoryType="transactional">
+			  <CompanyReference companyId="6984330">
+				<CompanyXCode>xw143350661wx</CompanyXCode>
+				<CompanyName>ITBasement</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>Network and Server Manager</JobTitle>
+				<JobLevel monsterId="12">Experienced (Non-Manager)</JobLevel>
+				<JobType monsterId="1">Employee</JobType>
+				<JobType monsterId="2">Temporary / Contract</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<JobStatus monsterId="5">Parttime</JobStatus>
+				<JobStatus monsterId="26">PerDiem</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Salary>
+				  <Currency monsterId="4">AUD</Currency>
+				  <SalaryMin>600</SalaryMin>
+				  <SalaryMax>800</SalaryMax>
+				  <CompensationType monsterId="3">Per Week</CompensationType>
+				</Salary>
+				<Contact hideStreetAddress="true" hideStreetAddress2="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true" hideFax="true" hideName="true" hidePhone="true">
+				  <CompanyName>ITBasement</CompanyName>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Sunshine</City>
+				  <State>VIC</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>3019</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>false</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;P&gt;We have a role available for an immediate start as a Network Engineer to join a Small business of 2 Technicians.&lt;BR&gt;&lt;/P&gt;
+	&lt;UL&gt;
+	&lt;LI&gt;&lt;B&gt;&lt;FONT size=2&gt;Start ASAP&lt;/FONT&gt;&lt;/B&gt;
+	&lt;LI&gt;&lt;B&gt;&lt;FONT size=2&gt;IT Consultancy Firm&lt;/FONT&gt;&lt;/B&gt; &lt;/LI&gt;&lt;/UL&gt;
+	&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+	&lt;P&gt;Immediate start for a&amp;nbsp;2 month trial period.&lt;BR&gt;&amp;nbsp;&lt;/P&gt;
+	&lt;P&gt;&lt;/P&gt;
+	&lt;P&gt;&lt;STRONG&gt;Main Responsibilities:- &lt;/STRONG&gt;&lt;/P&gt;
+	&lt;UL&gt;
+	&lt;LI&gt;Onsite and Phone support for Windows Users
+	&lt;LI&gt;Server management, Windows 2003 and Windows 2008
+	&lt;LI&gt;Installation and repair of Computer systems.&amp;nbsp;&lt;/LI&gt;&lt;/UL&gt;
+	&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+	&lt;P&gt;&lt;STRONG&gt;Main Skill Sets:- &lt;/STRONG&gt;&lt;/P&gt;
+	&lt;UL&gt;
+	&lt;LI&gt;The ability to work unsupervised and also as part of a team &lt;/LI&gt;
+	&lt;LI&gt;&lt;STRONG&gt;Must have a Valid Australian Full Drivers License and ability to drive a manual car.&lt;/STRONG&gt;&lt;/LI&gt;
+	&lt;LI&gt;Good communication and Excellent English.&lt;/LI&gt;
+	&lt;LI&gt;Server 2003 Server 2008 Skills.&lt;/LI&gt;
+	&lt;LI&gt;Install and Manage Routers.&lt;/LI&gt;
+	&lt;LI&gt;Networking Understanding.&lt;/LI&gt;
+	&lt;LI&gt;Problem Solving Skills.&lt;/LI&gt;&lt;/UL&gt;
+	&lt;P&gt;&lt;BR&gt;&amp;nbsp;&lt;/P&gt;
+	&lt;P&gt;&lt;FONT size=2&gt;&lt;/FONT&gt;&lt;/P&gt;
+	&lt;P&gt;&lt;FONT size=2&gt;This is a fantastic opportunity for a Network Engineer with excellent communication skills who can deal with stressful situations. A good opportunity to have hands on Training and Exposure to Servers.&amp;nbsp;&lt;/FONT&gt;&lt;FONT face=Verdana&gt;&lt;FONT size=2&gt;Preference if you live near office near Sunshine.&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;
+	&lt;P&gt;&lt;BR&gt;&lt;BR&gt;Email resume to.&lt;BR&gt;&lt;A href="mailto:Jobs@itbasement.com"&gt;Jobs@itbasement.com&lt;/A&gt; &lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;/P&gt;</JobBody>
+				<Openings>0</Openings>
+				<WorkingHoursPerWeek>0</WorkingHoursPerWeek>
+				<JobSourceId monsterId="6" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87130482" jobPostingState="active" bold="true" desiredDuration="30">
+				  <InventoryPreference>
+					<Autorefresh desired="true">
+					  <Frequency>7</Frequency>
+					</Autorefresh>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="137">
+					<City>Melbourne</City>
+					<State>VIC</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="137">
+					  <City>Melbourne</City>
+					  <State>VIC</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="660">IT/Software Development</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="660">IT/Software Development</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11847" categoryId="660">
+					  <Name>IT Consulting</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11882" categoryId="660">
+					  <Name>Network and Server Administration</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11985" categoryId="660">
+					  <Name>Technical Customer Service</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Sunshine</JobCity>
+				  <MoveJob moveAction="copy" moveDays="7" />
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-03-27T00:44:31-05:00</JobPostDate>
+					<JobActiveDate>2010-04-17T00:08:46-05:00</JobActiveDate>
+					<JobExpireDate>2010-04-26T00:44:32-05:00</JobExpireDate>
+					<JobModifiedDate>2010-04-17T00:08:46-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Sunshine</City>
+					<State>VIC</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>3019</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="12438" />
+				  <PositionOpenings>0</PositionOpenings>
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="77">Computer/IT Services</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="11154232385" inventoryType="transactional">
+			  <CompanyReference companyId="4129022">
+				<CompanyXCode>xc1nis_townsvillex</CompanyXCode>
+				<CompanyName>Townsville Bulletin</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>SALES REPRESENTATIVE WELL</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideContactInfoField="true" hideEmailAddress="true" hideFax="true" hidePhone="true">
+				  <CompanyName>The Townsville Bulletin</CompanyName>
+				  <Phones>
+					<Phone phoneType="contact">1800555010</Phone>
+				  </Phones>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Townsville</City>
+				  <State>QLD</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>4810</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>true</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>SALES REPRESENTATIVE Well established Electrical Agency with Leading Brands requires a Representative based in Townsville to service existing accounts in the Townsville, Cairns &amp;amp; Mt Isa area on a regular call centre. Experience in the electrical retail industry would be an advantage. An attractive salary package which will include basic salary, commission and a company vehicle will be discussed at the interview. Please reply in writing to: The Manager Tom Jack Agencies PO Box 1417, Aitkenvale QLD 4814 Closing date: 9th April, 2010&lt;p&gt;&lt;b&gt;This ad appeared in the Townsville Bulletin on 31/MAR/10&lt;/b&gt;&lt;/p&gt;</JobBody>
+				<Openings>0</Openings>
+				<DesiredLanguages>
+				  <Language>
+					<LanguageName monsterId="27">English</LanguageName>
+				  </Language>
+				</DesiredLanguages>
+				<WorkingHoursPerWeek>0</WorkingHoursPerWeek>
+				<ExemptionStatus monsterId="0">Exempt</ExemptionStatus>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87219175" jobPostingRefCode="11154232385" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="48240">
+					<City>Townsville &amp; Far North Queensland</City>
+					<State>QLD</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="48240">
+					  <City>Townsville &amp; Far North Queensland</City>
+					  <State>QLD</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="10">Sales/Retail/Business Development</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="10">Sales/Retail/Business Development</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11913" categoryId="10">
+					  <Name>General/Other: Sales/Business Development</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Townsville</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-03-31T19:55:55-05:00</JobPostDate>
+					<JobActiveDate>2010-03-31T00:00:00-05:00</JobActiveDate>
+					<JobExpireDate>2010-04-30T00:00:00-05:00</JobExpireDate>
+					<JobModifiedDate>2010-03-31T19:55:56-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Townsville</City>
+					<State>QLD</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>4810</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13983" />
+				  <PositionOpenings>0</PositionOpenings>
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="85">Other/Not Classified</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="2122890" inventoryType="transactional">
+			  <CompanyReference companyId="4128369">
+				<CompanyXCode>xc1nis_cumberlandx</CompanyXCode>
+				<CompanyName>Cumberland Newspapers</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>DENTAL ASSISTANT</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideContactInfoField="true" hideFax="true" hidePhone="true">
+				  <CompanyName>Cumberland Newspapers</CompanyName>
+				  <Phones>
+					<Phone phoneType="contact">1800555010</Phone>
+				  </Phones>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Sydney</City>
+				  <State>NSW</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>2000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>true</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;div&gt;&lt;b&gt;Dental Assistant - F/T&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;#149;&amp;nbsp;To join our friendly &amp;amp; supportive 3 Dentist team&lt;/div&gt;&lt;div&gt;&amp;#149;&amp;nbsp;4 days plus Saturday&lt;/div&gt;&lt;div&gt;&amp;#149;&amp;nbsp;Includes all aspects of practice activity, (including in surgery &amp;amp; front desk)&lt;/div&gt;&lt;div&gt;&amp;#149;&amp;nbsp;Would suit an applicant with experience&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Please email your resume to:&lt;/b&gt; &lt;b&gt;reception@dentistsonstarkey.com.au&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;/b&gt;</JobBody>
+				<Openings>0</Openings>
+				<DesiredLanguages>
+				  <Language>
+					<LanguageName monsterId="27">English</LanguageName>
+				  </Language>
+				</DesiredLanguages>
+				<WorkingHoursPerWeek>0</WorkingHoursPerWeek>
+				<ExemptionStatus monsterId="0">Exempt</ExemptionStatus>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87350865" jobPostingRefCode="2122890" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="128">
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="128">
+					  <City>Sydney</City>
+					  <State>NSW</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="3975">Medical/Health</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="3975">Medical/Health</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11773" categoryId="3975">
+					  <Name>Dental Practitioner</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11872" categoryId="3975">
+					  <Name>Dental Assistant/Hygienist</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11908" categoryId="3975">
+					  <Name>General/Other: Medical/Health</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Sydney</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-04-08T08:27:21-05:00</JobPostDate>
+					<JobActiveDate>2010-04-08T00:00:00-05:00</JobActiveDate>
+					<JobExpireDate>2010-05-08T00:00:00-05:00</JobExpireDate>
+					<JobModifiedDate>2010-04-15T08:27:03-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Sydney</City>
+					<State>NSW</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>2000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13973" />
+				  <PositionOpenings>0</PositionOpenings>
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="85">Other/Not Classified</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="3543578" inventoryType="transactional">
+			  <CompanyReference companyId="4058470">
+				<CompanyXCode>xc1b_recruitrx</CompanyXCode>
+				<CompanyName>RecruitR</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>Mining Engineer</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideStreetAddress="true" hideStreetAddress2="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true" hideFax="true" hideName="true" hidePhone="true">
+				  <CompanyName>RecruitR</CompanyName>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Brisbane</City>
+				  <State>QLD</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>4000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>false</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;p&gt;Mining Engineer with 3+ years experience required for Asian adventure | Travel to anywhere in Asia Pacific on time off | Earn tax free USD&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; Gain expat experience and travel &lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; Tax Free USD&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&lt;font size="2"&gt; Gain valuable leadership experience &lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;RecruitR is currently partnered with a leading organisation that is seeking to appoint a &lt;strong&gt;Mining Engineer&lt;/strong&gt; to one of their operations in South East Asia.  &lt;/p&gt;&lt;p&gt;In this role you will be reporting to the Technical Services Manager and will be responsible for developing mine plans as well as mentoring national engineers.  The key focus of this role is to contribute to the safe and efficient extraction of coal through accurate &amp;amp; timely mine planning &amp;amp; scheduling.  &lt;/p&gt;&lt;p&gt;We are not necessarily looking for someone that has extensive experience; we are after someone that can: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;Work in challenging conditions&lt;/li&gt;&lt;li&gt;Train and mentor national engineers&lt;/li&gt;&lt;li&gt;Have a lifestyle that allows for extended FIFO roster (5 weeks on / 2 weeks off) ? on your time off you can be flown to Point of Hire or anywhere in the Asia Pacific region.&lt;/li&gt;&lt;li&gt;Take a positive approach to their work &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The successful applicant will require 3+ years post graduate experience within open cut coal mining &amp;amp; relevant tertiary qualifications.  Vulcan &amp;amp; XPAC are the mine planning software packages utilised but it is not essential that you have had experience with these.  You will need exposure to some software packages though.&lt;/p&gt;&lt;p&gt;This role is ideal for someone with a sense of adventure, someone that wants to gain expat experience and someone that is ready for their next challenge.   &lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p align="left"&gt; &lt;br&gt;&lt;strong&gt;For a confidential discussion regarding this opportunity please contact Forrest Briggs on 07 3231 0273. Alternatively, please e-mail your application to forrest@recruitr.com.au&lt;/strong&gt;&lt;/p&gt;&lt;p align="center"&gt;&lt;strong&gt;Visit &lt;/strong&gt;&lt;strong&gt;http://www.recruitr.com.au&lt;/strong&gt;&lt;strong&gt; to view more jobs &lt;br&gt;&lt;/strong&gt;&lt;/p&gt;</JobBody>
+				<LanguageOfJob monsterId="27">English</LanguageOfJob>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87369056" jobPostingRefCode="3543578" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="132">
+					<City>Brisbane</City>
+					<State>QLD</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="132">
+					  <City>Brisbane</City>
+					  <State>QLD</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="15430">Mining, Oil &amp; Gas</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="15430">Mining, Oil &amp; Gas</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11889" categoryId="15430">
+					  <Name>Oil Rig &amp; Pipeline Install/Maintain/Repair</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="15498" categoryId="15430">
+					  <Name>Engineering</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="15501" categoryId="15430">
+					  <Name>General/Other: Mining, Oil &amp; Gas</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Brisbane</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-04-09T02:26:32-05:00</JobPostDate>
+					<JobActiveDate>2010-04-08T16:27:51-05:00</JobActiveDate>
+					<JobExpireDate>2010-05-09T02:26:32-05:00</JobExpireDate>
+					<JobModifiedDate>2010-04-09T02:26:33-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Brisbane</City>
+					<State>QLD</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>4000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="14431" />
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="46">Staffing/Employment Agencies</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="3B/51493" inventoryType="transactional">
+			  <CompanyReference companyId="4059844">
+				<CompanyXCode>xc1b_hudsonx</CompanyXCode>
+				<CompanyName>Hudson - Head Office Sydney</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>Senior Infrastructure Consultant</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideStreetAddress="true" hideStreetAddress2="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true" hideFax="true" hideName="true" hidePhone="true">
+				  <CompanyName>Hudson</CompanyName>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Melbourne</City>
+				  <State>VIC</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>3000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>false</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;ul&gt;&lt;li&gt;&lt;b&gt; Permanent Position&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt; Immediate Start&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt; CBD Location&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;Excellent opportunity for a Senior Infrastructure Consultant to join a rapidly expanding IT Services Organisation based in Melbourne&amp;#39;s CBD. This exciting opportunity has potential for unlimited growth and will be working within a fast moving and like minded team. &lt;br&gt;&lt;br&gt;To be considered for this role, you must have the following skills:&lt;ul&gt;&lt;li&gt; Solid experience in working in the IT industry, preferably in large and complex environments&lt;/li&gt;&lt;li&gt; Design and implementation of solutions involving Windows NT, 2000, 2003 and 2008 server&lt;/li&gt;&lt;li&gt; Knowledge of VMware &lt;/li&gt;&lt;li&gt; Active Directory and Exchange Server design experience &lt;/li&gt;&lt;li&gt; Network and system management and monitoring experience&lt;/li&gt;&lt;li&gt; MCSE certification mandatory&lt;/li&gt;&lt;li&gt; Excellent written and verbal communication skills&lt;/li&gt;&lt;li&gt; The ability to work with a variety of people with different levels of expertise&lt;/li&gt;&lt;li&gt; A drive for delivering the very best service in the market&lt;/li&gt;&lt;/ul&gt;Like to know more?&lt;br&gt;&lt;br&gt;To submit your application, in strict confidence, please apply online using the appropriate link below. Alternatively, for a confidential discussion, please contact Jackie Bozinovski in our Melbourne office on 03 9623 6678, quoting Ref No. 3B/51493&lt;br&gt;&lt;br&gt;Your interest will be treated in the strictest of confidence. &lt;A HREF="http://apps.au.hudson.com/apply_online/default.asp?advertid=349669" style="display:none" id="custom_apply_url"&gt;Apply&lt;/A&gt;</JobBody>
+				<LanguageOfJob monsterId="27">English</LanguageOfJob>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87554815" jobPostingRefCode="3B/51493" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="137">
+					<City>Melbourne</City>
+					<State>VIC</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="137">
+					  <City>Melbourne</City>
+					  <State>VIC</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="660">IT/Software Development</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="660">IT/Software Development</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11787" categoryId="660">
+					  <Name>Enterprise Software Implementation &amp; Consulting</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11847" categoryId="660">
+					  <Name>IT Consulting</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="11882" categoryId="660">
+					  <Name>Network and Server Administration</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Melbourne</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-04-19T02:32:11-05:00</JobPostDate>
+					<JobActiveDate>2010-04-18T19:41:06-05:00</JobActiveDate>
+					<JobExpireDate>2010-05-19T02:32:11-05:00</JobExpireDate>
+					<JobModifiedDate>2010-04-19T02:32:15-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Melbourne</City>
+					<State>VIC</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>3000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13812" />
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="46">Staffing/Employment Agencies</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="3181183" inventoryType="transactional">
+			  <CompanyReference companyId="4127839">
+				<CompanyXCode>xc1nis_advertiserx</CompanyXCode>
+				<CompanyName>Adelaide Advertiser</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>HAIRDRESSER</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Contact hideContactInfoField="true" hideEmailAddress="true" hideFax="true" hidePhone="true">
+				  <CompanyName>The Advertiser</CompanyName>
+				  <Phones>
+					<Phone phoneType="contact">1800555010</Phone>
+				  </Phones>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Adelaide</City>
+				  <State>SA</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode>5000</PostalCode>
+				</PhysicalAddress>
+				<DisableApplyOnline>true</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;b&gt; &lt;BR&gt; HAIRDRESSER&lt;/b&gt;&lt;p&gt; - Senior.  &lt;BR&gt; A qualified stylist is required for a fulltime position. Must be outgoing and have up to date skills. All calls confidential. &lt;BR&gt; Phone A/H: 0413 528 889 &lt;BR&gt;&lt;p&gt;&lt;b&gt;This ad appeared in The Adelaide Advertiser on 27/MAR/10&lt;/b&gt;&lt;/p&gt;</JobBody>
+				<Openings>0</Openings>
+				<DesiredLanguages>
+				  <Language>
+					<LanguageName monsterId="27">English</LanguageName>
+				  </Language>
+				</DesiredLanguages>
+				<WorkingHoursPerWeek>0</WorkingHoursPerWeek>
+				<ExemptionStatus monsterId="0">Exempt</ExemptionStatus>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87132709" jobPostingRefCode="3181183" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="134">
+					<City>Adelaide &amp; Adelaide Hills</City>
+					<State>SA</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="134">
+					  <City>Adelaide &amp; Adelaide Hills</City>
+					  <State>SA</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="553">Installation/Maintenance/Repair</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11903" categoryId="553">
+					  <Name>General/Other: Installation/Maintenance/Repair</Name>
+					</JobOccupation>
+					<JobOccupation monsterId="15457" categoryId="553">
+					  <Name>Beauty Therapy &amp; Make-Up</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Adelaide</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-03-27T07:52:33-05:00</JobPostDate>
+					<JobActiveDate>2010-03-27T00:00:00-05:00</JobActiveDate>
+					<JobExpireDate>2010-04-26T00:00:00-05:00</JobExpireDate>
+					<JobModifiedDate>2010-03-27T07:52:38-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Adelaide</City>
+					<State>SA</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode>5000</PostalCode>
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="13971" />
+				  <PositionOpenings>0</PositionOpenings>
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="13">Printing and Publishing</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+			<Job jobRefCode="CO/100326203455/AMYLEE/SK" inventoryType="transactional">
+			  <CompanyReference companyId="4058292">
+				<CompanyXCode>xc1b_personalgx</CompanyXCode>
+				<CompanyName>Personnel Concept Group</CompanyName>
+			  </CompanyReference>
+			  <Channel monsterId="168" />
+			  <JobInformation>
+				<JobTitle>MANAGER - Accountant - Tax &amp; Business Services – Focus also on Fun Stuff?</JobTitle>
+				<JobType monsterId="1">Employee</JobType>
+				<JobStatus monsterId="4">Fulltime</JobStatus>
+				<IsHandinamic>false</IsHandinamic>
+				<Salary>
+				  <Currency monsterId="4">AUD</Currency>
+				  <SalaryMin>90000</SalaryMin>
+				  <SalaryMax>129999</SalaryMax>
+				  <CompensationType monsterId="1">Per Year</CompensationType>
+				  <SalaryDescription>$140,000 - $116,000</SalaryDescription>
+				</Salary>
+				<Contact hideStreetAddress="true" hideStreetAddress2="true" hideCity="true" hideState="true" hidePostalCode="true" hideCountry="true" hideContactInfoField="true">
+				  <CompanyName>AccountantJobs</CompanyName>
+				  <Phones>
+					<Phone phoneType="contact">1300 88 32 11</Phone>
+				  </Phones>
+				</Contact>
+				<PhysicalAddress>
+				  <StreetAddress />
+				  <StreetAddress2 />
+				  <City>Perth</City>
+				  <State>WA</State>
+				  <CountryCode>AU</CountryCode>
+				  <PostalCode />
+				</PhysicalAddress>
+				<DisableApplyOnline>false</DisableApplyOnline>
+				<HideCompanyInfo>false</HideCompanyInfo>
+				<JobBody>&lt;div style="text-align: center"&gt;&lt;span style="color: #800000"&gt;&lt;span style="font-size: 14pt"&gt;&lt;span&gt;&lt;span&gt;&lt;strong&gt;MANAGER &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 12pt"&gt;&lt;span&gt;&lt;strong&gt;&lt;br /&gt;
+	&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 12pt"&gt;&lt;span style="color: #000080"&gt;&lt;strong&gt;&lt;br /&gt;
+	Tax &amp;amp; Business Services Accountant&lt;br /&gt;
+	Location - Subiaco&lt;br /&gt;
+	&lt;/strong&gt;&lt;span style="font-size: 10pt"&gt;&lt;strong&gt;&lt;br /&gt;
+	&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+	&lt;div style="text-align: left"&gt;Someone once told me that &lt;span style="color: #000080"&gt;&lt;span&gt;&lt;em&gt;being a good Manager means being able to delegate to your team, because as individuals, they should&amp;nbsp; add value to projects and to their Manager&lt;/em&gt;.&lt;/span&gt;&lt;/span&gt; That is what you will get with these guys:&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li style="text-align: left"&gt;Focus&amp;nbsp;on the more interesting (and let&amp;rsquo;s face it, fun) issues of people management, like providing them with the right technical challenges at the right time of their career so they develop into the Accountant they want to be.&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div style="text-align: left"&gt;Engaging a team like this is will be a relief to you if you&amp;rsquo;re used to&amp;nbsp;having to keep a close eye on people:&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li style="text-align: left"&gt;These guys are pretty on the ball, prevents avoidable write-offs&lt;/li&gt;
+		&lt;li style="text-align: left"&gt;Because they can be trusted from day one you&amp;rsquo;ll be able to assimilate easily, without unnecessary after hours work just to catch up.&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div style="text-align: left"&gt;It also gives you room to get more involved with the consulting side of the practice, which is particularly good right now because there is a distinct movement towards more tax advisory assignments. &lt;br /&gt;
+	&lt;br /&gt;
+	Partners are young in spirit, but mature professionals, and they encourage Managers and Senior staff to get out around&amp;nbsp;Perth and meet clients as often as practical, to give a human face to the business and to let you better understand clients as people. &lt;br /&gt;
+	&lt;br /&gt;
+	This also puts you in a better position to establish your own project pipeline:&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li style="text-align: left"&gt;Being at ground level you can more easily investigate new service areas to offer to existing clients, and even be introduced to potential clients by default.&lt;/li&gt;
+		&lt;li style="text-align: left"&gt;That&amp;rsquo;s a handy skill to develop if you are wanting to make partner within the next two years.&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div style="text-align: left"&gt;&lt;em&gt;&lt;span style="color: #808080"&gt;CA or CPA&amp;nbsp;qualified with 6yr + experience and open management style.&lt;/span&gt;&lt;/em&gt;&lt;br /&gt;
+	&lt;br /&gt;
+	&lt;/div&gt;
+	&lt;div style="text-align: left"&gt;&lt;span style="color: #000080"&gt;&lt;span&gt;Click the&lt;/span&gt; &lt;span style="color: #cc0099"&gt;&lt;span style="font-size: 10pt"&gt;&lt;span&gt;&lt;strong&gt;&amp;quot;APPLY&amp;quot;&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;span&gt;button below&amp;nbsp;and&amp;nbsp;I will call you to confidentially discuss.&lt;br /&gt;
+	&lt;/span&gt;&lt;br /&gt;
+	Email &lt;/span&gt;&lt;a href="mailto:AmyLee@AccountantJobs.com.au"&gt;&lt;strong&gt;&lt;span style="color: #000080"&gt;AmyLee@AccountantJobs.com.au&lt;/span&gt;&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;&lt;span style="color: #000080"&gt; &lt;br /&gt;
+	&lt;/span&gt;&lt;/strong&gt;&lt;br /&gt;
+	For more information, or&amp;nbsp;to&amp;nbsp;discuss&amp;nbsp;other suitable positions feel free to call me,&amp;nbsp;&lt;strong&gt;Amy Blakiston&lt;/strong&gt;,&amp;nbsp;on&amp;nbsp;&lt;strong&gt;(08)&amp;nbsp;9328 7055 / 1300&amp;nbsp;696 900&amp;nbsp;&lt;/strong&gt;or &lt;strong&gt;0438722264 &lt;/strong&gt;now/after hours.&lt;/div&gt;</JobBody>
+				<LanguageOfJob monsterId="1">Aboriginal Dialects</LanguageOfJob>
+				<JobSourceId monsterId="3" />
+			  </JobInformation>
+			  <JobPostings>
+				<JobPosting postingId="87146775" jobPostingRefCode="CO/100326203455/AMYLEE/SK" jobPostingState="active" desiredDuration="30">
+				  <InventoryPreference>
+					<PostingLocationGroup monsterId="877" />
+				  </InventoryPreference>
+				  <Location locationId="139">
+					<City>Perth</City>
+					<State>WA</State>
+					<CountryCode>AU</CountryCode>
+				  </Location>
+				  <Locations>
+					<Location locationId="139">
+					  <City>Perth</City>
+					  <State>WA</State>
+					  <CountryCode>AU</CountryCode>
+					</Location>
+				  </Locations>
+				  <JobCategory monsterId="1">Accounting/Finance/Insurance</JobCategory>
+				  <JobCategories>
+					<JobCategory monsterId="1">Accounting/Finance/Insurance</JobCategory>
+				  </JobCategories>
+				  <JobOccupations>
+					<JobOccupation monsterId="11893" categoryId="1">
+					  <Name>General/Other: Accounting/Finance</Name>
+					</JobOccupation>
+				  </JobOccupations>
+				  <JobCity>Perth</JobCity>
+				  <BoardName monsterId="1">Monster</BoardName>
+				  <JobPostingDates>
+					<JobPostDate>2010-03-29T06:20:06-05:00</JobPostDate>
+					<JobActiveDate>2010-03-29T06:20:06-05:00</JobActiveDate>
+					<JobExpireDate>2010-04-28T06:20:06-05:00</JobExpireDate>
+					<JobModifiedDate>2010-03-29T06:20:06-05:00</JobModifiedDate>
+				  </JobPostingDates>
+				  <PhysicalAddress>
+					<StreetAddress />
+					<StreetAddress2 />
+					<City>Perth</City>
+					<State>WA</State>
+					<CountryCode>AU</CountryCode>
+					<PostalCode />
+				  </PhysicalAddress>
+				  <DisplayTemplate monsterId="14879" />
+				  <Industries>
+					<Industry>
+					  <IndustryName monsterId="28">Accounting and Auditing Services</IndustryName>
+					</Industry>
+				  </Industries>
+				</JobPosting>
+			  </JobPostings>
+			</Job>
+		  </Jobs>
+		</QueriesResponse>
+	  </SOAP-ENV:Body>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

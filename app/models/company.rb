@@ -10,10 +10,7 @@
 #
 
 class Company < ActiveRecord::Base
-  attr_accessible :name, :phone, :address_attributes
-  validates_presence_of :name, :phone, :address
-  has_one :address, as: :addressable
+  attr_accessible :name, :phone
+  validates_presence_of :name
   has_many :jobs
-
-  accepts_nested_attributes_for :address
 end

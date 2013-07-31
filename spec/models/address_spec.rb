@@ -21,19 +21,19 @@ describe Address do
 		expect(create(:address)).to be_valid
 	end
 
-  it "is valid with a unit, street, postcode, latitude, and longitude" do
+  it "is valid with a street, city, postcode, state, latitude, and longitude" do
 		expect(build(:address)).to be_valid
 	end
 
-  it "is invalid without a unit" do
-		expect(build(:address, unit: nil)).to have(1).errors_on(:unit)
-	end
-
-  it "is invalid without a street" do
-		expect(build(:address, street: nil)).to have(1).errors_on(:street)
+  it "is invalid without a city" do
+		expect(build(:address, city: nil)).to have(1).errors_on(:city)
 	end
 
   it "is invalid without a postcode" do
 		expect(build(:address, postcode: nil)).to have(1).errors_on(:postcode)
+	end
+
+  it "is invalid without a state" do
+		expect(build(:address, state: nil)).to have(1).errors_on(:state)
 	end
 end
