@@ -21,26 +21,14 @@
 
 </head>
 <body>
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <%= link_to "Project name", "#", :class => "brand" %>
-        <div class="nav-collapse">
-          <ul class="nav nav-top">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
+<div class="nav-header">
+  <ul>
+    <li>Are you an employer? <span class="">Post a Free ad</span></li>  
+    <li>Log In</li>
+  </ul>
+</div>
+  
+
     <% flash.each do |name, msg| %>
       <%= content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do %>
         <a class="close" data-dismiss="alert" href="#">×</a>
@@ -52,6 +40,6 @@
     <footer>
       <p>&copy; Company 2012</p>
     </footer>
-  </div>
+
 </body>
 </html>

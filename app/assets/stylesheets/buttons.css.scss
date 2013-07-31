@@ -147,18 +147,20 @@ input[type="button"] {
 // -------------------------
 .btn-primary {
   background: $btnPrimaryBackground;
+  border: 1px solid $greenDark;
   color: white;
   &:hover {
-  	color: white;
+    color: white;
   }
 }
 
 .btn-secondary {
   background: $btnSecondaryBackground;
-  color: $gray;
+  border: 1px solid $blueDarker;
+  color: $white;
   &:hover {
-  	background: darken($btnSecondaryBackground, 5%);
-  	color: $gray;
+    background: darken($btnSecondaryBackground, 5%);
+    color: $white;
   }
 }
 // Warning appears are orange
@@ -180,13 +182,15 @@ input[type="button"] {
 // Inverse appears as dark gray
 .btn-inverse {
   background: $btnInverseBackground;
+  border: 1px solid $grayLight;
+  color: $gray;
 }
 // Hero unit button background colour
 .btn-hero {
-	background: $heroUnitButtonBackground;
-	&:hover {
-		background: darken($heroUnitButtonBackground, 5%);
-	}
+  background: $heroUnitButtonBackground;
+  &:hover {
+    background: darken($heroUnitButtonBackground, 5%);
+  }
 }
 
 
