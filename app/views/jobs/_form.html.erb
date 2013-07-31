@@ -2,29 +2,34 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-  	<h5>Job Details</h5>
-    <%= f.input :title %>
-    <%= f.input :posted_at %>
-    <%= f.input :expires_at %>
-    <%= f.input :job_type %>
-    <%= f.input :external_link %>
-    <h5>Job Company</h5>
-    <%= f.simple_fields_for :company do |c| %>
-    	<%= c.input :name %>
-    	<%= c.input :phone %>
-    	<%= c.simple_fields_for :address do |a| %>
-    		<%= a.input :unit %>
-    		<%= a.input :street %>
-    		<%= a.input :postcode %>
-    	<% end %>
-    <% end %>
-    <h5>Job Categories</h5>
-    <%= f.simple_fields_for :subcategories do |s| %>
-    	<%= s.simple_fields_for :category do |category| %>
-    		<%= s.input :name, label: "Category name" %>
-    	<% end %>
-    	<%= s.input :name, label: "Subcategory name" %>
-    <% end %>
+  	<div class="row-fluid">
+  		<div class="span6">
+		  	<h5>Job Details</h5>
+		    <%= f.input :title %>
+		    <%= f.input :description, as: :text %>
+		    <%= f.input :job_type %>
+		    <%= f.input :external_job_id %>
+		    <%= f.simple_fields_for :address do |a| %>
+		    	<%= a.input :street %>
+		    	<%= a.input :city %>
+		    	<%= a.input :postcode %>
+		    	<%= a.input :state %>
+		    <% end %>
+  		</div>
+  		<div class="span6">
+  			<h5>Job Company</h5>
+  			<%= f.simple_fields_for :company do |c| %>
+  				<%= c.input :name %>
+  				<%= c.input :phone %>
+  			<% end %>
+  			<h5>Job Subcategories</h5>
+  			<%= f.simple_fields_for :subcategories do |s| %>
+  				<%= s.input :name, label: "Subcategory name" %>
+  			<% end %>
+  		</div>
+  	</div>
+  	<%= f.input :posted_at %>
+  	<%= f.input :expires_at %>
   </div>
 
   <div class="form-actions">

@@ -18,6 +18,12 @@ $iconWhiteSpritePath: '';
 	textarea { margin:auto; }
 }
 
+@media (min-width: 768px) {
+	input[type="text"], input[type="tel"], .controls textarea {
+		width:100%;
+	}
+}
+
 .page-header {
   a.btn {
     float: right;

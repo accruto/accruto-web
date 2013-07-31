@@ -1,5 +1,7 @@
 Accruto::Application.routes.draw do
-  resources :jobs
+  resources :jobs do
+  	get 'search', on: :collection
+  end
 
 
   get "pages/stylesheet"

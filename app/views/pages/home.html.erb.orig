@@ -1,0 +1,75 @@
+<div class="main-landing">
+	<div class="container">
+		<div class="align-center">
+			<%= image_tag "/assets/logo-accruto-main.png" %>
+			<h1>Join our 600,000 customers and kick-start your new career</h1>		
+		</div>
+	</div>
+</div>
+
+<div class="main-search">
+	<div class="container">
+		<%= simple_form_for @job, class: 'form-inline' do |f| %>
+			<div class="row-fluid">
+				<div class="span4">
+					<label>Job title?</label><br>
+					<input type="text" />
+				</div>
+				<div class="span4">
+					<label>Where?</label><br>
+					<input type="text" />
+				</div>
+				<div class="span4">
+					<%= f.button :submit, "Search", class: 'btn-primary btn-large' %>
+				</div>
+			</div>
+		<% end %>		
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		
+	</div>
+	<div class="row">
+		<h3>Browse Categories</h3>
+	</div>	
+	<div class="row">
+		<div class="span3">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="span3">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>	
+	</div>
+<<<<<<< HEAD
+<% end %>
+</div>
+<hr>
+
+=======
+</div>
+>>>>>>> 5f118ca6aaa6a6f5eed4063026dffca008a88a84

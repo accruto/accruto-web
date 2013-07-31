@@ -21,11 +21,21 @@ class JobsController < ApplicationController
     end
   end
 
+  def search
+  	@jobs = Job.order("expires_at DESC")
+
+  	respond_to do |format|
+  	  format.html
+  	  format.json { render json: @jobs }
+  	end
+  end
+
   # GET /jobs/new
   # GET /jobs/new.json
   def new
     @job = Job.new
-    @job.build_company.build_address
+    @job.build_company
+    @job.build_address
     @job.subcategories.build
 
     respond_to do |format|
@@ -46,7 +56,7 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.save
-        format.html { redirect_to @job, notice: 'Job was successfully created.' }
+        format.html { redirect_to jobs_path, notice: 'Job was successfully created.' }
         format.json { render json: @job, status: :created, location: @job }
       else
         format.html { render action: "new" }
@@ -62,7 +72,7 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.update_attributes(params[:job])
-        format.html { redirect_to @job, notice: 'Job was successfully updated.' }
+        format.html { redirect_to jobs_path, notice: 'Job was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
