@@ -10,29 +10,32 @@
 // Grays
 // -------------------------
 $black:                 #000 !default;
-$grayDarker:            #939393;
-$grayDark:              #333 !default;
+$grayDarker:            #636363;
+$grayDark:              #939393;
 $gray:                  #c2c2c2 ;
 $grayLight:             #e0e0e0;
 $grayLighter:           #f7f7f7 ;
 $white:                 #fff !default;
 
 
-// Accent colors
+// Brand colors
 // -------------------------
-$blueLight:            	#f4fcff !default;
-$blue:                 	#98e3ff !default;
-$blueDark:            	#36b3e3 !default;
-$blueDarker:         		#2c98c1 !default;
-$blueBrandDark:    			#2b3f49 !default;
-$blueBrandLight:    		#436370 !default;
-$green:                 #54cc96 !default;
-$greenDark:            	#4bb686 !default;
-$yellowDark:         		#dcb80e !default;
-$yellow:                #ffd510 !default;
-$yellowLight:         	#fbe380 !default;
-$goldLight:            	#f1eddf !default;
-$red:                   #ef4b4b !default;
+$blueLight:            #f4fcff;
+$blue:                   #98e3ff;
+$blueDark:            #36b3e3;
+$blueDarker:         #2c98c1;
+$blueBrandDark:    #2b3f49;
+$blueBrandLight:    #436370;
+$green:                 #54cc96;
+$greenDark:            #4bb686;
+$yellowDark:         #dcb80e;
+$yellow:                #ffd510;
+$yellowLight:         #fbe380;
+$goldLight:            #f1eddf;
+
+// Accent Colors
+// -------------------------
+$red:                     #ef4b4b;
 $orange:                #f89406 !default;
 $pink:                  #c3325f !default;
 $purple:                #7a43b6 !default;
@@ -80,7 +83,7 @@ $paddingLarge:          11px 19px !default; // 44px
 $paddingSmall:          2px 10px !default;  // 26px
 $paddingMini:           0px 6px !default;   // 22px
 
-$baseBorderRadius:      2px !default;
+$baseBorderRadius:      3px !default;
 $borderRadiusLarge:     2px !default;
 $borderRadiusSmall:     2px !default;
 
@@ -193,25 +196,25 @@ $wellBackground:                  #f5f5f5 !default;
 $navbarCollapseWidth:             979px !default;
 $navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
 
-$navbarHeight:                    55px !default;
-$navbarBackgroundHighlight:       #ffffff !default;
+$navbarHeight:                    100px !default;
+$navbarBackgroundHighlight:       $blueBrandDark;
 $navbarInverseBackgroundHighlight:       #222222 !default;
 
-// White Navbar
+// Custom Navbar
 $navbarBackground:                #ffffff !default;
 $navbarBorder:                    darken($navbarBackground, 8%) !default;
 
 $navbarText:                      #777 !default;
-$navbarLinkColor:                 #777 !default;
+$navbarLinkColor:                 $white !default;
 
-$navbarActiveBackground:          $grayDark;
+$navbarActiveBackground:          $blueBrandDark;
 $navbarLinkColorActive:           white;
 
-$navbarHoverBackground:						$grayDark;
+$navbarHoverBackground:		    $blueBrandDark;
 $navbarLinkColorHover:            white;
 
 
-$navbarBrandColor:                $navbarLinkColor !default;
+$navbarBrandColor:                $navbarLinkColor;
 
 // Black navbar
 $navbarInverseBackground:                $blueBrandDark !default;
