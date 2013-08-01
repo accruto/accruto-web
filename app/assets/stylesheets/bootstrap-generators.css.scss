@@ -55,4 +55,18 @@ a.brand.image > img { height: 45px; }
 	color: $blue;
 }
 
+// Footer 
+footer {
+	border-top: 1px solid $grayLighter;
+	padding: 20px 0;
+
+	a {
+		color: $grayDark;
+		font-size: $fontSizeSmall;
+	}
+	a:hover {
+		color: $grayDarker;
+		text-decoration: none;
+	}
+}
 

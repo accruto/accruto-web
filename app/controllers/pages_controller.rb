@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   def home
   	@job = Job.new
   	@jobs = Job.all
+      render :layout => 'home'
   end
 
   def about

@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="align-center">
 			<%= image_tag "/assets/logo-accruto-main.png" %>
-			<h1>Join our 600,000 customers and kick-start your new career</h1>		
+				<h1 class="main-headline">Join our 600,000 customers and kick-start your new career</h1>		
 		</div>
 	</div>
 </div>
@@ -11,16 +11,16 @@
 	<div class="container">
 		<%= simple_form_for @job, class: 'form-inline' do |f| %>
 			<div class="row-fluid">
-				<div class="span4">
-					<label>Job title?</label><br>
+				<div class="span5">
+					<label>What's your next job title?</label>
 					<input type="text" />
 				</div>
-				<div class="span4">
-					<label>Where?</label><br>
+				<div class="span5">
+					<label>Where do you want to work?</label>
 					<input type="text" />
 				</div>
-				<div class="span4">
-					<%= f.button :submit, "Search", class: 'btn-primary btn-large' %>
+				<div class="span2">
+					<%= f.button :submit, "Search", class: 'btn-primary btn-large btn-main-search' %>
 				</div>
 			</div>
 		<% end %>		
@@ -30,7 +30,7 @@
 <div class="container">
 	<div class="row job-ticker">
 		<div class="align-center">
-			<h3>There are currently<span class=""> 234,756 </span>Australian Jobs posted on Accruto
+			<h3>There are currently<span class="updated-figures"> 234,756 </span>Australian Jobs posted on Accruto
 			</h3>
 		</div>
 	</div>
@@ -141,17 +141,17 @@
 				<%= image_tag "/assets/companies-logo.png" %>
 			</div>
 		</div>	
-
-<hr>
 </div>
 
-<div class="container talent-hunter">
-	<div class="row">
-		<div class="align-center">
-				<h3>Are you a Recruiter? Take a look at our custom solution, <a class="">Talent Hunter</a></h3>
+<div class="talent-hunter">
+	<div class="container">
+		<div class="row">
+			<div class="align-center">
+					<h3>Are you a Recruiter? Take a look at our custom solution, <a class="to-linked-me">Talent Hunter</a></h3>
+			</div>
 		</div>
-	</div>
 
+	</div>
 </div>
 
 

@@ -7,6 +7,11 @@
 	-webkit-text-stroke: 1px; //anti-aliasing
 }
 
+@mixin heading-one {
+	font-weight: 400;
+	font-size: 36px;
+}
+
 %section-space {
 	padding: 50px 0px;
 }
@@ -16,9 +21,29 @@
 	@extend %section-space;
 }
 
+.main-headline {
+	@include heading-one;
+	color: $blue;	
+}
+
 .main-search {
 	background-color: $yellow;
 	border: 1px solid $yellowDark;
+	padding-top: 26px;
+
+	label {
+		color: $blueBrandDark;
+		font-weight: 600;
+		font-size: $fontSizeLarge;
+
+	}
+	input[type="text"] {
+		border: 1px solid $yellowDark;
+		height: 40px;
+	}
+}
+.btn-main-search {
+	margin-top: 30px;
 }
 
 .customers, .browse-jobs, .job-ticker, .partner-companies {
@@ -30,11 +55,31 @@
 	@include heading-three;
 	color: $grayDarker;
 }
+
+.updated-figures {
+	border-bottom: 2px dotted $blue;
+	font-weight: 500;
+}
+
+.browse-jobs {
+	padding-top: 0px;
+}
+.sub-heading {
+	font-size: 16px;
+	color: $blueBrandDark;
+}
 .category-list {
 	list-style-type: none;
-}
-.category-list li a{
-	color: $grayDark;
+
+	li {
+		margin: 10px 0; 
+	}
+	li a {
+		color: $grayDark;
+	}
+	a:hover {
+		color: $grayDarker;
+	}
 }
 
 .section-title {
@@ -47,10 +92,17 @@
 	color: $grayDarker;
 }
 
-.talent-hunter h3 {
+
+.talent-hunter {
+	background-color: $goldLight;
+	
+	h3 {
 	@include heading-three;
 	color: $grayDark;
+	}
+	.to-linked-me {
+		border-bottom: 2px solid $grayLight;
+	}	
 }
 
-.sub-heading {
-}
+
