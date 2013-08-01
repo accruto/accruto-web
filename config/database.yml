@@ -5,3 +5,11 @@ development:
   username: Katie
   password:
   host: localhost
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: accruto-test
+  username: Katie
+  password:
+  host: localhost  

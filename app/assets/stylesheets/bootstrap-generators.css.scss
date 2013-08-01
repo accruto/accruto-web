@@ -6,7 +6,7 @@ $iconWhiteSpritePath: '';
 
 @media (min-width: 980px) {
 	body {
-	  padding-top: $navbarHeight + 20px;
+	  // padding-top: $navbarHeight + 20px;
 	  padding-bottom: 40px;
 	}
 }
@@ -49,3 +49,10 @@ a.brand.image > img { height: 45px; }
 .error > * > input { &:focus { color: $errorColor !important; } }
 .error > * > input { color: $errorColor !important; }
 .error > .controls > * { border-color: $errorColor !important; }
+
+// Color helpers 
+.blue-accent {
+	color: $blue;
+}
+
+

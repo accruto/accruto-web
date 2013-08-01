@@ -1,11 +1,56 @@
 @import "bootstrap-variables";
 @import "mixins";
 
+@mixin heading-three {
+	font-weight:300;
+	font-size: 24px;
+	-webkit-text-stroke: 1px; //anti-aliasing
+}
+
+%section-space {
+	padding: 50px 0px;
+}
+
 .main-landing {
 	background-color: $blueBrandDark;
+	@extend %section-space;
 }
 
 .main-search {
 	background-color: $yellow;
 	border: 1px solid $yellowDark;
+}
+
+.customers, .browse-jobs, .job-ticker, .partner-companies {
+	@extend %section-space;
+
+}
+
+.job-ticker h3 {
+	@include heading-three;
+	color: $grayDarker;
+}
+.category-list {
+	list-style-type: none;
+}
+.category-list li a{
+	color: $grayDark;
+}
+
+.section-title {
+	@include heading-three;
+	margin-bottom: 30px;
+	color: $blueBrandDark;
+}
+
+.bodycopy {
+	color: $grayDarker;
+}
+
+.talent-hunter h3 {
+	@include heading-three;
+	color: $grayDark;
+}
+
+.sub-heading {
 }
