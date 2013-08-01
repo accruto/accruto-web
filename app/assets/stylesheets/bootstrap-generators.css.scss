@@ -50,9 +50,34 @@ a.brand.image > img { height: 45px; }
 .error > * > input { color: $errorColor !important; }
 .error > .controls > * { border-color: $errorColor !important; }
 
-// Color helpers 
-.blue-accent {
-	color: $blue;
+.label {
+	text-shadow: none !important;
+	font-weight:400;
+	color: $blueBrandDark;
 }
 
+
+// Color helpers 
+.blue-accent {
+	color: $blueAccent;
+}
+
+.brand-dark-blue-accent {
+	color: $blueBrandDark;
+}
+
+// Footer 
+footer {
+	border-top: 1px solid $grayLighter;
+	padding: 20px 0;
+
+	a {
+		color: $grayDark;
+		font-size: $fontSizeSmall;
+	}
+	a:hover {
+		color: $grayDarker;
+		text-decoration: none;
+	}
+}
 

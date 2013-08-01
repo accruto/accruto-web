@@ -21,37 +21,17 @@
 
 </head>
 <body>
-<<<<<<< HEAD
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <%= link_to "Accruto", "#", :class => "brand" %>
-        <div class="nav-collapse">
-          <ul class="nav nav-top">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
+ 
+  <div class="navbar">
+    <div class="">
+      <ul class="nav nav-top">
+        <li><a href="#"><span class="blue-accent">Are you an employer? </span> Post a Free ad</a></li>  
+        <li class=""><a href="#">Log In</a></li>
+      </ul>
     </div>
   </div>
-  <div class="container">
-=======
-<div class="nav-header">
-  <ul>
-    <li>Are you an employer? <span class="">Post a Free ad</span></li>  
-    <li>Log In</li>
-  </ul>
-</div>
   
 
->>>>>>> 5f118ca6aaa6a6f5eed4063026dffca008a88a84
     <% flash.each do |name, msg| %>
       <%= content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do %>
         <a class="close" data-dismiss="alert" href="#">×</a>
@@ -59,10 +39,8 @@
       <% end %>
     <% end %>
     <%= yield %>
-    <hr>
-    <footer>
-      <p>&copy; Company 2012</p>
-    </footer>
+
+    <%= render 'layouts/shared/footer' %>
 
 </body>
 </html>

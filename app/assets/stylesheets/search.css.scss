@@ -1,5 +1,60 @@
 @import "bootstrap-variables";
 
+.results-main, .detail-show {
+	margin-top: 40px;
+}
+
+.search-box {
+	background-color: $blue;
+	border: 1px solid $goldLight;
+	input[type="text"], input[type="submit"] {
+		width: 95%;
+	}
+	h4 {
+		padding: 10px 20px 10px 20px;
+	}
+	form {
+		padding: 20px 20px;
+		background-color: $blueLight;
+		margin: 0;
+	}
+}
+
+.sidebar-title {
+		font-size: $fontSizeLarge;
+		color: $blueBrandDark;
+		font-weight: 500;
+}
+
+.recent-searches, .favourite-roles {
+	margin: 20px 0;
+	border: 1px solid $goldLight;
+	font-size: 14px;
+	background-color: $grayLighter;
+	
+	p {
+		padding: 20px 20px 0 20px;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		background-color: $white;	
+	}
+
+	li {
+		border-bottom: 1px solid $goldLight;
+		padding: 20px 20px;
+	}
+
+	li a {
+		color: $gray;
+	}
+	.recent-role {
+		color: $blueBrandDark;
+	}	
+}
+
+
 .result-jobs {
 	list-style:none;
 	margin: 0;
@@ -9,14 +64,31 @@
 	margin-top: 30px;
 }
 
+.result-sentence {
+	font-size: $fontSizeLarge;
+	font-weight: 400;
+	color: $grayDark;
+}
 .result-number {
-	color: $blue;
+	color: $blueDark;
 }
 
-.search-box {
-	background: $blueLight;
-	padding:20px;
-	input[type="text"] {
-		width: 90%;
-	}
+
+.role-title {
+	@include heading-three;
+	color: $blueBrandDark;
+} 
+
+.label-full-time {
+	background-color: $yellowLight;
+	padding: 6px 4px;
+
+}
+
+.job-description {
+	font-size: $fontSizeSmall;
+}
+
+.posted-date {
+	color: $gray;
 }
