@@ -9690,3 +9690,1769 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/jobs/17" for 127.0.0.1 at 2013-08-01 13:57:38 +1000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mJob Load (9.7ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT 1[0m  [["id", "17"]]
+  Rendered jobs/_search_sidebar.html.erb (0.7ms)
+  [1m[35mCompany Load (2.2ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 19 LIMIT 1
+  [1m[36mAddress Load (4.2ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 17 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  Rendered jobs/show.html.erb within layouts/application (1199.7ms)
+Compiled alerts.css  (518ms)  (pid 48824)
+Compiled bootstrap-generators.css  (5004ms)  (pid 48824)
+Compiled bootstrap-variables.css  (109ms)  (pid 48824)
+Compiled buttons.css  (205ms)  (pid 48824)
+Compiled dropdowns.css  (182ms)  (pid 48824)
+Compiled forms.css  (839ms)  (pid 48824)
+Compiled hero-unit.css  (310ms)  (pid 48824)
+Compiled home.css  (159ms)  (pid 48824)
+Compiled navbar.css  (178ms)  (pid 48824)
+Compiled search.css  (40ms)  (pid 48824)
+Completed 500 Internal Server Error in 9521ms
+
+Sass::SyntaxError - Invalid CSS after "...---------------": expected selector or at-rule, was "<<<<<<< HEAD"
+  (in /Users/johnkuehyoongfook/accruto/app/assets/stylesheets/bootstrap-variables.css.scss.orig):
+  sass (3.2.9) lib/sass/scss/parser.rb:1148:in `expected'
+  sass (3.2.9) lib/sass/scss/parser.rb:1084:in `expected'
+  sass (3.2.9) lib/sass/scss/parser.rb:28:in `parse'
+  sass (3.2.9) lib/sass/engine.rb:342:in `_to_tree'
+  sass (3.2.9) lib/sass/engine.rb:315:in `_render'
+  sass (3.2.9) lib/sass/engine.rb:262:in `render'
+  sass-rails (3.2.6) lib/sass/rails/template_handlers.rb:106:in `evaluate'
+  tilt (1.4.1) lib/tilt/template.rb:103:in `render'
+  sprockets (2.2.2) lib/sprockets/context.rb:193:in `block in evaluate'
+  sprockets (2.2.2) lib/sprockets/context.rb:190:in `evaluate'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:12:in `initialize'
+  sprockets (2.2.2) lib/sprockets/base.rb:249:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:270:in `circular_call_protection'
+  sprockets (2.2.2) lib/sprockets/base.rb:248:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:93:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/caching.rb:19:in `cache_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:92:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:169:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:60:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:111:in `block in resolve_dependencies'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:105:in `resolve_dependencies'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:97:in `build_required_assets'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:16:in `initialize'
+  sprockets (2.2.2) lib/sprockets/base.rb:249:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:270:in `circular_call_protection'
+  sprockets (2.2.2) lib/sprockets/base.rb:248:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:93:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/caching.rb:19:in `cache_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:92:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:169:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:60:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/bundled_asset.rb:38:in `init_with'
+  sprockets (2.2.2) lib/sprockets/asset.rb:24:in `from_hash'
+  sprockets (2.2.2) lib/sprockets/caching.rb:15:in `cache_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:92:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:169:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:60:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/environment.rb:78:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:177:in `[]'
+  actionpack (3.2.13) lib/sprockets/helpers/rails_helper.rb:126:in `asset_for'
+  actionpack (3.2.13) lib/sprockets/helpers/rails_helper.rb:44:in `block in stylesheet_link_tag'
+  actionpack (3.2.13) lib/sprockets/helpers/rails_helper.rb:43:in `stylesheet_link_tag'
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___2552341905946846659_70232089249700'
+  actionpack (3.2.13) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.13) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.13) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.13) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.13) lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  app/controllers/jobs_controller.rb:18:in `show'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:425:in `_run__4149702932379075613__process_action__2546772205215799890__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__698523745455932681__call__2944376149039651093__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-livereload (0.3.15) lib/rack/livereload.rb:23:in `_call'
+  rack-livereload (0.3.15) lib/rack/livereload.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started GET "/jobs/search" for 127.0.0.1 at 2013-08-01 13:57:48 +1000
+Processing by JobsController#search as HTML
+  Rendered jobs/_search_sidebar.html.erb (0.1ms)
+  [1m[35mJob Load (2.5ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY expires_at DESC
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 19 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 17 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 20 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 18 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 12 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 10 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.7ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 11 LIMIT 1[0m
+  [1m[35mAddress Load (1.3ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 9 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (20.9ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 17 LIMIT 1[0m
+  [1m[35mAddress Load (2.0ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 15 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (1.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1[0m
+  [1m[35mAddress Load (0.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 1 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.7ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 10 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 8 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 16 LIMIT 1[0m
+  [1m[35mAddress Load (0.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 14 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 9 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 13 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 9 LIMIT 1[0m
+  [1m[35mAddress Load (0.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 6 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (1.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1[0m
+  [1m[35mAddress Load (0.8ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 7 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1[0m
+  [1m[35mAddress Load (0.8ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 5 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 15 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 12 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 14 LIMIT 1[0m
+  [1m[35mAddress Load (0.8ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 11 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1[0m
+  [1m[35mAddress Load (2.3ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 16 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (2.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 6 LIMIT 1[0m
+  [1m[35mAddress Load (10.0ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 3 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (1.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 5 LIMIT 1[0m
+  [1m[35mAddress Load (0.8ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 2 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (1.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 7 LIMIT 1[0m
+  [1m[35mAddress Load (0.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 4 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  Rendered jobs/search.html.erb within layouts/application (496.7ms)
+Completed 500 Internal Server Error in 586ms
+
+Sass::SyntaxError - Invalid CSS after "...---------------": expected selector or at-rule, was "<<<<<<< HEAD"
+  (in /Users/johnkuehyoongfook/accruto/app/assets/stylesheets/bootstrap-variables.css.scss.orig):
+  sass (3.2.9) lib/sass/scss/parser.rb:1148:in `expected'
+  sass (3.2.9) lib/sass/scss/parser.rb:1084:in `expected'
+  sass (3.2.9) lib/sass/scss/parser.rb:28:in `parse'
+  sass (3.2.9) lib/sass/engine.rb:342:in `_to_tree'
+  sass (3.2.9) lib/sass/engine.rb:315:in `_render'
+  sass (3.2.9) lib/sass/engine.rb:262:in `render'
+  sass-rails (3.2.6) lib/sass/rails/template_handlers.rb:106:in `evaluate'
+  tilt (1.4.1) lib/tilt/template.rb:103:in `render'
+  sprockets (2.2.2) lib/sprockets/context.rb:193:in `block in evaluate'
+  sprockets (2.2.2) lib/sprockets/context.rb:190:in `evaluate'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:12:in `initialize'
+  sprockets (2.2.2) lib/sprockets/base.rb:249:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:270:in `circular_call_protection'
+  sprockets (2.2.2) lib/sprockets/base.rb:248:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:93:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/caching.rb:19:in `cache_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:92:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:169:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:60:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:111:in `block in resolve_dependencies'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:105:in `resolve_dependencies'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:97:in `build_required_assets'
+  sprockets (2.2.2) lib/sprockets/processed_asset.rb:16:in `initialize'
+  sprockets (2.2.2) lib/sprockets/base.rb:249:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:270:in `circular_call_protection'
+  sprockets (2.2.2) lib/sprockets/base.rb:248:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:93:in `block in build_asset'
+  sprockets (2.2.2) lib/sprockets/caching.rb:19:in `cache_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:92:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:169:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:60:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/bundled_asset.rb:38:in `init_with'
+  sprockets (2.2.2) lib/sprockets/asset.rb:24:in `from_hash'
+  sprockets (2.2.2) lib/sprockets/caching.rb:15:in `cache_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:92:in `build_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:169:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/index.rb:60:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/environment.rb:78:in `find_asset'
+  sprockets (2.2.2) lib/sprockets/base.rb:177:in `[]'
+  actionpack (3.2.13) lib/sprockets/helpers/rails_helper.rb:126:in `asset_for'
+  actionpack (3.2.13) lib/sprockets/helpers/rails_helper.rb:44:in `block in stylesheet_link_tag'
+  actionpack (3.2.13) lib/sprockets/helpers/rails_helper.rb:43:in `stylesheet_link_tag'
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___2552341905946846659_70232089249700'
+  actionpack (3.2.13) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.13) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.13) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.13) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.13) lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  app/controllers/jobs_controller.rb:27:in `search'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:425:in `_run__4149702932379075613__process_action__2384853146329452750__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__698523745455932681__call__2944376149039651093__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (0.9.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-livereload (0.3.15) lib/rack/livereload.rb:23:in `_call'
+  rack-livereload (0.3.15) lib/rack/livereload.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `<main>'
+  script/rails:0:in `<main>'
+
+
+
+Started POST "/__better_errors/70232097560000/variables" for 127.0.0.1 at 2013-08-01 13:57:50 +1000
+
+
+Started GET "/jobs/search" for 127.0.0.1 at 2013-08-01 13:58:26 +1000
+Processing by JobsController#search as HTML
+  Rendered jobs/_search_sidebar.html.erb (0.1ms)
+  [1m[36mJob Load (1.6ms)[0m  [1mSELECT "jobs".* FROM "jobs" ORDER BY expires_at DESC[0m
+  [1m[35mCompany Load (0.6ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 19 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 17 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 20 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 18 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 12 LIMIT 1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 10 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 11 LIMIT 1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 9 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.8ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 17 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 15 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 1 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 10 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 8 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.6ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 16 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 14 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (1.7ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 9 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 13 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 9 LIMIT 1
+  [1m[36mAddress Load (0.7ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 6 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.8ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 7 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 5 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 15 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 12 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.7ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 14 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 11 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1
+  [1m[36mAddress Load (0.7ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 16 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 6 LIMIT 1
+  [1m[36mAddress Load (0.7ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 3 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 5 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 2 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.7ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 7 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 4 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  Rendered jobs/search.html.erb within layouts/application (273.7ms)
+Compiled application.css  (20ms)  (pid 48824)
+Compiled jquery.js  (4ms)  (pid 48824)
+Compiled jquery_ujs.js  (0ms)  (pid 48824)
+Compiled bootstrap-transition.js  (8ms)  (pid 48824)
+Compiled bootstrap-alert.js  (1ms)  (pid 48824)
+Compiled bootstrap-modal.js  (1ms)  (pid 48824)
+Compiled bootstrap-dropdown.js  (2ms)  (pid 48824)
+Compiled bootstrap-scrollspy.js  (1ms)  (pid 48824)
+Compiled bootstrap-tab.js  (1ms)  (pid 48824)
+Compiled bootstrap-tooltip.js  (1ms)  (pid 48824)
+Compiled bootstrap-popover.js  (0ms)  (pid 48824)
+Compiled bootstrap-button.js  (1ms)  (pid 48824)
+Compiled bootstrap-collapse.js  (0ms)  (pid 48824)
+Compiled bootstrap-carousel.js  (1ms)  (pid 48824)
+Compiled bootstrap-typeahead.js  (1ms)  (pid 48824)
+Compiled bootstrap-affix.js  (1ms)  (pid 48824)
+Compiled bootstrap.js  (1111ms)  (pid 48824)
+Compiled dataTables/jquery.dataTables.js  (111ms)  (pid 48824)
+Compiled dataTables/jquery.dataTables.bootstrap.js  (1ms)  (pid 48824)
+Compiled jobs.js  (361ms)  (pid 48824)
+Compiled pages.js  (178ms)  (pid 48824)
+Compiled application.js  (2281ms)  (pid 48824)
+Completed 200 OK in 3920ms (Views: 3202.0ms | ActiveRecord: 22.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /application.css - 304 Not Modified (56ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /alerts.css - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-generators.css - 200 OK (11ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /dropdowns.css - 200 OK (7ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /home.css - 200 OK (3ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /buttons.css - 200 OK (4ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /forms.css - 200 OK (4ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /navbar.css - 200 OK (4ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /hero-unit.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /search.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /font-awesome.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /dataTables/jquery.dataTables.js - 304 Not Modified (105ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /jobs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:31 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:32 +1000
+Served asset /pages.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:32 +1000
+Served asset /application.js - 304 Not Modified (60ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-01 13:58:38 +1000
+Processing by PagesController#home as HTML
+  [1m[35mJob Load (1.0ms)[0m  SELECT "jobs".* FROM "jobs" 
+  [1m[36mJobCategory Load (1.1ms)[0m  [1mSELECT "job_categories".* FROM "job_categories" [0m
+  Rendered pages/home.html.erb within layouts/application (347.2ms)
+Completed 200 OK in 865ms (Views: 702.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.css?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /dataTables/jquery.dataTables.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/placeholder-customer-1.png" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /placeholder-customer-1.png - 200 OK (38ms)
+
+
+Started GET "/assets/placeholder-customer-2.png" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /placeholder-customer-2.png - 200 OK (172ms)
+
+
+Started GET "/assets/companies-logo.png" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /companies-logo.png - 200 OK (33ms)
+
+
+Started GET "/assets/logo-accruto-main.png" for 127.0.0.1 at 2013-08-01 13:58:40 +1000
+Served asset /logo-accruto-main.png - 304 Not Modified (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-01 14:00:07 +1000
+Processing by PagesController#home as HTML
+  [1m[35mJob Load (0.8ms)[0m  SELECT "jobs".* FROM "jobs" 
+  [1m[36mJobCategory Load (1.9ms)[0m  [1mSELECT "job_categories".* FROM "job_categories" [0m
+  Rendered pages/home.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 454ms (Views: 266.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /dataTables/jquery.dataTables.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logo-accruto-main.png" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /logo-accruto-main.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/placeholder-customer-1.png" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /placeholder-customer-1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/placeholder-customer-2.png" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /placeholder-customer-2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/companies-logo.png" for 127.0.0.1 at 2013-08-01 14:00:09 +1000
+Served asset /companies-logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-01 14:00:37 +1000
+Processing by PagesController#home as HTML
+  [1m[35mJob Load (1.3ms)[0m  SELECT "jobs".* FROM "jobs" 
+  [1m[36mJobCategory Load (0.7ms)[0m  [1mSELECT "job_categories".* FROM "job_categories" [0m
+  Rendered pages/home.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 425ms (Views: 316.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.css?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /dataTables/jquery.dataTables.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo-accruto-main.png" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /logo-accruto-main.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/placeholder-customer-1.png" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /placeholder-customer-1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/placeholder-customer-2.png" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /placeholder-customer-2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/companies-logo.png" for 127.0.0.1 at 2013-08-01 14:00:39 +1000
+Served asset /companies-logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2013-08-01 14:01:12 +1000
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (1.2ms)[0m  SELECT "jobs".* FROM "jobs" 
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 4 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 7 LIMIT 1
+  [1m[36mAddress Load (0.8ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 5 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 16 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 1 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.6ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 6 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 9 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 12 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 15 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 11 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 14 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 13 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 9 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 9 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 11 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 10 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 12 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 2 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 5 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 14 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 16 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 7 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 3 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 6 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 8 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (1.0ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 10 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 15 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 17 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 17 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (1.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 19 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 18 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 20 LIMIT 1
+  Rendered jobs/index.html.erb within layouts/application (144.9ms)
+Completed 200 OK in 1097ms (Views: 569.9ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.css?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /dataTables/jquery.dataTables.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/dataTables/sort_both.png" for 127.0.0.1 at 2013-08-01 14:01:14 +1000
+Served asset /dataTables/sort_both.png - 304 Not Modified (35ms)
+
+
+Started GET "/assets/dataTables/sort_asc.png" for 127.0.0.1 at 2013-08-01 14:01:15 +1000
+Served asset /dataTables/sort_asc.png - 304 Not Modified (40ms)
+
+
+Started GET "/jobs/search" for 127.0.0.1 at 2013-08-01 14:01:16 +1000
+Processing by JobsController#search as HTML
+  Rendered jobs/_search_sidebar.html.erb (0.1ms)
+  [1m[36mJob Load (1.0ms)[0m  [1mSELECT "jobs".* FROM "jobs" ORDER BY expires_at DESC[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 19 LIMIT 1
+  [1m[36mAddress Load (0.9ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 17 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 20 LIMIT 1
+  [1m[36mAddress Load (1.0ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 18 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 12 LIMIT 1
+  [1m[36mAddress Load (0.7ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 10 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 11 LIMIT 1
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 9 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 17 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 15 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 1 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 10 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 8 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 16 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 14 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  Rendered jobs/search.html.erb within layouts/application (160.0ms)
+Completed   in 165ms
+Connecting to database specified by database.yml
+
+
+Started GET "/jobs" for 127.0.0.1 at 2013-08-01 14:07:53 +1000
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (1.7ms)[0m  [1mSELECT "jobs".* FROM "jobs" [0m
+  [1m[35mAddress Load (3.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 4 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 7 LIMIT 1[0m
+  [1m[35mAddress Load (0.8ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 5 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 16 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1[0m
+  [1m[35mAddress Load (1.0ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 1 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.7ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 6 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 9 LIMIT 1[0m
+  [1m[35mAddress Load (0.8ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 12 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 15 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 11 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 14 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 13 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 9 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 9 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 11 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 10 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 12 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 2 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 5 LIMIT 1[0m
+  [1m[35mAddress Load (0.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 14 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 16 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 7 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1[0m
+  [1m[35mAddress Load (1.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 3 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.8ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 6 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 8 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 10 LIMIT 1[0m
+  [1m[35mAddress Load (0.8ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 15 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 17 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 17 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (3.9ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 19 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 18 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 20 LIMIT 1[0m
+  Rendered jobs/index.html.erb within layouts/application (378.5ms)
+Completed 200 OK in 1697ms (Views: 889.5ms | ActiveRecord: 49.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /application.css - 304 Not Modified (121ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /alerts.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /forms.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /hero-unit.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /home.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /buttons.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /dropdowns.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /navbar.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /search.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /font-awesome.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.css?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /bootstrap.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /dataTables/jquery.dataTables.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /jobs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /pages.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 14:07:56 +1000
+Served asset /application.js - 304 Not Modified (153ms)
+
+
+Started GET "/assets/dataTables/sort_asc.png" for 127.0.0.1 at 2013-08-01 14:07:57 +1000
+Served asset /dataTables/sort_asc.png - 304 Not Modified (6ms)
+
+
+Started GET "/assets/dataTables/sort_both.png" for 127.0.0.1 at 2013-08-01 14:07:57 +1000
+Served asset /dataTables/sort_both.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-08-01 14:07:57 +1000
+Served asset /fontawesome-webfont.woff - 304 Not Modified (53ms)
+
+
+Started GET "/jobs/search" for 127.0.0.1 at 2013-08-01 14:08:04 +1000
+Processing by JobsController#search as HTML
+  Rendered jobs/_search_sidebar.html.erb (0.9ms)
+  [1m[35mJob Load (2.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY expires_at DESC
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 19 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 17 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.7ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 20 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 18 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 12 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 10 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 11 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 9 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 17 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 15 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 2 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 1 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 10 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 8 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 16 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 14 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 9 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 13 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 9 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 6 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1[0m
+  [1m[35mAddress Load (0.7ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 7 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 5 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 15 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 12 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 14 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 11 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 8 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 16 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 6 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 3 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 5 LIMIT 1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 2 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 7 LIMIT 1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 4 AND "addresses"."addressable_type" = 'Job' LIMIT 1
+  Rendered jobs/search.html.erb within layouts/application (1287.9ms)
+Completed 200 OK in 2206ms (Views: 1592.6ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /dataTables/jquery.dataTables.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:08 +1000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-08-01 14:08:09 +1000
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+
+
+Started GET "/jobs/17" for 127.0.0.1 at 2013-08-01 14:08:26 +1000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mJob Load (2.6ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT 1[0m  [["id", "17"]]
+  Rendered jobs/_search_sidebar.html.erb (0.1ms)
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 19 LIMIT 1
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT "addresses".* FROM "addresses" WHERE "addresses"."addressable_id" = 17 AND "addresses"."addressable_type" = 'Job' LIMIT 1[0m
+  Rendered jobs/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 365ms (Views: 263.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/alerts.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /alerts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-generators.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-generators.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-variables.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-variables.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdowns.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /dropdowns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /navbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /forms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hero-unit.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /hero-unit.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.css?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /dataTables/jquery.dataTables.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dataTables/jquery.dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /dataTables/jquery.dataTables.bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /jobs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-01 14:08:28 +1000
+Served asset /application.js - 304 Not Modified (0ms)
