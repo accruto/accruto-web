@@ -1,17 +1,6 @@
 @import "bootstrap-variables";
 @import "mixins";
 
-@mixin heading-three {
-	font-weight:300;
-	font-size: 24px;
-	-webkit-text-stroke: 1px; //anti-aliasing
-}
-
-@mixin heading-one {
-	font-weight: 400;
-	font-size: 36px;
-}
-
 %section-space {
 	padding: 50px 0px;
 }

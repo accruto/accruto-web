@@ -1,6 +1,15 @@
 //
 // Variables
 // --------------------------------------------------
+@mixin heading-one {
+	font-weight: 400;
+	font-size: 36px;
+}
+
+@mixin heading-three {
+	font-weight:400;
+	font-size: 24px;
+}
 
 
 // Global values
@@ -22,6 +31,7 @@ $white:                 #fff !default;
 // -------------------------
 $blueLight:            #f4fcff;
 $blue:                   #98e3ff;
+$blueAccent:         #56c1ea;
 $blueDark:            #36b3e3;
 $blueDarker:         #2c98c1;
 $blueBrandDark:    #2b3f49;

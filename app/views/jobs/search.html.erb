@@ -1,45 +1,48 @@
-<div class="row-fluid">
-	<div class="span4">
-		<%= render 'search_sidebar' %>
-	</div>
-	<div class="span8">
-		<h4>There are a total of <span class="result-number"><%= number_to_human(@jobs.length) %></span> jobs matching your search criteria</h4>
-		<hr>
-		<ul class="result-jobs">
-			<% @jobs.each do |job| %>
-				<% case job.source %>
-					<% when 'CareerOne' %>
-						<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new">
-					<% else %>
-						<a href="<%= job_path(job) %>">
-					<% end %>
-					<li>
-						<div class="row-fluid">
-							<div class="span8">
-								<h3><%= job.title %></h3>
-								<p>
-									<span class="label label-warning"><%= job.job_type %></span>
-									<%= job.company.name %> - <%= job.address.city %>, <%=  job.address.postcode %> <%= job.address.state %>
-								</p>
-								<small>Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</small>
-								<p><%= truncate(sanitize(job.description, tags: ""), length: 170, seperator: " ") %></p>
-							</div>
-							<div class="span3">
-								<div class="result-actions align-right">
-									<% case job.source %>
-										<% when 'CareerOne' %>
-											<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new" class="btn btn-primary">VIEW</a>
-										<% else %>
-											<a href="<%= job_path(job) %>" class="btn btn-primary">VIEW</a>
-										<% end %>
-										<a href="#" class="btn btn-inverse"><i class="icon-star"></i></a>
+<div class="container results-main">
+	<div class="row-fluid">
+		<div class="span4">
+			<%= render 'search_sidebar' %>
+		</div>
+		<div class="span8 result-list">
+			<h4 class="result-sentence">There are a total of <span class="result-number"><%= number_to_human(@jobs.length) %></span> jobs matching your search criteria</h4>
+			<hr>
+			<ul class="result-jobs">
+				<% @jobs.each do |job| %>
+					<% case job.source %>
+						<% when 'CareerOne' %>
+							<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new">
+						<% else %>
+							<a href="<%= job_path(job) %>">
+						<% end %>
+						<li>
+							<div class="row-fluid">
+								<div class="span8">
+									<h3 class="role-title"><%= job.title %></h3>
+									<p>
+										<span class="label label-full-time"><%= job.job_type %></span>
+										<span class="blue-accent"><%= job.company.name %> - <%= job.address.city %>, <%=  job.address.postcode %> <%= job.address.state %>
+										</span>
+									</p>
+									<p class="job-description"><%= truncate(sanitize(job.description, tags: ""), length: 170, seperator: " ") %></p>
+									<small class="posted-date">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</small>								
+								</div>
+								<div class="span3">
+									<div class="result-actions align-right">
+										<% case job.source %>
+											<% when 'CareerOne' %>
+												<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new" class="btn btn-primary">VIEW</a>
+											<% else %>
+												<a href="<%= job_path(job) %>" class="btn btn-primary">VIEW</a>
+											<% end %>
+											<a href="#" class="btn btn-inverse"><i class="icon-star"></i></a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<hr>
-					</li>
-				</a>
-			<% end %>
-		</ul>
+							<hr>
+						</li>
+					</a>
+				<% end %>
+			</ul>
+		</div>
 	</div>
 </div>

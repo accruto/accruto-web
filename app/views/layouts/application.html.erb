@@ -21,16 +21,16 @@
 
 </head>
 <body>
- 
   <div class="navbar">
     <div class="">
+      <a href="#"><%= image_tag "/assets/navbar-logo.png" %></a>
       <ul class="nav nav-top">
         <li><a href="#"><span class="blue-accent">Are you an employer? </span> Post a Free ad</a></li>  
         <li class=""><a href="#">Log In</a></li>
       </ul>
     </div>
-  </div>
-  
+  </div>  
+
 
     <% flash.each do |name, msg| %>
       <%= content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do %>
@@ -38,7 +38,7 @@
         <%= msg %>
       <% end %>
     <% end %>
-    <%= yield %>
+    <%= yield %>  
 
     <%= render 'layouts/shared/footer' %>
 
