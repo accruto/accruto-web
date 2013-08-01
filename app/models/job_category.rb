@@ -9,7 +9,7 @@
 #
 
 class JobCategory < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :external_category_id
   has_many :subcategories, class_name: "JobSubcategory"
   validates_presence_of :name
 end

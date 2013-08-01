@@ -8,6 +8,7 @@
 		    <%= f.input :title %>
 		    <%= f.input :description, as: :text %>
 		    <%= f.input :job_type %>
+		    <%= f.input :source, collection: ['Accruto','CareerOne','JXT','JobAdder'], prompt: "Select Job Source" %>
 		    <%= f.input :external_job_id %>
 		    <%= f.simple_fields_for :address do |a| %>
 		    	<%= a.input :street %>

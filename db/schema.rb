@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730075746) do
+ActiveRecord::Schema.define(:version => 20130801012023) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -35,8 +35,9 @@ ActiveRecord::Schema.define(:version => 20130730075746) do
 
   create_table "job_categories", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.integer  "external_category_id"
   end
 
   create_table "job_subcategories", :force => true do |t|
@@ -62,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20130730075746) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.text     "description"
+    t.string   "source"
   end
 
 end

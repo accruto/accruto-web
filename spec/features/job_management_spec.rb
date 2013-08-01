@@ -14,6 +14,7 @@ feature 'Job management' do
 			select_date @job.posted_at, :from => "job_posted_at"
 			select_date @job.expires_at, :from => "job_expires_at"
 			fill_in "External job", with: @job.external_job_id
+			select("Accruto", from: "Source")
 			fill_in "Job type", with: @job.job_type
 
 			fill_in "job_company_attributes_name", with: @job.company.name
@@ -52,6 +53,7 @@ feature 'Job management' do
 			select_date @job.posted_at, :from => "job_posted_at"
 			select_date @job.expires_at, :from => "job_expires_at"
 			fill_in "External job", with: @job.external_job_id
+			select("Accruto", from: "Source")
 			fill_in "Job type", with: @job.job_type
 
 			fill_in "job_company_attributes_name", with: @job.company.name
@@ -74,6 +76,7 @@ feature 'Job management' do
 			select_date @job.posted_at, :from => "job_posted_at"
 			select_date @job.expires_at, :from => "job_expires_at"
 			fill_in "External job", with: @job.external_job_id
+			select("Accruto", from: "Source")
 			fill_in "Job type", with: @job.job_type
 
 			fill_in "City", with: @job.address.city
@@ -95,6 +98,7 @@ feature 'Job management' do
 			select_date @job.posted_at, :from => "job_posted_at"
 			select_date @job.expires_at, :from => "job_expires_at"
 			fill_in "External job", with: @job.external_job_id
+			select("Accruto", from: "Source")
 			fill_in "Job type", with: @job.job_type
 
 			fill_in "City", with: ""
@@ -116,6 +120,7 @@ feature 'Job management' do
 			select_date @job.posted_at, :from => "job_posted_at"
 			select_date @job.expires_at, :from => "job_expires_at"
 			fill_in "External job", with: @job.external_job_id
+			select("Accruto", from: "Source")
 			fill_in "Job type", with: @job.job_type
 
 			fill_in "City", with: @job.address.city
@@ -137,6 +142,7 @@ feature 'Job management' do
 			select_date @job.posted_at, :from => "job_posted_at"
 			select_date @job.expires_at, :from => "job_expires_at"
 			fill_in "External job", with: @job.external_job_id
+			select("Accruto", from: "Source")
 			fill_in "Job type", with: @job.job_type
 
 			fill_in "City", with: @job.address.city

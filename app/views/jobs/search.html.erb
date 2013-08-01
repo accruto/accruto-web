@@ -7,21 +7,32 @@
 		<hr>
 		<ul class="result-jobs">
 			<% @jobs.each do |job| %>
-				<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new">
+				<% case job.source %>
+					<% when 'CareerOne' %>
+						<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new">
+					<% else %>
+						<a href="<%= job_path(job) %>">
+					<% end %>
 					<li>
 						<div class="row-fluid">
-							<div class="span7">
+							<div class="span8">
 								<h3><%= job.title %></h3>
 								<p>
 									<span class="label label-warning"><%= job.job_type %></span>
 									<%= job.company.name %> - <%= job.address.city %>, <%=  job.address.postcode %> <%= job.address.state %>
 								</p>
-								<!-- <p><%= sanitize job.description, tags: %w(div ul li p) %></p> -->
+								<small>Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</small>
+								<p><%= truncate(sanitize(job.description, tags: ""), length: 170, seperator: " ") %></p>
 							</div>
-							<div class="span4">
+							<div class="span3">
 								<div class="result-actions align-right">
-									<span><%= distance_of_time_in_words(job.expires_at, DateTime.now) %> ago</span><br>
-									<a href="#" class="btn btn-primary">APPLY</a>
+									<% case job.source %>
+										<% when 'CareerOne' %>
+											<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new" class="btn btn-primary">VIEW</a>
+										<% else %>
+											<a href="<%= job_path(job) %>" class="btn btn-primary">VIEW</a>
+										<% end %>
+										<a href="#" class="btn btn-inverse"><i class="icon-star"></i></a>
 								</div>
 							</div>
 						</div>

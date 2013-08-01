@@ -25,6 +25,7 @@ namespace :load_feed do
 
 			@job.title = parsed_job.title
 			@job.external_job_id = parsed_job.external_job_id
+			@job.source = parsed_job.source
 			@job.description = parsed_job.description
 			@job.posted_at = parsed_job.posted_at
 			@job.expires_at = parsed_job.expires_at

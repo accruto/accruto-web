@@ -3,32 +3,30 @@
 		<%= render 'search_sidebar' %>
 	</div>
 	<div class="span8">
-		<h4>There are a total of <span class="result-number"><%= number_to_human(@jobs.length) %></span> jobs matching your search criteria</h4>
+		<a href="javascript:history.back()"><span class="job-detail-back">Back to search results</span></a>
 		<hr>
-		<ul class="result-jobs">
-			<% @jobs.each do |job| %>
-				<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new">
-					<li>
-						<div class="row-fluid">
-							<div class="span7">
-								<h3><%= job.title %></h3>
-								<p>
-									<span class="label label-warning"><%= job.job_type %></span>
-									<%= job.company.name %> - <%= job.address.city %>, <%=  job.address.postcode %> <%= job.address.state %>
-								</p>
-								<!-- <p><%= sanitize job.description, tags: %w(div ul li p) %></p> -->
-							</div>
-							<div class="span4">
-								<div class="result-actions align-right">
-									<span><%= distance_of_time_in_words(job.expires_at, DateTime.now) %> ago</span><br>
-									<a href="#" class="btn btn-primary">APPLY</a>
-								</div>
-							</div>
-						</div>
-						<hr>
-					</li>
-				</a>
-			<% end %>
-		</ul>
+		<div class="row-fluid">
+			<div class="span7">
+				<h3><%= @job.title %></h3>
+				<p>
+					<span class="label label-warning"><%= @job.job_type %></span>
+					<%= @job.company.name %> - <%= @job.address.city %>, <%=  @job.address.postcode %> <%= @job.address.state %>
+				</p>
+				<small>Posted <%= distance_of_time_in_words(@job.posted_at, DateTime.now) %> ago on <%= @job.source %>.com</small>
+				<!-- <p><%= sanitize @job.description, tags: %w(div ul li p) %></p> -->
+			</div>
+			<div class="span4">
+				<div class="result-actions align-right">
+					<a href="#" class="btn btn-primary">APPLY</a>
+					<a href="#" class="btn btn-inverse"><i class="icon-star"></i></a>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row-fluid">
+			<div class="span12">
+				<p><%= @job.description %></p>
+			</div>
+		</div>
 	</div>
 </div>

@@ -2,16 +2,18 @@
 #
 # Table name: jobs
 #
-#  id            :integer          not null, primary key
-#  title         :string(255)
-#  address_id    :integer
-#  posted_at     :datetime
-#  expires_at    :datetime
-#  job_type      :string(255)
-#  company_id    :integer
-#  external_link :string(255)
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
+#  id              :integer          not null, primary key
+#  title           :string(255)
+#  address_id      :integer
+#  posted_at       :datetime
+#  expires_at      :datetime
+#  job_type        :string(255)
+#  company_id      :integer
+#  external_job_id :string(255)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  description     :text
+#  source          :string(255)
 #
 
 require 'spec_helper'
@@ -74,6 +76,10 @@ describe Job do
 
 		it "without a company" do
 			expect(build(:job, company: nil)).to have(1).errors_on(:company)
+		end
+
+		it "without a source" do
+			expect(build(:job, source: nil)).to have(1).errors_on(:source)
 		end
 	end
 
