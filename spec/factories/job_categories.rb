@@ -3,6 +3,7 @@
 FactoryGirl.define do
   factory :job_category do
     name "Legal"
+    external_category_id 8888
     after(:create) do |job_category|
     	job_category.subcategories << create(:job_subcategory)
     	job_category.subcategories << create(:job_subcategory, name: "Mining")

@@ -2,25 +2,27 @@
 #
 # Table name: jobs
 #
-#  id            :integer          not null, primary key
-#  title         :string(255)
-#  address_id    :integer
-#  posted_at     :datetime
-#  expires_at    :datetime
-#  job_type      :string(255)
-#  company_id    :integer
+#  id              :integer          not null, primary key
+#  title           :string(255)
+#  address_id      :integer
+#  posted_at       :datetime
+#  expires_at      :datetime
+#  job_type        :string(255)
+#  company_id      :integer
 #  external_job_id :string(255)
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  description     :text
+#  source          :string(255)
 #
 
 class Job < ActiveRecord::Base
-  attr_accessible :company_id, :expires_at, :external_job_id,
+  attr_accessible :company_id, :expires_at, :external_job_id, :source,
   								:posted_at, :title, :description, :job_type, :company_attributes,
   								:subcategories_attributes, :address_attributes
 
  	validates_presence_of :title, :job_type, :description, :posted_at,
- 												:expires_at, :company, :address
+ 												:expires_at, :company, :address, :source
 
  	validates :title, length: { maximum: 70 }
  	belongs_to :company
@@ -45,6 +47,7 @@ class Job < ActiveRecord::Base
  			# job details
  			job.title = parsed_job.JobInformation.JobTitle.downcase.split('-')[0].split('/')[0].split(' ').map { |w| w.capitalize }.join(' ')
  			job.external_job_id = parsed_job.jobRefCode
+ 			job.source = 'CareerOne'
  			job.posted_at = DateTime.parse(parsed_job.JobPostings.JobPosting.JobPostingDates.JobPostDate)
  			job.expires_at = DateTime.parse(parsed_job.JobPostings.JobPosting.JobPostingDates.JobExpireDate)
  			job_types_parsed = parsed_job.JobInformation.JobStatus

@@ -19,7 +19,7 @@ describe JobCategory do
 		expect(create(:job_category).subcategories.count).to eq(2)
 	end
 
-	it "is valid with a name" do
+	it "is valid with a name and external_category_id" do
 		expect(build(:job_category)).to be_valid
 	end
 

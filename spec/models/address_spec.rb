@@ -3,11 +3,12 @@
 # Table name: addresses
 #
 #  id               :integer          not null, primary key
-#  unit             :string(255)
 #  street           :string(255)
+#  city             :string(255)
 #  postcode         :integer
-#  latitude         :string(255)
-#  longitude        :string(255)
+#  state            :string(255)
+#  latitude         :float
+#  longitude        :float
 #  addressable_id   :integer
 #  addressable_type :string(255)
 #  created_at       :datetime         not null

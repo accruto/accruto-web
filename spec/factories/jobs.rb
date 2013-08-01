@@ -12,6 +12,7 @@ FactoryGirl.define do
   	posted_at 1.day.ago
   	expires_at 1.day.from_now
   	external_job_id "123123"
+  	source "CareerOne"
   	job_type { "Fulltime" }
   	after(:create) do |job|
   		job.subcategories << create(:job_subcategory)
@@ -25,6 +26,7 @@ FactoryGirl.define do
   		posted_at @job.posted_at
   		expires_at @job.expires_at
   		external_job_id @job.external_job_id
+  		source "CareerOne"
   		job_type @job.types.join(", ")
   	end
   end

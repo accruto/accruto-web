@@ -12,4 +12,4 @@ test:
   database: accruto-test
   username: Katie
   password:
-  host: localhost  
+  host: localhost
