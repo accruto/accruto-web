@@ -1,0 +1,17 @@
+<%= simple_form_for([:admin, @category]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+  	<div class="row-fluid">
+  		<div class="span6">
+		  	<h5>Category Details</h5>
+		    <%= f.input :name %>
+		    <%= f.input :external_category_id, label: "External Category ID" %>
+  		</div>
+  	</div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
