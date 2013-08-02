@@ -10,7 +10,7 @@ class JobsController < ApplicationController
   end
 
   def search
-  	@jobs = Job.order("expires_at DESC")
+  	@jobs = Job.order("expires_at DESC").limit(23)
 
   	respond_to do |format|
   	  format.html

@@ -38,7 +38,7 @@ class Job < ActiveRecord::Base
 
  	def self.load_careerone_feed(external_category_id, number_of_jobs)
  		cat = ENV['CAREERONE_CAT_CODE']
- 		xml = open("http://jsx.monster.com/query.ashx?cy=au&pp=#{number_of_jobs}&tm=0d&jcat=#{external_category_id}&cat=#{cat}&rev=2.0")
+ 		xml = open("http://jsx.monster.com/query.ashx?cy=au&pp=100&tm=0d&jcat=#{external_category_id}&cat=#{cat}&rev=2.0")
  		xml = File.read(xml)
  		parsed_xml = RecursiveOpenStruct.new(Hash.from_xml(xml))
  		@parsed_jobs = parsed_xml.Monster.Jobs.Job

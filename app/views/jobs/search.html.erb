@@ -24,7 +24,7 @@
 										</span>
 									</p>
 									<p class="job-description"><%= truncate(sanitize(job.description, tags: ""), length: 170, seperator: " ") %></p>
-									<small class="posted-date">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</small>								
+									<small class="posted-date">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</small>
 								</div>
 								<div class="span3">
 									<div class="result-actions align-right">
@@ -38,9 +38,9 @@
 									</div>
 								</div>
 							</div>
-							<hr>
 						</li>
 					</a>
+					<hr>
 				<% end %>
 			</ul>
 		</div>
