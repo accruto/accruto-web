@@ -17,6 +17,6 @@
 
 class Address < ActiveRecord::Base
   attr_accessible :latitude, :longitude, :postcode, :street, :city, :state, :addressable_id
-  validates_presence_of :postcode, :city, :state
+  validates_presence_of :city, :state
   belongs_to :addressable, polymorphic: true
 end

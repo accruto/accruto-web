@@ -2,6 +2,7 @@
 
 .results-main, .detail-show {
 	margin-top: 40px;
+	hr { margin: 0; padding: 0 }
 }
 
 .search-box {
@@ -31,14 +32,14 @@
 	border: 1px solid $goldLight;
 	font-size: 14px;
 	background-color: $grayLighter;
-	
+
 	p {
 		padding: 20px 20px 0 20px;
 	}
 	ul {
 		list-style-type: none;
 		margin: 0;
-		background-color: $white;	
+		background-color: $white;
 	}
 
 	li {
@@ -51,7 +52,7 @@
 	}
 	.recent-role {
 		color: $blueBrandDark;
-	}	
+	}
 }
 
 
@@ -59,6 +60,7 @@
 	list-style:none;
 	margin: 0;
 	a:not(.btn) { color: $headingsColor; }
+	li { padding: 0 0 20px 0; }
 }
 .result-actions {
 	margin-top: 30px;
@@ -73,11 +75,15 @@
 	color: $blueDark;
 }
 
+.result-list {
+	padding-left: 30px;
+}
 
 .role-title {
-	@include heading-three;
+	@include heading-four;
 	color: $blueBrandDark;
-} 
+	margin-bottom: 0;
+}
 
 .label-full-time {
 	background-color: $yellowLight;

@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: accruto
+  username: Katie
+  password:
+  host: localhost
+<<<<<<< HEAD
+=======
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: accruto-test
+  username: Katie
+  password:
+  host: localhost
+>>>>>>> c108d4d2f2c3a4bd408d3f73dd1bee1c1014ddda

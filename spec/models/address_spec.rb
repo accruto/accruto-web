@@ -22,16 +22,12 @@ describe Address do
 		expect(create(:address)).to be_valid
 	end
 
-  it "is valid with a street, city, postcode, state, latitude, and longitude" do
+  it "is valid with a street, city, state, latitude, and longitude" do
 		expect(build(:address)).to be_valid
 	end
 
   it "is invalid without a city" do
 		expect(build(:address, city: nil)).to have(1).errors_on(:city)
-	end
-
-  it "is invalid without a postcode" do
-		expect(build(:address, postcode: nil)).to have(1).errors_on(:postcode)
 	end
 
   it "is invalid without a state" do

@@ -38,7 +38,7 @@ describe Job do
 	end
 
 	context "is valid" do
-		it "with a title, job_type, description, external_link, job_type, company_id, posted_at, expires_at" do
+		it "with a title, job_type, description, external_link, job_type, company_id, posted_at" do
 			expect(build(:job)).to be_valid
 		end
 		it "with parsed XML" do
@@ -70,10 +70,6 @@ describe Job do
 			expect(build(:job, posted_at: nil)).to have(1).errors_on(:posted_at)
 		end
 
-		it "without an expires_at" do
-			expect(build(:job, expires_at: nil)).to have(1).errors_on(:expires_at)
-		end
-
 		it "without a company" do
 			expect(build(:job, company: nil)).to have(1).errors_on(:company)
 		end
@@ -85,7 +81,7 @@ describe Job do
 
 	context "CareerOne Feed" do
 		before(:each) do
-			@response = Job.load_careerone_feed(10)
+			@response = Job.load_careerone_feed(1, 10)
 		end
 
 		context "Job Details" do

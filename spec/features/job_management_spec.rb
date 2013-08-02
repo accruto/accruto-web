@@ -8,7 +8,7 @@ feature 'Job management' do
 
 	context "admin successfully" do
 		scenario 'creates a new job with valid fields' do
-			visit new_job_path
+			visit new_admin_job_path
 			fill_in "Title", with: @job.title
 			fill_in "Description", with: @job.description
 			select_date @job.posted_at, :from => "job_posted_at"
@@ -32,7 +32,7 @@ feature 'Job management' do
 		end
 		scenario 'updates a job with valid fields' do
 			@created_job = create(:job)
-			visit edit_job_path(@created_job)
+			visit edit_admin_job_path(@created_job)
 			fill_in "Title", with: "Office Human Resource Manager"
 			click_button "Update Job"
 			expect(page).to have_content('Job was successfully updated')
@@ -40,7 +40,7 @@ feature 'Job management' do
 
 		scenario 'deletes a job' do
 			@created_job = create(:job)
-			visit jobs_path
+			visit admin_jobs_path
 			click_link "Destroy"
 			expect(page).to_not have_content(@created_job.title)
 		end
@@ -48,7 +48,7 @@ feature 'Job management' do
 
 	context "admin fails to" do
 		scenario 'create a new job without a title' do
-			visit new_job_path
+			visit new_admin_job_path
 			fill_in "Title", with: ""
 			select_date @job.posted_at, :from => "job_posted_at"
 			select_date @job.expires_at, :from => "job_expires_at"
@@ -70,8 +70,8 @@ feature 'Job management' do
 			expect(page).to have_content('Titlecan\'t be blank')
 		end
 
-		scenario 'create a new job without an address postcode' do
-			visit new_job_path
+		scenario 'create a new job without an address city' do
+			visit new_admin_job_path
 			fill_in "Title", with: @job.title
 			select_date @job.posted_at, :from => "job_posted_at"
 			select_date @job.expires_at, :from => "job_expires_at"
@@ -79,9 +79,9 @@ feature 'Job management' do
 			select("Accruto", from: "Source")
 			fill_in "Job type", with: @job.job_type
 
-			fill_in "City", with: @job.address.city
+			fill_in "City", with: ""
 			fill_in "Street", with: @job.address.street
-			fill_in "Postcode", with: ""
+			fill_in "Postcode", with: @job.address.postcode
 			fill_in "State", with: @job.address.state
 
 			fill_in "Subcategory name", match: :prefer_exact, with: @category.subcategories.name
@@ -89,11 +89,11 @@ feature 'Job management' do
 			fill_in "job_company_attributes_name", with: @job.company.name
 			fill_in "job_company_attributes_phone", with: @job.company.phone
 			click_button "Create Job"
-			expect(page).to have_content('Postcodecan\'t be blank')
+			expect(page).to have_content('Citycan\'t be blank')
 		end
 
 		scenario 'create a new job without an address city' do
-			visit new_job_path
+			visit new_admin_job_path
 			fill_in "Title", with: @job.title
 			select_date @job.posted_at, :from => "job_posted_at"
 			select_date @job.expires_at, :from => "job_expires_at"
@@ -115,7 +115,7 @@ feature 'Job management' do
 		end
 
 		scenario 'create a new job without an address state' do
-			visit new_job_path
+			visit new_admin_job_path
 			fill_in "Title", with: @job.title
 			select_date @job.posted_at, :from => "job_posted_at"
 			select_date @job.expires_at, :from => "job_expires_at"
@@ -137,7 +137,7 @@ feature 'Job management' do
 		end
 
 		scenario 'create a new job without a subcategory' do
-			visit new_job_path
+			visit new_admin_job_path
 			fill_in "Title", with: @job.title
 			select_date @job.posted_at, :from => "job_posted_at"
 			select_date @job.expires_at, :from => "job_expires_at"

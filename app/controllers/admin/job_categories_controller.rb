@@ -29,7 +29,7 @@ class Admin::JobCategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to admin_job_category_path, notice: 'Job was successfully created.' }
+        format.html { redirect_to admin_job_category_path, notice: 'Category was successfully created.' }
       else
         format.html { render action: "new" }
       end
@@ -43,7 +43,7 @@ class Admin::JobCategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.update_attributes(params[:category])
-        format.html { redirect_to admin_job_category_path, notice: 'Job was successfully updated.' }
+        format.html { redirect_to admin_job_category_path, notice: 'Category was successfully updated.' }
       else
         format.html { render action: "edit" }
       end

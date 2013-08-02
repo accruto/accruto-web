@@ -1,6 +1,6 @@
 Accruto::Application.routes.draw do
   resources :jobs do
-  	get 'search', on: :collection
+  	get 'search', on: :collection, as: 'search'
   end
 
   resources :job_categories

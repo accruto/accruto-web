@@ -2,14 +2,14 @@
 	<div class="container">
 		<div class="align-center">
 			<%= image_tag "/assets/logo-accruto-main.png" %>
-				<h1 class="main-headline">Join our 600,000 customers and kick-start your new career</h1>		
+				<h1 class="main-headline">Join our 600,000 customers and kick-start your new career</h1>
 		</div>
 	</div>
 </div>
 
 <div class="main-search">
 	<div class="container">
-		<%= simple_form_for @job, class: 'form-inline' do |f| %>
+		<%= simple_form_for @job, url: '/jobs/search', method: 'get', class: 'form-inline' do |f| %>
 			<div class="row-fluid">
 				<div class="span5">
 					<label>What's your next job title?</label>
@@ -45,7 +45,7 @@
 				<div class="span3">
 					<ul class="category-list">
 						<% group.each do |category| %>
-							<li><a href="#"><%= category.name %></a></li>
+							<li><a href="/jobs/search"><%= category.name %></a></li>
 						<% end %>
 					</ul>
 				</div>

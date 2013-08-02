@@ -20,7 +20,7 @@ FactoryGirl.define do
   	end
 
   	factory :job_careerone do
-  		@job = Job.load_careerone_feed(1).first
+  		@job = Job.load_careerone_feed(1, 10).first
   		title @job.title
   		description @job.description
   		posted_at @job.posted_at

@@ -56,8 +56,13 @@ a.brand.image > img { height: 45px; }
 	color: $blueBrandDark;
 }
 
+// Remove shadows from links
+a {
+	text-shadow: none !important;
+}
 
-// Color helpers 
+
+// Color helpers
 .blue-accent {
 	color: $blueAccent;
 }
@@ -66,7 +71,7 @@ a.brand.image > img { height: 45px; }
 	color: $blueBrandDark;
 }
 
-// Footer 
+// Footer
 footer {
 	border-top: 1px solid $grayLighter;
 	padding: 20px 0;

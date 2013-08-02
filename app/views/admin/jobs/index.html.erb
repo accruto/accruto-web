@@ -33,7 +33,7 @@
         <td><%= job.company.name %></td>
         <td><%= job.external_job_id %></td>
         <td><%= link_to 'Edit', edit_admin_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, confirm: 'Are you sure?', method: :delete %></td>
+        <td><%= link_to 'Destroy', [:admin, job], confirm: 'Are you sure?', method: :delete %></td>
       </tr>
   <% end %>
     </tbody>
