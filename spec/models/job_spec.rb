@@ -37,6 +37,20 @@ describe Job do
 		expect(create(:job).subcategories.count).to eq(2)
 	end
 
+	context "scopes" do
+		before(:each) do
+			@active_job = create(:job)
+			@inactive_job = create(:job_inactive)
+		end
+	  it "returns only active jobs" do
+			expect(Job.active).to eq([@active_job])
+		end
+
+	  it "does not return inactive jobs" do
+			expect(Job.active).not_to eq([@inactive_job])
+		end
+	end
+
 	context "is valid" do
 		it "with a title, job_type, description, external_link, job_type, company_id, posted_at" do
 			expect(build(:job)).to be_valid
@@ -81,7 +95,7 @@ describe Job do
 
 	context "CareerOne Feed" do
 		before(:each) do
-			@response = Job.load_careerone_feed(1, 10)
+			@response = Job.load_careerone_feed(15)
 		end
 
 		context "Job Details" do

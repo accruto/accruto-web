@@ -2,7 +2,7 @@ class Admin::JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = Job.limit('100')
 
     respond_to do |format|
       format.html # index.html.erb

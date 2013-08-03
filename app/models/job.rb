@@ -36,36 +36,57 @@ class Job < ActiveRecord::Base
  	accepts_nested_attributes_for :subcategories
  	accepts_nested_attributes_for :address
 
- 	def self.load_careerone_feed(external_category_id, number_of_jobs)
+ 	scope :active, -> { where("expires_at > ?", DateTime.now) }
+
+ 	def self.load_careerone_feed(external_subcategory_id)
+ 		job_subcategory = JobSubcategory.where(external_subcategory_id: external_subcategory_id)
+ 		if job_subcategory.blank?
+ 			external_subcategory_id = 15
+ 			job_category = OpenStruct.new
+ 			job_category.id = 1
+ 		else
+	 		job_category = job_subcategory.first.job_category
+	 		external_subcategory_id = job_subcategory.first.external_subcategory_id
+	 	end
+
  		cat = ENV['CAREERONE_CAT_CODE']
- 		xml = open("http://jsx.monster.com/query.ashx?cy=au&pp=100&tm=0d&jcat=#{external_category_id}&cat=#{cat}&rev=2.0")
- 		xml = File.read(xml)
+ 		xml = open("http://jsx.monster.com/query.ashx?cy=au&pp=200&tm=0d&occ=#{job_category.id}.#{external_subcategory_id}&cat=#{cat}&rev=2.0")
  		parsed_xml = RecursiveOpenStruct.new(Hash.from_xml(xml))
  		@parsed_jobs = parsed_xml.Monster.Jobs.Job
  		jobs = []
- 		@parsed_jobs.each do |parsed_job|
- 			parsed_job = RecursiveOpenStruct.new(parsed_job)
- 			job = OpenStruct.new
- 			job.company = OpenStruct.new
+ 		unless @parsed_jobs.blank?
+	 		@parsed_jobs.each do |parsed_job|
+	 			parsed_job = RecursiveOpenStruct.new(parsed_job)
+	 			job = OpenStruct.new
+	 			job.company = OpenStruct.new
 
- 			job.title = parsed_job.Title.downcase.split('-')[0].split('/')[0].split(' ').map { |w| w.capitalize }.join(' ')
- 			job.external_job_id = parsed_job.ID
- 			job.source = 'CareerOne' # temporary
- 			job.posted_at = DateTime.strptime(parsed_job.DateActive, '%m/%d/%Y')
- 			job.expires_at = DateTime.strptime(parsed_job.DateExpires, '%m/%d/%Y')
- 			job.types = ['Full Time'] # temporary
- 			job.description = parsed_job.Summary
+	 			job.title = parsed_job.Title.downcase.split('-')[0].split('/')[0].split('(')[0].split('$')[0].split(' ').map { |w| w.capitalize }.join(' ')
+	 			job.external_job_id = parsed_job.ID
+	 			job.source = 'CareerOne' # temporary
+	 			job.posted_at = DateTime.strptime(parsed_job.DateActive, '%m/%d/%Y')
+	 			job.expires_at = DateTime.strptime(parsed_job.DateExpires, '%m/%d/%Y')
+	 			job.types = ['Full Time'] # temporary
+	 			job.description = parsed_job.Summary
 
- 			job.categories = ["Accounting"] # temporary
- 			job.industries = ["Mining"] # temporary
+		 		job.industries = [] # temporary
+		 		unless job_subcategory.blank?
+	 				job.industries << job_subcategory.first.name
+	 			else
+	 				job.industries << "Others"
+	 			end
 
- 			job.company.name = parsed_job.CompanyName
- 			job.company.city = parsed_job.Location.City
- 			job.company.state = parsed_job.Location.State
- 			job.company.postcode = parsed_job.Location.PostalCode
+	 			if parsed_job.CompanyName.blank?
+	 				job.company.name = "The Advertiser"
+	 			else
+	 				job.company.name = parsed_job.CompanyName
+	 			end
+	 			job.company.city = parsed_job.Location.City
+	 			job.company.state = parsed_job.Location.State
+	 			job.company.postcode = parsed_job.Location.PostalCode
 
- 			jobs << job
+	 			jobs << job
+	 		end
+ 			return jobs
  		end
- 		return jobs
  	end
 end
