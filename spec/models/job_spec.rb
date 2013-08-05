@@ -21,7 +21,6 @@ require 'spec_helper'
 describe Job do
 	it "has a valid factory" do
 		expect(create(:job)).to be_valid
-		expect(create(:job_careerone)).to be_valid
 	end
 
   it "has a company" do
@@ -54,9 +53,6 @@ describe Job do
 	context "is valid" do
 		it "with a title, job_type, description, external_link, job_type, company_id, posted_at" do
 			expect(build(:job)).to be_valid
-		end
-		it "with parsed XML" do
-			expect(build(:job_careerone)).to be_valid
 		end
 	end
 
@@ -95,7 +91,7 @@ describe Job do
 
 	context "CareerOne Feed" do
 		before(:each) do
-			@response = Job.load_careerone_feed(15)
+			@response = Job.load_careerone_feed(15432)
 		end
 
 		context "Job Details" do

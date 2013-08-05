@@ -21,15 +21,5 @@ FactoryGirl.define do
   	factory :job_inactive do
   		expires_at 1.day.ago
   	end
-  	factory :job_careerone do
-  		@job = Job.load_careerone_feed(15).first
-  		title @job.title
-  		description @job.description
-  		posted_at @job.posted_at
-  		expires_at @job.expires_at
-  		external_job_id @job.external_job_id
-  		source "CareerOne"
-  		job_type @job.types.join(", ")
-  	end
   end
 end

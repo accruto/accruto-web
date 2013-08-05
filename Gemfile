@@ -46,5 +46,6 @@ group :test do
   gem "launchy", "~> 2.2.0"
   gem "spork", "~> 0.9.2"
   gem "guard-spork", "~> 1.5.1"
+  gem 'simplecov', :require => false
 end
 
