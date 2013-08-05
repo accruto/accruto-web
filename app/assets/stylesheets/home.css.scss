@@ -122,9 +122,25 @@
 	input[type="submit"] {
 		width: 90%;
 	}
+	
 
 	.btn-main-search {
 		width: 90%;
+		margin-top:10px;
+	}
+	
+	.main-headline {
+		@include heading-four;
+		font-weight: 500;
+		line-height: 28px;
+
+	}
+	.main-landing {
+		padding: 0 10px;
+	}
+
+	.browse-jobs{
+		padding: 0;
 	}
 
 	.customers, .job-ticker, .partner-companies {
@@ -139,14 +155,24 @@
 		@include heading-four;
 		font-weight: 600;
 	}
-
-	.customer-profile {
-		
+	
+	.customer-avatar, .customer-avatar-two {
+		margin-bottom: 20px;
 	}
 
-	.talent-hunter h3{
+	.customer-avatar-two {
+		margin-top: 60px;
+	}
+
+	.talent-hunter {
+		margin-top: 40px;
+
+		h3 {
 		@include heading-four;
 		line-height: 28px;
+		}
 	}
-}
+
+
+} /* end */ 
 
