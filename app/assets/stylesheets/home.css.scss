@@ -107,6 +107,10 @@
 
 /* Smaller ----------- */
 @media screen and (max-width : 650px) {
+	%center-phone {
+		text-align: center;
+	}
+
 	body {
 		padding: 0;
 	}
@@ -114,13 +118,35 @@
 	input {
 		width: 90%;
 	}
+	
+	input[type="submit"] {
+		width: 90%;
+	}
 
 	.btn-main-search {
 		width: 90%;
 	}
 
-	.customers, .browse-jobs, .job-ticker, .partner-companies {
-		padding: 0px 0px;
+	.customers, .job-ticker, .partner-companies {
+		padding: 0px 15px;
+	}
+
+	.customers, .talent-hunter {
+		@extend %center-phone;
+	}
+
+	.section-title {
+		@include heading-four;
+		font-weight: 600;
+	}
+
+	.customer-profile {
+		
+	}
+
+	.talent-hunter h3{
+		@include heading-four;
+		line-height: 28px;
 	}
 }
 
