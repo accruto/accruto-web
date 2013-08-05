@@ -16,5 +16,25 @@
 	}
 }
 
-.brand {
+// mobile-section
+.navbar-button {
+	color:white;
+}
+
+.navbar-menu {
+	width:100%;
+	margin: 0;
+	position:absolute;
+	margin-top:-50px;
+	display:none;
+	z-index: 5;
+	li {
+		list-style: none;
+		text-align:	center;
+		background: white;
+		padding: 10px 0;
+	}
+	a:not(:first-child) li {
+		border-top: 1px solid #e1e1e1;
+	}
 }
