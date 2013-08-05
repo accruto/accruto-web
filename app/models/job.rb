@@ -41,7 +41,7 @@ class Job < ActiveRecord::Base
  	def self.load_careerone_feed(external_subcategory_id)
  		job_subcategory = JobSubcategory.where(external_subcategory_id: external_subcategory_id)
  		if job_subcategory.blank?
- 			external_subcategory_id = 15
+ 			external_subcategory_id = 15432
  			job_category = OpenStruct.new
  			job_category.id = 1
  		else
