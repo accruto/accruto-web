@@ -19,8 +19,8 @@
 								<div class="span8">
 									<h3 class="role-title"><%= job.title %></h3>
 									<p>
-										<span class="label label-full-time"><%= job.job_type %></span>
-										<span class="blue-accent"><%= job.company.name %> - <%= job.address.city %>, <%=  job.address.postcode %> <%= job.address.state %>
+										<span class="label label-full-time hidden"><%= job.job_type %></span>
+										<span class="blue-accent"><%= job.company.name.titleize %> - <%= job.address.city %>, <%=  job.address.postcode %> <%= job.address.state %>
 										</span>
 									</p>
 									<p class="job-description"><%= truncate(sanitize(job.description, tags: ""), length: 170, seperator: " ") %></p>
