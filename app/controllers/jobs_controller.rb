@@ -10,7 +10,8 @@ class JobsController < ApplicationController
   end
 
   def search
-  	@jobs = Job.order("expires_at DESC").limit(23)
+  	#@jobs = Job.order("expires_at DESC").paginate(:page => params[:page], :per_page => 10)
+  	@jobs = Job.order("expires_at DESC").text_search(params[:query]).page(params[:page]).per_page(10)
 
   	respond_to do |format|
   	  format.html

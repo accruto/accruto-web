@@ -18,6 +18,11 @@
 
 class Job < ActiveRecord::Base
 	require 'open-uri'
+	include PgSearch
+	# multisearchable :against => [:title, :description],
+ 	#  								using: {tsearch: {dictionary: "english"}}
+ 	pg_search_scope :search, against: [:title, :description],
+ 	  using: {tsearch: {dictionary: "english"}}
 
   attr_accessible :company_id, :expires_at, :external_job_id, :source,
   								:posted_at, :title, :description, :job_type, :company_attributes,
@@ -37,6 +42,14 @@ class Job < ActiveRecord::Base
  	accepts_nested_attributes_for :address
 
  	scope :active, -> { where("expires_at > ?", DateTime.now) }
+
+	def self.text_search(query)
+		if query.present?
+			search(query)
+		else
+			scoped
+		end
+	end
 
  	def self.load_careerone_feed(external_subcategory_id)
  		job_subcategory = JobSubcategory.where(external_subcategory_id: external_subcategory_id)

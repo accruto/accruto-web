@@ -9,20 +9,20 @@
 
 <div class="main-search">
 	<div class="container">
-		<%= simple_form_for @job, url: '/jobs/search', method: 'get', class: 'form-inline' do |f| %>
-			<div class="row-fluid">
-				<div class="span5">
-					<label>What's your next job title?</label>
-					<input type="text" placeholder="Type Job title, keyword etc..."/>
-				</div>
-				<div class="span5">
-					<label>Where do you want to work?</label>
-					<input type="text" placeholder="Surry Hills, Sydney, 2008"/>
-				</div>
-				<div class="span2">
-					<%= f.button :submit, "Search", class: 'btn-primary btn-large btn-main-search' %>
-				</div>
-			</div>
+		<%= form_tag "/jobs/search", method: :get do %>
+		  <div class="row-fluid">
+		  	<div class="span5">
+		  		<label>What's your next job title?</label>
+		  		<%= text_field_tag :query, params[:query], placeholder: 'Job Title' %>
+		  	</div>
+		  	<div class="span5">
+		  		<label>Where do you want to work?</label>
+		  		<input type="text" placeholder="Surry Hills, Sydney, 2008"/>
+		  	</div>
+		  	<div class="span2">
+		  		<%= submit_tag "Search", class: 'btn-primary btn-large btn-main-search' %>
+		  	</div>
+		  </div>
 		<% end %>
 	</div>
 </div>
