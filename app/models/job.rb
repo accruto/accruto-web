@@ -21,8 +21,11 @@ class Job < ActiveRecord::Base
 	include PgSearch
 	# multisearchable :against => [:title, :description],
  	#  								using: {tsearch: {dictionary: "english"}}
- 	pg_search_scope :search, against: [:title, :description],
- 	  using: {tsearch: {dictionary: "english"}}
+ 	pg_search_scope :search, against: [
+ 			[:title, 'A'],
+	    [:description, 'B'],
+ 		],
+ 	  using: {tsearch: {dictionary: "simple"}}
 
   attr_accessible :company_id, :expires_at, :external_job_id, :source,
   								:posted_at, :title, :description, :job_type, :company_attributes,
@@ -43,7 +46,7 @@ class Job < ActiveRecord::Base
 
  	scope :active, -> { where("expires_at > ?", DateTime.now) }
 
-	def self.text_search(query)
+	def self.job_search(query)
 		if query.present?
 			search(query)
 		else

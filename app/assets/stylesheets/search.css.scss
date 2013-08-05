@@ -82,7 +82,8 @@
 .role-title {
 	@include heading-four;
 	color: $blueBrandDark;
-	margin-bottom: 0;
+	line-height:20px;
+	margin-bottom: 20px;
 }
 
 .label-full-time {

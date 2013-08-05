@@ -1,5 +1,5 @@
 module JobsHelper
 	def total_search_result
-		return Job.text_search(params[:query]).length
+		return @search_results.length
 	end
 end
