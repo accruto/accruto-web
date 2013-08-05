@@ -94,4 +94,33 @@
 	}	
 }
 
+/* Larger ----------- */
+@media screen and (max-width: 1024px) {
+	
+}
+
+
+/* Medium ------------ */
+@media screen and (max-width: 768px) {
+	
+}
+
+/* Smaller ----------- */
+@media screen and (max-width : 650px) {
+	body {
+		padding: 0;
+	}
+
+	input {
+		width: 90%;
+	}
+
+	.btn-main-search {
+		width: 90%;
+	}
+
+	.customers, .browse-jobs, .job-ticker, .partner-companies {
+		padding: 0px 0px;
+	}
+}
 
