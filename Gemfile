@@ -15,6 +15,9 @@ gem "nokogiri", "~> 1.6.0"
 gem "json", "~> 1.8.0"
 gem "recursive-open-struct", "~> 0.4.3"
 gem "jquery-datatables-rails", "~> 1.11.2"
+gem "pg_search", "~> 0.7.0"
+gem "will_paginate", "~> 3.0.4"
+gem "bootstrap-will_paginate", "~> 0.0.9"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
