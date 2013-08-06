@@ -99,3 +99,57 @@
 .posted-date {
 	color: $gray;
 }
+
+/* Larger ----------- */
+@media screen and (max-width: 1024px) {
+	
+}
+
+
+/* Medium ------------ */
+@media screen and (max-width: 768px) {
+	
+}
+
+/* Smaller ----------- */
+@media screen and (max-width : 650px) {
+	.results-main {
+		margin-top: 0;
+	}
+	.result-list {
+		padding: 0 20px;
+	}
+	.result-sentence {
+		
+
+	}
+
+	.job-info {
+		text-align:left;
+		padding: 20px 0 0 0;
+		
+	}
+	
+	.role-title {
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+	
+	.job-location {
+		font-size: $fontSizeSmall;
+		line-height:none;
+	}
+
+	.result-actions {
+		margin: 10px 0 0 0;
+		text-align: left;
+	}
+
+	.btn-view-job {
+		width: 70%;
+	}
+
+	.posted-date {
+		padding-top: 20px;
+	}
+}
