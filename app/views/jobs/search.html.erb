@@ -4,7 +4,7 @@
 			<%= render 'search_sidebar' %>
 		</div>
 		<div class="span8 result-list">
-			<h4 class="result-sentence">There are a total of <span class="result-number"><%= number_to_human(total_search_result) %></span> jobs matching your search criteria</h4>
+			<h4 class="result-sentence">There are a total of <span class="result-number"><%= number_with_delimiter(total_search_result) %></span> jobs matching your search criteria</h4>
 			<hr>
 			<ul class="result-jobs">
 				<% @jobs.each do |job| %>

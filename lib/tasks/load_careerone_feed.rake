@@ -9,7 +9,7 @@ namespace :load_careerone_feed do
 				@loaded_jobs.each_with_index do |job, index|
 					@job = Job.find_or_initialize_by_external_job_id(job.external_job_id)
 					@company = Company.find_or_initialize_by_name(job.company.name)
-					@address = Address.new
+					@address = Address.find_or_initialize_by_city(job.city)
 
 					@job.subcategories = []
 					job.industries.each do |sc|
@@ -21,9 +21,9 @@ namespace :load_careerone_feed do
 					@company.name = job.company.name
 					@company.save
 
-					@address.city = job.company.city
-					@address.postcode = job.company.postcode
-					@address.state = job.company.state
+					@address.city = job.city
+					@address.postcode = job.postcode
+					@address.state = job.state
 
 					@job.title = job.title
 					puts "#{i} - #{@job.title}"

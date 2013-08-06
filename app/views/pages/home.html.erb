@@ -14,11 +14,11 @@
 		  <div class="row-fluid">
 		  	<div class="span5">
 		  		<label>What's your next job title?</label>
-		  		<%= text_field_tag :query, params[:query], placeholder: 'Job Title' %>
+		  		<%= text_field_tag :job_title, params[:job_title], placeholder: 'Job Title' %>
 		  	</div>
 		  	<div class="span5">
 		  		<label>Where do you want to work?</label>
-		  		<input type="text" placeholder="City, State, or Postcode"/>
+		  		<%= text_field_tag :address, params[:address], placeholder: 'City or State' %>
 		  	</div>
 		  	<div class="span2">
 		  		<%= submit_tag "Search", class: 'btn-primary btn-large btn-main-search' %>

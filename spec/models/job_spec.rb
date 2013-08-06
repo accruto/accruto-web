@@ -130,6 +130,34 @@ describe Job do
 					expect(obj.description).to be_a_kind_of(String)
 				end
 			end
+			it "returns a street as string" do
+				@response.each do |obj|
+					if obj.street
+						expect(obj.street).to be_a_kind_of(String)
+					else
+						expect(obj.street).to eq(nil)
+					end
+				end
+			end
+			it "returns a city as string" do
+				@response.each do |obj|
+					expect(obj.city).to be_a_kind_of(String)
+				end
+			end
+			it "returns a postcode as integer" do
+				@response.each do |obj|
+					if obj.postcode
+						expect(obj.postcode).to be_a_kind_of(Integer)
+					else
+						expect(obj.postcode).to eq(nil)
+					end
+				end
+			end
+			it "returns a state as string" do
+				@response.each do |obj|
+					expect(obj.state).to be_a_kind_of(String)
+				end
+			end
 		end
 
 		context "Company Details" do
@@ -141,34 +169,6 @@ describe Job do
 			it "returns a name as string" do
 				@response.each do |obj|
 					expect(obj.company.name).to be_a_kind_of(String)
-				end
-			end
-			it "returns a street as string" do
-				@response.each do |obj|
-					if obj.company.street
-						expect(obj.company.street).to be_a_kind_of(String)
-					else
-						expect(obj.company.street).to eq(nil)
-					end
-				end
-			end
-			it "returns a city as string" do
-				@response.each do |obj|
-					expect(obj.company.city).to be_a_kind_of(String)
-				end
-			end
-			it "returns a postcode as integer" do
-				@response.each do |obj|
-					if obj.company.postcode
-						expect(obj.company.postcode).to be_a_kind_of(Integer)
-					else
-						expect(obj.company.postcode).to eq(nil)
-					end
-				end
-			end
-			it "returns a state as string" do
-				@response.each do |obj|
-					expect(obj.company.state).to be_a_kind_of(String)
 				end
 			end
 		end

@@ -8,6 +8,6 @@ module JobsHelper
 	end
 
 	def number_of_jobs_in_category(category)
-		category.subcategories.map { |s| s.jobs.length }.inject(:+)
+		return "(#{category.subcategories.map { |s| s.jobs.length }.inject(:+)})" if Rails.env.development?
 	end
 end

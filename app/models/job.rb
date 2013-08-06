@@ -21,11 +21,14 @@ class Job < ActiveRecord::Base
 	include PgSearch
 	# multisearchable :against => [:title, :description],
  	#  								using: {tsearch: {dictionary: "english"}}
- 	pg_search_scope :search, against: [
+ 	pg_search_scope :search_jobs, against: [
  			[:title, 'A'],
 	    [:description, 'B'],
  		],
- 	  using: {tsearch: {dictionary: "simple"}}
+ 	  using: { tsearch: {
+ 	  		dictionary: "simple"
+ 	  	}
+ 		}
 
   attr_accessible :company_id, :expires_at, :external_job_id, :source,
   								:posted_at, :title, :description, :job_type, :company_attributes,
@@ -36,7 +39,7 @@ class Job < ActiveRecord::Base
 
  	validates :title, length: { maximum: 70 }
  	belongs_to :company
- 	has_one :address, as: :addressable
+ 	belongs_to :address
 
  	has_and_belongs_to_many :subcategories, class_name: "JobSubcategory"
 
@@ -46,9 +49,17 @@ class Job < ActiveRecord::Base
 
  	scope :active, -> { where("expires_at > ?", DateTime.now) }
 
-	def self.job_search(query)
-		if query.present?
-			search(query)
+	def self.search_by_job_title(job_title)
+		if job_title.present?
+			search_jobs(job_title)
+		else
+			scoped
+		end
+	end
+
+	def self.search_by_address(address)
+		if address.present?
+			joins(:address).merge(Address.where("to_tsvector('simple', street) @@ :q or to_tsvector('simple', city) @@ :q or to_tsvector('simple', state) @@ :q", q: address ))
 		else
 			scoped
 		end
@@ -58,15 +69,14 @@ class Job < ActiveRecord::Base
  		job_subcategory = JobSubcategory.where(external_subcategory_id: external_subcategory_id)
  		if job_subcategory.blank?
  			external_subcategory_id = 15432
- 			job_category = OpenStruct.new
- 			job_category.id = 1
+ 			external_category_id = 1
  		else
-	 		job_category = job_subcategory.first.job_category
-	 		external_subcategory_id = job_subcategory.first.external_subcategory_id
+ 			job_subcategory = job_subcategory.first
+	 		external_category_id = job_subcategory.job_category.external_category_id
 	 	end
 
  		cat = ENV['CAREERONE_CAT_CODE']
- 		xml = open("http://jsx.monster.com/query.ashx?cy=au&pp=200&tm=0d&occ=#{job_category.id}.#{external_subcategory_id}&cat=#{cat}&rev=2.0")
+ 		xml = open("http://jsx.monster.com/query.ashx?cy=au&pp=200&tm=0d&occ=#{external_category_id}.#{external_subcategory_id}&cat=#{cat}&rev=2.0")
  		parsed_xml = RecursiveOpenStruct.new(Hash.from_xml(xml))
  		@parsed_jobs = parsed_xml.Monster.Jobs.Job
  		jobs = []
@@ -76,7 +86,7 @@ class Job < ActiveRecord::Base
 	 			job = OpenStruct.new
 	 			job.company = OpenStruct.new
 
-	 			job.title = parsed_job.Title.downcase.split('-')[0].split('/')[0].split('(')[0].split('$')[0].split(' ').map { |w| w.capitalize }.join(' ')
+	 			job.title = parsed_job.Title.titleize
 	 			job.external_job_id = parsed_job.ID
 	 			job.source = 'CareerOne' # temporary
 	 			job.posted_at = DateTime.strptime(parsed_job.DateActive, '%m/%d/%Y')
@@ -86,7 +96,7 @@ class Job < ActiveRecord::Base
 
 		 		job.industries = [] # temporary
 		 		unless job_subcategory.blank?
-	 				job.industries << job_subcategory.first.name
+	 				job.industries << job_subcategory.name
 	 			else
 	 				job.industries << "Others"
 	 			end
@@ -96,9 +106,9 @@ class Job < ActiveRecord::Base
 	 			else
 	 				job.company.name = parsed_job.CompanyName
 	 			end
-	 			job.company.city = parsed_job.Location.City
-	 			job.company.state = parsed_job.Location.State
-	 			job.company.postcode = parsed_job.Location.PostalCode
+	 			job.city = parsed_job.Location.City
+	 			job.state = parsed_job.Location.State
+	 			job.postcode = parsed_job.Location.PostalCode
 
 	 			jobs << job
 	 		end
