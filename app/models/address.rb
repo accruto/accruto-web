@@ -26,8 +26,10 @@ class Address < ActiveRecord::Base
   		obj.longitude = geo.longitude
   	else
   		results = Geocoder.coordinates(obj.state)
-  		obj.latitude = results[0]
-  		obj.longitude = results[1]
+  		unless results.blank?
+	  		obj.latitude = results[0]
+	  		obj.longitude = results[1]
+	  	end
   	end
   end
 
