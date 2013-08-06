@@ -3,3 +3,43 @@
 .detail-info, .detail-description {
 	padding: 10px 0;
 }
+
+/* Larger ----------- */
+@media screen and (max-width: 1024px) {
+	
+}
+
+
+/* Medium ------------ */
+@media screen and (max-width: 768px) {
+	
+}
+
+/* Smaller ----------- */
+@media screen and (max-width : 650px) {
+	.job-container {
+		padding: 20px 20px 0 20px;
+	}
+	.detail-info, .detail-description, .result-actions {
+		text-align: left; 
+	}
+
+	.role-title {
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+	.detail-info {
+		padding: 0;
+	}
+
+	.job-location {
+		font-size: $fontSizeSmall;
+		line-height:none;
+	}
+
+	.btn-apply-job{
+		width: 70%;
+	}
+
+
+}

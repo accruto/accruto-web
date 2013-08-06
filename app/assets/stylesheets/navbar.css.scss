@@ -50,7 +50,7 @@
 		right: 10px;
 	}
 
-	.navbar-menu {
+	.navbar-list {
 		width:100%;
 		margin: 0;
 		position:absolute;
@@ -69,6 +69,12 @@
 			color: white;
 			text-align: left;
 			padding-left: 80px;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+		a:active li {
+			background-color: $yellow;
 		}
 	}		
 }
