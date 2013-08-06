@@ -1,6 +1,6 @@
 @import "bootstrap-variables";
 
-.results-main, .detail-show {
+.results-main {
 	margin-top: 40px;
 	hr { margin: 0; padding: 0 }
 }
@@ -113,19 +113,16 @@
 
 /* Smaller ----------- */
 @media screen and (max-width : 650px) {
+
 	.results-main {
 		margin-top: 0;
 	}
 	.result-list {
 		padding: 0 20px;
 	}
-	.result-sentence {
-		
-
-	}
 
 	.job-info {
-		text-align:left;
+		text-align: left;
 		padding: 20px 0 0 0;
 		
 	}

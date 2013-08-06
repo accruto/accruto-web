@@ -1,23 +1,23 @@
 <div class="container detail-show">
 	<div class="row-fluid">
-		<div class="span4">
+		<div class="span4 hidden-phone">
 			<%= render 'search_sidebar' %>
 		</div>
-		<div class="span8">
-			<a href="javascript:history.back()"><span class="job-detail-back">Back to search results</span></a>
+		<div class="span8 job-container">
+			<a href="javascript:history.back()" class="go-back"><span class="job-detail-back">Back to search results</span></a>
 			<hr>
 			<div class="row-fluid">
 				<div class="span7 detail-info">
 					<h3 class="role-title"><%= @job.title %></h3>
 					<p>
 						<span class="label label-full-time"><%= @job.job_type %></span>
-						<%= @job.company.name %> - <%= @job.address.city %>, <%=  @job.address.postcode %> <%= @job.address.state %>
+						<span class="job-location blue-accent"><%= @job.company.name %> - <%= @job.address.city %>, <%=  @job.address.postcode %> <%= @job.address.state %></span>
 					</p>
-					<small class="posted-date">Posted <%= distance_of_time_in_words(@job.posted_at, DateTime.now) %> ago on <%= @job.source %>.com</small>
+					<small class="posted-date hidden-phone">Posted <%= distance_of_time_in_words(@job.posted_at, DateTime.now) %> ago on <%= @job.source %>.com</small>
 				</div>
-				<div class="span4">
+				<div class="span4 hidden-phone">
 					<div class="result-actions align-right">
-						<a href="#" class="btn btn-primary">APPLY</a>
+						<a href="#" class="btn btn-primary btn-apply-job">APPLY</a>
 						<a href="#" class="btn btn-inverse"><i class="icon-star"></i></a>
 					</div>
 				</div>
@@ -27,6 +27,13 @@
 				<div class="span12">
 					<p><%= sanitize @job.description %></p>
 				</div>
+				<div class="span4 hidden-desktop">
+					<div class="result-actions align-right">
+						<a href="#" class="btn btn-primary btn-apply-job">APPLY</a>
+						<a href="#" class="btn btn-inverse"><i class="icon-star"></i></a>
+					</div>
+				</div>	
+				<small class="posted-date hidden-desktop">Posted <%= distance_of_time_in_words(@job.posted_at, DateTime.now) %> ago on <%= @job.source %>.com</small>												
 			</div>
 		</div>
 	</div>
