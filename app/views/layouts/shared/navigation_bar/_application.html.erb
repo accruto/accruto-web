@@ -1,9 +1,9 @@
 <div class="navigation-bar">
   <div class="container">
   	<div class="row-fluid">
-      <div class="span3 hidden-desktop">
-                <%= image_tag "/assets/navbar-logo.png", :class=> "logo-phone" %>
-                <span id="navbar-button" class="navbar-button"><i class="icon-reorder"></i></span>
+      <div class="span3">
+                <%= image_tag "/assets/navbar-logo.png", :class=> "small-logo " %>
+                <span id="navbar-button" class="navbar-button hidden-desktop hidden-tablet"><i class="icon-reorder"></i></span>
       </div>
   		<div class="span9">
   			<ul class="navbar-links hidden-phone">
@@ -14,7 +14,7 @@
     </div>
   </div>
 </div>
-<div class="hidden-desktop">
+<div class="hidden-desktop hidden-tablet">
     <ul id="navbar-menu" class="navbar-list">
       <a href="#"><li><i class="icon-search"></i>&nbsp;&nbsp;Search Another Job</li></a>
       <a href="#"><li><i class="icon-star"></i>&nbsp;&nbsp;My Favourites</li></a>

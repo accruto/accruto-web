@@ -81,6 +81,7 @@
 
 .role-title {
 	@include heading-four;
+	font-weight: 600;
 	color: $blueBrandDark;
 	line-height:20px;
 	margin-bottom: 20px;
@@ -94,6 +95,7 @@
 
 .job-description {
 	font-size: $fontSizeSmall;
+	color: $grayDarker;
 }
 
 .posted-date {

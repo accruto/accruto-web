@@ -37,8 +37,11 @@
 		background-color: $blueBrandDarker;
 	}
 	
-	.logo-phone {
+	.small-logo, .small-logo-home{
 		padding: 10px 0 0 0;
+	}
+	.small-logo-home {
+		margin: 0 auto;
 	}
 
 	.navbar-button {
@@ -61,7 +64,7 @@
 			list-style: none;
 			text-align:	center;
 			background: $blueBrandDark;
-			padding: 10px 0;
+			padding: 15px 0;
 		}
 
 		a li {

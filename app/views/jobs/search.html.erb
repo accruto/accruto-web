@@ -17,20 +17,22 @@
 						<li>
 							<div class="row-fluid">
 								<div class="span8 job-info">
-									<h3 class="role-title"><%= job.title.capitalize %></h3>
+									<h3 class="role-title"><%= job.title %> </h3>
+
 									<p>
 										<span class="label label-full-time hidden"><%= job.job_type %></span>
 										<span class="job-location blue-accent"><%= job.company.name.titleize %> - <%= job.address.city %>, <%=  job.address.postcode %> <%= job.address.state %>
 										</span>
 									</p>
-									<p class="job-description hidden-phone"><%= truncate(sanitize(job.description, tags: ""), length: 170, seperator: " ") %></p>
+									<p class="job-description"><%= truncate(sanitize(job.description, tags: ""), length: 120, seperator: " ") %></p>
+
 									<small class="posted-date hidden-phone">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</small>
 								</div>
 								<div class="span3">
 									<div class="result-actions align-right">
 										<% case job.source %>
 											<% when 'CareerOne' %>
-												<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new" class="btn btn-primary btn-view-job">VIEW</a>
+												<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new" class="btn btn-primary btn-view-job hidden-phone">VIEW</a>
 											<% else %>
 												<a href="<%= job_path(job) %>" class="btn btn-primary btn-view-job">VIEW</a>
 											<% end %>
