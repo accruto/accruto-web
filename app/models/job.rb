@@ -65,6 +65,14 @@ class Job < ActiveRecord::Base
 		end
 	end
 
+	def self.filter_by_days(days)
+		if days.present?
+			where("posted_at >= ?", days.to_i.days.ago)
+		else
+			scoped
+		end
+	end
+
  	def self.load_careerone_feed(external_subcategory_id)
  		job_subcategory = JobSubcategory.where(external_subcategory_id: external_subcategory_id)
  		if job_subcategory.blank?

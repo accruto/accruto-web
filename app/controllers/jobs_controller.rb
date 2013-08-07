@@ -15,7 +15,7 @@ class JobsController < ApplicationController
   end
 
   def search
-  	@search_results = Job.search_by_job_title(params[:job_title].downcase).search_by_address(params[:address].downcase)
+  	@search_results = Job.search_by_job_title(params[:job_title].downcase).search_by_address(params[:address].downcase).filter_by_days(params[:days])
   	@jobs = @search_results.page(params[:page]).per_page(10)
 
   	respond_to do |format|
