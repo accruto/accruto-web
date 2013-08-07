@@ -17,7 +17,7 @@
 						<li>
 							<div class="row-fluid">
 								<div class="span8 job-info">
-									<h3 class="role-title"><%= job.title %></h3>
+									<h3 class="role-title"><%= job.title.capitalize %></h3>
 									<p>
 										<span class="label label-full-time hidden"><%= job.job_type %></span>
 										<span class="job-location blue-accent"><%= job.company.name.titleize %> - <%= job.address.city %>, <%=  job.address.postcode %> <%= job.address.state %>
@@ -35,8 +35,8 @@
 												<a href="<%= job_path(job) %>" class="btn btn-primary btn-view-job">VIEW</a>
 											<% end %>
 											<a href="#" class="btn btn-inverse"><i class="icon-star"></i></a>
-									<small class="posted-date hidden-desktop hidden-tablet">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</small>											
-									</div>																	
+									<small class="posted-date hidden-desktop hidden-tablet">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</small>
+									</div>
 								</div>
 							</div>
 						</li>

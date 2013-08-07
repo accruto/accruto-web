@@ -1,4 +1,9 @@
 class JobsController < ApplicationController
+	def new
+		@job = Job.new
+		@job.build_company
+		@job.build_address
+	end
 
   def show
     @job = Job.find(params[:id])

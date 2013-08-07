@@ -7,15 +7,8 @@
 		  	<h5>Job Details</h5>
 		    <%= f.input :title %>
 		    <%= f.input :description, as: :text %>
-		    <%= f.input :job_type %>
-		    <%= f.input :source, collection: ['Accruto','CareerOne','JXT','JobAdder'], prompt: "Select Job Source" %>
-		    <%= f.input :external_job_id %>
-		    <%= f.simple_fields_for :address do |a| %>
-		    	<%= a.input :street %>
-		    	<%= a.input :city %>
-		    	<%= a.input :postcode %>
-		    	<%= a.input :state %>
-		    <% end %>
+		    <%= f.input :job_type, collection: ["Part Time", "Full Time", "Contract"] %>
+		    <%= f.input :subcategories, label: "Job Subcategory", collection: ["Mining", "Biotech", "Oil and Gas"] %>
   		</div>
   		<div class="span6">
   			<h5>Job Company</h5>
@@ -23,14 +16,14 @@
   				<%= c.input :name %>
   				<%= c.input :phone %>
   			<% end %>
-  			<h5>Job Subcategories</h5>
-  			<%= f.simple_fields_for :subcategories do |s| %>
-  				<%= s.input :name, label: "Subcategory name" %>
+  			<%= f.simple_fields_for :address do |a| %>
+  				<%= a.input :street %>
+  				<%= a.input :city %>
+  				<%= a.input :postcode %>
+  				<%= a.input :state %>
   			<% end %>
   		</div>
   	</div>
-  	<%= f.input :posted_at %>
-  	<%= f.input :expires_at %>
   </div>
 
   <div class="form-actions">

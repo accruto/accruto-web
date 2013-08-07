@@ -86,7 +86,7 @@ class Job < ActiveRecord::Base
 	 			job = OpenStruct.new
 	 			job.company = OpenStruct.new
 
-	 			job.title = parsed_job.Title.capitalize
+	 			job.title = parsed_job.Title
 	 			job.external_job_id = parsed_job.ID
 	 			job.source = 'CareerOne' # temporary
 	 			job.posted_at = DateTime.strptime(parsed_job.DateActive, '%m/%d/%Y')
