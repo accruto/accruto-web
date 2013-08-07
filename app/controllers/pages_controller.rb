@@ -3,10 +3,8 @@ class PagesController < ApplicationController
   end
 
   def home
-  	@job = Job.new
-  	@jobs = Job.all
-      @categories = JobCategory.all
-      render :layout => 'home'
+	  @categories = JobCategory.all
+	  render :layout => 'home'
   end
 
   def about
