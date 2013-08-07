@@ -32,7 +32,7 @@ class Job < ActiveRecord::Base
 
   attr_accessible :company_id, :expires_at, :external_job_id, :source,
   								:posted_at, :title, :description, :job_type, :company_attributes,
-  								:subcategories_attributes, :address_attributes
+  								:subcategories_attributes, :address_attributes, :subcategory_ids
 
  	validates_presence_of :title, :job_type, :description, :posted_at,
  												:company, :address, :source

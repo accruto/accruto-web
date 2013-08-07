@@ -4,24 +4,86 @@
   <div class="form-inputs job-form-container">
   	<div class="row-fluid">
   		<div class="span6 ">
-		  	<p class="about-listing">Fill in the form below to post your job now.</p>
+		  	<p class="about-listing">Fill in the form below to post your job.</p>
 		    <%= f.input :title, label: "Job Title", input_html: { class: "form-inputs" } %>
 		    <%= f.simple_fields_for :company do |c| %>
 		    	<%= c.input :name, label: "Company Name" %>
 		    <% end %>
 		    <%= f.simple_fields_for :address do |a| %>
-		    	<%= a.input :full_street_address, label: "Location", collection: ["Sydney 2010", "NSW", "Australia"] %>
+		    	<%= a.input :city, label: "City", collection: [
+		    		["Sydney", "Sydney"],
+		    		["Perth", "Perth"],
+		    		["Brisbane", "Brisbane"]
+		    		] %>
+		    	<%= a.hidden_field :state, value: 'NSW' %>
 		    <% end %>
 		    <div class="job-type">
-		    	<%= f.input :job_type, collection: ["Part Time", "Full Time", "Contract"], as: :radio_buttons %>
+		    	<%= f.input :job_type, collection: [
+		    		["Part Time","Part Time"],
+		    		["Full Time","Full Time"],
+		    		["Contract", "Contract"]
+		    		], as: :radio_buttons %>
 		    </div>
-		    <%= f.input :subcategories, label: "Category", collection: ["Mining", "Biotech", "Oil and Gas"] %>
+		    <%= f.association :subcategories, label: "Category", collection: @subcategories, include_blank: true, input_html: { class: 'chosen-select' } %>
 		    <%= f.input :description, as: :text, input_html: { class: 'compose-description'} %>
+		    <%= f.hidden_field :posted_at, value: DateTime.now %>
+		    <%= f.hidden_field :source, value: 'accruto' %>
+  		</div>
+  		<div class="span6">
+  			<div class="job-form-preview">
+  				<p>Preview your job posting</p>
+  				<ul class="result-jobs">
+  					<li>
+  						<div class="row-fluid">
+  							<div class="span8 job-info">
+  								<h3 class="role-title"><span id="job_title_preview">Example Job Title</span></h3>
+  								<p>
+  									<span class="label label-full-time hidden"><span id="job-type-preview">Full Time</span></span>
+  									<span class="job-location blue-accent"><span id="job_company_attributes_name_preview">Pollenizer</span> - <span id="job_address_attributes_city_preview">Sydney, 2010 NSW</span>
+  									</span>
+  								</p>
+  								<p class="job-description"><span id="job_description_preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  								consequat.</span></p>
+
+  								<small class="posted-date hidden-phone">Posted today on accruto.com</small>
+  							</div>
+  							<div class="span3">
+  								<div class="result-actions align-right">
+  										<a href="#" class="btn btn-primary btn-view-job">VIEW</a>
+  										<a href="#" class="btn btn-inverse"><i class="icon-star"></i></a>
+  								<small class="posted-date hidden-desktop hidden-tablet">Posted today on accruto.com</small>
+  								</div>
+  							</div>
+  						</div>
+  					</li>
+  				</ul>
+  				<hr>
+  				<p>Purchase addons</p>
+  				<div class="row-fluid align-center">
+  					<div class="span4">
+  						<%= radio_button_tag :checkbox, 1 %><br><br>
+  						<%= image_tag "http://placehold.it/100x100" %>
+  						<h3>Free</h3>
+  					</div>
+  					<div class="span4">
+  						<%= radio_button_tag :checkbox, 1 %><br><br>
+  						<%= image_tag "http://placehold.it/100x100" %>
+  						<h3>$15</h3>
+  					</div>
+  					<div class="span4">
+  						<%= radio_button_tag :checkbox, 1 %><br><br>
+  						<%= image_tag "http://placehold.it/100x100" %>
+  						<h3>$30</h3>
+  					</div>
+  				</div>
+  				<br>
+  				<hr>
+  				<h3>Total Payment: $15</h3>
+  				<%= f.button :submit, "Post Job", :class=>'btn btn-primary btn-large btn-create-jobs' %>
+  			</div>
   		</div>
   	</div>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Post Job", :class=>'btn btn-primary btn-large btn-create-jobs' %>
   </div>
 <% end %>

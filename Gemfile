@@ -19,7 +19,9 @@ gem "pg_search", "~> 0.7.0"
 gem "will_paginate", "~> 3.0.4"
 gem "bootstrap-will_paginate", "~> 0.0.9"
 gem "geocoder", "~> 1.1.8"
+gem "chosen-rails", "~> 1.0.0"
 gem 'newrelic_rpm'
+
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -3,6 +3,17 @@ class JobsController < ApplicationController
 		@job = Job.new
 		@job.build_company
 		@job.build_address
+		@job.subcategories.build
+		@subcategories = JobSubcategory.all
+	end
+
+	def create
+		@job = Job.new(params[:job])
+		if @job.save
+			redirect_to root_path, notice: "Job was succesfully posted"
+		else
+			render action: "new"
+		end
 	end
 
   def show
@@ -15,7 +26,10 @@ class JobsController < ApplicationController
   end
 
   def search
-  	@search_results = Job.search_by_job_title(params[:job_title].downcase).search_by_address(params[:address].downcase).filter_by_days(params[:days])
+  	@search_results = Job.search_by_job_title(params[:job_title].downcase)
+									  	.search_by_address(params[:address].downcase)
+									  	.filter_by_days(params[:days])
+
   	@jobs = @search_results.page(params[:page]).per_page(10)
 
   	respond_to do |format|

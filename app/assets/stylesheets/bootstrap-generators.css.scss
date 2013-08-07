@@ -46,9 +46,11 @@ a.brand.image > img { height: 45px; }
 .clear-both { clear:both; }
 
 .error > * { color: $errorColor !important; }
+.error > .controls > .radio { color: $textColor !important }
 .error > * > input { &:focus { color: $errorColor !important; } }
 .error > * > input { color: $errorColor !important; }
 .error > .controls > * { border-color: $errorColor !important; }
+.help-inline { color: $errorColor !important }
 
 .label {
 	text-shadow: none !important;

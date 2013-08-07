@@ -5,3 +5,7 @@ jQuery ->
 	$('.datatable').dataTable
 	  sDom: "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
 	  sPaginationType: "bootstrap"
+	$('.chosen-select').chosen
+    allow_single_deselect: true
+    no_results_text: 'No results matched'
+    width: '200px'
