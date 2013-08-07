@@ -1,25 +1,27 @@
 <%= simple_form_for(@job) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs job-form-container">
   	<div class="row-fluid">
-  		<div class="span6">
-		  	<h5>Job Details</h5>
-		    <%= f.input :title, label: "Job Title" %>
+  		<div class="span6 ">
+		  	<p class="about-listing">Posting your latest job listings on Accruto is completely free. </p>
+		    <%= f.input :title, label: "Job Title", input_html: { class: "form-inputs" } %>
 		    <%= f.simple_fields_for :company do |c| %>
 		    	<%= c.input :name, label: "Company Name" %>
 		    <% end %>
 		    <%= f.simple_fields_for :address do |a| %>
-		    	<%= a.input :full_street_address, label: "Address", collection: ["Sydney 2010", "NSW", "Australia"] %>
+		    	<%= a.input :full_street_address, label: "Location", collection: ["Sydney 2010", "NSW", "Australia"] %>
 		    <% end %>
-		    <%= f.input :job_type, collection: ["Part Time", "Full Time", "Contract"], as: :radio_buttons %>
+		    <div class="job-type">
+		    	<%= f.input :job_type, collection: ["Part Time", "Full Time", "Contract"], as: :radio_buttons %>
+		    </div>
 		    <%= f.input :subcategories, label: "Job Subcategory", collection: ["Mining", "Biotech", "Oil and Gas"] %>
-		    <%= f.input :description, as: :text %>
+		    <%= f.input :description, as: :text, input_html: { class: 'compose-description'} %>
   		</div>
   	</div>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :class=>'btn btn-primary btn-large btn-create-jobs' %>
   </div>
 <% end %>

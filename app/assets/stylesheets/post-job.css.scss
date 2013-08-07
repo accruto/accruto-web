@@ -1,0 +1,88 @@
+@import "bootstrap-variables";
+
+.job-form-container {
+	margin-top: 40px;
+
+	.control-label {
+		margin-top: 30px;
+		font-weight: 600;
+		color: $blueBrandDark;
+	}
+}
+
+.page-header-post {
+	background: $yellow;
+	border-bottom: 1px solid $yellowDark;
+	padding: 20px 0;
+	h1 {
+		@include heading-one;
+		color: $blueBrandDark;
+		font-weight: 600;
+		margin: 0 0;
+	}
+}
+
+.job-type .radio{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.compose-description {
+	height: 300px;
+}
+
+.form-actions {
+	border-top: 0;
+	padding: 0 0;
+}
+
+
+/* Larger ----------- */
+@media screen and (max-width: 1024px) {
+	
+}
+
+
+/* Medium ------------ */
+@media screen and (max-width: 768px) {
+	
+}
+
+/* Smaller ----------- */
+@media screen and (max-width : 650px) {
+	.page-header-post {
+		padding: 10px 0;
+		h1 {
+		@include heading-three;
+		font-weight: 600;
+		text-align: center;
+		}
+	}
+
+	.job-form-container {
+		padding: 0 20px;
+
+		p, .control-label {
+			text-align: left;
+		}
+	}
+
+	.about-listing {
+		border-bottom: 1px solid $grayLight;
+		padding-bottom: 20px;
+	}
+
+	.compose-description {
+		width: 90%;
+		height: 300px;
+	}	
+	
+	.form-actions {
+		padding: 0 30px;
+	}
+
+	input[type="submit"] {
+		width: 100%;
+	}
+
+}
