@@ -59,7 +59,7 @@ class Job < ActiveRecord::Base
 
 	def self.search_by_address(address)
 		if address.present?
-			joins(:address).merge(Address.where("to_tsvector('simple', street) @@ :q or to_tsvector('simple', city) @@ :q or to_tsvector('simple', state) @@ :q", q: address ))
+			joins(:address).merge(Address.where("to_tsvector('simple', street) @@ plainto_tsquery(:q) or to_tsvector('simple', city) @@ plainto_tsquery(:q) or to_tsvector('simple', state) @@ plainto_tsquery(:q)", q: address.to_s ))
 		else
 			scoped
 		end

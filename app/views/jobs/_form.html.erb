@@ -4,7 +4,7 @@
   <div class="form-inputs job-form-container">
   	<div class="row-fluid">
   		<div class="span6 ">
-		  	<p class="about-listing">Posting your latest job listings on Accruto is completely free. </p>
+		  	<p class="about-listing">Fill in the form below to post your job now.</p>
 		    <%= f.input :title, label: "Job Title", input_html: { class: "form-inputs" } %>
 		    <%= f.simple_fields_for :company do |c| %>
 		    	<%= c.input :name, label: "Company Name" %>
@@ -15,13 +15,13 @@
 		    <div class="job-type">
 		    	<%= f.input :job_type, collection: ["Part Time", "Full Time", "Contract"], as: :radio_buttons %>
 		    </div>
-		    <%= f.input :subcategories, label: "Job Subcategory", collection: ["Mining", "Biotech", "Oil and Gas"] %>
+		    <%= f.input :subcategories, label: "Category", collection: ["Mining", "Biotech", "Oil and Gas"] %>
 		    <%= f.input :description, as: :text, input_html: { class: 'compose-description'} %>
   		</div>
   	</div>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, :class=>'btn btn-primary btn-large btn-create-jobs' %>
+    <%= f.button :submit, "Post Job", :class=>'btn btn-primary btn-large btn-create-jobs' %>
   </div>
 <% end %>
