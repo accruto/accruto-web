@@ -5,23 +5,16 @@
   	<div class="row-fluid">
   		<div class="span6">
 		  	<h5>Job Details</h5>
-		    <%= f.input :title %>
-		    <%= f.input :description, as: :text %>
-		    <%= f.input :job_type, collection: ["Part Time", "Full Time", "Contract"] %>
+		    <%= f.input :title, label: "Job Title" %>
+		    <%= f.simple_fields_for :company do |c| %>
+		    	<%= c.input :name, label: "Company Name" %>
+		    <% end %>
+		    <%= f.simple_fields_for :address do |a| %>
+		    	<%= a.input :full_street_address, label: "Address", collection: ["Sydney 2010", "NSW", "Australia"] %>
+		    <% end %>
+		    <%= f.input :job_type, collection: ["Part Time", "Full Time", "Contract"], as: :radio_buttons %>
 		    <%= f.input :subcategories, label: "Job Subcategory", collection: ["Mining", "Biotech", "Oil and Gas"] %>
-  		</div>
-  		<div class="span6">
-  			<h5>Job Company</h5>
-  			<%= f.simple_fields_for :company do |c| %>
-  				<%= c.input :name %>
-  				<%= c.input :phone %>
-  			<% end %>
-  			<%= f.simple_fields_for :address do |a| %>
-  				<%= a.input :street %>
-  				<%= a.input :city %>
-  				<%= a.input :postcode %>
-  				<%= a.input :state %>
-  			<% end %>
+		    <%= f.input :description, as: :text %>
   		</div>
   	</div>
   </div>
