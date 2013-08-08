@@ -4,7 +4,7 @@ module JobsHelper
 	end
 
 	def total_jobs
-		return Job.all.length
+		return 23145
 	end
 
 	def number_of_jobs_in_category(category)

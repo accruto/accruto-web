@@ -19,12 +19,14 @@
 class Job < ActiveRecord::Base
 	require 'open-uri'
 	include PgSearch
-	# multisearchable :against => [:title, :description],
- 	#  								using: {tsearch: {dictionary: "english"}}
+
  	pg_search_scope :search_jobs, against: [
  			[:title, 'A'],
 	    [:description, 'B'],
  		],
+ 		associated_against: {
+ 			subcategories: :name
+ 		},
  	  using: { tsearch: {
  	  		dictionary: "simple"
  	  	}
@@ -77,7 +79,7 @@ class Job < ActiveRecord::Base
 		if option.present?
 			case option
 			when 'posted_at'
-				reorder("posted_at ASC")
+				reorder("posted_at DESC")
 			else
 				scoped
 			end

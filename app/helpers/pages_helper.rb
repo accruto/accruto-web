@@ -12,8 +12,8 @@ module PagesHelper
 
 	def sort_filter_options
 		return [
-			["Date Posted", 'posted_at'],
-			["Relevance", 'relevance']
+			["Relevance", 'relevance'],
+			["Date Posted", 'posted_at']
 		]
 	end
 end
