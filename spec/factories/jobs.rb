@@ -15,11 +15,22 @@ FactoryGirl.define do
   	source "CareerOne"
   	job_type { "Fulltime" }
   	after(:create) do |job|
-  		job.subcategories << create(:job_subcategory)
-  		job.subcategories << create(:job_subcategory, name: "Mining")
+  		job.subcategories << create(:job_category).subcategories[0]
+  		job.subcategories << create(:job_category).subcategories[1]
   	end
+
+  	factory :job_with_one_subcategory do
+  		after(:create) do |job|
+  			job.subcategories << create(:job_category).subcategories[0]
+  		end
+  	end
+
   	factory :job_inactive do
   		expires_at 1.day.ago
+  		after(:create) do |job|
+  			job.subcategories << create(:job_category).subcategories[0]
+  			job.subcategories << create(:job_category).subcategories[1]
+  		end
   	end
   end
 end

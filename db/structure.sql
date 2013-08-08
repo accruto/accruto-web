@@ -107,7 +107,8 @@ CREATE TABLE job_categories (
     name character varying(255),
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    external_category_id integer
+    external_category_id integer,
+    slug character varying(255)
 );
 
 
@@ -140,7 +141,8 @@ CREATE TABLE job_subcategories (
     job_category_id integer,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    external_subcategory_id integer
+    external_subcategory_id integer,
+    slug character varying(255)
 );
 
 
@@ -380,6 +382,62 @@ ALTER TABLE ONLY pg_search_documents
 
 
 --
+-- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
+
+
+--
+-- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
+
+
+--
+-- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
+
+
+--
+-- Name: index_job_categories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_job_categories_on_slug ON job_categories USING btree (slug);
+
+
+--
+-- Name: index_jobs_on_address_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_jobs_on_address_id ON jobs USING btree (address_id);
+
+
+--
+-- Name: index_jobs_on_company_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_jobs_on_company_id ON jobs USING btree (company_id);
+
+
+--
+-- Name: index_jobs_on_description; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_jobs_on_description ON jobs USING btree (description);
+
+
+--
+-- Name: index_jobs_on_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_jobs_on_title ON jobs USING btree (title);
+
+
+--
 -- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -419,3 +477,7 @@ INSERT INTO schema_migrations (version) VALUES ('20130805042117');
 INSERT INTO schema_migrations (version) VALUES ('20130806060106');
 
 INSERT INTO schema_migrations (version) VALUES ('20130806061727');
+
+INSERT INTO schema_migrations (version) VALUES ('20130808013415');
+
+INSERT INTO schema_migrations (version) VALUES ('20130808013436');

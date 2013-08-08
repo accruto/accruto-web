@@ -9,4 +9,11 @@ module PagesHelper
 			["Last 30 days", 30]
 		]
 	end
+
+	def sort_filter_options
+		return [
+			["Date Posted", 'posted_at'],
+			["Relevance", 'relevance']
+		]
+	end
 end

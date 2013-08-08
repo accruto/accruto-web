@@ -19,7 +19,7 @@
 require 'spec_helper'
 
 describe Job do
-	it "has a valid factory" do
+	it "has a valid factory", focus: true do
 		expect(create(:job)).to be_valid
 	end
 
@@ -37,16 +37,25 @@ describe Job do
 	end
 
 	context "scopes" do
-		before(:each) do
-			@active_job = create(:job)
-			@inactive_job = create(:job_inactive)
-		end
 	  it "returns only active jobs" do
+	  	@active_job = create(:job)
+	  	@inactive_job = create(:job_inactive)
 			expect(Job.active).to eq([@active_job])
 		end
 
 	  it "does not return inactive jobs" do
+	  	@active_job = create(:job)
+	  	@inactive_job = create(:job_inactive)
 			expect(Job.active).not_to eq([@inactive_job])
+		end
+
+		it "returns jobs that matches searched job title"
+		it "returns jobs that matches searched address"
+		it "returns jobs that matches days filter"
+
+		it "returns jobs that matches category search", focus: true do
+			@job_with_one_subcategory = create(:job_with_one_subcategory)
+			expect(Job.search_by_category("Editorial & Writing")).to eq([@job_with_one_subcategory])
 		end
 	end
 

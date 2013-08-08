@@ -10,7 +10,7 @@
 
 <div class="main-search">
 	<div class="container">
-		<%= form_tag "/jobs/search", method: :get do %>
+		<%= form_tag search_jobs_path, method: :get do %>
 		  <div class="row-fluid">
 		  	<div class="span5">
 		  		<label>What's your next job title?</label>
@@ -46,7 +46,7 @@
 				<div class="span3">
 					<ul class="category-list">
 						<% group.each do |category| %>
-							<li><a href="/jobs/search"><%= category.name %></a></li>
+							<li><a href="/jobs/category/<%= category.slug %>"><%= category.name %></a></li>
 						<% end %>
 					</ul>
 				</div>

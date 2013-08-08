@@ -2,11 +2,17 @@
 		<h4 class="sidebar-title">Refine your Search Results</h4>
 	<%= form_tag "/jobs/search", method: :get do %>
 		<label class="brand-dark-blue-accent">What do you want to be?</label>
-		<%= text_field_tag :job_title, params[:job_title], placeholder: 'Job Title' %>
+		<% if params[:job_title] %>
+			<%= text_field_tag :job_title, params[:job_title], placeholder: 'Job Title' %>
+		<% elsif params[:category] %>
+			<%= text_field_tag :job_title, params[:category], placeholder: 'Job Title' %>
+		<% end %>
 		<label class="brand-dark-blue-accent">Where?</label>
 		<%= text_field_tag :address, params[:address], placeholder: 'City or State' %>
 		<label class="brand-dark-blue-accent">Date posted:</label>
 		<%= select_tag :days, options_for_select(date_filter_options, params[:days]) %>
+		<label class="brand-dark-blue-accent">Sort by:</label>
+		<%= select_tag :sort, options_for_select(sort_filter_options, params[:sort]) %>
 		<div class="hidden">
 			<label class="brand-dark-blue-accent">What type of commitment</label>
 			<div class="radio-container">

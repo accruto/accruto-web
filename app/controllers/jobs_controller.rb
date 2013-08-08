@@ -26,12 +26,11 @@ class JobsController < ApplicationController
   end
 
   def search
-  	@search_results = Job.search_by_job_title(params[:job_title].downcase)
-									  	.search_by_address(params[:address].downcase)
+		@search_results = Job.search_by_job_title(params[:job_title])
+									  	.search_by_address(params[:address])
 									  	.filter_by_days(params[:days])
-
-  	@jobs = @search_results.page(params[:page]).per_page(10)
-
+									  	.sort_by(params[:sort])
+		@jobs = @search_results.page(params[:page]).per_page(10)
   	respond_to do |format|
   	  format.html
   	  format.json { render json: @jobs }

@@ -51,7 +51,7 @@ class Job < ActiveRecord::Base
 
 	def self.search_by_job_title(job_title)
 		if job_title.present?
-			search_jobs(job_title)
+			search_jobs(job_title.downcase)
 		else
 			scoped
 		end
@@ -59,7 +59,7 @@ class Job < ActiveRecord::Base
 
 	def self.search_by_address(address)
 		if address.present?
-			joins(:address).merge(Address.where("to_tsvector('simple', street) @@ plainto_tsquery(:q) or to_tsvector('simple', city) @@ plainto_tsquery(:q) or to_tsvector('simple', state) @@ plainto_tsquery(:q)", q: address.to_s ))
+			joins(:address).merge(Address.where("to_tsvector('simple', street) @@ plainto_tsquery(:q) or to_tsvector('simple', city) @@ plainto_tsquery(:q) or to_tsvector('simple', state) @@ plainto_tsquery(:q)", q: address.to_s.downcase ))
 		else
 			scoped
 		end
@@ -68,6 +68,19 @@ class Job < ActiveRecord::Base
 	def self.filter_by_days(days)
 		if days.present?
 			where("posted_at >= ?", days.to_i.days.ago)
+		else
+			scoped
+		end
+	end
+
+	def self.sort_by(option)
+		if option.present?
+			case option
+			when 'posted_at'
+				reorder("posted_at ASC")
+			else
+				scoped
+			end
 		else
 			scoped
 		end

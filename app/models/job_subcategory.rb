@@ -17,4 +17,7 @@ class JobSubcategory < ActiveRecord::Base
   belongs_to :job_category
   validates_presence_of :name
   accepts_nested_attributes_for :category
+
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 end
