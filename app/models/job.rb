@@ -59,7 +59,7 @@ class Job < ActiveRecord::Base
 		end
 	end
 
-	def self.search_by_address(address)
+	def self.filter_by_address(address)
 		if address.present?
 			joins(:address).merge(Address.where("to_tsvector('simple', street) @@ plainto_tsquery(:q) or to_tsvector('simple', city) @@ plainto_tsquery(:q) or to_tsvector('simple', state) @@ plainto_tsquery(:q)", q: address.to_s.downcase ))
 		else
@@ -76,13 +76,9 @@ class Job < ActiveRecord::Base
 	end
 
 	def self.sort_by(option)
-		if option.present?
-			case option
-			when 'posted_at'
-				reorder("posted_at DESC")
-			else
-				scoped
-			end
+		case option
+		when 'posted_at'
+			reorder("posted_at DESC")
 		else
 			scoped
 		end
