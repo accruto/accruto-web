@@ -1,6 +1,8 @@
 class Admin::JobSubcategoriesController < ApplicationController
   # GET /job_categories
   # GET /job_categories.json
+  load_and_authorize_resource
+
   def index
     @subcategories = JobSubcategory.all
 

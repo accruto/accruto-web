@@ -16,4 +16,10 @@ module PagesHelper
 			["Date Posted", 'posted_at']
 		]
 	end
+
+	def hidden_on_desktop_page(page)
+		if params[:action] == page
+			return 'hidden-desktop'
+		end
+	end
 end

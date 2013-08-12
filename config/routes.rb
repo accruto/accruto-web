@@ -1,9 +1,12 @@
 Accruto::Application.routes.draw do
+  devise_for :users
+
   get "jobs/category/:category", to: "jobs#search"
 
   resources :jobs do
   	collection do
 	  	get 'search'
+	  	delete 'clear_searches'
 	  end
   end
 
@@ -27,8 +30,22 @@ Accruto::Application.routes.draw do
   root :to => 'pages#home'
 end
 #== Route Map
-# Generated on 08 Aug 2013 13:15
+# Generated on 12 Aug 2013 11:41
 #
+#               user_session POST   /users/sign_in(.:format)                    devise/sessions#create
+#       destroy_user_session DELETE /users/sign_out(.:format)                   devise/sessions#destroy
+#              user_password POST   /users/password(.:format)                   devise/passwords#create
+#          new_user_password GET    /users/password/new(.:format)               devise/passwords#new
+#         edit_user_password GET    /users/password/edit(.:format)              devise/passwords#edit
+#                            PUT    /users/password(.:format)                   devise/passwords#update
+#   cancel_user_registration GET    /users/cancel(.:format)                     devise/registrations#cancel
+#          user_registration POST   /users(.:format)                            devise/registrations#create
+#      new_user_registration GET    /users/sign_up(.:format)                    devise/registrations#new
+#     edit_user_registration GET    /users/edit(.:format)                       devise/registrations#edit
+#                            PUT    /users(.:format)                            devise/registrations#update
+#                            DELETE /users(.:format)                            devise/registrations#destroy
+#                            GET    /jobs/category/:category(.:format)          jobs#search
+#                search_jobs GET    /jobs/search(.:format)                      jobs#search
 #                       jobs GET    /jobs(.:format)                             jobs#index
 #                            POST   /jobs(.:format)                             jobs#create
 #                    new_job GET    /jobs/new(.:format)                         jobs#new

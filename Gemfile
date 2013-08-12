@@ -22,7 +22,9 @@ gem "geocoder", "~> 1.1.8"
 gem "chosen-rails", "~> 1.0.0"
 gem "friendly_id", "~> 4.0.9"
 gem 'newrelic_rpm'
-
+gem "devise", "~> 3.0.2"
+gem "rolify", "~> 3.2.0"
+gem "cancan", "~> 1.6.10"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
