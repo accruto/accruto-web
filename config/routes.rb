@@ -6,6 +6,7 @@ Accruto::Application.routes.draw do
   resources :jobs do
   	collection do
 	  	get 'search'
+	  	get 'apply'
 	  	delete 'clear_searches'
 	  end
   end

@@ -29,6 +29,9 @@ class JobsController < ApplicationController
     end
   end
 
+  def apply
+  end
+
   def search
 		unless params[:category]
 			@search_results = Job.search_by_job_title(params[:job_title])
