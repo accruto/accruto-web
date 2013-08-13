@@ -382,27 +382,6 @@ ALTER TABLE ONLY pg_search_documents
 
 
 --
--- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
-
-
---
--- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
-
-
---
--- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
-
-
---
 -- Name: index_job_categories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -410,31 +389,10 @@ CREATE UNIQUE INDEX index_job_categories_on_slug ON job_categories USING btree (
 
 
 --
--- Name: index_jobs_on_address_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+-- Name: index_job_subcategories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE INDEX index_jobs_on_address_id ON jobs USING btree (address_id);
-
-
---
--- Name: index_jobs_on_company_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_jobs_on_company_id ON jobs USING btree (company_id);
-
-
---
--- Name: index_jobs_on_description; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_jobs_on_description ON jobs USING btree (description);
-
-
---
--- Name: index_jobs_on_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_jobs_on_title ON jobs USING btree (title);
+CREATE UNIQUE INDEX index_job_subcategories_on_slug ON job_subcategories USING btree (slug);
 
 
 --
