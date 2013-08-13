@@ -3,16 +3,91 @@
 .job-form-container {
 	margin-top: 40px;
 
-	.control-label {
+	.control-label, .about-listing {
 		margin-top: 30px;
 		font-weight: 600;
 		color: $blueBrandDark;
 	}
 }
 
-.job-form-preview {
-	margin: 0 0 0 50px;
+.about-listing {
+	color: $grayDarker !important;
 }
+
+
+.preview-sidebar {
+	padding: 0 0 0 30px;
+}
+
+.create-subheading {
+	padding: 10px 0 10px 10px;
+	p {
+		margin: 0 0;
+	}
+}
+
+.highlight-indent {
+	padding: 20px 20px;
+	background: $grayLighter;
+}
+
+.job-form-preview .result-jobs {
+	border: 1px solid $goldLight;
+}
+
+.addon-choices {
+	background: $white;
+	a {
+		color: $grayDark;
+		&:hover {
+		text-decoration: none;
+		}
+	}
+
+
+	ul {
+		list-style: none;
+		margin: 0 0;
+		border: 1px solid $grayLighter;
+		border-bottom: 0px;
+	}
+
+	li {
+		padding: 20px 30px;
+		border-bottom: 1px solid $grayLighter;
+		&:hover {
+			background: $yellowLight;
+			border-left: 3px solid $yellowDark;
+			color: $grayDarker;
+
+		}
+	}
+
+	input {
+		margin: 0;
+	}
+
+	span {
+		margin-left: 10px;
+	}
+}
+
+.price-dis {
+	background: $blueLight;
+}
+
+.ad-price {
+	font-weight: 600;
+	color: $blueBrandDark;
+}
+
+.result-jobs {
+	padding: 10px 0 0 20px;
+	background: $white;
+
+}
+
+
 
 .page-header-post {
 	background: $yellow;
@@ -39,6 +114,22 @@
 	border-top: 0;
 	padding: 0 0;
 }
+
+.payable {
+	text-align: left;
+	padding: 20px 0 0 30px;
+	h3 {
+		@include heading-three;
+		margin-top: 0;
+	}
+}
+
+.amount-due {
+	font-weight: 600;
+	color: $blueBrandDark;
+	border-bottom: 2px dotted $grayLight;
+}
+
 
 
 /* Larger ----------- */
@@ -71,6 +162,10 @@
 		}
 	}
 
+	.preview-sidebar {
+		padding: 0 0 0 0;
+	}
+
 	.about-listing {
 		border-bottom: 1px solid $grayLight;
 		padding-bottom: 20px;
@@ -87,6 +182,24 @@
 
 	input[type="submit"] {
 		width: 100%;
+	}
+
+	.addon-choices {
+		li {
+		text-align: left;
+		}
+	}	
+
+	.job-form-container {
+		margin-top: 0px;
+	}
+
+	.result-actions .btn-view-job {
+		display: none;
+	}
+
+	.payable {
+		padding: 20px 0 0 0;
 	}
 
 }
