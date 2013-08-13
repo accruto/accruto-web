@@ -1,13 +1,10 @@
 class Admin::JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
+  load_and_authorize_resource
+
   def index
     @jobs = Job.limit('100')
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @jobs }
-    end
   end
 
   def new
@@ -15,11 +12,6 @@ class Admin::JobsController < ApplicationController
     @job.build_company
     @job.build_address
     @job.subcategories.build
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @job }
-    end
   end
 
   # GET /jobs/1/edit
@@ -32,15 +24,11 @@ class Admin::JobsController < ApplicationController
   def create
     @job = Job.new(params[:job])
 
-    respond_to do |format|
-      if @job.save
-        format.html { redirect_to admin_jobs_path, notice: 'Job was successfully created.' }
-        format.json { render json: @job, status: :created, location: @job }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @job.errors, status: :unprocessable_entity }
-      end
-    end
+		if @job.save
+			redirect_to admin_jobs_path, notice: 'Job was successfully created.'
+		else
+			render action: "new"
+		end
   end
 
   # PUT /jobs/1
@@ -48,14 +36,10 @@ class Admin::JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
 
-    respond_to do |format|
-      if @job.update_attributes(params[:job])
-        format.html { redirect_to admin_jobs_path, notice: 'Job was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @job.errors, status: :unprocessable_entity }
-      end
+    if @job.update_attributes(params[:job])
+      redirect_to admin_jobs_path, notice: 'Job was successfully updated.'
+    else
+      render action: "edit"
     end
   end
 
@@ -64,10 +48,6 @@ class Admin::JobsController < ApplicationController
   def destroy
     @job = Job.find(params[:id])
     @job.destroy
-
-    respond_to do |format|
-      format.html { redirect_to admin_jobs_url }
-      format.json { head :no_content }
-    end
+    redirect_to admin_jobs_url
   end
 end

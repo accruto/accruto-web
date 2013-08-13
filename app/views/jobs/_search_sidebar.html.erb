@@ -22,11 +22,22 @@
 </div>
 
 <div class="recent-searches">
-	<p><span class="sidebar-title">Recent Searches</span><span class="set-alert pull-right">Set Alert </span></p>
+	<p><span class="sidebar-title">Recent Searches</span></p>
 	<ul class="recent-list">
-		<li><a href="#"><span class="recent-role">Account Director</span> at <span class="blue-accent">ABC Engineering</span></a></li>
-		<li><a href="#"><span class="recent-role">Recruitment Consultant - Account Management/Temporary Desk </span> at <span class="blue-accent">Quay Appointments</span></a></li>
+		<% if session[:search].blank? %>
+			<li>
+				<a href="#"><span class="recent-role">No Recent Searches</span></a>
+			</li>
+		<% else %>
+			<% session[:search].each do |recent_search| %>
+				<li>
+					<a href="#"><span class="recent-role"><%= recent_search.job_title.capitalize %></span> in <span class="recent-role"><%= recent_search.address.capitalize %></span>
+					<a href="#" class="btn btn-inverse pull-right">Alert Me</a>
+				</li>
+		<% end %>
+		<% end %>
 	</ul>
+	<p class="align-right"><%= link_to 'Clear Searches', clear_searches_jobs_path, confirm: 'Are you sure?', method: :delete %></p>
 </div>
 
 <div class="favourite-roles">
