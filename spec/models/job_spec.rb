@@ -19,7 +19,7 @@
 require 'spec_helper'
 
 describe Job do
-	it "has a valid factory", focus: true do
+	it "has a valid factory" do
 		expect(create(:job)).to be_valid
 	end
 
@@ -52,11 +52,6 @@ describe Job do
 		it "returns jobs that matches searched job title"
 		it "returns jobs that matches searched address"
 		it "returns jobs that matches days filter"
-
-		it "returns jobs that matches category search", focus: true do
-			@job_with_one_subcategory = create(:job_with_one_subcategory)
-			expect(Job.search_by_category("Editorial & Writing")).to eq([@job_with_one_subcategory])
-		end
 	end
 
 	context "is valid" do
