@@ -7,6 +7,7 @@
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #  external_category_id :integer
+#  slug                 :string(255)
 #
 
 require 'spec_helper'

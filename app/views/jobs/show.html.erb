@@ -1,7 +1,7 @@
 <div class="container detail-show">
 	<div class="row-fluid">
 		<div class="span4 hidden-phone">
-			<%= render 'search_sidebar' %>
+			<%= render 'search_sidebar', favourite_jobs: @favourite_jobs %>
 		</div>
 		<div class="span8 job-container">
 			<a href="javascript:history.back()" class="go-back"><span class="job-detail-back">Back to search results</span></a>

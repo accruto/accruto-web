@@ -1,4 +1,6 @@
 class JobsController < ApplicationController
+  before_filter :load_favourite_jobs, only: [:show, :search, :favourites]
+
 	def index
 		redirect_to root_path
 	end
@@ -63,4 +65,35 @@ class JobsController < ApplicationController
   	redirect_to search_jobs_path
   end
 
+  def add_to_favourite
+    @job = Job.find(params[:job_id])
+    @job_id = @job.id
+    @set_selected = true
+
+    if !current_user.favourite_job?(@job_id)
+      current_user.favourites.build(:user_id => current_user.id, :job_id => @job_id)
+      current_user.save
+    elsif current_user && current_user.favourite_job?(@job_id)
+      current_user.favourites.find_by_job_id(@job_id).delete
+      @set_selected = false
+    end
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def favourites
+    @jobs = @favourite_jobs.paginate(page: params[:page], per_page: 10)
+
+    respond_to do |format|
+      format.html
+    end
+  end
+
+  private
+
+  def load_favourite_jobs
+    @favourite_jobs = current_user ? current_user.favourite_jobs : []
+  end
 end
