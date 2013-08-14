@@ -1,0 +1,9 @@
+<li id="job-list-sidebar-<%= job.id %>">
+  <% if job.source == 'CareerOne' %>
+    <a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new">
+  <% else %>
+    <a href="<%= job_path(job) %>">
+  <% end %>
+      <span class="recent-role"><%= job.title %></span> at <span class="blue-accent"><%= job.company.name %></span>
+    </a>
+</li>

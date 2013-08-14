@@ -8,6 +8,8 @@ Accruto::Application.routes.draw do
 	  	get 'search'
 	  	get 'apply'
 	  	delete 'clear_searches'
+      post 'add_to_favourite'
+      get 'favourites'
 	  end
   end
 

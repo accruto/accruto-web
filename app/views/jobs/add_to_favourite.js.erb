@@ -1,0 +1,14 @@
+<% if @set_selected %>
+  $('#favourite-btn-<%= @job_id %>').addClass('favourite-job');
+  if ($('#job-list-sidebar-empty').is(":visible")) {
+    $('#job-list-sidebar-empty').hide();
+  }
+  $('#favourites-sidebar-list').append('<%= j(render "job_favourite_item", job: @job ) %>');
+<% else %>
+  $('#favourite-btn-<%= @job_id %>').removeClass('favourite-job');
+  $('#job-list-sidebar-<%= @job_id %>').remove();
+
+  if ($('#favourites-sidebar-list').children().length <= 1) {
+    $('#job-list-sidebar-empty').show();
+  }
+<% end %>

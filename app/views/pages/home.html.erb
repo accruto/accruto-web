@@ -42,7 +42,7 @@
 			</div>
 		</div>
 		<div class="row hidden-phone visible-desktop visible-tablet">
-			<% @categories.in_groups(4).each do |group| %>
+			<% @categories.in_groups(4, false).each do |group| %>
 				<div class="span3">
 					<ul class="category-list">
 						<% group.each do |category| %>

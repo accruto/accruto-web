@@ -1,14 +1,14 @@
 <div class="container results-main">
 	<div class="row-fluid">
 		<div class="span4 hidden-phone">
-			<%= render 'search_sidebar' %>
+			<%= render 'search_sidebar', favourite_jobs: @favourite_jobs %>
 		</div>
 		<div class="span8 result-list">
-			<h4 class="result-sentence">There are a total of <span class="result-number"><%= number_with_delimiter(total_search_result) %></span> jobs matching your search criteria</h4>
+			<h4 class="result-sentence">There are a total of <span class="result-number"><%= number_with_delimiter(total_search_result(@search_results)) %></span> jobs matching your search criteria</h4>
 			<hr>
 			<ul class="result-jobs">
 				<% @jobs.each do |job| %>
-					<% case job.source %>
+					  <% case job.source %>
 						<% when 'CareerOne' %>
 							<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new">
 						<% else %>
@@ -28,6 +28,7 @@
 
 									<small class="posted-date hidden-phone">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</small>
 								</div>
+
 								<div class="span3">
 									<div class="result-actions align-right">
 										<% case job.source %>
@@ -36,7 +37,9 @@
 											<% else %>
 												<a href="<%= job_path(job) %>" class="btn btn-primary btn-view-job">VIEW</a>
 											<% end %>
-											<a href="#" class="btn btn-inverse"><i class="icon-star"></i></a>
+                      <a href="#" id="favourite-btn-<%= job.id %>" data-job-id="<%= job.id %>" class="btn btn-inverse add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>">
+                        <i class="icon-star"></i>
+                      </a>
 									<small class="posted-date hidden-desktop hidden-tablet">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</small>
 									</div>
 								</div>
@@ -49,4 +52,19 @@
 			<%= will_paginate @jobs %>
 		</div>
 	</div>
+</div>
+
+
+<div id="favourite-blocker-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="favouriteLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 id="favouriteLabel" class="favourite-modal">Please sign up</h4>
+  </div>
+  <div class="modal-body">
+    <p>You have to sign up to add jobs to your favourite lists</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">I will signup later</button>
+    <button id="go-to-signup-btn" class="btn btn-primary">Sign up now</button>
+  </div>
 </div>

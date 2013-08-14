@@ -4,3 +4,4 @@ tmp/*
 log/*.log
 log/development.log
 coverage
+.idea

@@ -44,6 +44,8 @@ class Job < ActiveRecord::Base
  	belongs_to :address
 
  	has_and_belongs_to_many :subcategories, class_name: "JobSubcategory"
+  has_many :favourites
+  has_many :favourite_users, through: :favourites, :source => :user
 
  	accepts_nested_attributes_for :company
  	accepts_nested_attributes_for :subcategories

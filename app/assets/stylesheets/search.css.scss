@@ -102,6 +102,25 @@
 	color: $gray;
 }
 
+.favourite-job {
+  background: #54cc96;
+  border: 1px solid #4bb686;
+  color: white;
+}
+
+.favourite-job:hover {
+  background: #40c68a;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.favourite-modal {
+  margin: 0px;
+}
+
 /* Larger ----------- */
 @media screen and (max-width: 1024px) {
 	

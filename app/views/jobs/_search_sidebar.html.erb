@@ -42,8 +42,14 @@
 
 <div class="favourite-roles">
 	<p><span class="sidebar-title">Favourited Jobs</span></p>
-	<ul class="recent-list">
-		<li><a href="#"><span class="recent-role">Account Director</span> at <span class="blue-accent">ABC Engineering</span></a></li>
-		<li><a href="#"><span class="recent-role">Recruitment Consultant - Account Management/Temporary Desk </span> at <span class="blue-accent">Quay Appointments</span></a></li>
-	</ul>
+	<ul id="favourites-sidebar-list" class="recent-list">
+    <% unless favourite_jobs.empty? %>
+      <%= render 'job_favourite_empty', show: false %>
+      <% favourite_jobs.each do |favourite_job| %>
+        <%= render 'job_favourite_item', job: favourite_job %>
+      <% end if defined?(favourite_jobs) %>
+    <% else %>
+      <%= render 'job_favourite_empty', show: true %>
+    <% end %>
+  </ul>
 </div>
