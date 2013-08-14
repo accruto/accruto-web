@@ -24,12 +24,11 @@
 		    		["Contract", "Contract"]
 		    		], as: :radio_buttons %>
 		    </div>
-		    <%= f.association :subcategories, label: "Category", collection: @subcategories, include_blank: true, input_html: { class: 'chosen-select' } %>
+		    <%= f.association :subcategories, label: "Category", collection: @subcategories, include_blank: true, input_html: { class: 'chosen-select' } %>		    
 		    <%= f.input :description, as: :text, input_html: { class: 'compose-description'} %>
 		    <%= f.hidden_field :posted_at, value: DateTime.now %>
 		    <%= f.hidden_field :source, value: 'accruto' %>
   		</div>
-
   		<div class="span6 preview-sidebar">
   			<div class="create-subheading">
   				<p class="about-listing">2. Preview your ad</p>
