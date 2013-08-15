@@ -43,13 +43,6 @@ class JobsController < ApplicationController
       @search_results = @subcategories.map { |sc| sc.jobs }.flatten
       @jobs = @search_results.paginate(page: params[:page], per_page: 10)
     end
-    if @search_results.count > 1 and session[:search].blank? == false
-      if session[:search].include? OpenStruct.new(params) == false
-        session[:search] << OpenStruct.new(params)
-      end
-    else
-      session[:search] = []
-    end
 
     if current_user
       handle_member_recent_searches

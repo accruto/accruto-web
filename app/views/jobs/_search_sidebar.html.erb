@@ -1,5 +1,5 @@
 <div class="search-box" xmlns="http://www.w3.org/1999/html">
-		<h4 class="sidebar-title">Refine your Search Results</h4>
+		<h4 class="sidebar-title">Refine your Search</h4>
 	<%= form_tag "/jobs/search", method: :get do %>
 		<label class="brand-dark-blue-accent">Whats  your next job title?</label>
 		<%= text_field_tag :job_title, params[:job_title], placeholder: 'Job Title' %>
@@ -31,15 +31,21 @@
     <% else %>
       <% @recent_searches.each do |recent_search| %>
         <li>
-          <a href="<%= build_search_params(recent_search) %>">
-            <span class="recent-role"><%= recent_search.job_title.try(:capitalize) %></span> in
-            <% if recent_search.address.present? %>
-              <span class="recent-role"><%= recent_search.address.try(:capitalize) %></span>
-            <% else %>
-              <span class="recent-role">Anywhere</span>
-            <% end %>
-          </a>
-          <a href="#" class="btn btn-inverse pull-right">Alert Me</a>
+        	<div class="row-fluid">
+        		<div class="span11">
+        			<a href="<%= build_search_params(recent_search) %>">
+        			  <span class="recent-role"><%= recent_search.job_title.try(:capitalize) %></span> <br>in
+        			  <% if recent_search.address.present? %>
+        			    <span class="recent-role"><%= recent_search.address.try(:capitalize) %></span>
+        			  <% else %>
+        			    <span class="recent-role">Anywhere</span>
+        			  <% end %>
+        			</a>
+        		</div>
+        		<div class="span1">
+        			<a href="#"><span class=""><i class="icon-bell-alt"></i></span></a>
+        		</div>
+        	</div>
         </li>
       <% end %>
     <% end %>
@@ -63,7 +69,7 @@
   </ul>
   <p class="align-right">
     <a href="/jobs/remove_all_favourites" id="remove-all-favourites" rel="nofollow">
-      <% unless favourite_jobs.empty? %> Remove all favourites <% end %> &nbsp;
+      <% unless favourite_jobs.empty? %>Clear Favourites<% end %>
     </a>
   </p>
 </div>

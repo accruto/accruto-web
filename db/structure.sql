@@ -99,6 +99,38 @@ ALTER SEQUENCE companies_id_seq OWNED BY companies.id;
 
 
 --
+-- Name: favourites; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE favourites (
+    id integer NOT NULL,
+    user_id integer,
+    job_id integer,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: favourites_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE favourites_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: favourites_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE favourites_id_seq OWNED BY favourites.id;
+
+
+--
 -- Name: job_categories; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -268,6 +300,44 @@ ALTER SEQUENCE pg_search_documents_id_seq OWNED BY pg_search_documents.id;
 
 
 --
+-- Name: recent_searches; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE recent_searches (
+    id integer NOT NULL,
+    job_title character varying(255),
+    address character varying(255),
+    days character varying(255),
+    sort character varying(255),
+    category character varying(255),
+    user_id integer,
+    search_at timestamp without time zone,
+    source text,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: recent_searches_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE recent_searches_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: recent_searches_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE recent_searches_id_seq OWNED BY recent_searches.id;
+
+
+--
 -- Name: roles; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -377,6 +447,13 @@ ALTER TABLE ONLY companies ALTER COLUMN id SET DEFAULT nextval('companies_id_seq
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY favourites ALTER COLUMN id SET DEFAULT nextval('favourites_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY job_categories ALTER COLUMN id SET DEFAULT nextval('job_categories_id_seq'::regclass);
 
 
@@ -412,6 +489,13 @@ ALTER TABLE ONLY pg_search_documents ALTER COLUMN id SET DEFAULT nextval('pg_sea
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY recent_searches ALTER COLUMN id SET DEFAULT nextval('recent_searches_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq'::regclass);
 
 
@@ -436,6 +520,14 @@ ALTER TABLE ONLY addresses
 
 ALTER TABLE ONLY companies
     ADD CONSTRAINT companies_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: favourites_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY favourites
+    ADD CONSTRAINT favourites_pkey PRIMARY KEY (id);
 
 
 --
@@ -479,6 +571,14 @@ ALTER TABLE ONLY pg_search_documents
 
 
 --
+-- Name: recent_searches_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY recent_searches
+    ADD CONSTRAINT recent_searches_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -495,6 +595,27 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
+
+
+--
+-- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
+
+
+--
+-- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
+
+
+--
 -- Name: index_job_categories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -502,10 +623,38 @@ CREATE UNIQUE INDEX index_job_categories_on_slug ON job_categories USING btree (
 
 
 --
--- Name: index_job_subcategories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+-- Name: index_jobs_on_address_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE UNIQUE INDEX index_job_subcategories_on_slug ON job_subcategories USING btree (slug);
+CREATE INDEX index_jobs_on_address_id ON jobs USING btree (address_id);
+
+
+--
+-- Name: index_jobs_on_company_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_jobs_on_company_id ON jobs USING btree (company_id);
+
+
+--
+-- Name: index_jobs_on_description; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_jobs_on_description ON jobs USING btree (description);
+
+
+--
+-- Name: index_jobs_on_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_jobs_on_title ON jobs USING btree (title);
+
+
+--
+-- Name: index_recent_searches_on_user_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_recent_searches_on_user_id ON recent_searches USING btree (user_id);
 
 
 --
@@ -591,3 +740,7 @@ INSERT INTO schema_migrations (version) VALUES ('20130808013436');
 INSERT INTO schema_migrations (version) VALUES ('20130812012143');
 
 INSERT INTO schema_migrations (version) VALUES ('20130812012853');
+
+INSERT INTO schema_migrations (version) VALUES ('20130813184913');
+
+INSERT INTO schema_migrations (version) VALUES ('20130814234953');
