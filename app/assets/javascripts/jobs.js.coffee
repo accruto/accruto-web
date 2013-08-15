@@ -22,4 +22,16 @@ jQuery ->
       $('#favourite-blocker-modal').modal('show');
 
   $('#go-to-signup-btn').click ->
-    window.location.href = "/users/sign_up";
+    window.location.href = '/users/sign_up';
+
+  $('body').on 'click', '.remove-favourite-item', (event) ->
+    job_id = $(this).data('job-id');
+    $.post('/jobs/remove_favourite', {job_id: job_id})
+
+  $('#remove-all-favourites').click (e) ->
+    e.preventDefault()
+    $('#remove-all-favourites-modal').modal('show');
+
+  $('#remove-all-favourites-yes').click (e) ->
+    e.preventDefault()
+    $.post('/jobs/remove_all_favourites',{'_method': 'delete'})

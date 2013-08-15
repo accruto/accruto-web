@@ -61,4 +61,11 @@
       <%= render 'job_favourite_empty', show: true %>
     <% end %>
   </ul>
+  <p class="align-right">
+    <a href="/jobs/remove_all_favourites" id="remove-all-favourites" rel="nofollow">
+      <% unless favourite_jobs.empty? %> Remove all favourites <% end %> &nbsp;
+    </a>
+  </p>
 </div>
+
+<%= render 'shared/modal_alert', alert_title: 'Alert', alert_content: 'Are you sure want to remove all favorites?', key: 'remove-all-favourites' %>

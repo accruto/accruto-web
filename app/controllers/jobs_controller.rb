@@ -98,6 +98,23 @@ class JobsController < ApplicationController
     end
   end
 
+  def remove_favourite
+    @job = Job.find(params[:job_id])
+    current_user.favourites.find_by_job_id(@job.id).try(:delete)
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def remove_all_favourites
+    current_user.favourites.delete_all
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
 
   def load_favourite_jobs
