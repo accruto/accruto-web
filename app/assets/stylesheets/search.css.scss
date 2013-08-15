@@ -31,10 +31,14 @@
 	margin: 20px 0;
 	border: 1px solid $goldLight;
 	font-size: 14px;
-	background-color: $grayLighter;
-
+	background-color: white;
 	p {
-		padding: 15px 20px 0 20px;
+		margin: 0;
+		padding: 15px 20px;
+		background: $grayLighter;
+	}
+	p.action {
+		background: $white;
 	}
 	ul {
 		list-style-type: none;
@@ -43,8 +47,12 @@
 	}
 
 	li {
-		border-bottom: 1px solid $goldLight;
 		padding: 20px;
+		border-bottom: 1px solid $goldLight;
+	}
+
+	li:first-child {
+		border-top: 1px solid $goldLight;
 	}
 
 	li a {

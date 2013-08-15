@@ -51,7 +51,7 @@
     <% end %>
 	</ul>
   <% unless @recent_searches.empty? %>
-	  <p class="align-right"><%= link_to 'Clear Searches', clear_searches_jobs_path, id: 'clear-recent-searches', confirm: 'Are you sure?', method: :delete %></p>
+	  <p class="action align-right"><%= link_to 'Clear Searches', clear_searches_jobs_path, id: 'clear-recent-searches', confirm: 'Are you sure?', method: :delete %></p>
   <% end %>
 </div>
 
@@ -67,11 +67,13 @@
       <%= render 'job_favourite_empty', show: true %>
     <% end %>
   </ul>
-  <p class="align-right">
-    <a href="/jobs/remove_all_favourites" id="remove-all-favourites" rel="nofollow">
-      <% unless favourite_jobs.empty? %>Clear Favourites<% end %>
-    </a>
-  </p>
+  <% unless favourite_jobs.empty? %>
+	  <p class="action align-right">
+	    <a href="/jobs/remove_all_favourites" id="remove-all-favourites" rel="nofollow">
+	      Clear Favourites
+	    </a>
+	  </p>
+  <% end %>
 </div>
 
 <%= render 'shared/modal_alert', alert_title: 'Alert', alert_content: 'Are you sure want to remove all favorites?', key: 'remove-all-favourites' %>
