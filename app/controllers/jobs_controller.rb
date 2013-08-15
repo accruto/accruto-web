@@ -1,26 +1,26 @@
 class JobsController < ApplicationController
   before_filter :load_favourite_jobs, only: [:show, :search, :favourites]
 
-	def index
-		redirect_to root_path
-	end
+  def index
+    redirect_to root_path
+  end
 
-	def new
-		@job = Job.new
-		@job.build_company
-		@job.build_address
-		@job.subcategories.build
-		@subcategories = JobSubcategory.all
-	end
+  def new
+    @job = Job.new
+    @job.build_company
+    @job.build_address
+    @job.subcategories.build
+    @subcategories = JobSubcategory.all
+  end
 
-	def create
-		@job = Job.new(params[:job])
-		if @job.save
-			redirect_to root_path, notice: "Job was succesfully posted"
-		else
-			render action: "new"
-		end
-	end
+  def create
+    @job = Job.new(params[:job])
+    if @job.save
+      redirect_to root_path, notice: "Job was succesfully posted"
+    else
+      render action: "new"
+    end
+  end
 
   def show
     @job = Job.find(params[:id])
@@ -35,34 +35,41 @@ class JobsController < ApplicationController
   end
 
   def search
-		unless params[:category]
-			@search_results = Job.search_by_job_title(params[:job_title])
-							  	.filter_by_address(params[:address])
-							  	.filter_by_days(params[:days])
-							  	.sort_by(params[:sort])
-							  	.active
-			@jobs = @search_results.page(params[:page]).per_page(10)
-		else
-			@subcategories = JobCategory.where(slug: params[:category]).first.subcategories
-			@search_results = @subcategories.map { |sc| sc.jobs }.flatten
-			@jobs = @search_results.paginate(page: params[:page], per_page: 10)
-		end
-		if @search_results.count > 1 and session[:search].blank? == false
-			if session[:search].include? OpenStruct.new(params) == false
-				session[:search] << OpenStruct.new(params)
-			end
-		else
-			session[:search] = []
-		end
-		respond_to do |format|
-		  format.html
-		  format.json { render json: @jobs }
-		end
+    unless params[:category]
+      @search_results = Job.search_by_job_title(params[:job_title]).filter_by_address(params[:address]).filter_by_days(params[:days]).sort_by(params[:sort]).active
+      @jobs = @search_results.page(params[:page]).per_page(10)
+    else
+      @subcategories = JobCategory.where(slug: params[:category]).first.subcategories
+      @search_results = @subcategories.map { |sc| sc.jobs }.flatten
+      @jobs = @search_results.paginate(page: params[:page], per_page: 10)
+    end
+    if @search_results.count > 1 and session[:search].blank? == false
+      if session[:search].include? OpenStruct.new(params) == false
+        session[:search] << OpenStruct.new(params)
+      end
+    else
+      session[:search] = []
+    end
+
+    if current_user
+      handle_member_recent_searches
+    else
+      handle_guest_recent_searches
+    end
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @jobs }
+    end
   end
 
   def clear_searches
-  	session.clear
-  	redirect_to search_jobs_path
+    if current_user
+      RecentSearch.destroy_all "user_id = #{current_user.id}"
+    else
+      session[:recent_searches].clear
+    end
+    redirect_to search_jobs_path
   end
 
   def add_to_favourite
@@ -95,5 +102,51 @@ class JobsController < ApplicationController
 
   def load_favourite_jobs
     @favourite_jobs = current_user ? current_user.favourite_jobs : []
+  end
+
+  def handle_member_recent_searches
+    session[:recent_searches] = nil if session[:recent_searches].present?
+    existing_search = RecentSearch.where(job_title: params[:job_title], address: params[:address], user_id: current_user.id).first
+
+    param_struct = OpenStruct.new(params)
+    source = param_struct.marshal_dump
+    search_filter = {job_title: params[:job_title], address: params[:address], days: params[:days], sort: params[:sort],
+                     category: params[:category], search_at: Time.now, source: source}
+
+    if (params[:job_title].present? || params[:address].present?)
+      if existing_search && !existing_search.source.diff(source).empty?
+        existing_search.update_attributes(search_filter)
+      elsif existing_search.nil?
+        RecentSearch.create(search_filter.merge(user_id: current_user.id))
+      elsif existing_search
+        existing_search.update_attribute(:updated_at, Time.now)
+      end
+    end
+    @recent_searches = current_user.recent_searches.order("updated_at DESC")
+  end
+
+  def handle_guest_recent_searches
+    session[:recent_searches] = [] if session[:recent_searches].nil?
+
+    param_struct = OpenStruct.new(params)
+    source = param_struct.marshal_dump
+    search_filter = {job_title: params[:job_title], address: params[:address], days: params[:days], sort: params[:sort],
+                     category: params[:category], search_at: Time.now, source: source}
+
+    existing_search = session[:recent_searches].select { |search| search.job_title == params[:job_title] && search.address == params[:address] }
+
+    if (params[:job_title].present? || params[:address].present?)
+      if !existing_search.empty? && !existing_search.first.source.diff(source).empty?
+        updates.each do |key, value|
+          eval("existing_search.first.#{key.to_s} = '#{params[key]}'")
+        end
+        existing_search.first.updated_at = Time.now
+      elsif existing_search.empty?
+        session[:recent_searches] << OpenStruct.new(search_filter.merge(updated_at: Time.now))
+      elsif !existing_search.empty?
+        existing_search.first.updated_at = Time.now
+      end
+    end
+    @recent_searches = session[:recent_searches] ? session[:recent_searches].sort_by(&:updated_at).reverse! : []
   end
 end

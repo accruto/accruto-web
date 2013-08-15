@@ -29,6 +29,7 @@ class User < ActiveRecord::Base
 
   has_many :favourites
   has_many :favourite_jobs, through: :favourites, :source => :job
+  has_many :recent_searches
 
   def favourite_job?(job_id)
     favourites.map(&:job_id).include?(job_id.to_i)

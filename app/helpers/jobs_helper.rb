@@ -16,4 +16,9 @@ module JobsHelper
       "favourite-job"
     end
   end
+
+  def build_search_params(recent_search)
+    search_jobs_url(job_title: recent_search.job_title, address: recent_search.address, days: recent_search.days,
+                    sort: recent_search.sort, category: recent_search.category)
+  end
 end
