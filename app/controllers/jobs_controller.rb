@@ -56,13 +56,16 @@ class JobsController < ApplicationController
     end
   end
 
-  def clear_searches
+  def remove_all_searches
     if current_user
       RecentSearch.destroy_all "user_id = #{current_user.id}"
     else
       session[:recent_searches].clear
     end
-    redirect_to search_jobs_path
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   def add_to_favourite

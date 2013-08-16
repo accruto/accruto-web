@@ -5,4 +5,4 @@ $('.add-to-favourite-btn').each(function(){
 $('#favourites-sidebar-list').empty()
 $('#remove-all-favourites-modal').modal('hide');
 $('#favourites-sidebar-list').append('<%= j(render "job_favourite_empty", show: true ) %>');
-$('#remove-all-favourites').html("&nbsp;");
+$('#remove-all-favourites-wrapper').hide();
