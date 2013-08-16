@@ -17,7 +17,7 @@
 						<li>
 							<div class="row-fluid">
 								<div class="span8 job-info">
-									<a href="#" id="favourite-btn-<%= job.id %>" data-job-id="<%= job.id %>" class="hidden-desktop pull-right btn btn-inverse add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>">
+									<a href="#" id="" data-job-id="<%= job.id %>" class="favourite-btn-<%= job.id %> hidden-desktop pull-right btn btn-inverse add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>">
 									  <i class="icon-star"></i>
 									</a>
 									<h3 class="role-title"><%= job.title %></h3>
@@ -38,7 +38,7 @@
 											<% else %>
 												<a href="<%= job_path(job) %>" class="btn btn-primary btn-view-job"><i class="icon-mail-forward"></i>&nbsp;&nbsp;VIEW</a>
 											<% end %>
-                      <a href="#" id="favourite-btn-<%= job.id %>" data-job-id="<%= job.id %>" class="hidden-phone btn btn-inverse add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>">
+                      <a href="#" id="" data-job-id="<%= job.id %>" class="favourite-btn-<%= job.id %> hidden-phone btn btn-inverse add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>">
                         <i class="icon-star"></i>
                       </a>
 									</div>
