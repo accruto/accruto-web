@@ -3,5 +3,5 @@ $('#favourite-btn-<%= @job.id %>').removeClass('favourite-job');
 
 if ($('#favourites-sidebar-list').children().length <= 1) {
   $('#job-list-sidebar-empty').show();
-  $('#remove-all-favourites').html("&nbsp;");
+  $('#remove-all-favourites-wrapper').hide()
 }
