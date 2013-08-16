@@ -1,3 +1,18 @@
 .sign-up, .sign-in {
-	padding: 0 20px;
+	padding-bottom: 20px;
+}
+/* Larger ----------- */
+@media screen and (max-width: 1024px) {
+}
+
+
+/* Medium ------------ */
+@media screen and (max-width: 768px) {
+	.sign-up, .sign-in {
+		padding: 0 20px 20px 20px;
+	}
+}
+
+/* Smaller ----------- */
+@media screen and (max-width : 650px) {
 }
