@@ -63,12 +63,19 @@
 	}
 }
 
-
+ul.result-jobs {
+}
 .result-jobs {
 	list-style:none;
 	margin: 0;
+	padding: 0;
 	a:not(.btn) { color: $headingsColor; }
-	li { padding: 0 0 20px 0; }
+	li {
+		padding: 0 0 20px 0;
+	}
+	li:not(:last-child) {
+		border-bottom: 1px solid $grayLighter;
+	}
 }
 .result-actions {
 	margin-top: 30px;
@@ -80,7 +87,7 @@
 	color: $grayDark;
 }
 .result-number {
-	color: $blueDark;
+	color: $greenDark;
 }
 
 .result-list {
@@ -92,7 +99,7 @@
 	font-weight: 600;
 	color: $blueBrandDark;
 	line-height:20px;
-	margin-bottom: 20px;
+	margin-bottom: 0;
 }
 
 .label-full-time {
@@ -101,13 +108,21 @@
 
 }
 
+.job-location {
+	font-size: $fontSizeSmall;
+}
+
 .job-description {
 	font-size: $fontSizeSmall;
 	color: $grayDarker;
+	line-height: 1.5;
+	padding-top:8px;
 }
 
 .posted-date {
-	color: $gray;
+	color: $greenDark;
+	font-size: $fontSizeMini;
+	margin-top:-5px;
 }
 
 .favourite-job {
@@ -134,6 +149,12 @@
   cursor: pointer;
 }
 
+.job-info {
+	p {
+		margin: 0;
+	}
+}
+
 /* Larger ----------- */
 @media screen and (max-width: 1024px) {
 
@@ -148,6 +169,12 @@
 /* Smaller ----------- */
 @media screen and (max-width : 650px) {
 
+	.result-sentence {
+		font-size: $fontSizeSmall;
+		font-weight: 400;
+		color: $grayDark;
+	}
+
 	.results-main {
 		margin-top: 0;
 	}
@@ -157,8 +184,11 @@
 
 	.job-info {
 		text-align: left;
-		padding: 20px 0 0 0;
+		padding: 0;
+	}
 
+	.posted-date {
+		margin-top:-25px;
 	}
 
 	.role-title {
