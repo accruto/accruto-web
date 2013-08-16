@@ -23,11 +23,9 @@
 
 <div class="recent-searches">
 	<p><span class="sidebar-title">Recent Searches</span></p>
-	<ul class="recent-list">
+	<ul id="searches-sidebar-list" class="recent-list">
     <% if @recent_searches.empty? %>
-      <li>
-        <a href="#"><span class="recent-role">No Recent Searches</span></a>
-      </li>
+      <%= render 'job_search_empty', show: true %>
     <% else %>
       <% @recent_searches.each do |recent_search| %>
         <li>
@@ -50,9 +48,9 @@
       <% end %>
     <% end %>
 	</ul>
-  <% unless @recent_searches.empty? %>
-	  <p class="action align-right"><%= link_to 'Clear Searches', clear_searches_jobs_path, id: 'clear-recent-searches', confirm: 'Are you sure?', method: :delete %></p>
-  <% end %>
+	<p id="remove-all-searches-wrapper" class="action align-right <%= 'hide' if @recent_searches.empty? %>">
+    <%= link_to 'Clear Searches', remove_all_searches_jobs_path, id: 'remove-all-searches' %>
+  </p>
 </div>
 
 <div class="favourite-roles">
@@ -69,11 +67,10 @@
   </ul>
 
   <p id="remove-all-favourites-wrapper" class="action align-right <%= 'hide' if favourite_jobs.empty? %>">
-    <a href="/jobs/remove_all_favourites" id="remove-all-favourites" rel="nofollow">
-      Clear Favourites
-    </a>
+    <%= link_to 'Clear Favourites', remove_all_favourites_jobs_path, id: 'remove-all-favourites' %>
   </p>
 
 </div>
 
-<%= render 'shared/modal_alert', alert_title: 'Alert', alert_content: 'Are you sure want to remove all favorites?', key: 'remove-all-favourites' %>
+<%= render 'shared/modal_alert', alert_title: 'Alert', alert_content: 'Are you sure want to clear recent searches?', key: 'remove-all-searches' %>
+<%= render 'shared/modal_alert', alert_title: 'Alert', alert_content: 'Are you sure want to clear favourites?', key: 'remove-all-favourites' %>

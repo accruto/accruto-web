@@ -35,3 +35,11 @@ jQuery ->
   $('#remove-all-favourites-yes').click (e) ->
     e.preventDefault()
     $.post('/jobs/remove_all_favourites',{'_method': 'delete'})
+
+  $('#remove-all-searches').click (e) ->
+    e.preventDefault()
+    $('#remove-all-searches-modal').modal('show');
+
+  $('#remove-all-searches-yes').click (e) ->
+    e.preventDefault()
+    $.post('/jobs/remove_all_searches',{'_method': 'delete'})
