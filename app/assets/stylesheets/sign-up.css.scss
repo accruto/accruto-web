@@ -1,6 +1,40 @@
-.sign-up, .sign-in {
-	padding-bottom: 20px;
+@import "bootstrap-variables";
+@import "mixins";
+
+.align-center {
+	text-align: center;
 }
+
+.title-sign, .small-note, .form-actions {
+	@extend .align-center;
+}
+
+.sign-up, .sign-in {
+	padding: 20px;
+}
+
+.sign-up-form {
+	background: $white;
+	margin: 40px 0;
+	padding: 0 20px;
+
+	.required, .optional {
+		width: 100%;
+	}
+}
+
+.small-note {
+	font-size: 14px;
+}
+
+.minor {
+	margin-left: 0;
+}
+
+.btn-signup {
+	padding: 10px 100px;
+}
+
 /* Larger ----------- */
 @media screen and (max-width: 1024px) {
 }
