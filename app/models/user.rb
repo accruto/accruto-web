@@ -34,4 +34,44 @@ class User < ActiveRecord::Base
   def favourite_job?(job_id)
     favourites.map(&:job_id).include?(job_id.to_i)
   end
+
+  def collect_jobs_results
+    collected_jobs = []
+    self.recent_searches.each do |recent_search|
+      ## get latest search result and compare with existing saved result
+      latest_job_ids = Job.grab_search_results(recent_search).map(&:id)
+      current_job_ids = recent_search.search_results.map {|r| r.keys[0] }
+      new_jobs_ids = latest_job_ids - current_job_ids
+
+      ## update recent_search search_results if there is any diff
+      new_jobs_ids.each do |new_jobs_id|
+        recent_search.search_results << { new_jobs_id => { notified: false } }
+        recent_search.save
+      end
+
+      ## get only job that not yet received by user (notified == false)
+      jobs_ids = []
+      recent_search.search_results.each do |result|
+        if result.values.first[:notified] == false
+          jobs_ids << result.keys.first
+        end
+      end
+
+      ## grab latest job from
+      jobs = Job.find(jobs_ids)
+      jobs.each do |job|
+        collected_jobs << job
+      end
+    end
+    collected_jobs
+  end
+
+  def update_job_results(status)
+    self.recent_searches.each do |recent_search|
+      recent_search.search_results.each do |result|
+        result[result.keys.first][:notified] = status
+      end
+      recent_search.save
+    end
+  end
 end

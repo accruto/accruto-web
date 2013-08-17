@@ -1,0 +1,15 @@
+<h3><%= pluralize @jobs.size, 'jobs' %>  found based on your saved alert</h3>
+
+<% @jobs.each do |job| %>
+  <% if job.source == 'CareerOne' %>
+    <a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="_blank">
+  <% else %>
+    <a href="<%= job_url(job) %>" target="_blank">
+  <% end %>
+    <%= job.title %>
+  </a>
+  <br/>
+  <p><%= job.description %></p><br/>
+  <%= job.company.name.titleize %> - <%= job.address.city %>, <%=  job.address.postcode %> <%= job.address.state %><br/>
+  <hr/>
+<% end %>

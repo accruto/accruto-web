@@ -1,0 +1,15 @@
+recent_alert = $('#recent-search-alert-<%= @recent_search.id %>');
+recent_alert_tooltip = $('#recent-search-alert-tooltip-<%= @recent_search.id %>');
+
+if (recent_alert.hasClass('alert-icon-active')) {
+  recent_alert.removeClass('alert-icon-active');
+  recent_alert.addClass('alert-icon-inactive');
+  recent_alert_tooltip.attr('title','Alert inactive, click here to activate');
+} else {
+  recent_alert.removeClass('alert-icon-inactive');
+  recent_alert.addClass('alert-icon-active');
+  recent_alert_tooltip.attr('title','Alert active, click here to inactivate');
+}
+
+$('#alert-loader-<%= @recent_search.id %>').html("");
+$('#set-alert-<%= @recent_search.id %>').show('slow');

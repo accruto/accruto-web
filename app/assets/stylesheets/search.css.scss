@@ -126,27 +126,27 @@ ul.result-jobs {
 }
 
 .favourite-job {
-  background: #54cc96;
-  border: 1px solid #4bb686;
-  color: white;
+    background: #54cc96;
+    border: 1px solid #4bb686;
+    color: white;
 }
 
 .favourite-job:hover {
-  background: #40c68a;
-  color: white;
+    background: #40c68a;
+    color: white;
 }
 
 .hide {
-  display: none;
+    display: none;
 }
 
 .favourite-modal {
-  margin: 0px;
+    margin: 0px;
 }
 
 .remove-favourite-item {
-  margin-left: 5px;
-  cursor: pointer;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
 .job-info {
@@ -154,6 +154,14 @@ ul.result-jobs {
 	p {
 		margin: 0;
 	}
+}
+
+.alert-icon-active {
+    color: #468847;
+}
+
+.alert-icon-inactive {
+    color: #c2c2c2;
 }
 
 /* Larger ----------- */

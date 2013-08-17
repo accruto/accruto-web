@@ -1,16 +1,22 @@
 Accruto::Application.routes.draw do
+  match "/delayed_job" => DelayedJobWeb, :anchor => false
+
   devise_for :users
 
   get "jobs/category/:category", to: "jobs#search"
 
   resources :jobs do
   	collection do
-	  	get 'search'
+	  	## GET
+      get 'search'
 	  	get 'apply'
-	  	delete 'remove_all_searches'
-      post 'add_to_favourite'
       get 'favourites'
+      ## POST
+      post 'add_to_favourite'
       post 'remove_favourite'
+      post 'set_job_alert'
+      ## DELETE
+      delete 'remove_all_searches'
       delete 'remove_all_favourites'
 	  end
   end

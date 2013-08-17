@@ -99,6 +99,45 @@ ALTER SEQUENCE companies_id_seq OWNED BY companies.id;
 
 
 --
+-- Name: delayed_jobs; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE delayed_jobs (
+    id integer NOT NULL,
+    priority integer DEFAULT 0 NOT NULL,
+    attempts integer DEFAULT 0 NOT NULL,
+    handler text NOT NULL,
+    last_error text,
+    run_at timestamp without time zone,
+    locked_at timestamp without time zone,
+    failed_at timestamp without time zone,
+    locked_by character varying(255),
+    queue character varying(255),
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: delayed_jobs_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE delayed_jobs_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: delayed_jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE delayed_jobs_id_seq OWNED BY delayed_jobs.id;
+
+
+--
 -- Name: favourites; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -314,7 +353,9 @@ CREATE TABLE recent_searches (
     search_at timestamp without time zone,
     source text,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    subscribed boolean DEFAULT false,
+    search_results text
 );
 
 
@@ -447,6 +488,13 @@ ALTER TABLE ONLY companies ALTER COLUMN id SET DEFAULT nextval('companies_id_seq
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY delayed_jobs ALTER COLUMN id SET DEFAULT nextval('delayed_jobs_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY favourites ALTER COLUMN id SET DEFAULT nextval('favourites_id_seq'::regclass);
 
 
@@ -523,6 +571,14 @@ ALTER TABLE ONLY companies
 
 
 --
+-- Name: delayed_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY delayed_jobs
+    ADD CONSTRAINT delayed_jobs_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: favourites_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -595,24 +651,10 @@ ALTER TABLE ONLY users
 
 
 --
--- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+-- Name: delayed_jobs_priority; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
-
-
---
--- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
-
-
---
--- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
+CREATE INDEX delayed_jobs_priority ON delayed_jobs USING btree (priority, run_at);
 
 
 --
@@ -620,6 +662,13 @@ CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regcon
 --
 
 CREATE UNIQUE INDEX index_job_categories_on_slug ON job_categories USING btree (slug);
+
+
+--
+-- Name: index_job_subcategories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_job_subcategories_on_slug ON job_subcategories USING btree (slug);
 
 
 --
@@ -744,3 +793,7 @@ INSERT INTO schema_migrations (version) VALUES ('20130812012853');
 INSERT INTO schema_migrations (version) VALUES ('20130813184913');
 
 INSERT INTO schema_migrations (version) VALUES ('20130814234953');
+
+INSERT INTO schema_migrations (version) VALUES ('20130817004316');
+
+INSERT INTO schema_migrations (version) VALUES ('20130817154613');

@@ -25,6 +25,8 @@ gem 'newrelic_rpm'
 gem 'devise', '~> 3.0.2'
 gem 'rolify', '~> 3.2.0'
 gem 'cancan', '~> 1.6.10'
+gem 'delayed_job_active_record'
+gem 'delayed_job_web'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

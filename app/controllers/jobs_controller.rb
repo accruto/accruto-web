@@ -111,6 +111,22 @@ class JobsController < ApplicationController
     end
   end
 
+  def set_job_alert
+    @recent_search = RecentSearch.find(params[:id])
+    @search_results = Job.grab_search_results(@recent_search)
+    search_job_ids = @search_results.map(&:id)
+
+    if @recent_search.subscribed
+      @recent_search.inactivate_alert
+    else
+      @recent_search.activate_alert(search_job_ids)
+    end
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
 
   def load_favourite_jobs

@@ -36,4 +36,5 @@ Accruto::Application.configure do
   config.assets.debug = true
 
   config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+  config.action_mailer.perform_deliveries = true
 end

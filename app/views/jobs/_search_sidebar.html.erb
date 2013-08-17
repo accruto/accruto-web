@@ -41,7 +41,12 @@
         			</a>
         		</div>
         		<div class="span1">
-        			<a href="#"><span class=""><i class="icon-bell-alt"></i></span></a>
+              <span id="<%= "alert-loader-#{recent_search.id}" %>" data-image-url="/assets/ajax-loader.gif"></span>
+        			<a href="#" id="set-alert-<%= recent_search.id %>" class="set-alert-button" data-recent-search-id="<%= recent_search.id %>" data-action="<%= set_job_alert_jobs_path %>">
+                <span id="recent-search-alert-tooltip-<%= recent_search.id %>" class="" rel="tooltip" title="<%= recent_search.subscribed ? 'Alert active, click here to inactivate' : 'Alert inactive, click here to activate' %>">
+                  <i id="recent-search-alert-<%= recent_search.id %>" class="icon-bell-alt alert-icon-<%= recent_search.subscribed? ? 'active' : 'inactive' %>"></i>
+                </span>
+              </a>
         		</div>
         	</div>
         </li>

@@ -2,17 +2,19 @@
 #
 # Table name: recent_searches
 #
-#  id         :integer          not null, primary key
-#  job_title  :string(255)
-#  address    :string(255)
-#  days       :string(255)
-#  sort       :string(255)
-#  category   :string(255)
-#  user_id    :integer
-#  search_at  :datetime
-#  source     :text
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id             :integer          not null, primary key
+#  job_title      :string(255)
+#  address        :string(255)
+#  days           :string(255)
+#  sort           :string(255)
+#  category       :string(255)
+#  user_id        :integer
+#  search_at      :datetime
+#  source         :text
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  subscribed     :boolean          default(FALSE)
+#  search_results :text
 #
 
 require 'spec_helper'

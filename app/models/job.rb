@@ -135,5 +135,20 @@ class Job < ActiveRecord::Base
 	 		end
  			return jobs
  		end
- 	end
+  end
+
+  def self.grab_search_results(recent_search)
+    unless recent_search.category
+      search_results = Job.search_by_job_title(recent_search.job_title)
+        .filter_by_address(recent_search.address)
+        .filter_by_days(recent_search.days)
+        .sort_by(recent_search.sort)
+        .active
+    else
+      search_results = JobCategory.where(slug: recent_search.category)
+        .first.subcategories.map { |sc| sc.jobs }
+        .flatten
+    end
+    search_results
+  end
 end
