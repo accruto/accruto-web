@@ -1,3 +1,9 @@
+console.log('<%= @job_id %>');
+span_loader_image = $('#favourite-btn-<%= @job_id %>').children()[0]
+star_image = $('#favourite-btn-<%= @job_id %>').children()[1]
+$(span_loader_image).html("")
+$(star_image).show();
+
 <% if @set_selected %>
   $('.favourite-btn-<%= @job_id %>').addClass('favourite-job');
   if ($('#job-list-sidebar-empty').is(":visible")) {

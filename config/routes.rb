@@ -16,8 +16,8 @@ Accruto::Application.routes.draw do
       post 'remove_favourite'
       post 'set_job_alert'
       ## DELETE
-      delete 'remove_all_searches'
-      delete 'remove_all_favourites'
+      delete 'clear_searches'
+      delete 'clear_favourites'
 	  end
   end
 

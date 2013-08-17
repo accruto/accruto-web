@@ -10,7 +10,10 @@
 		  </a>
 		</div>
 		<div class="span1">
-			<span><i class="icon-remove remove-favourite-item" rel="tooltip" title="remove favourite" data-job-id="<%= job.id %>"></i></span>
+			<span>
+        <span id="<%= "favourite-loader-#{job.id}" %>" data-image-url="<%= image_path("ajax-loader.gif") %>"></span>
+        <i class="icon-remove remove-favourite-item" rel="tooltip" title="remove favourite" data-job-id="<%= job.id %>"></i>
+      </span>
 		</div>
 	</div>
 </li>

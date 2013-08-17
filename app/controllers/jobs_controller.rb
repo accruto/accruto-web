@@ -56,7 +56,7 @@ class JobsController < ApplicationController
     end
   end
 
-  def remove_all_searches
+  def clear_searches
     if current_user
       RecentSearch.destroy_all "user_id = #{current_user.id}"
     else
@@ -103,7 +103,7 @@ class JobsController < ApplicationController
     end
   end
 
-  def remove_all_favourites
+  def clear_favourites
     current_user.favourites.delete_all
 
     respond_to do |format|

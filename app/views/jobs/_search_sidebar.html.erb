@@ -41,7 +41,7 @@
         			</a>
         		</div>
         		<div class="span1">
-              <span id="<%= "alert-loader-#{recent_search.id}" %>" data-image-url="/assets/ajax-loader.gif"></span>
+              <span id="<%= "alert-loader-#{recent_search.id}" %>" data-image-url="<%= image_path("ajax-loader.gif") %>"></span>
         			<a href="#" id="set-alert-<%= recent_search.id %>" class="set-alert-button" data-recent-search-id="<%= recent_search.id %>" data-action="<%= set_job_alert_jobs_path %>">
                 <span id="recent-search-alert-tooltip-<%= recent_search.id %>" class="" rel="tooltip" title="<%= recent_search.subscribed ? 'Alert active, click here to inactivate' : 'Alert inactive, click here to activate' %>">
                   <i id="recent-search-alert-<%= recent_search.id %>" class="icon-bell-alt alert-icon-<%= recent_search.subscribed? ? 'active' : 'inactive' %>"></i>
@@ -54,7 +54,7 @@
     <% end %>
 	</ul>
 	<p id="remove-all-searches-wrapper" class="action align-right <%= 'hide' if @recent_searches.empty? %>">
-    <%= link_to 'Clear Searches', remove_all_searches_jobs_path, id: 'remove-all-searches' %>
+    <%= link_to 'Clear Searches', clear_searches_jobs_path, id: 'remove-all-searches' %>
   </p>
 </div>
 
@@ -72,7 +72,7 @@
   </ul>
 
   <p id="remove-all-favourites-wrapper" class="action align-right <%= 'hide' if favourite_jobs.empty? %>">
-    <%= link_to 'Clear Favourites', remove_all_favourites_jobs_path, id: 'remove-all-favourites' %>
+    <%= link_to 'Clear Favourites', clear_favourites_jobs_path, id: 'remove-all-favourites' %>
   </p>
 
 </div>
