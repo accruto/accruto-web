@@ -42,7 +42,7 @@
         		</div>
         		<div class="span1">
               <span id="<%= "alert-loader-#{recent_search.id}" %>" data-image-url="<%= image_path("ajax-loader.gif") %>"></span>
-        			<a href="#" id="set-alert-<%= recent_search.id %>" class="set-alert-button" data-recent-search-id="<%= recent_search.id %>" data-action="<%= set_job_alert_jobs_path %>">
+        			<a href="#" id="set-alert-<%= recent_search.id %>" class="set-alert-button <%= current_user ? '' : 'search-alert-blocked' %>" data-recent-search-id="<%= recent_search.id %>" data-action="<%= set_job_alert_jobs_path %>">
                 <span id="recent-search-alert-tooltip-<%= recent_search.id %>" class="" rel="tooltip" title="<%= recent_search.subscribed ? 'Alert active, click here to inactivate' : 'Alert inactive, click here to activate' %>">
                   <i id="recent-search-alert-<%= recent_search.id %>" class="icon-bell-alt alert-icon-<%= recent_search.subscribed? ? 'active' : 'inactive' %>"></i>
                 </span>
@@ -79,3 +79,4 @@
 
 <%= render 'shared/modal_alert', alert_title: 'Alert', alert_content: 'Are you sure want to clear recent searches?', key: 'remove-all-searches' %>
 <%= render 'shared/modal_alert', alert_title: 'Alert', alert_content: 'Are you sure want to clear favourites?', key: 'remove-all-favourites' %>
+<%= render 'shared/auth_block_modal', title: 'Please sign up', content: 'You have to sign up to activate job alert', key: 'search-alert' %>

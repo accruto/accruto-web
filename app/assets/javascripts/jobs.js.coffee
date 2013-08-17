@@ -58,10 +58,13 @@ jQuery ->
   $('.set-alert-button').each ->
     $(this).click (e) ->
       e.preventDefault()
-      id = $(this).data('recent-search-id')
-      $(this).hide()
-      span_loader = $(this).prev()
-      loader_image_url = span_loader.data('image-url')
-      span_loader.html('<img src="'+loader_image_url+'" id="image-loader-'+id+'"/>')
-      action = $(this).data('action')
-      $.post(action, {id: id})
+      if $(this).hasClass("search-alert-blocked")
+        $('#search-alert-modal').modal('show')
+      else
+        id = $(this).data('recent-search-id')
+        $(this).hide()
+        span_loader = $(this).prev()
+        loader_image_url = span_loader.data('image-url')
+        span_loader.html('<img src="'+loader_image_url+'" id="image-loader-'+id+'"/>')
+        action = $(this).data('action')
+        $.post(action, {id: id})
