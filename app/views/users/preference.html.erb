@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="page-header">
+    <h2>Preference</h2>
+  </div>
+
+  <%= simple_form_for @preference do |f| %>
+    <%= f.input :email_frequency, :as => :select do %>
+      <%= f.select :email_frequency, Preference::EMAIL_FREQUENCY %>
+    <% end %>
+    <%= f.button :submit, value: 'Update Preference' %>
+  <% end %>
+</div>

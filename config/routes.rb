@@ -1,4 +1,8 @@
 Accruto::Application.routes.draw do
+  get "users/preference"
+  post "users/update_preference" , as: 'preferences'
+  put "users/update_preference" , as: 'preference'
+
   match "/delayed_job" => DelayedJobWeb, :anchor => false
 
   devise_for :users

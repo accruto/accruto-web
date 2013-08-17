@@ -339,6 +339,38 @@ ALTER SEQUENCE pg_search_documents_id_seq OWNED BY pg_search_documents.id;
 
 
 --
+-- Name: preferences; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE preferences (
+    id integer NOT NULL,
+    user_id integer,
+    email_frequency character varying(255) DEFAULT 'Daily'::character varying,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: preferences_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE preferences_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: preferences_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE preferences_id_seq OWNED BY preferences.id;
+
+
+--
 -- Name: recent_searches; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -537,6 +569,13 @@ ALTER TABLE ONLY pg_search_documents ALTER COLUMN id SET DEFAULT nextval('pg_sea
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY preferences ALTER COLUMN id SET DEFAULT nextval('preferences_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY recent_searches ALTER COLUMN id SET DEFAULT nextval('recent_searches_id_seq'::regclass);
 
 
@@ -624,6 +663,14 @@ ALTER TABLE ONLY jobs
 
 ALTER TABLE ONLY pg_search_documents
     ADD CONSTRAINT pg_search_documents_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: preferences_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY preferences
+    ADD CONSTRAINT preferences_pkey PRIMARY KEY (id);
 
 
 --
@@ -797,3 +844,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130814234953');
 INSERT INTO schema_migrations (version) VALUES ('20130817004316');
 
 INSERT INTO schema_migrations (version) VALUES ('20130817154613');
+
+INSERT INTO schema_migrations (version) VALUES ('20130817214007');
