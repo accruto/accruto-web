@@ -139,10 +139,11 @@ class JobsController < ApplicationController
   end
 
   def location
-    results = Address.all.map {|c| [c.city, c.city, c.state] } + Address.all.map {|sc| [sc.state, sc.state, 0]}.uniq
+    results = Address.all.map {|sc| [sc.state, sc.state, 0, 0]}.uniq +
+              Address.all.map {|sc| [sc.city, sc.state, sc.state, 'merged']}
     compose_json = []
     results.each do |result|
-      compose_json << {:id => result[0], :label => result[1], :state => result[2] }
+      compose_json << {:id => result[0], :value => result[0], :label => result[1], :state => result[2], :merged => 'merged' }
     end
     respond_to do |format|
       format.json { render json: compose_json }

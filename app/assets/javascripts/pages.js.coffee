@@ -51,8 +51,10 @@ jQuery ->
         return false  if ui.item.label is "No Matches"
         item = ui.item
     ).data("ui-autocomplete")._renderItem = (ul, item) ->
-      if item.label isnt "No Matches" and item.state isnt 0
+      if item.label isnt "No Matches" and item.state isnt 0 and item.merged isnt 'merged'
         $("<li>").append("<a>" + item.label + "<br><div class='state-location'>" + item.state + "</div></a>").appendTo ul
+      else if item.label isnt "No Matches" and item.state isnt 0 and item.merged is 'merged'
+        $("<li>").append("<a>" + item.id + "<br><div class='state-location'>" + item.state + "</div></a>").appendTo ul
       else
         $("<li>").append("<a>" + item.label + "</a>").appendTo ul
 
