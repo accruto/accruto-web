@@ -127,6 +127,17 @@ class JobsController < ApplicationController
     end
   end
 
+  def list
+    results = JobCategory.all.map {|c| [c.id, c.name] } + JobSubcategory.all.map {|sc| [sc.id, sc.name]}
+    compose_json = []
+    results.each do |result|
+      compose_json << {:id => result[0], :label => result[1] }
+    end
+    respond_to do |format|
+      format.json { render json: compose_json }
+    end
+  end
+
   private
 
   def load_favourite_jobs

@@ -94,6 +94,10 @@
 	}	
 }
 
+.ui-autocomplete-loading {
+    background: white url('/assets/autocomplete-loader.gif') right center no-repeat;
+}
+
 /* Larger ----------- */
 @media screen and (max-width: 1024px) {
 	
