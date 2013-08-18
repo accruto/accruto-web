@@ -16,6 +16,7 @@ Accruto::Application.routes.draw do
 	  	get 'apply'
       get 'favourites'
       get 'list'
+      get 'location'
       ## POST
       post 'add_to_favourite'
       post 'remove_favourite'

@@ -138,6 +138,17 @@ class JobsController < ApplicationController
     end
   end
 
+  def location
+    results = Address.all.map {|c| [c.city, c.city, c.state] } + Address.all.map {|sc| [sc.state, sc.state, 0]}.uniq
+    compose_json = []
+    results.each do |result|
+      compose_json << {:id => result[0], :label => result[1], :state => result[2] }
+    end
+    respond_to do |format|
+      format.json { render json: compose_json }
+    end
+  end
+
   private
 
   def load_favourite_jobs
