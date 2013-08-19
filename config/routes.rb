@@ -39,6 +39,8 @@ Accruto::Application.routes.draw do
   end
 
   get "pages/stylesheet"
+  get "pages/modal_apply"
+  get "pages/modal_signup"
   get "pages/home"
   get "pages/about"
   get "pages/faq"

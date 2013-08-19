@@ -17,6 +17,8 @@
 #
 
 class Job < ActiveRecord::Base
+	before_save :set_defaults
+
 	require 'open-uri'
 	include PgSearch
 
@@ -36,8 +38,7 @@ class Job < ActiveRecord::Base
   								:posted_at, :title, :description, :job_type, :company_attributes,
   								:subcategories_attributes, :address_attributes, :subcategory_ids
 
- 	validates_presence_of :title, :job_type, :description, :posted_at,
- 												:company, :address, :source
+ 	validates_presence_of :title, :job_type, :description, :company, :address, :source
 
  	validates :title, length: { maximum: 70 }
  	belongs_to :company
@@ -52,6 +53,11 @@ class Job < ActiveRecord::Base
  	accepts_nested_attributes_for :address
 
  	scope :active, -> { where("expires_at > ?", DateTime.now) }
+
+ 	def set_defaults
+ 		self.posted_at = DateTime.now if self.posted_at.nil?
+ 		self.expires_at = 30.days.from_now if self.expires_at.nil?
+ 	end
 
 	def self.search_by_job_title(job_title)
 		if job_title.present?

@@ -1,9 +1,9 @@
 <div class="container detail-show">
 	<div class="row-fluid">
-		<div class="span4 hidden-phone">
+		<div class="span3 hidden-phone">
 			<%= render 'search_sidebar', favourite_jobs: @favourite_jobs %>
 		</div>
-		<div class="span8 job-container">
+		<div class="span9 job-container">
 			<a href="javascript:history.back()" class="go-back"><span class="job-detail-back">Back to search results</span></a>
 			<hr>
 			<div class="row-fluid">
@@ -32,8 +32,8 @@
 						<a href="#" class="btn btn-primary btn-apply-job">APPLY</a>
 						<a href="#" class="btn btn-inverse"><i class="icon-star"></i></a>
 					</div>
-				</div>	
-				<small class="posted-date hidden-desktop">Posted <%= distance_of_time_in_words(@job.posted_at, DateTime.now) %> ago on <%= @job.source %>.com</small>												
+				</div>
+				<small class="posted-date hidden-desktop">Posted <%= distance_of_time_in_words(@job.posted_at, DateTime.now) %> ago on <%= @job.source %>.com</small>
 			</div>
 		</div>
 	</div>

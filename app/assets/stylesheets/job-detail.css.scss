@@ -1,5 +1,8 @@
 @import "bootstrap-variables";
 
+.job-container {
+	margin-left:20px;
+}
 .detail-show {
 	margin-top: 40px;
 }
@@ -10,13 +13,13 @@
 
 /* Larger ----------- */
 @media screen and (max-width: 1024px) {
-	
+
 }
 
 
 /* Medium ------------ */
 @media screen and (max-width: 768px) {
-	
+
 }
 
 /* Smaller ----------- */
@@ -25,7 +28,7 @@
 		padding: 20px 20px 0 20px;
 	}
 	.detail-info, .detail-description, .result-actions {
-		text-align: left; 
+		text-align: left;
 	}
 
 	.role-title {

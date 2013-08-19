@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="stylesheet-modal-container">
+		<div class="modal modal-signup">
+			<%= simple_form_for :user do |f| %>
+			  <div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			    <h3>CREATE YOUR PROFILE</h3>
+			  </div>
+			  <div class="modal-body">
+			    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		    	<%= f.input :email, label: 'Whats your email?' %>
+		    	<%= f.input :password, label: 'Create Password' %>
+			  </div>
+			  <div class="modal-footer">
+			    <%= f.submit "SUBMIT APPLICATION", class: "btn btn-primary" %>
+			  </div>
+		  <% end %>
+		</div>
+	</div>
+</div>

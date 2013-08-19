@@ -4,6 +4,12 @@ class PagesController < ApplicationController
   def stylesheet
   end
 
+  def modal_apply
+  end
+
+  def modal_signup
+  end
+
   def home
 	  @categories = JobCategory.all
 	  render :layout => 'home'

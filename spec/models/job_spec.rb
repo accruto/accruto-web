@@ -80,10 +80,6 @@ describe Job do
 			expect(build(:job, job_type: nil)).to have(1).errors_on(:job_type)
 		end
 
-		it "without a posted_at" do
-			expect(build(:job, posted_at: nil)).to have(1).errors_on(:posted_at)
-		end
-
 		it "without a company" do
 			expect(build(:job, company: nil)).to have(1).errors_on(:company)
 		end

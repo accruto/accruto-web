@@ -62,13 +62,14 @@
 		color: $blueBrandDark;
 	}
 }
-
+.results-main ul.result-jobs {
+	padding: 0;
+}
 ul.result-jobs {
 }
 .result-jobs {
 	list-style:none;
 	margin: 0;
-	padding: 0;
 	a:not(.btn) { color: $headingsColor; }
 	li {
 		padding: 0 0 20px 0;

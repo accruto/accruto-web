@@ -24,7 +24,7 @@
 <div class="recent-searches">
 	<p><span class="sidebar-title">Recent Searches</span></p>
 	<ul id="searches-sidebar-list" class="recent-list">
-    <% if @recent_searches.empty? %>
+    <% if @recent_searches.nil? %>
       <%= render 'job_search_empty', show: true %>
     <% else %>
       <% @recent_searches.each do |recent_search| %>
@@ -53,7 +53,7 @@
       <% end %>
     <% end %>
 	</ul>
-	<p id="remove-all-searches-wrapper" class="action align-right <%= 'hide' if @recent_searches.empty? %>">
+	<p id="remove-all-searches-wrapper" class="action align-right <%= 'hide' if @recent_searches.nil? %>">
     <%= link_to 'Clear Searches', clear_searches_jobs_path, id: 'remove-all-searches' %>
   </p>
 </div>
