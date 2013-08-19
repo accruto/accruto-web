@@ -253,3 +253,43 @@ input[type="submit"].btn {
   color: $grayDark;
   text-decoration: none;
 }
+
+// Custom Buttons 
+// --------------------------------------------------'
+.add-to-favourite-btn-blocked {
+  display: inline-block;
+  @include ie7-inline-block();
+  padding: 5px 12px;
+  margin-bottom: 0; // For input.btn
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid $grayLight;
+  background-color: $white;
+  @include border-radius($baseBorderRadius);
+  @include ie7-restore-left-whitespace(); // Give IE7 some love
+
+  i {
+    color: $gray;
+  }
+  &:hover {
+    border: 1px solid $yellow;
+    background-color: $yellowLight;
+    color: $white;
+    i{
+      color: $white;
+    }
+  }
+}
+
+.btn-view-job {
+  &:hover {
+    background-color: $green;
+    border: 1px solid $greenDark;
+  }
+}
+
+
+
