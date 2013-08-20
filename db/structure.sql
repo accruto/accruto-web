@@ -347,7 +347,8 @@ CREATE TABLE preferences (
     user_id integer,
     email_frequency character varying(255) DEFAULT 'Daily'::character varying,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    next_alert_date date
 );
 
 
@@ -719,6 +720,34 @@ CREATE UNIQUE INDEX index_job_subcategories_on_slug ON job_subcategories USING b
 
 
 --
+-- Name: index_jobs_on_address_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_jobs_on_address_id ON jobs USING btree (address_id);
+
+
+--
+-- Name: index_jobs_on_company_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_jobs_on_company_id ON jobs USING btree (company_id);
+
+
+--
+-- Name: index_jobs_on_description; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_jobs_on_description ON jobs USING btree (description);
+
+
+--
+-- Name: index_jobs_on_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_jobs_on_title ON jobs USING btree (title);
+
+
+--
 -- Name: index_recent_searches_on_user_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -818,3 +847,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130817004316');
 INSERT INTO schema_migrations (version) VALUES ('20130817154613');
 
 INSERT INTO schema_migrations (version) VALUES ('20130817214007');
+
+INSERT INTO schema_migrations (version) VALUES ('20130820145500');
