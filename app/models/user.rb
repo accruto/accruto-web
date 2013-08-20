@@ -39,7 +39,6 @@ class User < ActiveRecord::Base
   end
 
   def collect_jobs_results
-    collected_jobs = []
     self.recent_searches.each do |recent_search|
       puts "  Process recent_search for '#{recent_search.job_title}'".green
       puts "    Get latest search result and compare with existing saved result"
@@ -51,10 +50,9 @@ class User < ActiveRecord::Base
 
       puts "    Update recent_search.search_results if there is any diff"
       start = Time.now
-      new_jobs_ids.each do |new_jobs_id|
-        recent_search.search_results << { new_jobs_id => { notified: false } }
-        recent_search.save
-      end
+      mapped_jobs = []
+      (current_job_ids + new_jobs_ids).map { |job_id| mapped_jobs << { job_id => {notified: false} } }
+      recent_search.update_attribute(:search_results, mapped_jobs)
       puts "    Time elapsed: #{Time.now - start} seconds".yellow
 
       puts "    Get only job that not yet received by user (notified == false)"
@@ -68,15 +66,15 @@ class User < ActiveRecord::Base
       puts "      #{jobs_ids.size} jobs to process"
       puts "    Time elapsed: #{Time.now - start} seconds".yellow
 
-      puts "    Get job data #{jobs_ids.split(',').to_s}"
+      puts "    Get job data #{jobs_ids.to_s}"
       start = Time.now
       jobs = Job.find(jobs_ids)
-      jobs.each do |job|
-        collected_jobs << job
-      end
       puts "    Time elapsed: #{Time.now - start} seconds".yellow
+      unless jobs.empty?
+        puts "  Send mailer process to background\n".green
+        Delayed::Job.enqueue JobMailerWorker.new({ user: self, jobs: jobs}), :queue => 'job-alert-email'
+      end
     end
-    collected_jobs
   end
 
   def update_job_results(status)

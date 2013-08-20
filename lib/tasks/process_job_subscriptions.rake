@@ -5,11 +5,7 @@ namespace 'accruto:job_subscriptions' do
       unless user.has_role? :admin
         begin
           puts "Processing user #{user.email}".green
-          jobs = user.collect_jobs_results
-          unless jobs.empty?
-            puts "  Send mailer process to background job".green
-            Delayed::Job.enqueue JobMailerWorker.new({ user: user, jobs: jobs}), :queue => 'job-alert-email'
-          end
+          user.collect_jobs_results
         rescue => e
           Rails.logger.info e
         end
