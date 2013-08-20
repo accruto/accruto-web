@@ -1,12 +1,27 @@
+@import "bootstrap-variables";
+
 .stylesheet-modal-container {
 	padding: {
 		top: 300px;
 		bottom:400px;
 	}
-	background: rgba(0,0,0,0.3);
+	background: rgba(43,63,73,0.7);
+
 	.modal-signup, .modal-apply {
 		margin-top: 130px;
 	}
 	.modal-apply {
+
+	}
+}
+
+.modal-header {
+	padding: 10px 20px;
+	background-color: $blueBrandDark;
+	color: $white;
+
+	h3 {
+		@include heading-four;
+		text-transform: uppercase;
 	}
 }

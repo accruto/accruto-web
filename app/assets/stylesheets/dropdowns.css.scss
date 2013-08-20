@@ -249,3 +249,18 @@
   margin-top: 2px; // give it some space to breathe
   @include border-radius($baseBorderRadius);
 }
+
+// Ui-menu 
+// ---------
+.ui-widget-content a {
+  color: red;
+
+}
+
+.ui-menu-item a {
+    &:hover {
+    border: 0 !important;
+    background: $blue !important;
+    border-radius: 0;
+  }
+}
