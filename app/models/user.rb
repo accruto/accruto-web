@@ -96,6 +96,10 @@ class User < ActiveRecord::Base
     preference.update_attributes!(:next_alert_date => next_alert)
   end
 
+  def self.job_alert_subscribed
+    joins(:preference).where("preferences.next_alert_date = ? AND preferences.email_frequency != 'Never'", Date.today)
+  end
+
   private
 
   def set_default_preference

@@ -1,7 +1,7 @@
 namespace 'accruto:job_subscriptions' do
   desc "Check and update subscribed jobs"
   task :process => :environment do
-    User.joins(:preference).where("preferences.next_alert_date = ?", Date.today).each do |user|
+    User.job_alert_subscribed.each do |user|
       unless user.has_role? :admin
         begin
           puts "Processing user #{user.email}".green
