@@ -127,15 +127,18 @@ ul.result-jobs {
 }
 
 .favourite-job {
-    background: #54cc96;
-    border: 1px solid #4bb686;
-    color: white;
+    border: 1px solid $yellow;
+    background-color: $yellowLight;
+    color: $white;
+    i{
+      color: $white;
+    }
 }
 
-.favourite-job:hover {
-    background: #40c68a;
-    color: white;
-}
+// .favourite-job:hover {
+//     background-color: $yellowLight;
+//     color: white;
+// }
 
 .hide {
     display: none;
@@ -224,5 +227,10 @@ ul.result-jobs {
 
 	.posted-date {
 		padding-top: 20px;
+	}
+
+	.add-to-favourite-btn, .add-to-favourite-btn-blocked {
+		display: inline;
+		float:right;
 	}
 }

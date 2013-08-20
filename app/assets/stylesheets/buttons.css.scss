@@ -254,9 +254,9 @@ input[type="submit"].btn {
   text-decoration: none;
 }
 
-// Custom Buttons 
+// Custom Buttons
 // --------------------------------------------------'
-.add-to-favourite-btn-blocked {
+.add-to-favourite-btn, .add-to-favourite-btn-blocked {
   display: inline-block;
   @include ie7-inline-block();
   padding: 5px 12px;

@@ -14,11 +14,11 @@ jQuery ->
     $(this).click (e) ->
       e.preventDefault()
       job_id = $(this).data('job-id')
-      $($(this).children()[1]).hide()
-      span_loader = $(this).children()[0]
-      span_loader = $(span_loader)
-      loader_image_url = span_loader.data('image-url')
-      span_loader.html('<img src="'+loader_image_url+'" id="image-loader-'+job_id+'"/>')
+      # $($(this).children()[1]).hide()
+      # span_loader = $(this).children()[0]
+      # span_loader = $(span_loader)
+      # loader_image_url = span_loader.data('image-url')
+      # span_loader.html('<img src="'+loader_image_url+'" id="image-loader-'+job_id+'"/>')
       action = $(this).data('action')
       $.post(action, {job_id: job_id})
 
