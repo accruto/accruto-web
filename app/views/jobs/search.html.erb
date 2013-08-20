@@ -17,9 +17,10 @@
 						<li>
 							<div class="row-fluid">
 								<div class="span8 job-info">
-									<a href="#" id="" data-job-id="<%= job.id %>" class="favourite-btn-<%= job.id %> hidden-desktop pull-right btn btn-inverse add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>">
-									  <i class="icon-star"></i>
-									</a>
+									<a href="#" data-job-id="<%= job.id %>" class="favourite-btn-<%= job.id %> hidden-desktop btn add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>" data-action="<%= add_to_favourite_jobs_path %>">
+                    <span class="<%= "job-loader-#{job.id}" %>" data-image-url="<%= image_path("ajax-loader.gif") %>"></span>
+                    <i class="icon-star"></i>
+                  </a>
 									<h3 class="role-title"><%= job.title %></h3>
 									<p>
 										<span class="label label-full-time hidden"><%= job.job_type %></span>
@@ -38,8 +39,8 @@
 											<% else %>
 												<a href="<%= job_path(job) %>" class="btn btn-inverse btn-view-job hidden-phone"><i class="icon-mail-forward"></i>&nbsp;&nbsp;VIEW</a>
 											<% end %>
-                      <a href="#" id="favourite-btn-<%= job.id %>" data-job-id="<%= job.id %>" class="favourite-btn-<%= job.id %> hidden-phone btn add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>" data-action="<%= add_to_favourite_jobs_path %>">
-                        <span id="<%= "job-loader-#{job.id}" %>" data-image-url="<%= image_path("ajax-loader.gif") %>"></span>
+                      <a href="#" data-job-id="<%= job.id %>" class="favourite-btn-<%= job.id %> hidden-phone btn add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>" data-action="<%= add_to_favourite_jobs_path %>">
+                        <span class="<%= "job-loader-#{job.id}" %>" data-image-url="<%= image_path("ajax-loader.gif") %>"></span>
                         <i class="icon-star"></i>
                       </a>
 									</div>
