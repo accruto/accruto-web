@@ -291,5 +291,23 @@ input[type="submit"].btn {
   }
 }
 
+.btn-yellow {
+  border: 1px solid $yellowDark;
+  background-color: $yellow;
+  color: $blueBrandDark;
+  font-weight: 600;
+  padding: 10px 20px;
+
+    &:hover {
+      background-color: $yellowSubtleDark;
+      color: $blueBrandDark;
+    }
+
+}
+
+.btn-email-sub {
+  margin: 0 0 0 20px;
+}
+
 
 
