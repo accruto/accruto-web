@@ -45,6 +45,8 @@ Accruto::Application.routes.draw do
   get "pages/home"
   get "pages/about"
   get "pages/faq"
+  get "pages/privacy"
+  get "pages/terms"
   get "pages/contact"
 
   root :to => 'pages#home'
