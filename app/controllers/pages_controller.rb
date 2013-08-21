@@ -31,5 +31,16 @@ class PagesController < ApplicationController
   end
 
   def contact
+  	@contact_form = ContactForm.new
   end
+
+	def send_contact_form
+		@contact_form = ContactForm.new(params[:contact_form])
+		if @contact_form.valid?
+		  ContactMailer.contact_form(@contact_form).deliver
+		  redirect_to pages_contact_path, :notice => "Message was successfully sent."
+		else
+		  render :contact
+		end
+	end
 end

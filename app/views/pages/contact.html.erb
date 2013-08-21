@@ -3,30 +3,28 @@
         <h1>Contact Us</h1>
     </div>
 </div>
-
 <div class="container">
   <div class="contact-form-container">
   	<div class="row-fluid">
   		<div class="span3">
-                <h4>Hello there! </h4>
-    	         <p class="contact-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.</p>
-
-                <a><i class="icon-comment"></i>&nbsp; Report a bug on the site</a>
-
+        <h4>Hello there! </h4>
+       	<p class="contact-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</p>
+        <a><i class="icon-comment"></i>&nbsp; Report a bug on the site</a>
   		</div>
   		<div class="span6">
 				<div class="highlight-indent contact-indent">
 				<div class="contact-send">
-                                      <%= simple_form_for :contact do |f| %>
-                                      <%= f.input :full_Name, wrapper_html: { class: 'name' } %>
-                                      <%= f.input :email, wrapper_html: { class: 'email' } %>
-                                      <%= f.input :What_is_this_about?, as: :select, wrapper_html: { class: 'options' } %>
-                                      <%= f.input :description, as: :text, :input_html => { :rows => 4}, placeholder: 'Please type in your message here', label: 'Your message' %>
-                                      <%= f.submit "Send Message", class: "btn btn-primary btn-apply-job" %>
-                                    <% end %>
+          <%= simple_form_for @contact_form, url: pages_send_contact_form_path do |f| %>
+          	<%= f.error_notification %>
+	          <%= f.input :full_name, wrapper_html: { class: 'name' } %>
+	          <%= f.input :email, wrapper_html: { class: 'email' } %>
+	          <%= f.input :about, collection: ['Feedback', 'Partnership', 'General Enquiries'], prompt: "Please Select One", wrapper_html: { class: 'options' } %>
+	          <%= f.input :message, as: :text, :input_html => { :rows => 4}, placeholder: 'Please type in your message here', label: 'Your message' %>
+	          <%= f.submit "Send Message", class: "btn btn-primary btn-apply-job" %>
+	        <% end %>
 				</div>
   			</div>
   		</div>

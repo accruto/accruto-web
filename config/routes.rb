@@ -48,6 +48,8 @@ Accruto::Application.routes.draw do
   get "pages/privacy"
   get "pages/terms"
   get "pages/contact"
+  post "pages/send_contact_form"
+
 
   root :to => 'pages#home'
 end
