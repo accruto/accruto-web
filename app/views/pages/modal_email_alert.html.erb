@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="stylesheet-modal-container">
+		<div class="modal modal-email-alert">
+			<%= simple_form_for :user do |f| %>
+			  <div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			    <h3>Create email alert for</h3>
+			  </div>
+			  
+			    <div class="short-job-apply">
+			    	<h4>Accountant</h4>
+			    	<p>South Bank, QLD 4100</p>
+			    </div>
+			<div class="modal-body">
+		    	<%= f.input :email, label: 'Whats your email?', placeholder: 'john@domain.com' %>
+			<%= f.input :How_often_would_you_like_to_received_these_alerts?, as: :select, wrapper_html: { class: 'options' } %>
+			  </div>
+			  <div class="modal-footer">
+			    <%= f.submit "Subscribe", class: "btn btn-primary btn-apply-job" %>
+			  </div>
+		  <% end %>
+		</div>
+	</div>
+</div>

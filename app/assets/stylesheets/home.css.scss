@@ -108,6 +108,24 @@
 	padding: 40px 0;
 }
 
+.contact-form-container {
+	padding: 40px 0;
+}
+
+.contact-description {
+	color: $blueBrandDark;
+}
+
+.contact-send {
+	background-color: $white;
+	border: 1px solid $goldLight;
+	padding: 20px 40px 0 20px ;
+
+	label {
+		color: $blueBrandDark;
+	}
+}
+
 /* Larger ----------- */
 @media screen and (max-width: 1024px) {
 	
@@ -185,6 +203,16 @@
 		@include heading-four;
 		line-height: 28px;
 		}
+	}
+
+	.contact-indent {
+		margin-top: 40px;
+	}
+
+
+	.contact-send {
+	padding: 20px 10px 0 10px ;
+	text-align: left;
 	}
 
 } /* end */ 

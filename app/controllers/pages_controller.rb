@@ -10,12 +10,21 @@ class PagesController < ApplicationController
   def modal_signup
   end
 
+  def modal_email_alert
+  end
+
   def home
 	  @categories = JobCategory.all
 	  render :layout => 'home'
   end
 
   def about
+  end
+
+  def terms
+  end
+
+  def privacy
   end
 
   def faq
