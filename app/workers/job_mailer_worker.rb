@@ -7,7 +7,7 @@ class JobMailerWorker < Struct.new(:args)
   def success(job)
     handler = parse_handler(job)
     user = handler[:user]
-    # user.update_job_results(true)
+    user.update_job_results(true)
   end
 
   def error(job, exception)

@@ -30,41 +30,51 @@ class User < ActiveRecord::Base
   has_many :favourites
   has_many :favourite_jobs, through: :favourites, :source => :job
   has_many :recent_searches
-  has_many :preferences
+  has_one :preference
+
+  before_create :set_default_preference
 
   def favourite_job?(job_id)
     favourites.map(&:job_id).include?(job_id.to_i)
   end
 
   def collect_jobs_results
-    collected_jobs = []
     self.recent_searches.each do |recent_search|
-      ## get latest search result and compare with existing saved result
+      puts "  Process recent_search for '#{recent_search.job_title}'".green
+      puts "    Get latest search result and compare with existing saved result"
+      start = Time.now
       latest_job_ids = Job.grab_search_results(recent_search).map(&:id)
       current_job_ids = recent_search.search_results.map {|r| r.keys[0] }
       new_jobs_ids = latest_job_ids - current_job_ids
+      puts "    Time elapsed: #{Time.now - start} seconds".yellow
 
-      ## update recent_search search_results if there is any diff
-      new_jobs_ids.each do |new_jobs_id|
-        recent_search.search_results << { new_jobs_id => { notified: false } }
-        recent_search.save
-      end
+      puts "    Update recent_search.search_results if there is any diff"
+      start = Time.now
+      mapped_jobs = []
+      (current_job_ids + new_jobs_ids).map { |job_id| mapped_jobs << { job_id => {notified: false} } }
+      recent_search.update_attribute(:search_results, mapped_jobs)
+      puts "    Time elapsed: #{Time.now - start} seconds".yellow
 
-      ## get only job that not yet received by user (notified == false)
+      puts "    Get only job that not yet received by user (notified == false)"
+      start = Time.now
       jobs_ids = []
       recent_search.search_results.each do |result|
         if result.values.first[:notified] == false
           jobs_ids << result.keys.first
         end
       end
+      puts "      #{jobs_ids.size} jobs to process"
+      puts "    Time elapsed: #{Time.now - start} seconds".yellow
 
-      ## grab latest job from
+      puts "    Get job data #{jobs_ids.to_s}"
+      start = Time.now
       jobs = Job.find(jobs_ids)
-      jobs.each do |job|
-        collected_jobs << job
+      puts "    Time elapsed: #{Time.now - start} seconds".yellow
+      unless jobs.empty?
+        puts "  Send mailer process to background\n".green
+        Delayed::Job.enqueue JobMailerWorker.new({ user: self, jobs: jobs}), :queue => 'job-alert-email'
       end
     end
-    collected_jobs
   end
 
   def update_job_results(status)
@@ -74,5 +84,25 @@ class User < ActiveRecord::Base
       end
       recent_search.save
     end
+
+    next_alert = if preference.email_frequency == 'Daily'
+      1.day.from_now.to_date
+    elsif preference.email_frequency == 'Weekly'
+      1.week.from_now.to_date
+    elsif preference.email_frequency == 'Fortnightly'
+      2.weeks.from_now.to_date
+    end
+
+    preference.update_attributes!(:next_alert_date => next_alert)
+  end
+
+  def self.job_alert_subscribed
+    joins(:preference).where("preferences.next_alert_date = ? AND preferences.email_frequency != 'Never'", Date.today)
+  end
+
+  private
+
+  def set_default_preference
+    build_preference(email_frequency: 'Daily', next_alert_date: Date.today)
   end
 end

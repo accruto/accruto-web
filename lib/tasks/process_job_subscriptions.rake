@@ -1,13 +1,11 @@
 namespace 'accruto:job_subscriptions' do
   desc "Check and update subscribed jobs"
   task :process => :environment do
-    User.all.each do |user|
+    User.job_alert_subscribed.each do |user|
       unless user.has_role? :admin
         begin
-          jobs = user.collect_jobs_results
-          unless jobs.empty?
-            Delayed::Job.enqueue JobMailerWorker.new({ user: user, jobs: jobs}), :queue => 'job-alert-email'
-          end
+          puts "Processing user #{user.email}".green
+          user.collect_jobs_results
         rescue => e
           Rails.logger.info e
         end

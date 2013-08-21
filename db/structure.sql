@@ -75,8 +75,7 @@ CREATE TABLE companies (
     name character varying(255),
     phone character varying(255),
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
-    logo_url character varying(255)
+    updated_at timestamp without time zone NOT NULL
 );
 
 
@@ -348,7 +347,8 @@ CREATE TABLE preferences (
     user_id integer,
     email_frequency character varying(255) DEFAULT 'Daily'::character varying,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    next_alert_date date
 );
 
 
@@ -699,27 +699,6 @@ ALTER TABLE ONLY users
 
 
 --
--- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
-
-
---
--- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
-
-
---
--- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
-
-
---
 -- Name: delayed_jobs_priority; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -731,6 +710,13 @@ CREATE INDEX delayed_jobs_priority ON delayed_jobs USING btree (priority, run_at
 --
 
 CREATE UNIQUE INDEX index_job_categories_on_slug ON job_categories USING btree (slug);
+
+
+--
+-- Name: index_job_subcategories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_job_subcategories_on_slug ON job_subcategories USING btree (slug);
 
 
 --
@@ -862,4 +848,4 @@ INSERT INTO schema_migrations (version) VALUES ('20130817154613');
 
 INSERT INTO schema_migrations (version) VALUES ('20130817214007');
 
-INSERT INTO schema_migrations (version) VALUES ('20130820065102');
+INSERT INTO schema_migrations (version) VALUES ('20130820145500');
