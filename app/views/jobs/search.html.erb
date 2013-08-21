@@ -4,8 +4,10 @@
 			<%= render 'search_sidebar', favourite_jobs: @favourite_jobs %>
 		</div>
 		<div class="span9 result-list">
-			<h4 class="result-sentence">There are a total of <span class="result-number"><%= number_with_delimiter(total_search_result(@search_results)) %></span> jobs matching your search criteria</h4>
-
+				<h4 class="result-sentence">There are <span class="result-number"><%= number_with_delimiter(total_search_result(@search_results)) %></span> <strong>Marketing</strong> jobs in <strong>Sydney, NSW 2008</strong></h4>
+				<%= simple_form_for :user do |f| %>
+				<%= f.submit "Create Job Alert", class: "btn btn-yellow btn-email-sub" %>
+				<% end %>
 			<hr>
 			<ul class="result-jobs">
 				<% @jobs.each do |job| %>

@@ -3,6 +3,9 @@
 .results-main {
 	margin-top: 40px;
 	hr { margin: 0; padding: 0 }
+	form {
+		display: inline-block;
+	}
 }
 
 .search-box {
@@ -64,6 +67,7 @@
 }
 .results-main ul.result-jobs {
 	padding: 0;
+
 }
 ul.result-jobs {
 }
@@ -86,6 +90,7 @@ ul.result-jobs {
 	font-size: $fontSizeLarge;
 	font-weight: 400;
 	color: $grayDark;
+	display: inline-block;
 }
 .result-number {
 	color: $greenDark;
