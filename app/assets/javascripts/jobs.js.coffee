@@ -27,9 +27,6 @@ jQuery ->
       e.preventDefault()
       $('#favourite-blocker-modal').modal('show')
 
-  $('#go-to-signup-btn').click ->
-    window.location.href = '/users/sign_up'
-
   $('body').on 'click', '.remove-favourite-item', (event) ->
     job_id = $(this).data('job-id')
     $(this).hide()

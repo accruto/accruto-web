@@ -59,7 +59,7 @@
 </div>
 
 <div class="favourite-roles">
-	<p><span class="sidebar-title">Favourited Jobs</span></p>
+	<p><span class="sidebar-title">Shortlisted Jobs</span></p>
 	<ul id="favourites-sidebar-list" class="recent-list">
     <% unless favourite_jobs.empty? %>
       <%= render 'job_favourite_empty', show: false %>
@@ -72,11 +72,11 @@
   </ul>
 
   <p id="remove-all-favourites-wrapper" class="action align-right <%= 'hide' if favourite_jobs.empty? %>">
-    <%= link_to 'Clear Favourites', clear_favourites_jobs_path, id: 'remove-all-favourites' %>
+    <%= link_to 'Clear Shortlist', clear_favourites_jobs_path, id: 'remove-all-favourites' %>
   </p>
 
 </div>
 
-<%= render 'shared/modal_alert', alert_title: 'Alert', alert_content: 'Are you sure want to clear recent searches?', key: 'remove-all-searches' %>
-<%= render 'shared/modal_alert', alert_title: 'Alert', alert_content: 'Are you sure want to clear favourites?', key: 'remove-all-favourites' %>
+<%= render 'shared/modal_alert', alert_title: 'Clear recent searches', alert_content: 'Are you sure want to clear all your recent searches?', key: 'remove-all-searches' %>
+<%= render 'shared/modal_alert', alert_title: 'Clear shortlist', alert_content: 'Are you sure want to clear all your shortlisted jobs?', key: 'remove-all-favourites' %>
 <%= render 'shared/auth_block_modal', title: 'Please sign up', content: 'You have to sign up to activate job alert', key: 'search-alert' %>

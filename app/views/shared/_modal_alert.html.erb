@@ -1,15 +1,15 @@
 <div id="<%= key if defined?(key) %>-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="alertLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h4 id="alertLabel" class="favourite-modal">
+    <h3 id="alertLabel">
       <%= alert_title if defined?(alert_title) %>
-    </h4>
+    </h3>
   </div>
   <div class="modal-body">
     <p><%= alert_content if defined?(alert_content) %></p>
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">No</button>
-    <button id="<%= key if defined?(key) %>-yes" class="btn btn-primary">Yes</button>
+  	<button class="btn" data-dismiss="modal" aria-hidden="true">No</button>
+  	<button id="<%= key if defined?(key) %>-yes" class="btn btn-primary">Yes</button>
   </div>
 </div>

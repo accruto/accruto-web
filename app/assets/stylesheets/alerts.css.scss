@@ -12,7 +12,7 @@
 .alert {
   padding: 8px 35px 8px 14px;
   //margin-bottom: $baseLineHeight;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   text-shadow: none !important;
   background-color: $warningBackground;
   border: 0px solid $warningBorder !important;

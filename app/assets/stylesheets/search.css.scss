@@ -184,6 +184,16 @@ ul.result-jobs {
 /* Smaller ----------- */
 @media screen and (max-width : 650px) {
 
+	input[type="submit"] {
+	width: 93%;
+	}
+
+	.job-ticker {
+		h3 {
+			font-size: 20px;
+			line-height: 28px;
+		}
+	}
 	.result-sentence {
 		font-size: $fontSizeSmall;
 		font-weight: 400;
