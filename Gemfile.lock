@@ -70,6 +70,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    colorize (0.5.8)
     columnize (0.3.6)
     compass (0.12.2)
       chunky_png (~> 1.2)
@@ -308,6 +309,7 @@ DEPENDENCIES
   capybara (~> 2.0.2)
   chosen-rails (~> 1.0.0)
   coffee-rails (~> 3.2.1)
+  colorize
   database_cleaner (~> 0.9.1)
   debugger (~> 1.6.0)
   delayed_job_active_record

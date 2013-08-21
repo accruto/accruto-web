@@ -48,12 +48,16 @@ class User < ActiveRecord::Base
       new_jobs_ids = latest_job_ids - current_job_ids
       puts "    Time elapsed: #{Time.now - start} seconds".yellow
 
-      puts "    Update recent_search.search_results if there is any diff"
-      start = Time.now
-      mapped_jobs = []
-      (current_job_ids + new_jobs_ids).map { |job_id| mapped_jobs << { job_id => {notified: false} } }
-      recent_search.update_attribute(:search_results, mapped_jobs)
-      puts "    Time elapsed: #{Time.now - start} seconds".yellow
+      if new_jobs_ids.size > 0
+        puts "    Update recent_search.search_results if there is any diff"
+        start = Time.now
+        mapped_jobs = []
+        (current_job_ids + new_jobs_ids).map { |job_id| mapped_jobs << { job_id => {notified: false} } }
+        recent_search.update_attribute(:search_results, mapped_jobs)
+        puts "    Time elapsed: #{Time.now - start} seconds".yellow
+      else
+        puts "    No jobs diff"
+      end
 
       puts "    Get only job that not yet received by user (notified == false)"
       start = Time.now
