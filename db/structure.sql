@@ -75,7 +75,8 @@ CREATE TABLE companies (
     name character varying(255),
     phone character varying(255),
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    logo_url character varying(255)
 );
 
 
@@ -860,3 +861,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130817004316');
 INSERT INTO schema_migrations (version) VALUES ('20130817154613');
 
 INSERT INTO schema_migrations (version) VALUES ('20130817214007');
+
+INSERT INTO schema_migrations (version) VALUES ('20130820065102');
