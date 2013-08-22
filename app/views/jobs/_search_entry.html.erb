@@ -1,0 +1,31 @@
+<li>
+	<div class="row-fluid">
+		<div class="span8 job-info">
+			<span data-job-id="<%= job.id %>" class="favourite-btn-<%= job.id %> hidden-desktop btn add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>" data-action="<%= add_to_favourite_jobs_path %>">
+        <i class="icon-star"></i></span>
+			<h3 class="role-title"><%= job.title %></h3>
+			<p>
+				<span class="label label-full-time hidden"><%= job.job_type %></span>
+				<div class="job-location">at <%= job.company.name.titleize %> - <%= job.address.city %>, <%=  job.address.postcode %> <%= job.address.state %>
+				</div>
+				<div class="posted-date hidden-phone">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</div>
+				<div class="posted-date hidden-desktop hidden-tablet">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</div>
+			</p>
+			<p class="job-description"><%= truncate(sanitize(job.description, tags: ""), length: 120, seperator: " ") %></p>
+		</div>
+		<div class="span3 hidden-phone">
+			<div class="result-actions align-right">
+				<% case job.source %>
+					<% when 'CareerOne' %>
+						<a href="http://jobview.careerone.com.au/GetJob.aspx?JobID=<%= job.external_job_id %>&WT.mc_n=AFC_linkme" target="new" class="btn btn-inverse btn-view-job hidden-phone"><i class="icon-mail-forward"></i>&nbsp;&nbsp;VIEW</a>
+					<% else %>
+						<a href="<%= job_path(job) %>" class="btn btn-inverse btn-view-job hidden-phone"><i class="icon-mail-forward"></i>&nbsp;&nbsp;VIEW</a>
+					<% end %>
+          <a href="#" data-job-id="<%= job.id %>" class="favourite-btn-<%= job.id %> hidden-phone btn add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>" data-action="<%= add_to_favourite_jobs_path %>">
+            <span class="<%= "job-loader-#{job.id}" %>" data-image-url="<%= image_path("ajax-loader.gif") %>"></span>
+            <i class="icon-star"></i>
+          </a>
+			</div>
+		</div>
+	</div>
+</li>
