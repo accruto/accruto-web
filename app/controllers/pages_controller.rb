@@ -19,6 +19,8 @@ class PagesController < ApplicationController
   end
 
   def about
+    ContactMailer.test_email.deliver
+    render nothing: true
   end
 
   def terms
