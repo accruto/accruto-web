@@ -24,8 +24,8 @@ class ApiController < ApplicationController
   private
 
   def restrict_access
-    #api_key = ReferralSite.find_by_token(params[:token])
-    #
-    #head :unauthorized unless api_key
+    api_key = ReferralSite.find_by_token(params[:token])
+
+    head :unauthorized unless api_key
   end
 end
