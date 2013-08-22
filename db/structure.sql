@@ -796,6 +796,27 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
+
+
+--
+-- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
+
+
+--
+-- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
+
+
+--
 -- Name: delayed_jobs_priority; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -807,13 +828,6 @@ CREATE INDEX delayed_jobs_priority ON delayed_jobs USING btree (priority, run_at
 --
 
 CREATE UNIQUE INDEX index_job_categories_on_slug ON job_categories USING btree (slug);
-
-
---
--- Name: index_job_subcategories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE UNIQUE INDEX index_job_subcategories_on_slug ON job_subcategories USING btree (slug);
 
 
 --
