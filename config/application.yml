@@ -6,15 +6,9 @@ CAREERONE_CAT_CODE: 1:EAAQZyQFf8jEXJ9WtzRkrCcuPhqurTr_Tc587b4Z66UWXcpVIXlbov2N9n
 
 development:
  SMTP_DOMAIN: http://localhost:3000
- SMTP_USERNAME: john@accruto.com
- SMTP_PASSWORD: iqRxL3WiJL_4zDX9UDL_Tw
 
 staging:
  SMTP_DOMAIN: http://staging.accruto.com
- SMTP_USERNAME: john@accruto.com
- SMTP_PASSWORD: iqRxL3WiJL_4zDX9UDL_Tw
 
 production:
  SMTP_DOMAIN: http://accruto.com
- SMTP_USERNAME: john@accruto.com
- SMTP_PASSWORD: iqRxL3WiJL_4zDX9UDL_Tw
