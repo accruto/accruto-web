@@ -9,12 +9,4 @@ class ContactMailer < ActionMailer::Base
       subject: "A new contact form entry was created"
     )
   end
-
-  def test_email
-    mail(
-        to: 'dhendyf@gmail.com',
-        subject: 'DEBUG EMAIL SUBJECT',
-        body: '<h3>DEBUG EMAIL</h3>'
-    )
-  end
 end
