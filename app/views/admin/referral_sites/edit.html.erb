@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="page-header">
+    <%= link_to admin_referral_sites_path, :class => 'btn' do %>
+      <i class="icon-list-alt"></i>
+      Back
+    <% end %>
+    <%= link_to @admin_referral_site, :class => 'btn btn-primary' do %>
+      <i class="icon-info-sign icon-white"></i>
+      Show
+    <% end %>
+    <h1>Editing Referral Site</h1>
+  </div>
+
+  <%= render 'form' %>
+</div>

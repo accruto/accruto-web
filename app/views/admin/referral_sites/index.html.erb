@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="page-header">
+    <%= link_to new_admin_referral_site_path, :class => 'btn btn-primary' do %>
+      <i class="icon-plus icon-white"></i>
+      New Referral Site
+    <% end %>
+    <h1>Listing Referral Sites</h1>
+  </div>
+
+  <table class="table table-bordered table-striped datatable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Token</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @referral_sites.each do |referral_site| %>
+      <tr>
+        <td><%= referral_site.name %></td>
+        <td><%= referral_site.token %></td>
+        <td><%= link_to 'Edit', edit_admin_referral_site_path(referral_site) %></td>
+        <td><%= link_to 'Destroy', admin_referral_site_path(referral_site), confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
