@@ -68,13 +68,16 @@ module Accruto
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    config.action_mailer.default_url_options = { :host => ENV['SMTP_DOMAIN'] }
+
+    config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
       :address              => "smtp.mandrillapp.com",
       :port                 => 587,
       :domain               => ENV['SMTP_DOMAIN'],
       :user_name            => ENV['SMTP_USERNAME'],
       :password             => ENV['SMTP_PASSWORD'],
-      :authentication       => :plain,
+      :authentication       => :login,
       :enable_starttls_auto => true
     }
 
