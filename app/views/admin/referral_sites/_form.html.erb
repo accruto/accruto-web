@@ -1,0 +1,15 @@
+<%= simple_form_for([:admin, @referral_site]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <div class="row-fluid">
+      <div class="span6">
+        <%= f.input :name %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

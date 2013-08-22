@@ -447,6 +447,38 @@ ALTER SEQUENCE recent_searches_id_seq OWNED BY recent_searches.id;
 
 
 --
+-- Name: referral_sites; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE referral_sites (
+    id integer NOT NULL,
+    name character varying(255),
+    token character varying(255),
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: referral_sites_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE referral_sites_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: referral_sites_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE referral_sites_id_seq OWNED BY referral_sites.id;
+
+
+--
 -- Name: roles; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -626,6 +658,13 @@ ALTER TABLE ONLY recent_searches ALTER COLUMN id SET DEFAULT nextval('recent_sea
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY referral_sites ALTER COLUMN id SET DEFAULT nextval('referral_sites_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq'::regclass);
 
 
@@ -733,6 +772,14 @@ ALTER TABLE ONLY recent_searches
 
 
 --
+-- Name: referral_sites_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY referral_sites
+    ADD CONSTRAINT referral_sites_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -749,27 +796,6 @@ ALTER TABLE ONLY users
 
 
 --
--- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
-
-
---
--- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
-
-
---
--- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
-
-
---
 -- Name: delayed_jobs_priority; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -781,6 +807,13 @@ CREATE INDEX delayed_jobs_priority ON delayed_jobs USING btree (priority, run_at
 --
 
 CREATE UNIQUE INDEX index_job_categories_on_slug ON job_categories USING btree (slug);
+
+
+--
+-- Name: index_job_subcategories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_job_subcategories_on_slug ON job_subcategories USING btree (slug);
 
 
 --
@@ -917,3 +950,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130820065102');
 INSERT INTO schema_migrations (version) VALUES ('20130820145500');
 
 INSERT INTO schema_migrations (version) VALUES ('20130821054545');
+
+INSERT INTO schema_migrations (version) VALUES ('20130821203933');
