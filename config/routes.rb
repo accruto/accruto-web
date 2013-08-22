@@ -43,11 +43,11 @@ Accruto::Application.routes.draw do
   get "pages/modal_signup"
   get "pages/modal_email_alert"
   get "pages/home"
-  get "pages/about"
-  get "pages/faq"
-  get "pages/privacy"
-  get "pages/terms"
-  get "pages/contact"
+  get "/about", to: "pages#about"
+  get "/faq", to: "pages#faq"
+  get "/privacy", to: "pages#privacy"
+  get "/terms", to: "pages#terms"
+  get "/contact", to: "pages#contact"
   post "pages/send_contact_form"
 
 

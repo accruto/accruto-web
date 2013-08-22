@@ -56,11 +56,10 @@
 	li {
 		padding: 20px 30px;
 		border-bottom: 1px solid $grayLighter;
-		&:hover {
+		&:hover, &.selected {
 			background: $yellowLight;
 			border-left: 3px solid $yellowDark;
 			color: $grayDarker;
-
 		}
 	}
 
@@ -189,7 +188,7 @@
 		li {
 		text-align: left;
 		}
-	}	
+	}
 
 	.job-form-container {
 		margin-top: 0px;

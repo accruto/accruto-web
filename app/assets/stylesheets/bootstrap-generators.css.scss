@@ -44,6 +44,7 @@ a.brand.image > img { height: 45px; }
 .align-left { text-align:left; }
 .align-right { text-align:right; }
 .clear-both { clear:both; }
+.hidden { display:none !important }
 
 .error > * { color: $errorColor !important; }
 .error > .controls > textarea { color: $textColor !important }
