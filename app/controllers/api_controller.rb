@@ -17,14 +17,15 @@ class ApiController < ApplicationController
 
     respond_to do |format|
       format.rss { render layout: false }
+      format.xml
     end
   end
 
   private
 
   def restrict_access
-    api_key = ReferralSite.find_by_token(params[:token])
-
-    head :unauthorized unless api_key
+    #api_key = ReferralSite.find_by_token(params[:token])
+    #
+    #head :unauthorized unless api_key
   end
 end

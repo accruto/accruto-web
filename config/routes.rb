@@ -1,5 +1,5 @@
 Accruto::Application.routes.draw do
-  get "api/jobs", format: :rss
+  get "api/jobs", format: :xml
   get "users/preference"
   post "users/update_preference" , as: 'preferences'
   put "users/update_preference" , as: 'preference'
