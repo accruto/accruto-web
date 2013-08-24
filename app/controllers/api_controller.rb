@@ -15,9 +15,11 @@ class ApiController < ApplicationController
       Job.all
     end
 
+    referral_site = ReferralSite.find_by_token(params[:token])
+    name = referral_site.name.downcase
+
     respond_to do |format|
-      format.rss { render layout: false }
-      format.xml
+      format.xml { render template: "api/#{name}.xml"}
     end
   end
 
