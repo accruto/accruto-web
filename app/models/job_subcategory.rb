@@ -12,7 +12,9 @@
 #
 
 class JobSubcategory < ActiveRecord::Base
-  attr_accessible :job_category_id, :name, :category_attributes, :external_subcategory_id
+  serialize :external_subcategory_ids, Array
+
+  attr_accessible :job_category_id, :name, :category_attributes, :external_subcategory_id, :external_subcategory_ids
   belongs_to :category, class_name: "JobCategory", foreign_key: 'job_category_id'
   has_and_belongs_to_many :jobs
   belongs_to :job_category

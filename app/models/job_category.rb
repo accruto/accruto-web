@@ -11,7 +11,9 @@
 #
 
 class JobCategory < ActiveRecord::Base
-  attr_accessible :name, :external_category_id
+  serialize :external_category_ids, Array
+
+  attr_accessible :name, :external_category_id, :external_category_ids
   has_many :subcategories, class_name: "JobSubcategory"
   validates_presence_of :name
 

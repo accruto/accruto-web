@@ -36,11 +36,12 @@ class Job < ActiveRecord::Base
 
   attr_accessible :company_id, :expires_at, :external_job_id, :source,
   								:posted_at, :title, :description, :job_type, :company_attributes,
-  								:subcategories_attributes, :address_attributes, :subcategory_ids
+  								:subcategories_attributes, :address_attributes, :subcategory_ids, :address_id,
+                  :created_at, :updated_at
 
  	validates_presence_of :title, :job_type, :description, :company, :address, :source
+  validates :title, :uniqueness => {:scope => :external_job_id}, length: { maximum: 70 }
 
- 	validates :title, length: { maximum: 70 }
  	belongs_to :company
  	belongs_to :address
 

@@ -17,7 +17,8 @@
 
 class Address < ActiveRecord::Base
   attr_accessible :latitude, :longitude, :postcode, :street, :city, :state, :addressable_id
-  validates_presence_of :city, :state
+  validates_presence_of :city
+    ## , :state - comment out state presence validation for now, jobadder missing state
   has_many :jobs
 
   geocoded_by :full_street_address do |obj, results|

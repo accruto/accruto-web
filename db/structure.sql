@@ -214,7 +214,8 @@ CREATE TABLE job_categories (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     external_category_id integer,
-    slug character varying(255)
+    slug character varying(255),
+    external_category_ids text
 );
 
 
@@ -248,7 +249,8 @@ CREATE TABLE job_subcategories (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     external_subcategory_id integer,
-    slug character varying(255)
+    slug character varying(255),
+    external_subcategory_ids text
 );
 
 
@@ -317,7 +319,8 @@ CREATE TABLE jobs (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     description text,
-    source character varying(255)
+    source character varying(255),
+    external_job_ids text
 );
 
 
@@ -796,27 +799,6 @@ ALTER TABLE ONLY users
 
 
 --
--- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
-
-
---
--- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
-
-
---
--- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
-
-
---
 -- Name: delayed_jobs_priority; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -828,6 +810,13 @@ CREATE INDEX delayed_jobs_priority ON delayed_jobs USING btree (priority, run_at
 --
 
 CREATE UNIQUE INDEX index_job_categories_on_slug ON job_categories USING btree (slug);
+
+
+--
+-- Name: index_job_subcategories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_job_subcategories_on_slug ON job_subcategories USING btree (slug);
 
 
 --
@@ -966,3 +955,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130820145500');
 INSERT INTO schema_migrations (version) VALUES ('20130821054545');
 
 INSERT INTO schema_migrations (version) VALUES ('20130821203933');
+
+INSERT INTO schema_migrations (version) VALUES ('20130824165351');
