@@ -45,7 +45,11 @@ class Job < ActiveRecord::Base
  	belongs_to :company
  	belongs_to :address
 
- 	has_and_belongs_to_many :subcategories, class_name: "JobSubcategory"
+ 	#has_and_belongs_to_many :subcategories, class_name: "JobSubcategory"
+
+  has_many :job_subcategories_jobs
+  has_many :subcategories, through: :job_subcategories_jobs, :source => :job_subcategory
+
   has_many :favourites
   has_many :favourite_users, through: :favourites, :source => :user
 
@@ -158,4 +162,5 @@ class Job < ActiveRecord::Base
     end
     search_results
   end
+
 end
