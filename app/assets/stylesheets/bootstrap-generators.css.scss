@@ -16,6 +16,12 @@ $iconWhiteSpritePath: '';
 		text-align:center;
 	}
 	textarea { margin:auto; }
+	input[type="text"], input[type="tel"], input[type="email"], .controls textarea {
+		width:90%;
+	}
+	textarea {
+		width:90%;
+	}
 }
 
 @media (min-width: 768px) {

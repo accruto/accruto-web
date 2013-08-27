@@ -8,7 +8,7 @@
 					<%= params[:address].blank? ? "Australia" : params[:address] %>
 				</span></h4>
 				<%= simple_form_for :user do |f| %>
-				<%= f.submit "Create Job Alert", class: "btn btn-yellow btn-email-sub hidden" %>
+				<%= f.submit "Create Job Alert", class: "btn btn-yellow btn-email-sub" %>
 				<% end %>
 			<hr>
 			<ul class="result-jobs">

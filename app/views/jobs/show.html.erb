@@ -7,19 +7,19 @@
 			<a href="javascript:history.back()" class="go-back"><span class="job-detail-back"><i class="icon-mail-reply"></i> &nbsp;Back to search results</span></a>
 			<div class="row-fluid">
 				<div class="span7 detail-info">
-					<h3 class="role-title"><%= @job.title %></h3>
+					<h3 class="job-detail role-title"><%= @job.title %></h3>
 					<p>
 						<span class="label label-full-time hidden"><%= @job.job_type %></span>
 						<div class="job-location">at <%= @job.company.name.titleize %> - <%= @job.address.city %>, <%=  @job.address.postcode %> <%= @job.address.state %>
 						</div>
-						<div class="posted-date hidden-phone">Posted <%= distance_of_time_in_words(@job.posted_at, DateTime.now) %> ago on <%= @job.source %>.com</div>
+						<div class="posted-date hidden-phone">Posted <%= distance_of_time_in_words(@job.posted_at, DateTime.now) %> ago <!-- on <%= @job.source %>.com --></div>
 						<div class="posted-date hidden-desktop hidden-tablet">Posted <%= distance_of_time_in_words(@job.posted_at, DateTime.now) %> ago on <%= @job.source %>.com</div>
 					</p>
 					<p class="job-description"><%= sanitize(@job.description, tags: "") %></p>
 				</div>
 				<div class="span4">
 					<div class="result-actions align-right">
-						<a href="#" class="btn btn-inverse btn-view-job">APPLY</a>
+						<a href="<%= apply_jobs_path(@job) %>" class="btn btn-primary btn-view-job">APPLY</a>
 						<a href="#" data-job-id="<%= @job.id %>" class="favourite-btn-<%= @job.id %> btn add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(@job) %>" data-action="<%= add_to_favourite_jobs_path %>">
 						  <span class="<%= "job-loader-#{@job.id}" %>" data-image-url="<%= image_path("ajax-loader.gif") %>"></span>
 						  <i class="icon-star"></i>

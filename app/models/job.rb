@@ -39,6 +39,9 @@ class Job < ActiveRecord::Base
   								:subcategories_attributes, :address_attributes, :subcategory_ids, :address_id,
                   :created_at, :updated_at
 
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
  	validates_presence_of :title, :job_type, :description, :company, :address, :source
   validates :title, :uniqueness => {:scope => :external_job_id}, length: { maximum: 70 }
 

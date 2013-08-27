@@ -14,7 +14,7 @@ Accruto::Application.routes.draw do
   	collection do
 	  	## GET
       get 'search'
-	  	get 'apply'
+	  	get ':id/apply', to: "jobs#apply", as: "apply"
       get 'favourites'
       get 'list'
       get 'location'
@@ -56,8 +56,13 @@ Accruto::Application.routes.draw do
   root :to => 'pages#home'
 end
 #== Route Map
-# Generated on 12 Aug 2013 11:41
+# Generated on 26 Aug 2013 15:44
 #
+#           users_preference GET    /users/preference(.:format)                 users#preference
+#                preferences POST   /users/update_preference(.:format)          users#update_preference
+#                 preference PUT    /users/update_preference(.:format)          users#update_preference
+#                delayed_job        /delayed_job(.:format)                      DelayedJobWeb
+#           new_user_session GET    /users/sign_in(.:format)                    devise/sessions#new
 #               user_session POST   /users/sign_in(.:format)                    devise/sessions#create
 #       destroy_user_session DELETE /users/sign_out(.:format)                   devise/sessions#destroy
 #              user_password POST   /users/password(.:format)                   devise/passwords#create
@@ -72,6 +77,15 @@ end
 #                            DELETE /users(.:format)                            devise/registrations#destroy
 #                            GET    /jobs/category/:category(.:format)          jobs#search
 #                search_jobs GET    /jobs/search(.:format)                      jobs#search
+#                 apply_jobs GET    /jobs/:id/apply(.:format)                   jobs#apply
+#            favourites_jobs GET    /jobs/favourites(.:format)                  jobs#favourites
+#                  list_jobs GET    /jobs/list(.:format)                        jobs#list
+#              location_jobs GET    /jobs/location(.:format)                    jobs#location
+#      add_to_favourite_jobs POST   /jobs/add_to_favourite(.:format)            jobs#add_to_favourite
+#      remove_favourite_jobs POST   /jobs/remove_favourite(.:format)            jobs#remove_favourite
+#         set_job_alert_jobs POST   /jobs/set_job_alert(.:format)               jobs#set_job_alert
+#        clear_searches_jobs DELETE /jobs/clear_searches(.:format)              jobs#clear_searches
+#      clear_favourites_jobs DELETE /jobs/clear_favourites(.:format)            jobs#clear_favourites
 #                       jobs GET    /jobs(.:format)                             jobs#index
 #                            POST   /jobs(.:format)                             jobs#create
 #                    new_job GET    /jobs/new(.:format)                         jobs#new
@@ -114,9 +128,22 @@ end
 #      admin_job_subcategory GET    /admin/job_subcategories/:id(.:format)      admin/job_subcategories#show
 #                            PUT    /admin/job_subcategories/:id(.:format)      admin/job_subcategories#update
 #                            DELETE /admin/job_subcategories/:id(.:format)      admin/job_subcategories#destroy
+#       admin_referral_sites GET    /admin/referral_sites(.:format)             admin/referral_sites#index
+#                            POST   /admin/referral_sites(.:format)             admin/referral_sites#create
+#    new_admin_referral_site GET    /admin/referral_sites/new(.:format)         admin/referral_sites#new
+#   edit_admin_referral_site GET    /admin/referral_sites/:id/edit(.:format)    admin/referral_sites#edit
+#        admin_referral_site GET    /admin/referral_sites/:id(.:format)         admin/referral_sites#show
+#                            PUT    /admin/referral_sites/:id(.:format)         admin/referral_sites#update
+#                            DELETE /admin/referral_sites/:id(.:format)         admin/referral_sites#destroy
 #           pages_stylesheet GET    /pages/stylesheet(.:format)                 pages#stylesheet
+#          pages_modal_apply GET    /pages/modal_apply(.:format)                pages#modal_apply
+#         pages_modal_signup GET    /pages/modal_signup(.:format)               pages#modal_signup
+#    pages_modal_email_alert GET    /pages/modal_email_alert(.:format)          pages#modal_email_alert
 #                 pages_home GET    /pages/home(.:format)                       pages#home
-#                pages_about GET    /pages/about(.:format)                      pages#about
-#                  pages_faq GET    /pages/faq(.:format)                        pages#faq
-#              pages_contact GET    /pages/contact(.:format)                    pages#contact
+#                      about GET    /about(.:format)                            pages#about
+#                        faq GET    /faq(.:format)                              pages#faq
+#                    privacy GET    /privacy(.:format)                          pages#privacy
+#                      terms GET    /terms(.:format)                            pages#terms
+#                    contact GET    /contact(.:format)                          pages#contact
+#    pages_send_contact_form POST   /pages/send_contact_form(.:format)          pages#send_contact_form
 #                       root        /                                           pages#home

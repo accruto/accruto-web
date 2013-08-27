@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   before_filter :load_favourite_jobs, only: [:show, :search, :favourites]
+  before_filter :authenticate_user!, only: :apply
 
   def index
     redirect_to root_path
@@ -32,6 +33,8 @@ class JobsController < ApplicationController
   end
 
   def apply
+  	@job = Job.find(params[:id])
+  	@job_application = JobApplication.new
   end
 
   def search
