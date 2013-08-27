@@ -18,6 +18,7 @@ class JobParser::Jobadder
     print "Parse JobAdder Categories ... "
     start_processing_time = Time.now
     categories_source = @doc.xpath("//Category")
+    print "#{categories_source.size} categories to parse "
     jobadder_categories = categories_source.map {|category| [category.attr('id'), category.text] }.uniq
 
     @new_categories_temp = []
@@ -35,6 +36,7 @@ class JobParser::Jobadder
     print "Parse JobAdder Subcategories ... "
     start_processing_time = Time.now
     subcategories_source = @doc.xpath("//SubCategory")
+    print "#{subcategories_source.size} subcategories to parse "
     jobadder_subcategories = subcategories_source.map {|category| [category.attr('id'), category.text] }.uniq
 
     @new_categories_temp, @job_subcategories_name = [], []
@@ -60,13 +62,20 @@ class JobParser::Jobadder
   end
 
   def parse_and_create_job
-    print "Parse JobAdder Jobs ... "
+    print "Parse JobAdder Jobs ... \n"
     start_processing_time = Time.now
     collected_jobs, @subcategories = [], {}
-    @doc.xpath("//Advertiser").map do |ads_xml|
+    advertisers = @doc.xpath("//Advertiser")
+    print "#{advertisers.size} advertiser to parse \n"
+    advertisers.each do |ads_xml|
+      puts "Processing Advertiser == #{ads_xml.xpath('Name').text} ==".green
       company_name = ads_xml.xpath("Name").text
       company = Company.find_or_create_by_name(company_name)
-      ads_xml.xpath("//Job").map do |job|
+      xml_jobs = ads_xml.xpath(".//Jobs/Job")
+
+      print "Parsing #{xml_jobs.size} jobs under #{company_name}\n"
+      xml_jobs.each do |job|
+        puts "Processing Job ... #{job.xpath("Title").text} "
         title = job.xpath("Title").text
         location = job.xpath("Location").text
         address = Address.find_by_city_and_street(location,"") || Address.where("city ILIKE ? AND street = ''", "%#{location}%").first
@@ -99,7 +108,7 @@ class JobParser::Jobadder
         collected_jobs << Job.new(collected_data)
       end
     end
-
+    print "\nImporting Jobs ...\n"
     @inserted_jobs = Job.import collected_jobs
     print "completed in #{Time.now - start_processing_time} seconds\n".yellow
   end
