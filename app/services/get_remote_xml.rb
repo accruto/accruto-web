@@ -9,6 +9,7 @@ class GetRemoteXML
 
   def send_request
     print "Getting XML file from remote source ... "
+    start_processing_time = Time.now
     if @options[:url]
       url = URI.parse(@options[:url])
       http = Net::HTTP.new(url.host, url.port)
