@@ -34,9 +34,13 @@ class Address < ActiveRecord::Base
   	end
   end
 
-  after_validation :geocode, :if => lambda { |obj| obj.latitude.nil? OR obj.trip.longitude.nil? }
+  after_validation :geocode, if: :full_street_address_changed?
 
   def full_street_address
     [street, city, postcode, state].compact.join(', ')
+  end
+
+  def full_street_address_changed?
+    street_changed? || city_changed? || postcode_changed? || state_changed?
   end
 end
