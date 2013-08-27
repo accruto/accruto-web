@@ -1,4 +1,4 @@
-namespace 'accruto:jobadder' do
+namespace 'accruto:feed:jobadder' do
   desc "Parse jobadder job feed"
   task :parse => :environment do
 

@@ -14,6 +14,7 @@ class GetRemoteXML
       url = URI.parse(@options[:url])
       http = Net::HTTP.new(url.host, url.port)
       http.use_ssl = (url.scheme == 'https')
+      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
       request = Net::HTTP::Get.new(url.path)
       if @options[:username].present? && @options[:password].present?
         request.basic_auth(@options[:username], @options[:password])
