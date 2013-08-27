@@ -109,7 +109,7 @@ class JobParser::Jobadder
         collected_jobs << Job.new(collected_data)
       end
     end
-    print "\n"
+    print "\nImporting Jobs ...\n"
     @inserted_jobs = Job.import collected_jobs
     print "completed in #{Time.now - start_processing_time} seconds\n".yellow
   end
