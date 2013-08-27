@@ -96,7 +96,6 @@ class JobParser::Jobadder
             created_at: Time.now,
             updated_at: Time.now
         }
-
         collected_jobs << Job.new(collected_data)
       end
     end
