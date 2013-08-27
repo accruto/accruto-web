@@ -29,7 +29,7 @@ gem 'cancan', '~> 1.6.10'
 gem 'delayed_job_active_record'
 gem 'delayed_job_web'
 gem 'colorize'
-gem 'activerecord-import'
+gem 'activerecord-import', github: 'dferdian/activerecord-import'
 gem "carrierwave", "~> 0.9.0"
 
 group :assets do

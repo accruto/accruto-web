@@ -16,7 +16,12 @@ class JobSubcategory < ActiveRecord::Base
 
   attr_accessible :job_category_id, :name, :category_attributes, :external_subcategory_id, :external_subcategory_ids
   belongs_to :category, class_name: "JobCategory", foreign_key: 'job_category_id'
-  has_and_belongs_to_many :jobs
+
+  #has_and_belongs_to_many :jobs
+
+  has_many :job_subcategories_jobs
+  has_many :jobs, through: :job_subcategories_jobs
+
   belongs_to :job_category
   validates_presence_of :name
   accepts_nested_attributes_for :category
