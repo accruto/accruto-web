@@ -56,6 +56,8 @@ class Job < ActiveRecord::Base
   has_many :favourites
   has_many :favourite_users, through: :favourites, :source => :user
 
+  has_many :job_applications
+
  	accepts_nested_attributes_for :company
  	accepts_nested_attributes_for :subcategories
  	accepts_nested_attributes_for :address

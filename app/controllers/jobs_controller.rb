@@ -39,7 +39,7 @@ class JobsController < ApplicationController
 
   def search
     unless params[:category]
-      @search_results = Job.search_by_job_title(params[:job_title]).filter_by_address(params[:address]).filter_by_days(params[:days]).sort_by(params[:sort])
+      @search_results = Job.search_by_job_title(params[:job_title]).filter_by_address(params[:address]).filter_by_days(params[:days]).sort_by(params[:sort]).active
       @jobs = @search_results.page(params[:page]).per_page(10)
     else
       @subcategories = JobCategory.where(slug: params[:category]).first.subcategories

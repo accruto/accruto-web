@@ -3,7 +3,7 @@ namespace :load_careerone_feed do
 	task :all => :environment do
 		i = 1
 		total_jobs = Job.all.length
-		JobSubcategory.all.each do |subcategory|
+		JobSubcategory.where("external_subcategory_id IS NOT ?", nil).each do |subcategory|
 			@loaded_jobs = Job.load_careerone_feed(subcategory.external_subcategory_id)
 			unless @loaded_jobs.blank?
 				@loaded_jobs.each_with_index do |job, index|
