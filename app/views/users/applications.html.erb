@@ -1,0 +1,28 @@
+<% title "My Applications" %>
+<h4>Below are jobs that you have already applied on Accruto.</h4>
+<hr>
+<ul class="ul-no-bullets">
+<% @job_applications.each do |job_application| %>
+	<li>
+		<div class="row-fluid">
+			<div class="span4 job-info">
+				<h3 class="role-title"><%= job_application.job.title %></h3>
+				<p>
+					<span class="label label-full-time hidden"><%= job_application.job.job_type %></span>
+					<div class="job-location">at <%= job_application.job.company.name.titleize %> - <%= job_application.job.address.city %>, <%=  job_application.job.address.postcode %> <%= job_application.job.address.state %>
+					</div>
+					<div class="posted-date hidden-phone">Posted <%= distance_of_time_in_words(job_application.job.posted_at, DateTime.now) %> ago on <%= job_application.job.source %>.com</div>
+					<div class="posted-date hidden-desktop hidden-tablet">Posted <%= distance_of_time_in_words(job_application.job.posted_at, DateTime.now) %> ago on <%= job_application.job.source %>.com</div>
+					<br>
+				</p>
+			</div>
+			<div class="span4">
+				<div class="application-actions align-center">
+					<a href="#" class="btn btn-inverse btn-small">Edit Resume</a><br>
+					<small>Applied <%= job_application.created_at.to_date.to_formatted_s(:long) %></small>
+				</div>
+			</div>
+		</div>
+	</li>
+<% end %>
+</ul>

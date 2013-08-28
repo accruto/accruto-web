@@ -1,10 +1,12 @@
 <div class="container detail-show">
 	<div class="row-fluid">
 		<div class="span3 hidden-phone">
-			<%= render 'search_sidebar', favourite_jobs: @favourite_jobs %>
+			<%= render 'shared/search_sidebar', favourite_jobs: @favourite_jobs %>
 		</div>
 		<div class="span9 job-container">
-			<a href="javascript:history.back()" class="go-back"><span class="job-detail-back"><i class="icon-mail-reply"></i> &nbsp;Back to search results</span></a>
+			<%= link_to :back, class: 'go-back' do %>
+				<span class="job-detail-back"><i class="icon-mail-reply"></i> &nbsp;Back to search results</span>
+			<% end %>
 			<div class="row-fluid">
 				<div class="span7 detail-info">
 					<h3 class="job-detail role-title"><%= @job.title %></h3>

@@ -32,6 +32,7 @@ class User < ActiveRecord::Base
   has_many :recent_searches
   has_one :preference
   has_one :resume
+  has_many :job_applications
 
   before_create :set_default_preference
 

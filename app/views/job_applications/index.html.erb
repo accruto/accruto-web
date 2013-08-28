@@ -1,0 +1,27 @@
+<div class="page-header">
+  <%= link_to new_job_application_path, :class => 'btn btn-primary' do %>
+    <i class="icon-plus icon-white"></i>
+    New Job application
+  <% end %>
+  <h1>Listing job_applications</h1>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+<% @job_applications.each do |job_application| %>
+    <tr>
+      <td><%= link_to 'Show', job_application %></td>
+      <td><%= link_to 'Edit', edit_job_application_path(job_application) %></td>
+      <td><%= link_to 'Destroy', job_application, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

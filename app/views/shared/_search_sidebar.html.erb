@@ -26,7 +26,7 @@
 	<p><span class="sidebar-title">Recent Searches</span></p>
 	<ul id="searches-sidebar-list" class="recent-list">
     <% if @recent_searches.blank? %>
-      <%= render 'job_search_empty', show: true %>
+      <%= render 'shared/job_search_empty', show: true %>
     <% else %>
       <% @recent_searches.each do |recent_search| %>
         <li>
@@ -62,17 +62,17 @@
 <div class="favourite-roles">
 	<p><span class="sidebar-title">Shortlisted Jobs</span></p>
 	<ul id="favourites-sidebar-list" class="recent-list">
-    <% unless favourite_jobs.empty? %>
-      <%= render 'job_favourite_empty', show: false %>
+    <% unless favourite_jobs.blank? %>
+      <%= render 'shared/job_favourite_empty', show: false %>
       <% favourite_jobs.each do |favourite_job| %>
-        <%= render 'job_favourite_item', job: favourite_job %>
+        <%= render 'shared/job_favourite_item', job: favourite_job %>
       <% end if defined?(favourite_jobs) %>
     <% else %>
-      <%= render 'job_favourite_empty', show: true %>
+      <%= render 'shared/job_favourite_empty', show: true %>
     <% end %>
   </ul>
 
-  <p id="remove-all-favourites-wrapper" class="action align-right <%= 'hide' if favourite_jobs.empty? %>">
+  <p id="remove-all-favourites-wrapper" class="action align-right <%= 'hide' if favourite_jobs.blank? %>">
     <%= link_to 'Clear', clear_favourites_jobs_path, id: 'remove-all-favourites' %>
   </p>
 

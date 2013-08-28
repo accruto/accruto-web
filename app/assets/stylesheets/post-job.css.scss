@@ -2,7 +2,6 @@
 
 
 .job-form-container {
-	margin-top: 40px;
 
 	.control-label, .about-listing {
 		margin-top: 30px;
@@ -93,6 +92,7 @@
 	background: $yellow;
 	border-bottom: 1px solid $yellowDark;
 	padding: 20px 0;
+	margin: 0 0 30px 0;
 	h1 {
 		@include heading-one;
 		color: $blueBrandDark;

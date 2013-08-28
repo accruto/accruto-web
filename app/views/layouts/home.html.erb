@@ -3,12 +3,6 @@
 <%= render 'layouts/shared/head_content' %>
 <body>
   <%= render 'layouts/shared/nav' %>
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do %>
-      <a class="close" data-dismiss="alert" href="#">×</a>
-      <%= msg %>
-    <% end %>
-  <% end %>
   <%= yield %>
   <%= render 'layouts/shared/footer' %>
   <% if Rails.env.production? %>

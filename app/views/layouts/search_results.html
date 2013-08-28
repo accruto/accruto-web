@@ -3,13 +3,8 @@
 	<%= render 'layouts/shared/head_content' %>
 	<body>
 		<%= render 'layouts/shared/nav' %>
-		<div class="page-header-post">
-		    <div class="container ">
-		      <h1><%= yield(:title) %></h1>
-		    </div>
-		</div>
+		<%= render 'layouts/shared/flash_messages' %>
 		<div class="container">
-			<%= render 'layouts/shared/flash_messages' %>
 			<div class="row-fluid">
 				<div class="span12">
 					<%= yield %>

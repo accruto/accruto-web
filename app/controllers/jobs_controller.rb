@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   before_filter :load_favourite_jobs, only: [:show, :search, :favourites]
-  before_filter :authenticate_user!, only: :apply
+  layout 'search_results', only: [:search, :show]
 
   def index
     redirect_to root_path
@@ -30,11 +30,6 @@ class JobsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @job }
     end
-  end
-
-  def apply
-  	@job = Job.find(params[:id])
-  	@job_application = JobApplication.new
   end
 
   def search
