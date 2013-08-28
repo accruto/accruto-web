@@ -103,12 +103,13 @@ class JobParser::Jobadder
             description: description,
             source: "JobAdder",
             created_at: Time.now,
-            updated_at: Time.now
+            updated_at: Time.now,
+            expires_at: 30.days.from_now
         }
         collected_jobs << Job.new(collected_data)
       end
     end
-    print "\nImporting Jobs ...\n"
+    print "\nImporting Jobs ... "
     @inserted_jobs = Job.import collected_jobs
     print "completed in #{Time.now - start_processing_time} seconds\n".yellow
   end

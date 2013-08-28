@@ -904,7 +904,7 @@ CREATE INDEX index_jobs_on_company_id ON jobs USING btree (company_id);
 -- Name: index_jobs_on_description; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE INDEX index_jobs_on_description ON jobs USING btree (description);
+CREATE INDEX index_jobs_on_description ON jobs USING gin (to_tsvector('english'::regconfig, description));
 
 
 --
@@ -1037,3 +1037,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130826044920');
 INSERT INTO schema_migrations (version) VALUES ('20130827015131');
 
 INSERT INTO schema_migrations (version) VALUES ('20130827015520');
+
+INSERT INTO schema_migrations (version) VALUES ('20130827072058');
