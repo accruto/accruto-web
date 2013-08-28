@@ -11,7 +11,7 @@
 #
 
 class JobCategory < ActiveRecord::Base
-  serialize :external_category_ids, Array
+  serialize :external_category_ids, Hash
 
   attr_accessible :name, :external_category_id, :external_category_ids
   has_many :subcategories, class_name: "JobSubcategory"

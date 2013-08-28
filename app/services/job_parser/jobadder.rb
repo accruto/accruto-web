@@ -43,7 +43,7 @@ class JobParser::Jobadder
     jobadder_subcategories.each do |jobadder_subcategory|
       subcategory = JobSubcategory.find_by_name(jobadder_subcategory[1])
       if subcategory.nil?
-        @new_categories_temp << { name: jobadder_subcategory[1], external_subcategory_ids: [{jobadder: jobadder_subcategory[0] }] }
+        @new_categories_temp << { name: jobadder_subcategory[1], external_subcategory_ids: { jobadder: jobadder_subcategory[0] } }
         @job_subcategories_name << jobadder_subcategory[1]
       else
         @job_subcategories_name << subcategory.name

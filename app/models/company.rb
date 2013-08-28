@@ -11,6 +11,9 @@
 
 class Company < ActiveRecord::Base
   attr_accessible :name, :phone
-  validates_presence_of :name
+
+  validates :name, presence: true,
+                   uniqueness: true
+
   has_many :jobs
 end

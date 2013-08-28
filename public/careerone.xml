@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster>
+  <Jobs Found="66" Returned="66">
+    <Job ID="124644899" PositionID="91681317">
+      <Title>Insolvency Accountant</Title>
+      <Summary><![CDATA[Varied and interesting engagements Specialist insolvency firm Supportive team environment This specialist insolvency firm handles a range of predominantly corporate matters including VA's, liquidations, receiverships and trade-ons. Due to growth in the volume of appointments an intermediate insolvency accountant is required to join the team. Experience working on a variety of corporate matters wil]]></Summary>
+      <DateActive Date="2013-08-28T00:09:12-05:00">8/28/2013</DateActive>
+      <DateExpires Date="2013-09-13T20:22:22-05:00">9/13/2013</DateExpires>
+      <DateUpdated Date="2013-08-28 00:09:00">8/28/2013</DateUpdated>
+      <Location LID="137">
+        <Country LID="877">Australia</Country>
+        <State LID="867">Victoria</State>
+        <City LID="137">Melbourne</City>
+      </Location>
+      <CompanyName>Hays Professional Practice</CompanyName>
+      <DisplayOptions>20</DisplayOptions>
+    </Job>
+    <Job ID="124428612" PositionID="91526710">
+      <Title>Manager – Corporate Recovery / Insolvency.</Title>
+      <Summary><![CDATA[Well acclaimed four Partner firm is well positioned in the middle market space. They act at all stages of the decline curve from – restructuring, work out arrangements, business review and formal recovery. An unfailing flow of enquiries and a solid pipeline of work sees the division needing to recruit another Manager grade candidate with a breadth of corporate insolvency experience. The firm has a]]></Summary>
+      <DateActive Date="2013-08-28T00:14:06-05:00">8/28/2013</DateActive>
+      <DateExpires Date="2013-09-06T02:45:13-05:00">9/6/2013</DateExpires>
+      <DateUpdated Date="2013-08-28 00:14:00">8/28/2013</DateUpdated>
+      <Location LID="137">
+        <Country LID="877">Australia</Country>
+        <State LID="867">Victoria</State>
+        <City LID="137">Melbourne</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="105000"></Min>
+        <Max Value="149999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124428616" PositionID="91526714">
+      <Title>Insolvency Manager</Title>
+      <Summary><![CDATA[Their bread and butter is the SME space with companies of $1-20M. 75% of the role is corporate matters that are debtor based. These include CVL’s, VA’s and the odd trading appointment. 25% of the role is formal bankruptcy appointments which will add value to your resume. Along with a couple of Senior Managers you will share the responsibility for a pool of 7 staff and you will be reporting to the ]]></Summary>
+      <DateActive Date="2013-08-28T00:14:06-05:00">8/28/2013</DateActive>
+      <DateExpires Date="2013-09-06T02:45:17-05:00">9/6/2013</DateExpires>
+      <DateUpdated Date="2013-08-28 00:14:00">8/28/2013</DateUpdated>
+      <Location LID="137">
+        <Country LID="877">Australia</Country>
+        <State LID="867">Victoria</State>
+        <City LID="137">Melbourne</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="90000"></Min>
+        <Max Value="119999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124428643" PositionID="91526741">
+      <Title>Director - Insolvency and Restructuring.</Title>
+      <Summary><![CDATA[The perception of this top four restructuring team is a “highly regarded practice that nips at the heels of the big four firms in regards to the calibre of formal and informal engagements”. The resources and synergies make the procurement of high-end restructuring pieces and cross-border transactions achievable. Well balanced practice consisting of bank initiated recovery and advisory and corporat]]></Summary>
+      <DateActive Date="2013-08-28T00:14:07-05:00">8/28/2013</DateActive>
+      <DateExpires Date="2013-09-06T02:45:51-05:00">9/6/2013</DateExpires>
+      <DateUpdated Date="2013-08-28 00:14:00">8/28/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="180000"></Min>
+        <Max Value="200000"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124211981" PositionID="91378942">
+      <Title>Insolvency Senior/Supervisor</Title>
+      <Summary><![CDATA[This is the “best of both worlds” because although a regional practice it is part of a national firm. National partnership winning matters from the big banks and utilising contacts there. Staff don’t have to give up career progression by being in the bush. The team and office is sizable and being part of an international firm staff benefit from national training and having everything integrated. T]]></Summary>
+      <DateActive Date="2013-08-28T00:22:35-05:00">8/28/2013</DateActive>
+      <DateExpires Date="2013-08-30T02:35:59-05:00">8/30/2013</DateExpires>
+      <DateUpdated Date="2013-08-28 00:23:00">8/28/2013</DateUpdated>
+      <Location LID="48232">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="48232">Wollongong, South Coast, Highlands &amp; Snowy Mountains</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="60000"></Min>
+        <Max Value="79999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124961731" PositionID="91911479">
+      <Title>Insolvency Senior.</Title>
+      <Summary><![CDATA[Monitoring of continued trading and profitability of company. Preparation of trade on controls and budgets and monitoring of supplier and trading accounts, prepare purchase orders, invoices, sales, receipts, payments, wages and leases Prepare statutory forms and lodge with the ASIC within the relevant time periods Monitor Receiverships and delegation of tasks to junior staff members Assist with op]]></Summary>
+      <DateActive Date="2013-08-26T02:37:42-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-25T02:37:42-05:00">9/25/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 02:38:00">8/26/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="65000"></Min>
+        <Max Value="79999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124961735" PositionID="91911483">
+      <Title>NEW ROLE: Insolvency Supervisor.</Title>
+      <Summary><![CDATA[Practice excels in the bank side informal and formal recovery and bankruptcy space. They have nabbed a number of highly complex corporate and bankruptcy mandates and are viewed as one of the leading providers of SME recovery by two of the big four banks. The Partners at this firm are rather ‘down to earth’ and they are not regarded as ‘the old boys club’. Expect supported progression to Manager le]]></Summary>
+      <DateActive Date="2013-08-26T02:37:48-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-25T02:37:48-05:00">9/25/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 02:38:00">8/26/2013</DateUpdated>
+      <Location LID="137">
+        <Country LID="877">Australia</Country>
+        <State LID="867">Victoria</State>
+        <City LID="137">Melbourne</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="80000"></Min>
+        <Max Value="119999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124961758" PositionID="91911504">
+      <Title>Manager – Corporate Recovery / Insolvency.</Title>
+      <Summary><![CDATA[Well acclaimed four Partner firm is well positioned in the middle market space. They act at all stages of the decline curve from – restructuring, work out arrangements, business review and formal recovery. An unfailing flow of enquiries and a solid pipeline of work sees the division needing to recruit another Manager grade candidate with a breadth of corporate insolvency experience. The firm has a]]></Summary>
+      <DateActive Date="2013-08-26T02:38:16-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-25T02:38:16-05:00">9/25/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 02:38:00">8/26/2013</DateUpdated>
+      <Location LID="137">
+        <Country LID="877">Australia</Country>
+        <State LID="867">Victoria</State>
+        <City LID="137">Melbourne</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="105000"></Min>
+        <Max Value="149999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124961798" PositionID="91911544">
+      <Title>Senior Manager / Manager – Corporate Recovery.</Title>
+      <Summary><![CDATA[Well acclaimed corporate recovery team is well positioned in the institutional and corporate spheres. They act at all stages of the decline curve from – restructuring, work out arrangements, business review and formal recovery. An unfailing flow of enquiries and a solid pipeline of work see the division needing to recruit another Manager or Senior Manager grade candidate with a breadth of corporat]]></Summary>
+      <DateActive Date="2013-08-26T02:39:18-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-25T02:39:18-05:00">9/25/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 02:39:00">8/26/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="105000"></Min>
+        <Max Value="149999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124961802" PositionID="91911548">
+      <Title>Insolvency Senior / Supervisor. Relocate to Cairns.</Title>
+      <Summary><![CDATA[Top-notch full service accounting firm in every respect with a strong presence in the North Queensland region backed by a national network of firms. The practice has been riding on a ‘high’ the last few years with a solid pipeline of work and sufficient workflow to keep the team rather content but not burdened. Their strengths are derived from their specialist structure (distinguished teams) and r]]></Summary>
+      <DateActive Date="2013-08-26T02:39:19-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-25T02:39:19-05:00">9/25/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 02:39:00">8/26/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124348898" PositionID="91472992">
+      <Title>Insolvency Seniors + Supervisors $103K-$74K Moving back to Perth? Best?</Title>
+      <Summary><![CDATA[Are you currently working in the UK or other overseas destination? Maybe never lived in Perth, but keen to check out the sunny city of Australia? Or moved East Coast and ready to come back? Or currently living in Perth and simply looking for a change from your current position. There are currently two openings with this market leading specialist firm that is regarded as an employer of choice. Firm]]></Summary>
+      <DateActive Date="2013-08-26T00:14:10-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-04T02:44:47-05:00">9/4/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:14:00">8/26/2013</DateUpdated>
+      <Location LID="139">
+        <Country LID="877">Australia</Country>
+        <State LID="863">Western Australia</State>
+        <City LID="139">Perth</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124348899" PositionID="91472993">
+      <Title>Insolvency Intermediate</Title>
+      <Summary><![CDATA[The firm’s size means you will gain the advantage of increased responsibility early on in your career. You will be given autonomy to run files as soon as possible. Direct access and mentorship from experienced Partners. Undertake a broad range of matters that will improve your expertise as well as keep you interested. VA's and CVL's with the odd receivership. Keep your skills up on the bankruptcy ]]></Summary>
+      <DateActive Date="2013-08-26T00:14:10-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-04T02:44:50-05:00">9/4/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:14:00">8/26/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="45000"></Min>
+        <Max Value="59999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124142912" PositionID="91329170">
+      <Title>Insolvency Intermediate/Senior. $75-55K. Broad Exposure?</Title>
+      <Summary><![CDATA[Role vacant due to the growth. Day to day functions will be made up of 75% Corporate and 25% Personal engagements. CVL’s, VA’s and Official Liquidations. Diverse range of creditor and debtor side engagements. Specialty in the SME market. Strong communication skills will be utilised when you’re ready to liaise with Creditors, Secured Lenders, Other Stakeholders as well as put you in a position to m]]></Summary>
+      <DateActive Date="2013-08-26T00:17:48-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-08-28T02:47:09-05:00">8/28/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:18:00">8/26/2013</DateUpdated>
+      <Location LID="868">
+        <Country LID="877">Australia</Country>
+        <State LID="125">Australian Capital Territory</State>
+        <City LID="868">Canberra/Other ACT</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="55000"></Min>
+        <Max Value="69999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124142915" PositionID="91329173">
+      <Title>Insolvency Senior Manager.</Title>
+      <Summary><![CDATA[Be involved in traditional formal insolvency engagements including receiverships and the creditor side advisory. Formulate with the Partners a number of turnaround, divestments and operational performance mandates. Lead a major work stream on the financial restructuring which includes taking care of the subject business’ liquidity position, short-term cash flow management, capital facility and bi-]]></Summary>
+      <DateActive Date="2013-08-26T00:17:48-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-08-28T02:47:13-05:00">8/28/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:18:00">8/26/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="95000"></Min>
+        <Max Value="119999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124580171" PositionID="91634492">
+      <Title>Business Analyst</Title>
+      <Summary><![CDATA[Diverse Personal and Corporate Client Base Boutique Advisory Firm Attractive Remuneration Package + CA/CPA Assistance Our client is a specialist boutique organisation offering a range of expert services including Corporate Advisory, Corporate & Personal Insolvency and Business Restructuring & Turnarounds. Based in the Adelaide CBD, this dynamic Firm undertakes work for a range of local and nationa]]></Summary>
+      <DateActive Date="2013-08-26T00:18:05-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-11T23:15:12-05:00">9/11/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:18:00">8/26/2013</DateUpdated>
+      <Location LID="134">
+        <Country LID="877">Australia</Country>
+        <State LID="866">South Australia</State>
+        <City LID="134">Adelaide &amp; Adelaide Hills</City>
+      </Location>
+      <CompanyName>StillWell</CompanyName>
+      <DisplayOptions>4</DisplayOptions>
+    </Job>
+    <Job ID="124737224" PositionID="91749392">
+      <Title>Manager – Insolvency.</Title>
+      <Summary><![CDATA[At this juncture in your career you will seeking a firm where you career can grow in sync with the firm. This well-regarded specialist firm is one of the few that is burgeoning and can offer progress to Director. Have carriage of a range of IA’s and medium to large scale receiverships across a range of industries. Naturally a creditor based firm, held in high-regard by major lenders and they have ]]></Summary>
+      <DateActive Date="2013-08-26T00:19:40-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-18T02:49:18-05:00">9/18/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:20:00">8/26/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="100000"></Min>
+        <Max Value="149999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124737225" PositionID="91749393">
+      <Title>Insolvency Manager</Title>
+      <Summary><![CDATA[Benefit from joining the team of a highly reputed Partner who is well known for their professionalism. The people who he mentors are very strong technically and are good communicators. You will have the opportunity to establish and maintain positive relationships with clients such as lawyers and accountants. Oversee up to 4 juniors throughout engagements. Being a small team there is definite room ]]></Summary>
+      <DateActive Date="2013-08-26T00:19:40-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-18T02:49:21-05:00">9/18/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:20:00">8/26/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="95000"></Min>
+        <Max Value="119999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124737226" PositionID="91749394">
+      <Title>Corporate Recovery Senior</Title>
+      <Summary><![CDATA[Prior experience on lender advisory projects and strategic business reviews will be greatly utilized. Recent assignments have included: a number of turnaround, divestment and operational performance mandates such as financial restructuring of a major entity; cash flow forecasts and renegotiating bank facilities for ASX listed companies; and managing the ongoing operations of a major entertainment ]]></Summary>
+      <DateActive Date="2013-08-26T00:19:40-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-18T02:49:22-05:00">9/18/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:20:00">8/26/2013</DateUpdated>
+      <Location LID="137">
+        <Country LID="877">Australia</Country>
+        <State LID="867">Victoria</State>
+        <City LID="137">Melbourne</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124737227" PositionID="91749395">
+      <Title>Insolvency - Multiple Roles</Title>
+      <Summary><![CDATA[An environment where people are not held back and the culture is close, with everyone gets on well with each other. You will be supported in marketing and developing your own workload with the view of a future senior managment position. Day-to-day functions will be made up of 75% Corporate and 25% Personal engagements including CVL’s, VA’s and Official Liquidations. There is a diverse range of cre]]></Summary>
+      <DateActive Date="2013-08-26T00:19:40-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-18T02:49:25-05:00">9/18/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:20:00">8/26/2013</DateUpdated>
+      <Location LID="48234">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="35481">Cairns</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="65000"></Min>
+        <Max Value="79999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124737230" PositionID="91749398">
+      <Title>Senior – Restructuring / Recovery.</Title>
+      <Summary><![CDATA[As a senior you are targeting to get to the next step. Master what is currently on hand for the twelve month at this big four firm. Your challenge will be to work on volatile restructuring pieces and complex bank initiated formal recovery. Assist senior staff influence operational and financial change, take the responsibility of some challenging financial analysis and modeling. This expectation wi]]></Summary>
+      <DateActive Date="2013-08-26T00:19:40-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-18T02:49:30-05:00">9/18/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:20:00">8/26/2013</DateUpdated>
+      <Location LID="137">
+        <Country LID="877">Australia</Country>
+        <State LID="867">Victoria</State>
+        <City LID="137">Melbourne</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124737231" PositionID="91749399">
+      <Title>Insolvency Senior/Supervisor</Title>
+      <Summary><![CDATA[Due to growth they are currently light at the top so your progress to a higher level will not be hampered. Partners aren’t just great role models but have impressive soft skills and invest heavily in staff development. Expect training through their in-house ‘school’ for people and stakeholder management. Benefit from exposure to a broad range of matters. There will be formal appointments such as m]]></Summary>
+      <DateActive Date="2013-08-26T00:19:40-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-18T02:49:31-05:00">9/18/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:20:00">8/26/2013</DateUpdated>
+      <Location LID="48240">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="48240">Townsville &amp; Far North Queensland</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="65000"></Min>
+        <Max Value="79999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124737280" PositionID="91749448">
+      <Title>Intermediate / Senior Insolvency Accountant</Title>
+      <Summary><![CDATA[This is your opportunity to work with one of Adelaide’s leading insolvency specialists continuing to win work from the banks and expand their team. The partners are well known in the industry and will have you working on a wide range of engagements including high profile voluntary administrations and liquidations, receiverships, investigations etc. You will gain unparalleled exposure that comes on]]></Summary>
+      <DateActive Date="2013-08-26T00:19:48-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-18T02:50:47-05:00">9/18/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:20:00">8/26/2013</DateUpdated>
+      <Location LID="134">
+        <Country LID="877">Australia</Country>
+        <State LID="866">South Australia</State>
+        <City LID="134">Adelaide &amp; Adelaide Hills</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="45000"></Min>
+        <Max Value="59999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124547597" PositionID="91612490">
+      <Title>Junior Analyst Make The Switch to Corporate Recovery!</Title>
+      <Summary><![CDATA[About the Company An opportunity has become available with a leading International insolvency and corporate recovery specialist in the Perth CBD. Our client has experienced and is continuing to experience unprecedented growth due to new client wins and are now on the lookout for team-orientated analysts for a long-term career within insolvency & corporate recovery. About the Role You will play a k]]></Summary>
+      <DateActive Date="2013-08-26T00:23:58-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-11T00:04:23-05:00">9/11/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:24:00">8/26/2013</DateUpdated>
+      <Location LID="139">
+        <Country LID="877">Australia</Country>
+        <State LID="863">Western Australia</State>
+        <City LID="139">Perth</City>
+      </Location>
+      <CompanyName>Lloyd Morgan</CompanyName>
+      <Salary>
+        <Min Value="50000"></Min>
+        <Max Value="60000"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124142925" PositionID="91329181">
+      <Title>Insolvency Senior.</Title>
+      <Summary><![CDATA[Are you with a debtor driven firm and mainly engrossed in VA’s and CVL’s and looking for the next step? Consider the following: 75% of the firms income is Receivership work and the remainder IA reviews and liquidations Are on a number of the largest bank panels On the panel for the corporate regulator, the ASIC and undertake investigations and act as court appointed Receivers on their behalf Part ]]></Summary>
+      <DateActive Date="2013-08-26T00:28:14-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-08-28T02:47:22-05:00">8/28/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:28:00">8/26/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124142957" PositionID="91329213">
+      <Title>Director / Partner – Insolvency</Title>
+      <Summary><![CDATA[This successful insolvency brand is across the east coast cities and is ready to expand to WA with a new office in Perth. Therefore they are looking for a current Director/Partner with a bundle of fees to bring across as well as the ability to develop the portfolio and interested in creating an office. The support and resources will be provided through the east coast network. At your level, only a]]></Summary>
+      <DateActive Date="2013-08-26T00:28:16-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-08-28T02:48:01-05:00">8/28/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:28:00">8/26/2013</DateUpdated>
+      <Location LID="139">
+        <Country LID="877">Australia</Country>
+        <State LID="863">Western Australia</State>
+        <City LID="139">Perth</City>
+      </Location>
+      <CompanyName>AccountantJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="130000"></Min>
+        <Max Value="199999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124142990" PositionID="91329240">
+      <Title>Insolvency Senior – Bankruptcy Focus</Title>
+      <Summary><![CDATA[Ability to choose how to reach the Supervisor level at this Mid Tier firm. Although initially reporting to a Supervisor, a Partner will assist in a progression plan and seek to get the successful candidate to Supervisor within a year. Training initiatives include regular external and on the job sessions. Role offers flexibility going forward. If passionate about personal insolvency then the role c]]></Summary>
+      <DateActive Date="2013-08-26T00:28:16-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-08-28T02:48:27-05:00">8/28/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:28:00">8/26/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="60000"></Min>
+        <Max Value="79999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124142992" PositionID="91329242">
+      <Title>Insolvency Intermediate Accountant.</Title>
+      <Summary><![CDATA[Flagrantly a highly regarded mid-tier firm that is regarded for their expertise across a number of accounting disciplines, however what is most notable is their formidable insolvency offering that houses a number of Partners that excel across the full spectrum of formal corporate recovery, advisory and bankruptcy. Increase in mandates from top-tier and mid-tier banks and Lawyers dictate the need f]]></Summary>
+      <DateActive Date="2013-08-26T00:28:16-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-08-28T02:48:28-05:00">8/28/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:28:00">8/26/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="50000"></Min>
+        <Max Value="69999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124578589" PositionID="91633504">
+      <Title>Insolvency Professional *</Title>
+      <Summary><![CDATA[National Firm Career Progression Working with a team of Experts Fantastic opportunity to join this consistently growing mid-tier, national Accountancy firm. Working in the capacity of Senior Insolvency professional you will be working with a team of experts whilst assisting and mentoring more junior members within the team. Having ideally at least 3 years experience within an Insolvency capacity y]]></Summary>
+      <DateActive Date="2013-08-26T00:31:26-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-11T18:44:25-05:00">9/11/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:31:00">8/26/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>Hays Professional Practice</CompanyName>
+      <DisplayOptions>20</DisplayOptions>
+    </Job>
+    <Job ID="124551747" PositionID="91615248">
+      <Title>Insolvency Director</Title>
+      <Summary><![CDATA[The assignments will include receiverships, IA’s and VA’s. Avoid having to handle liquidations as they are dealt with by other specialists within the practice. Using a pooling system you may supervise anywhere up to 5-6 staff on the larger assignments. The team will consist of a Manager to run the file while you focus on the overall strategy of the assignment. Reporting to multiple Partners. The t]]></Summary>
+      <DateActive Date="2013-08-26T00:32:24-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-11T02:44:05-05:00">9/11/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:32:00">8/26/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="200000"></Min>
+        <Max Value="200000"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124551759" PositionID="91615260">
+      <Title>Insolvency Supervisor</Title>
+      <Summary><![CDATA[Gain mentorship from a highly rated practitioner. Partner has an impeccable track record with ASIC and ITSA. Looking for someone that can grow into Partnership in the future. From day one you will be in a leadership role - looking after a couple of staff. Files aren’t massive but are highly complex and require a strategic level of thinking. Undertake a mixture of corporate and personal appointment]]></Summary>
+      <DateActive Date="2013-08-26T00:32:24-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-11T02:44:34-05:00">9/11/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:32:00">8/26/2013</DateUpdated>
+      <Location LID="137">
+        <Country LID="877">Australia</Country>
+        <State LID="867">Victoria</State>
+        <City LID="137">Melbourne</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="80000"></Min>
+        <Max Value="119999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124551766" PositionID="91615267">
+      <Title>Restructuring Partner</Title>
+      <Summary><![CDATA[This Big 4 leverages off internal referrals as well as strong external relationships with banks that ensure continually diverse jobs. The restructuring group has strong synergies with other service lines such as Transactional Services, Corporate Finance and Audit/BAS. This provides broad opportunities not only in the matters but in drawing resources from other Partners for mutual benefit. The nati]]></Summary>
+      <DateActive Date="2013-08-26T00:32:24-05:00">8/26/2013</DateActive>
+      <DateExpires Date="2013-09-11T02:44:49-05:00">9/11/2013</DateExpires>
+      <DateUpdated Date="2013-08-26 00:32:00">8/26/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="200000"></Min>
+        <Max Value="200000"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124901040" PositionID="91869312">
+      <Title>ANALYST / SENIOR ANALYST INSOLVENCY</Title>
+      <Summary><![CDATA[Clear benefit of working for this leading firm is the diverse exposure you will receive early on in your career. Apart from formal assignments, you’ll assist Directors and Partners with complex IA assignments, Forensic Investigations and Transactional Service engagements. Most of the assignments you’ll work on are in the SME market as well as the larger corporate files. Jobs are across a variety o]]></Summary>
+      <DateActive Date="2013-08-23T02:37:15-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-22T02:37:15-05:00">9/22/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 02:37:00">8/23/2013</DateUpdated>
+      <Location LID="139">
+        <Country LID="877">Australia</Country>
+        <State LID="863">Western Australia</State>
+        <City LID="139">Perth</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="86000"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124901051" PositionID="91869323">
+      <Title>Insolvency Senior. Corporate Recovery + Reconstruction.</Title>
+      <Summary><![CDATA[As expected you will be involved in everything from delegating to more junior staff to overseeing the running of trade-ons and working on large administration jobs. Given the high profile of the team, you can be assured that the work you will have exposure to will be diverse, interesting and often the more complex well known jobs. Liaise with the major banks as well as lawyers. Aggressive growth p]]></Summary>
+      <DateActive Date="2013-08-23T02:37:31-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-22T02:37:31-05:00">9/22/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 02:38:00">8/23/2013</DateUpdated>
+      <Location LID="139">
+        <Country LID="877">Australia</Country>
+        <State LID="863">Western Australia</State>
+        <City LID="139">Perth</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="100000"></Min>
+        <Max Value="149999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124901052" PositionID="91869324">
+      <Title>Supervisor / Assistant Manager Insolvency</Title>
+      <Summary><![CDATA[Your new employer – Highly respected Insolvency Partners Continually winning new work. Most recently been securing large mining/resources engagements. Other jobs have been across the hospitality, retail, manufacturing and agriculture. Plenty of support and on the job training from both the Manager and Partner The Position – Manage your own client engagements with assistance of your team Corporate ]]></Summary>
+      <DateActive Date="2013-08-23T02:37:32-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-22T02:37:32-05:00">9/22/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 02:38:00">8/23/2013</DateUpdated>
+      <Location LID="139">
+        <Country LID="877">Australia</Country>
+        <State LID="863">Western Australia</State>
+        <City LID="139">Perth</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124289209" PositionID="91432802">
+      <Title>Insolvency Manager. $117-97K. Specialty in the SME market?</Title>
+      <Summary><![CDATA[The culture is close and everyone gets on well with each other. Report to experienced Partners. An environment where people are not held back based on time with the firm. Strong communication skills will be utilized in dealing with creditors, employees, directors and debtors. Team of 4 that you will take accountability for. Be in a position to get involved in marketing and business development. Ro]]></Summary>
+      <DateActive Date="2013-08-23T00:18:07-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-01T02:43:39-05:00">9/1/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:18:00">8/23/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="95000"></Min>
+        <Max Value="119999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124289211" PositionID="91432804">
+      <Title>Insolvency Manager</Title>
+      <Summary><![CDATA[Strong emphasis on career development and staff are provided with a career plan closely monitored by the Partners. This includes the ability and flexibility to take on assignments that interest you. You will be involved in marketing to internal and external clients and directly to corporates. Throughout positive and negative economic times you want to be part of a group that can provide security a]]></Summary>
+      <DateActive Date="2013-08-23T00:18:07-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-01T02:43:41-05:00">9/1/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:18:00">8/23/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="90000"></Min>
+        <Max Value="119999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124287521" PositionID="91431662">
+      <Title>Forensic Accountant</Title>
+      <Summary><![CDATA[Dynamic Firm Career Prospects Work / Life balance This very well established and successful mid-tier firm of Chartered Accountants is located in impressive offices within Brisbane CBD. This team of experts they are currently looking to recruit an experience Forensic Accountant who possess a strong accounting background and has gain exposure within the Forensic arena. You will possess excellent rep]]></Summary>
+      <DateActive Date="2013-08-23T00:20:31-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-01T01:47:40-05:00">9/1/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:21:00">8/23/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>Hays Professional Practice</CompanyName>
+      <DisplayOptions>20</DisplayOptions>
+    </Job>
+    <Job ID="124682259" PositionID="91708471">
+      <Title>Insolvency Senior - Brisbane</Title>
+      <Summary><![CDATA[Strong platform into management. Responsibility for a portfolio of VA’s; CVL’s; MVL’s as well as a small amount of bankruptcies. Engagements come from a variety of industries such as retail, publishing, IT and building. In addition, this is a firm that wins receivership work from Big 4 banks. They will give you exposure to interesting business consulting matters such as due diligence investigation]]></Summary>
+      <DateActive Date="2013-08-23T00:24:51-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-15T02:31:44-05:00">9/15/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:25:00">8/23/2013</DateUpdated>
+      <Location LID="134">
+        <Country LID="877">Australia</Country>
+        <State LID="866">South Australia</State>
+        <City LID="134">Adelaide &amp; Adelaide Hills</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="60000"></Min>
+        <Max Value="79999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124682268" PositionID="91708480">
+      <Title>Insolvency Supervisor.</Title>
+      <Summary><![CDATA[Well-leveraged Partnership this mid-tier corporate recovery player is somewhat of a big hitter in the middle market corporate recovery space. Work is sourced from a range of referrers across both the creditor and debtor market resulting in a well-balanced practice throughout most economic phases. Furthermore, a solid restructuring and performance improvement offering provides economic weatherproof]]></Summary>
+      <DateActive Date="2013-08-23T00:24:51-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-15T02:31:54-05:00">9/15/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:25:00">8/23/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="75000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124682216" PositionID="91708428">
+      <Title>Insolvency Supervisor</Title>
+      <Summary><![CDATA[Taking responsibility for a portfolio of VA’s; CVL’s; MVL’s as well as a small amount of bankruptcies. Engagements come from a variety of industries such as retail, publishing, IT and building. This is a firm that wins receivership work from Big 4 banks. They offer exposure to interesting business consulting matters such as due diligence investigations of business ventures for lending institutions]]></Summary>
+      <DateActive Date="2013-08-23T00:31:50-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-15T02:30:35-05:00">9/15/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:32:00">8/23/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124682218" PositionID="91708430">
+      <Title>Senior Analyst – Corporate Recovery.</Title>
+      <Summary><![CDATA[Leading recovery and advisory practice is still in a rather expansive mood despite a number of their competitors deciding to consolidate on their current headcount. The mandate from the Partner-in-Charge is to acquire Senior Analysts that have demonstrated academic excellence and are conversant with high-level creditor side recovery. Ideally you will be working for a big four or specialist recover]]></Summary>
+      <DateActive Date="2013-08-23T00:31:50-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-15T02:30:40-05:00">9/15/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:32:00">8/23/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="75000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124682236" PositionID="91708448">
+      <Title>Insolvency Supervisor - Brisbane</Title>
+      <Summary><![CDATA[Taking responsibility for a portfolio of VA’s; CVL’s; MVL’s as well as a small amount of bankruptcies. Engagements come from a variety of industries such as retail, publishing, IT and building. This is a firm that wins receivership work from Big 4 banks. They offer exposure to interesting business consulting matters such as due diligence investigations of business ventures for lending institutions]]></Summary>
+      <DateActive Date="2013-08-23T00:31:50-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-15T02:31:08-05:00">9/15/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:32:00">8/23/2013</DateUpdated>
+      <Location LID="139">
+        <Country LID="877">Australia</Country>
+        <State LID="863">Western Australia</State>
+        <City LID="139">Perth</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124682237" PositionID="91708449">
+      <Title>Insolvency Supervisor - Brisbane</Title>
+      <Summary><![CDATA[Taking responsibility for a portfolio of VA’s; CVL’s; MVL’s as well as a small amount of bankruptcies. Engagements come from a variety of industries such as retail, publishing, IT and building. This is a firm that wins receivership work from Big 4 banks. They offer exposure to interesting business consulting matters such as due diligence investigations of business ventures for lending institutions]]></Summary>
+      <DateActive Date="2013-08-23T00:31:50-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-15T02:31:10-05:00">9/15/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:32:00">8/23/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124682239" PositionID="91708451">
+      <Title>Insolvency Supervisor - Melbourne</Title>
+      <Summary><![CDATA[Taking responsibility for a portfolio of VA’s; CVL’s; MVL’s as well as a small amount of bankruptcies. Engagements come from a variety of industries such as retail, publishing, IT and building. This is a firm that wins receivership work from Big 4 banks. They offer exposure to interesting business consulting matters such as due diligence investigations of business ventures for lending institutions]]></Summary>
+      <DateActive Date="2013-08-23T00:31:50-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-15T02:31:12-05:00">9/15/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:32:00">8/23/2013</DateUpdated>
+      <Location LID="137">
+        <Country LID="877">Australia</Country>
+        <State LID="867">Victoria</State>
+        <City LID="137">Melbourne</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124682243" PositionID="91708455">
+      <Title>Insolvency Senior</Title>
+      <Summary><![CDATA[A flat-structure means early on in your career you will report directly to an easy-going Partner and Manager who have created a fun place to develop. It also means that the ability to progress quickly is on offer for those who produce results. They have regular social functions, give junior staff carriage of small to medium files and give benefits of excellent bonuses for putting in extra hours. M]]></Summary>
+      <DateActive Date="2013-08-23T00:31:51-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-15T02:31:20-05:00">9/15/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:32:00">8/23/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="55000"></Min>
+        <Max Value="69999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124682251" PositionID="91708463">
+      <Title>Insolvency Accountant – 1-5 years experience?</Title>
+      <Summary><![CDATA[You are in your first 1 to 5 years of your insolvency career, at either a graduate, intermediate, senior, supervisor or assistant manager level and thinking you would like to know what is available to you in other firms. As Australia’s number 1 provider of Insolvency professionals for the past decade we are confident in our ability to provide you with up to date market advice as well as the detail]]></Summary>
+      <DateActive Date="2013-08-23T00:31:51-05:00">8/23/2013</DateActive>
+      <DateExpires Date="2013-09-15T02:31:33-05:00">9/15/2013</DateExpires>
+      <DateUpdated Date="2013-08-23 00:32:00">8/23/2013</DateUpdated>
+      <Location LID="134">
+        <Country LID="877">Australia</Country>
+        <State LID="866">South Australia</State>
+        <City LID="134">Adelaide &amp; Adelaide Hills</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="65000"></Min>
+        <Max Value="79999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124865804" PositionID="91845416">
+      <Title>Insolvency Senior</Title>
+      <Summary><![CDATA[This role offers a strong platform into management and will have you taking responsibility for a portfolio of VA’s; CVL’s; MVL’s as well as a small amount of bankruptcies. These engagements come from a variety of industries such as retail, publishing, IT and building. In addition, this is a firm that wins receivership work from Big 4 banks. They will give you exposure to interesting business consu]]></Summary>
+      <DateActive Date="2013-08-22T02:58:46-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-09-21T02:58:46-05:00">9/21/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 03:03:00">8/22/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="60000"></Min>
+        <Max Value="79999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124283472" PositionID="91427938">
+      <Title>CORPORATE FINANCE SENIOR / MANAGER - SYDNEY CBD</Title>
+      <Summary><![CDATA[CORPORATE FINANCE SENIOR / MANAGER - SYDNEY CBD · Leading well known Firm and growing team · Excellent development and mentorship · Sydney CBD Outstanding career opportunity to work with a top tier firm - As a result of their strong market position, they are looking for a Senior Associate / Manager to join their team. The focus of this role will be focused in assisting and developing the transacti]]></Summary>
+      <DateActive Date="2013-08-22T00:06:50-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-08-31T23:04:30-05:00">8/31/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:07:00">8/22/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>Gap Recruitment Pty Ltd</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="120000"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>21</DisplayOptions>
+    </Job>
+    <Job ID="124648941" PositionID="91684205">
+      <Title>Insolvency Supervisor / Assistant Manager</Title>
+      <Summary><![CDATA[Opportunity to improve your marketing skills as well as build your own referral base. You will be liaising with the major banks. Diverse industry exposure such as resources, property, pubs and clubs, and financial services. Proven growth at every level means increased potential to move into Partnership. Gain exposure to a growing Corporate Advisory practice. Focus on bank assignments including rec]]></Summary>
+      <DateActive Date="2013-08-22T00:10:46-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-09-14T02:35:27-05:00">9/14/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:11:00">8/22/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="80000"></Min>
+        <Max Value="119999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124648962" PositionID="91684226">
+      <Title>Business Services: Senior Accountant</Title>
+      <Summary><![CDATA[This is a cohesive environment that is firmly focused on the team achieving its desired results thus making it an encouraging place to make a run at Supervisor. Alleviate pressure from the Manager as the go to technical person for the junior staff; The juniors you manage will be well trained through regular in-house training and external confrences. Expect performance reviews every six months with]]></Summary>
+      <DateActive Date="2013-08-22T00:10:47-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-09-14T02:35:48-05:00">9/14/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:11:00">8/22/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>AccountantJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="75000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124648974" PositionID="91684238">
+      <Title>Insolvency Professionals</Title>
+      <Summary><![CDATA[You have either developed a successful career in the Insolvency space or you are at the earlier stages looking to make a lifetime profession in the sector. We too have grown our presence and knowledge in the insolvency space to become Australia’s number 1 provider of Insolvency professionals and hence assisting a large range of professionals in their career moves around Australia. Here in Perth we]]></Summary>
+      <DateActive Date="2013-08-22T00:10:47-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-09-14T02:35:58-05:00">9/14/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:11:00">8/22/2013</DateUpdated>
+      <Location LID="139">
+        <Country LID="877">Australia</Country>
+        <State LID="863">Western Australia</State>
+        <City LID="139">Perth</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="60000"></Min>
+        <Max Value="79999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124649016" PositionID="91684278">
+      <Title>Corporate Recovery Supervisor.</Title>
+      <Summary><![CDATA[The high-end advisory pieces here will suit a consummate Corporate Recovery Supervisor. You would currently be employed by a big 4 or leading specialist recovery / advisory firm and have strong expertise in bank driven formal insolvencies and lender advisory. Ideally some of this expertise would have been in assignments involving bi-lateral lenders or syndication. With your level of expertise and ]]></Summary>
+      <DateActive Date="2013-08-22T00:10:58-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-09-14T02:36:32-05:00">9/14/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:11:00">8/22/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="80000"></Min>
+        <Max Value="119999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124470878" PositionID="91555331">
+      <Title>Insolvency Intermediate.</Title>
+      <Summary><![CDATA[Consider the following: Mentorships and career counselling from a former big 4 Executive Attend creditor meetings with the Partner Carriage of files Partner has an open door policy Firm's bread and butter is CVL’s and Receiverships in the property and construction sector. You can expect technical and financial support for CA and CPA. What will impress if the relaxed and cohesive culture the Partne]]></Summary>
+      <DateActive Date="2013-08-22T00:14:36-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-09-07T02:28:33-05:00">9/7/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:15:00">8/22/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="45000"></Min>
+        <Max Value="59999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124470879" PositionID="91555332">
+      <Title>Insolvency Intermediate</Title>
+      <Summary><![CDATA[Due to the firm’s size you will gain the advantage of increased responsibility early on in your career. You will be given autonomy to run files as soon as possible with direct access and mentorship from experienced Partners. Undertake a broad range of matters that will improve your expertise as well as keep you interested. This includes VA's and CVL's with the odd receivership. You will also be ab]]></Summary>
+      <DateActive Date="2013-08-22T00:14:36-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-09-07T02:28:35-05:00">9/7/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:15:00">8/22/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="45000"></Min>
+        <Max Value="59999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124470883" PositionID="91555336">
+      <Title>Senior Analyst - Corporate Recovery.</Title>
+      <Summary><![CDATA[Acquisition of several large recovery assignments at arguably Sydney's leading Corporate Recovery and Advisory firm has created two opportunities at Senior Analyst level. Working for several of the best industry minds, you will be provided with an opportunity to undertake strategic receiverships – a broader advisory piece with the view of turning the company around, VA’s and complex syndicated IA’]]></Summary>
+      <DateActive Date="2013-08-22T00:14:36-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-09-07T02:28:39-05:00">9/7/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:15:00">8/22/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124470905" PositionID="91555358">
+      <Title>Insolvency Senior</Title>
+      <Summary><![CDATA[Flat-structure means early on in your career you will report directly to an easy-going Partner and Manager. They have created a fun place to develop. It also means that the ability to progress quickly is on offer for those who produce results quickly. Regular social functions. Junior staff have carriage of small to medium files. Benefits of excellent bonuses for putting in extra hours. Manage a ca]]></Summary>
+      <DateActive Date="2013-08-22T00:21:38-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-09-07T02:29:19-05:00">9/7/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:22:00">8/22/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="55000"></Min>
+        <Max Value="69999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124470910" PositionID="91555363">
+      <Title>Insolvency Manager. Corporate Recovery + Reconstruction.</Title>
+      <Summary><![CDATA[As expected you will be involved in everything from delegating to the seniors and more junior staff to overseeing the running of trade-ons and working on large administration jobs. Given the high profile of the team, you can be assured that the work you will have exposure to will be diverse, interesting and often the more complex well known jobs. Liaise with the major banks as well as lawyers. Agg]]></Summary>
+      <DateActive Date="2013-08-22T00:21:38-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-09-07T02:29:27-05:00">9/7/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:22:00">8/22/2013</DateUpdated>
+      <Location LID="139">
+        <Country LID="877">Australia</Country>
+        <State LID="863">Western Australia</State>
+        <City LID="139">Perth</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="100000"></Min>
+        <Max Value="149999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124253421" PositionID="91407003">
+      <Title>Insolvency Supervisors &amp; Seniors. $98K - 70K</Title>
+      <Summary><![CDATA[This is a demanding opportunity that will suit an equally demanding person. Currently they are thin at the Senior and Supervisor level and to fulfil market demand it’s envisaged you’ll take on a management role and lead and develop junior staff – not often is this on offer with a market leader. This will also free up the Partners time so they can market the practice. Quality of work is not an issu]]></Summary>
+      <DateActive Date="2013-08-22T00:30:38-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-08-31T02:39:14-05:00">8/31/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:31:00">8/22/2013</DateUpdated>
+      <Location LID="134">
+        <Country LID="877">Australia</Country>
+        <State LID="866">South Australia</State>
+        <City LID="134">Adelaide &amp; Adelaide Hills</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124253422" PositionID="91407004">
+      <Title>INSOLVENCY - Manager.</Title>
+      <Summary><![CDATA[Although this practice is not located in the CBD they have a rather stellar record attracting quality formal recovery and advisory matters. The Partner at the helm has worked for a number of quality firms including a stint at arguably the leading specialist practice in the formal recovery realm. His advice is not only sort in terminal recovery situation but also in a more informal setting in relat]]></Summary>
+      <DateActive Date="2013-08-22T00:30:38-05:00">8/22/2013</DateActive>
+      <DateExpires Date="2013-08-31T02:39:16-05:00">8/31/2013</DateExpires>
+      <DateUpdated Date="2013-08-22 00:31:00">8/22/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="85000"></Min>
+        <Max Value="119999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124209863" PositionID="91377229">
+      <Title>Insolvency Professional *</Title>
+      <Summary><![CDATA[National Firm Career Progression Working with a team of Experts Fantastic opportunity to join this consistently growing mid-tier, national Accountancy firm. Working in the capacity of Senior Insolvency professional you will be working with a team of experts whilst assisting and mentoring more junior members within the team. Having ideally at least 3 years experience within an Insolvency capacity y]]></Summary>
+      <DateActive Date="2013-08-21T00:20:21-05:00">8/21/2013</DateActive>
+      <DateExpires Date="2013-08-30T00:26:28-05:00">8/30/2013</DateExpires>
+      <DateUpdated Date="2013-08-21 00:20:00">8/21/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>Hays Professional Practice</CompanyName>
+      <DisplayOptions>20</DisplayOptions>
+    </Job>
+    <Job ID="124211996" PositionID="91378957">
+      <Title>Senior Manager / Manager – Corporate Recovery.</Title>
+      <Summary><![CDATA[Well acclaimed corporate recovery team is well positioned in the institutional and corporate spheres. They act at all stages of the decline curve from – restructuring, work out arrangements, business review and formal recovery. An unfailing flow of enquiries and a solid pipeline of work see the division needing to recruit another Manager or Senior Manager grade candidate with a breadth of corporat]]></Summary>
+      <DateActive Date="2013-08-21T00:20:47-05:00">8/21/2013</DateActive>
+      <DateExpires Date="2013-08-30T02:36:25-05:00">8/30/2013</DateExpires>
+      <DateUpdated Date="2013-08-21 00:21:00">8/21/2013</DateUpdated>
+      <Location LID="132">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="132">Brisbane</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="105000"></Min>
+        <Max Value="149999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124211999" PositionID="91378960">
+      <Title>Insolvency Senior / Supervisor.</Title>
+      <Summary><![CDATA[Top-notch full service accounting firm in every respect with a strong presence in the North Queensland region backed by a national network of firms. The practice has been riding on a ‘high’ the last few years with a solid pipeline of work and sufficient workflow to keep the team rather content but not burdened. Their strengths are derived from their specialist structure (distinguished teams) and r]]></Summary>
+      <DateActive Date="2013-08-21T00:20:47-05:00">8/21/2013</DateActive>
+      <DateExpires Date="2013-08-30T02:36:30-05:00">8/30/2013</DateExpires>
+      <DateUpdated Date="2013-08-21 00:21:00">8/21/2013</DateUpdated>
+      <Location LID="48234">
+        <Country LID="877">Australia</Country>
+        <State LID="865">Queensland</State>
+        <City LID="35481">Cairns</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="70000"></Min>
+        <Max Value="99999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124212000" PositionID="91378961">
+      <Title>Insolvency Senior – Bankruptcy Focus</Title>
+      <Summary><![CDATA[Choose the way you want to reach the Supervisor level at this Mid Tier firm. Although you will initially be reporting to a Supervisor, a Partner will assist your progression plan and seek to get you to this level within a year. Training initiatives include regular external and on the job sessions. The role will give you flexibility going forward. If you are passionate about personal insolvency and]]></Summary>
+      <DateActive Date="2013-08-21T00:20:47-05:00">8/21/2013</DateActive>
+      <DateExpires Date="2013-08-30T02:36:31-05:00">8/30/2013</DateExpires>
+      <DateUpdated Date="2013-08-21 00:21:00">8/21/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>InsolvencyJobs.com.au</CompanyName>
+      <Salary>
+        <Min Value="60000"></Min>
+        <Max Value="79999"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>16</DisplayOptions>
+    </Job>
+    <Job ID="124582194" PositionID="91635734">
+      <Title>Insolvency Seniors &amp; Assistant Managers- Expressions of Interest</Title>
+      <Summary><![CDATA[Our Clients We are seeking experienced Senior Analysts/Insolvency Seniors and also Assistant Managers to work in the Perth market. Our clients have a very strong brand presence in WA and across Australia and are well known for the provision of quality business and insolvency advice. The Roles The successful Senior Analysts and Assistant Managers will be given the opportunity to work on a wide vari]]></Summary>
+      <DateActive Date="2013-08-13T02:13:32-05:00">8/13/2013</DateActive>
+      <DateExpires Date="2013-09-12T02:13:32-05:00">9/12/2013</DateExpires>
+      <DateUpdated Date="2013-08-13 02:14:00">8/13/2013</DateUpdated>
+      <Location LID="139">
+        <Country LID="877">Australia</Country>
+        <State LID="863">Western Australia</State>
+        <City LID="139">Perth</City>
+      </Location>
+      <CompanyName>Kelly Services</CompanyName>
+      <Salary>
+        <Min Value="60000"></Min>
+        <Max Value="85000"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>20</DisplayOptions>
+    </Job>
+    <Job ID="124580963" PositionID="91635082">
+      <Title>Insolvency Intermediate- Excellent Career Progression</Title>
+      <Summary><![CDATA[The Organisation The firm has developed an excellent reputation in WA for providing first class insolvency advice to various stakeholders. Its partners are extremely well respected in the Perth market and have extensive insolvency experience. The Role The successful Insolvency Intermediate will work on a wide variety of formal insolvency appointments (personal and corporate) and also assist with t]]></Summary>
+      <DateActive Date="2013-08-13T00:58:46-05:00">8/13/2013</DateActive>
+      <DateExpires Date="2013-09-12T00:58:46-05:00">9/12/2013</DateExpires>
+      <DateUpdated Date="2013-08-13 00:59:00">8/13/2013</DateUpdated>
+      <Location LID="139">
+        <Country LID="877">Australia</Country>
+        <State LID="863">Western Australia</State>
+        <City LID="139">Perth</City>
+      </Location>
+      <CompanyName>Kelly Executive</CompanyName>
+      <Salary>
+        <Min Value="50000"></Min>
+        <Max Value="70000"></Max>
+        <Type Id="1">Per Year</Type>
+        <Currency Id="4">AUD</Currency>
+      </Salary>
+      <DisplayOptions>20</DisplayOptions>
+    </Job>
+    <Job ID="124420432" PositionID="91520412">
+      <Title>Seeking a change from Insolvency? Trainee Assistant Underwriter</Title>
+      <Summary><![CDATA[Have you considered Insurance ? High performing 'financial lines' team - work with large corporate clients Salary up to 70K Your New client Our client a high performing international underwriting agency are currently sourcing a professional candidate for their financial lines team. This team specialise in writing business for directors and officers of large corporate clients protecting them in the]]></Summary>
+      <DateActive Date="2013-08-06T20:03:42-05:00">8/6/2013</DateActive>
+      <DateExpires Date="2013-09-05T20:03:42-05:00">9/5/2013</DateExpires>
+      <DateUpdated Date="2013-08-06 20:04:00">8/6/2013</DateUpdated>
+      <Location LID="128">
+        <Country LID="877">Australia</Country>
+        <State LID="861">New South Wales</State>
+        <City LID="128">Sydney</City>
+      </Location>
+      <CompanyName>Lloyd Harrington Pty Ltd</CompanyName>
+      <DisplayOptions>0</DisplayOptions>
+    </Job>
+  </Jobs>
+</Monster>
