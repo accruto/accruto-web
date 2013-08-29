@@ -1,8 +1,10 @@
 <% title "Shortlisted Jobs" %>
-<ul class="result-jobs">
-  <% if @jobs.empty? %>
+<% if @jobs.empty? %>
+  <ul class="ul-no-bullets">
     <li>You do not have any shortlisted jobs. <a href="<%= root_path %>">Find Jobs</a></li>
-  <% else %>
+  </ul>
+<% else %>
+  <ul class="result-jobs">
     <% @jobs.each do |job| %>
       <% case job.source %>
     <% when 'CareerOne' %>
@@ -43,5 +45,6 @@
       </li>
       </a>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
+<% end %>
+
