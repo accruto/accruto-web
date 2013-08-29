@@ -6,9 +6,9 @@
   <meta name="author" content="Accruto">
   <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 
-  <meta property="og:image" content="http://accruto.com/assets/accruto_facebook_large.png">
+  <meta property="og:image" content="http://www.accruto.com/assets/accruto_facebook_large.png?<%=Time.now.to_i %>">
   <meta property="og:title" content="<%= yield(:title).empty? ? "Accruto - Find Jobs and Kickstart Your New Career." : yield(:title) %>"/>
-  <meta property="og:url" content="http://accruto.com"/>
+  <meta property="og:url" content="<%= "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>"/>
   <meta property="og:site_name" content="Accruto"/>
   <meta property="og:type" content="website"/>
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
