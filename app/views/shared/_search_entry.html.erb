@@ -1,6 +1,9 @@
 <li>
 	<div class="row-fluid">
-		<div class="span8 job-info">
+		<div class="span2 hidden-phone">
+			<%= image_tag "accruto-logo-default.png", class: "job-company-logo" %>
+		</div>
+		<div class="span6 job-info">
 			<span data-job-id="<%= job.id %>" class="favourite-btn-<%= job.id %> hidden-desktop btn add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(job) %>" data-action="<%= add_to_favourite_jobs_path %>">
         <i class="icon-star"></i></span>
 			<h3 class="role-title"><%= job.title %></h3>
@@ -11,7 +14,7 @@
 				<div class="posted-date hidden-phone">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</div>
 				<div class="posted-date hidden-desktop hidden-tablet">Posted <%= distance_of_time_in_words(job.posted_at, DateTime.now) %> ago on <%= job.source %>.com</div>
 			</p>
-			<p class="job-description"><%= truncate(sanitize(job.description, tags: ""), length: 120, seperator: " ") %></p>
+			<p class="job-description"><%= truncate(sanitize(job.description, tags: ""), length: 170, seperator: " ") %></p>
 		</div>
 		<div class="span3 hidden-phone">
 			<div class="result-actions align-right">

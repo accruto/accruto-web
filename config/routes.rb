@@ -14,12 +14,6 @@ Accruto::Application.routes.draw do
   resources :jobs do
   	resources :job_applications
   	collection do
-	  	## GET
-      get 'search'
-	  	get ':job_id/apply', to: "job_applications#new", as: "apply"
-      get 'favourites'
-      get 'list'
-      get 'location'
       ## POST
       post 'add_to_favourite'
       post 'remove_favourite'
@@ -27,6 +21,12 @@ Accruto::Application.routes.draw do
       ## DELETE
       delete 'clear_searches'
       delete 'clear_favourites'
+	  	## GET
+      get 'search'
+	  	get ':job_id/apply', to: "job_applications#new", as: "apply"
+      get 'shortlist'
+      get 'list'
+      get 'location'
 	  end
   end
 
@@ -56,7 +56,7 @@ Accruto::Application.routes.draw do
   root :to => 'pages#home'
 end
 #== Route Map
-# Generated on 28 Aug 2013 14:58
+# Generated on 29 Aug 2013 14:33
 #
 #           users_preference GET    /users/preference(.:format)                       users#preference
 #         users_applications GET    /users/applications(.:format)                     users#applications
@@ -86,7 +86,7 @@ end
 #                            DELETE /jobs/:job_id/job_applications/:id(.:format)      job_applications#destroy
 #                search_jobs GET    /jobs/search(.:format)                            jobs#search
 #                 apply_jobs GET    /jobs/:job_id/apply(.:format)                     job_applications#new
-#            favourites_jobs GET    /jobs/favourites(.:format)                        jobs#favourites
+#             shortlist_jobs GET    /jobs/shortlist(.:format)                         jobs#shortlist
 #                  list_jobs GET    /jobs/list(.:format)                              jobs#list
 #              location_jobs GET    /jobs/location(.:format)                          jobs#location
 #      add_to_favourite_jobs POST   /jobs/add_to_favourite(.:format)                  jobs#add_to_favourite

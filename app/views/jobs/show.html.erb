@@ -17,7 +17,7 @@
 						<div class="posted-date hidden-phone">Posted <%= distance_of_time_in_words(@job.posted_at, DateTime.now) %> ago <!-- on <%= @job.source %>.com --></div>
 						<div class="posted-date hidden-desktop hidden-tablet">Posted <%= distance_of_time_in_words(@job.posted_at, DateTime.now) %> ago on <%= @job.source %>.com</div>
 					</p>
-					<p class="job-description"><%= sanitize(@job.description, tags: "") %></p>
+					<div class="job-description"><%= sanitize(@job.description, tags: "div ul li br b em strong") %></div>
 				</div>
 				<div class="span4">
 					<div class="result-actions align-right">

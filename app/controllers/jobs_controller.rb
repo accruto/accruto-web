@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_filter :load_favourite_jobs, only: [:show, :search, :favourites]
+  before_filter :load_favourite_jobs, only: [:show, :search, :shortlist]
   layout 'search_results', only: [:search, :show]
 
   def index
@@ -84,8 +84,8 @@ class JobsController < ApplicationController
     end
   end
 
-  def favourites
-    @jobs = @favourite_jobs.paginate(page: params[:page], per_page: 10)
+  def shortlist
+    @jobs = @favourite_jobs
 
     respond_to do |format|
       format.html

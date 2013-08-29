@@ -1,7 +1,7 @@
-<% title "My Job Applications" %>
+<% title "Applied Jobs" %>
 <ul class="ul-no-bullets">
   <% if @job_applications.empty? %>
-    <li>You do not have any job applications yet. <a href="<%= root_path %>">Start applying</a></li>
+    <li>You do not have any job applications yet. <a href="<%= root_path %>">Find Jobs</a></li>
   <% else %>
     <% @job_applications.each do |job_application| %>
     	<li>

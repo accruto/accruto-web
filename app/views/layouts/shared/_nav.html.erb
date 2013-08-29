@@ -16,8 +16,8 @@
             	    <span class="caret"></span>
             	  </a>
             	  <ul class="dropdown-menu pull-right">
-            	  	<li><%= link_to "My Job Applications", users_applications_path %></li>
-            	  	<li><%= link_to "Email Preferences", users_preference_path %></li>
+                  <li><%= link_to "Shortlisted Jobs", shortlist_jobs_path %></li>
+            	  	<li><%= link_to "Applied Jobs", users_applications_path %></li>
             	    <li><%= link_to "Settings", edit_user_registration_path %></li>
             	    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
             	  </ul>

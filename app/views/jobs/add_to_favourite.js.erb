@@ -10,7 +10,7 @@
     $('#job-list-sidebar-empty').hide();
     $('#remove-all-favourites-wrapper').show();
   }
-  $('#favourites-sidebar-list').append('<%= j(render "job_favourite_item", job: @job ) %>');
+  $('#favourites-sidebar-list').append('<%= j(render "shared/job_favourite_item", job: @job ) %>');
 <% else %>
   $('.favourite-btn-<%= @job_id %>').removeClass('favourite-job');
   $('#job-list-sidebar-<%= @job_id %>').remove();
