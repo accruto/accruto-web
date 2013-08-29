@@ -325,6 +325,7 @@ DEPENDENCIES
   chosen-rails (~> 1.0.0)
   coffee-rails (~> 3.2.1)
   colorize
+  compass-rails (~> 1.0.3)
   database_cleaner (~> 0.9.1)
   debugger (~> 1.6.0)
   delayed_job_active_record

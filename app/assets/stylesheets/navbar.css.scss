@@ -16,27 +16,40 @@
 	}
 }
 
+.navigation-bar ul.navbar-links li ul.dropdown-menu li {
+  margin: 0;
+}
+
+.btn-group.open .btn.dropdown-toggle {
+  background: #23333C;
+}
+.btn-user {
+  background: #23333C;
+  &:hover, &:focus {
+    background: #23333C;
+  }
+}
 
 /* Larger ----------- */
 @media screen and (max-width: 1024px) {
-	
+
 }
 
 
 /* Medium ------------ */
 @media screen and (max-width: 768px) {
-	
+
 }
 
 /* Smaller ----------- */
 @media screen and (max-width : 650px) {
-	
+
 	.navigation-bar {
 		height: 50px;
 		padding: 10px 0 0 0;
 		background-color: $blueBrandDarker;
 	}
-	
+
 	.small-logo, .small-logo-home{
 		padding: 10px 0 0 0;
 	}
@@ -59,7 +72,7 @@
 		position:absolute;
 		display:none;
 		z-index: 5;
-		
+
 		li {
 			list-style: none;
 			text-align:	center;
@@ -79,5 +92,5 @@
 		a:active li {
 			background-color: $yellow;
 		}
-	}		
+	}
 }
