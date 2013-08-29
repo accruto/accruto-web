@@ -1,8 +1,8 @@
 $iconSpritePath: '';
 $iconWhiteSpritePath: '';
 @import "bootstrap-variables";
-@import "bootstrap.scss";
-@import "responsive";
+@import "bootstrap";
+@import "bootstrap/responsive";
 
 @media (min-width: 980px) {
 	body {
