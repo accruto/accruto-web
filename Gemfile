@@ -31,12 +31,12 @@ gem 'delayed_job_web'
 gem 'colorize'
 gem 'activerecord-import', github: 'dferdian/activerecord-import'
 gem "carrierwave", "~> 0.9.0"
-gem "compass-rails", "~> 1.0.3"
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem "compass-rails", "~> 1.0.3"
 end
 
 group :development, :test do
