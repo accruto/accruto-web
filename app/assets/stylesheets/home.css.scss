@@ -12,7 +12,7 @@
 
 .main-headline {
 	@include heading-one;
-	color: $blue;	
+	color: $blue;
 }
 
 .main-search {
@@ -61,7 +61,7 @@
 	list-style-type: none;
 
 	li {
-		margin: 10px 0; 
+		margin: 10px 0;
 	}
 	li a {
 		color: $grayDark;
@@ -84,14 +84,14 @@
 
 .talent-hunter {
 	background-color: $goldLight;
-	
+
 	h3 {
 	@include heading-three;
 	color: $grayDark;
 	}
 	.to-linked-me {
 		border-bottom: 2px solid $grayLight;
-	}	
+	}
 }
 
 .ui-autocomplete-loading {
@@ -128,13 +128,13 @@
 
 /* Larger ----------- */
 @media screen and (max-width: 1024px) {
-	
+
 }
 
 
 /* Medium ------------ */
 @media screen and (max-width: 768px) {
-	
+
 }
 
 /* Smaller ----------- */
@@ -150,17 +150,17 @@
 	input {
 		width: 90%;
 	}
-	
+
 	input[type="submit"] {
 		width: 90%;
 	}
-	
+
 
 	.btn-main-search {
 		width: 90%;
 		margin-top:10px;
 	}
-	
+
 	.main-headline {
 		@include heading-four;
 		font-weight: 500;
@@ -187,7 +187,7 @@
 		@include heading-four;
 		font-weight: 600;
 	}
-	
+
 	.customer-avatar, .customer-avatar-two {
 		margin-bottom: 20px;
 	}
@@ -215,5 +215,5 @@
 	text-align: left;
 	}
 
-} /* end */ 
+} /* end */
 
