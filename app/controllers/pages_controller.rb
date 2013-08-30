@@ -19,6 +19,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @contact_form = ContactForm.new
   end
 
   def terms

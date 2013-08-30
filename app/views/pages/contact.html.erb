@@ -1,18 +1,18 @@
- <div class="page-header-post">
-    <div class="container ">
-        <h1>Contact Us</h1>
-    </div>
-</div>
+<% title "Contact Us" %>
 <div class="container">
   <div class="contact-form-container">
   	<div class="row-fluid">
   		<div class="span3">
-        <h4>Hello there! </h4>
-       	<p class="contact-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-        <a><i class="icon-comment"></i>&nbsp; Report a bug on the site</a>
+        <h4>We want to hear from you!</h4>
+       	<p class="contact-description">
+          <ul>
+            <li>Do you have a comment?</li>
+            <li>Feature suggestion?</li>
+            <li>Want to report a bug?</li>
+            <li>Want to become an Adzuna partner?</li>
+            <li>Please use the form on the left to get in touch with us.</li>
+          </ul>
+        </p>
   		</div>
   		<div class="span6">
 				<div class="highlight-indent contact-indent">
@@ -23,7 +23,7 @@
 	          <%= f.input :email, wrapper_html: { class: 'email' } %>
 	          <%= f.input :about, collection: ['Feedback', 'Partnership', 'General Enquiries'], prompt: "Please Select One", wrapper_html: { class: 'options' } %>
 	          <%= f.input :message, as: :text, :input_html => { :rows => 4}, placeholder: 'Please type in your message here', label: 'Your message' %>
-	          <%= f.submit "Send Message", class: "btn btn-primary btn-apply-job" %>
+	          <%= f.submit "Send Message", class: "btn btn-primary btn-apply-job", disable_with: "Sending..." %>
 	        <% end %>
 				</div>
   			</div>
