@@ -19,7 +19,11 @@ class ApiController < ApplicationController
     name = referral_site.name.downcase
 
     respond_to do |format|
-      format.xml { render template: "api/#{name}.xml"}
+      #format.xml { render template: "api/#{name}.xml"}
+      format.xml do
+        stream = render_to_string(:template => "api/#{name}.xml" )
+        send_data(stream, :type=>"text/xml",:filename => "accruto_feed_#{Date.today.to_s(:db)}.xml")
+      end
     end
   end
 
@@ -27,7 +31,6 @@ class ApiController < ApplicationController
 
   def restrict_access
     api_key = ReferralSite.find_by_token(params[:token])
-
     head :unauthorized unless api_key
   end
 end
