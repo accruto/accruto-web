@@ -12,7 +12,7 @@ class ApiController < ApplicationController
     elsif params[:posted_after].present?
       Job.where("DATE(posted_at) > ?", params[:posted_after])
     else
-      Job.all
+      Job.scoped
     end
 
     @jobs = if params[:limit].present?
