@@ -9,6 +9,6 @@ module ApplicationHelper
   end
 
   def generate_job_url(job)
-    "http://accruto.com/jobs/#{job.id}"
+    "#{request.protocol}#{request.host_with_port}/jobs/#{job.id}"
   end
 end
