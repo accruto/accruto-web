@@ -37,7 +37,7 @@ class Job < ActiveRecord::Base
   attr_accessible :company_id, :expires_at, :external_job_id, :source,
   								:posted_at, :title, :description, :job_type, :company_attributes,
   								:subcategories_attributes, :address_attributes, :subcategory_ids, :address_id,
-                  :created_at, :updated_at
+                  :created_at, :updated_at, :external_apply_url
 
   extend FriendlyId
   friendly_id :title, use: :slugged

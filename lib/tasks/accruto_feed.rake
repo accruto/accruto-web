@@ -14,7 +14,7 @@ namespace 'accruto:feed' do
       remote_xml = GetRemoteXML.new(url: 'https://feeds.jobadder.com/jobs/all',
                                     username: 'linkme',
                                     password: 'pe5redef')
-      doc = remote_xml.get_local_xml
+      doc = remote_xml.send_request
 
       parser = JobParser::Jobadder.new(doc)
       parser.run

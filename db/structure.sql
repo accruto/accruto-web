@@ -358,7 +358,8 @@ CREATE TABLE jobs (
     updated_at timestamp without time zone NOT NULL,
     description text,
     source character varying(255),
-    slug character varying(255)
+    slug character varying(255),
+    external_apply_url character varying(255)
 );
 
 
@@ -1039,3 +1040,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130827015131');
 INSERT INTO schema_migrations (version) VALUES ('20130827015520');
 
 INSERT INTO schema_migrations (version) VALUES ('20130827072058');
+
+INSERT INTO schema_migrations (version) VALUES ('20130830045542');

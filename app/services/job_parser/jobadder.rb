@@ -84,6 +84,7 @@ class JobParser::Jobadder
         job_type = job.xpath("JobType").text
         company_id = company.id
         external_job_id = job.attr("id")
+        external_apply_url = job.xpath("Application/ApplyUrl").text
         description = job.xpath("Description").text
 
         if @jobs_subcategories_collection[job.xpath("SubCategory").text][:name] == job.xpath("SubCategory").text
@@ -100,6 +101,7 @@ class JobParser::Jobadder
             job_type: job_type,
             company_id: company_id,
             external_job_id: external_job_id,
+            external_apply_url: external_apply_url,
             description: description,
             source: "JobAdder",
             created_at: Time.now,

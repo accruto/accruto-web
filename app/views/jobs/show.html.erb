@@ -23,7 +23,14 @@
 				</div>
 				<div class="span4">
 					<div class="result-actions align-right">
-						<a href="<%= apply_jobs_path(@job) %>" class="btn btn-primary btn-view-job">APPLY</a>
+						<% case @job.source %>
+						<% when 'CareerOne' %>
+							<a target="new" href="<%= "http://jobview.careerone.com.au/GetJob.aspx?JobID=#{@job.external_job_id}&WT.mc_n=AFC_linkme" %>" class="btn btn-primary btn-view-job">APPLY</a>
+						<% when 'JobAdder' %>
+							<a target="new" href="<%= @job.external_apply_url %>" class="btn btn-primary btn-view-job">APPLY</a>
+						<% else %>
+							<a href="<%= apply_jobs_path(@job) %>" class="btn btn-primary btn-view-job">APPLY</a>
+						<% end %>
 						<a href="#" data-job-id="<%= @job.id %>" class="favourite-btn-<%= @job.id %> btn add-to-favourite-btn<%= current_user ? '' : '-blocked' %> <%= selected_job_favourite(@job) %>" data-action="<%= add_to_favourite_jobs_path %>">
 						  <span class="<%= "job-loader-#{@job.id}" %>" data-image-url="<%= image_path("ajax-loader.gif") %>"></span>
 						  <i class="icon-star"></i>
