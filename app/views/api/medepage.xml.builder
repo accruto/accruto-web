@@ -8,6 +8,7 @@ xml.Jobs do
       xml.Position job.title
       xml.Description { xml.cdata!(job.description) }
       xml.Location "#{job.address.city}, #{job.address.state}, Australia"
+      xml.Link generate_job_url(job)
       xml.Email ""
     end
   end

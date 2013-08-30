@@ -15,15 +15,19 @@ class ApiController < ApplicationController
       Job.all
     end
 
+    @jobs = if params[:limit].present?
+      @jobs.limit(params[:limit].to_i)
+    end
+
     referral_site = ReferralSite.find_by_token(params[:token])
     name = referral_site.name.downcase
 
     respond_to do |format|
-      #format.xml { render template: "api/#{name}.xml"}
-      format.xml do
-        stream = render_to_string(:template => "api/#{name}.xml" )
-        send_data(stream, :type=>"text/xml",:filename => "accruto_feed_#{Date.today.to_s(:db)}.xml")
-      end
+      format.xml { render template: "api/#{name}.xml"}
+      # format.xml do
+      #   stream = render_to_string(:template => "api/#{name}.xml" )
+      #   send_data(stream, :type=>"text/xml",:filename => "accruto_feed_#{Date.today.to_s(:db)}.xml")
+      # end
     end
   end
 
