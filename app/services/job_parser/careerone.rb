@@ -17,7 +17,7 @@ class JobParser::Careerone
     print "Parse Careerone Categories ...\n"
     start_processing_time = Time.now
 
-    subcategories = JobSubcategory.includes(:job_category)
+    subcategories = JobSubcategory.includes(:job_category).where("external_subcategory_id IS NOT NULL")
     subcategories.each do |subcategory|
       parse_and_create_job(subcategory) unless subcategory.job_category.nil?
     end
