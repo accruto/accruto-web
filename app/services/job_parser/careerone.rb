@@ -84,8 +84,8 @@ class JobParser::Careerone
     start_processing_time = Time.now
     collected_job_categories = []
     Job.find(@inserted_jobs[:ids]).each do |job|
-      if @subcategories_collections[job.external_job_id.to_i][:external_job_id] == job.external_job_id.to_i
-        job_subcategory_id = @subcategories_collections[job.external_job_id.to_i][:job_subcategory_id]
+      if @subcategories_collections[job.external_job_id][:external_job_id].to_i == job.external_job_id.to_i
+        job_subcategory_id = @subcategories_collections[job.external_job_id][:job_subcategory_id].to_i
         collected_data = {job_id: job.id, job_subcategory_id: job_subcategory_id}
         collected_job_categories << JobSubcategoriesJob.new(collected_data)
       end

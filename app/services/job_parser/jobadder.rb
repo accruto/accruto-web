@@ -43,7 +43,7 @@ class JobParser::Jobadder
     jobadder_subcategories.each do |jobadder_subcategory|
       subcategory = JobSubcategory.find_by_name(jobadder_subcategory[1])
       if subcategory.nil?
-        @new_categories_temp << { name: jobadder_subcategory[1], external_subcategory_ids: { jobadder: jobadder_subcategory[0] } }
+        @new_categories_temp << { name: jobadder_subcategory[1], job_category_id: jobadder_subcategory[1], external_subcategory_ids: { jobadder: jobadder_subcategory[0] } }
         @job_subcategories_name << jobadder_subcategory[1]
       else
         @job_subcategories_name << subcategory.name
@@ -121,8 +121,8 @@ class JobParser::Jobadder
     start_processing_time = Time.now
     collected_job_categories = []
     Job.find(@inserted_jobs[:ids]).each do |job|
-      if @subcategories[job.external_job_id.to_i][:external_job_id] == job.external_job_id.to_i
-        job_subcategory_id = @subcategories[job.external_job_id.to_i][:job_subcategory_id]
+      if @subcategories[job.external_job_id][:external_job_id].to_i == job.external_job_id.to_i
+        job_subcategory_id = @subcategories[job.external_job_id][:job_subcategory_id].to_i
         collected_data = {job_id: job.id, job_subcategory_id: job_subcategory_id}
         collected_job_categories << JobSubcategoriesJob.new(collected_data)
       end

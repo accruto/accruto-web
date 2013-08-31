@@ -5,6 +5,7 @@ class JobParser::Medepage
     remote_xml = GetRemoteXML.new(url: url)
     @doc = remote_xml.send_request
     @collected_jobs = []
+    @subcategories_collections = {}
   end
 
   def run
@@ -18,6 +19,7 @@ class JobParser::Medepage
   def parse_and_create_job
     print "Parse Medepage Job ... \n"
     start_processing_time = Time.now
+    category = JobCategory.find_or_create_by_name('Health, Medical & Pharmaceutical')
     xml_jobs = @doc.xpath("//Jobs/Job")
     xml_jobs.each do |job|
       puts "Processing Job ... #{job.xpath("Position").text} "
@@ -28,7 +30,19 @@ class JobParser::Medepage
       job_type = 'Full Time'
       company_name = job.xpath("AdvertiserName").text
       company = Company.find_or_create_by_name(company_name)
-      external_job_id = job.attr("SenderReference")
+      external_job_id = job.xpath("SenderReference").text
+      external_apply_url = job.xpath("ApplicationURL").text
+      external_subcategory = job.xpath("Classification").text
+
+      subcategory = JobSubcategory.find_or_create_by_name_and_job_category_id(external_subcategory, category.id)
+      external_subcategory_ids_temp = subcategory.external_subcategory_ids
+      external_subcategory_ids_temp[:medepage] = external_job_id
+      subcategory.update_attribute(:external_subcategory_ids, external_subcategory_ids_temp)
+
+      @subcategories_collections[external_job_id] = {
+          external_job_id: external_job_id,
+          job_subcategory_id: subcategory.id
+      }
 
       collected_data = {
           title: title,
@@ -39,9 +53,8 @@ class JobParser::Medepage
           external_job_id: external_job_id,
           description: description,
           source: "Medepage",
-          created_at: Time.now,
-          updated_at: Time.now,
-          expires_at: 30.days.from_now
+          expires_at: 30.days.from_now,
+          external_apply_url: external_apply_url
       }
 
       @collected_jobs << Job.new(collected_data)
@@ -55,12 +68,13 @@ class JobParser::Medepage
   def build_job_categories_relation
     print "Create relation data for job and subcategories ... "
     start_processing_time = Time.now
-    category = JobCategory.find_or_create_by_name('Health, Medical & Pharmaceutical')
-    subcategory = JobSubcategory.find_or_create_by_name_and_job_category_id('Classification', category.id)
     collected_job_categories = []
     Job.find(@inserted_jobs[:ids]).each do |job|
-      collected_data = {job_id: job.id, job_subcategory_id: subcategory.id}
-      collected_job_categories << JobSubcategoriesJob.new(collected_data)
+      if @subcategories_collections[job.external_job_id][:external_job_id].to_i == job.external_job_id.to_i
+        job_subcategory_id = @subcategories_collections[job.external_job_id][:job_subcategory_id].to_i
+        collected_data = {job_id: job.id, job_subcategory_id: job_subcategory_id}
+        collected_job_categories << JobSubcategoriesJob.new(collected_data)
+      end
     end
     JobSubcategoriesJob.import collected_job_categories
     print "completed in #{Time.now - start_processing_time} seconds\n".yellow
