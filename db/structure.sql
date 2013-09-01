@@ -889,6 +889,20 @@ CREATE UNIQUE INDEX index_job_categories_on_slug ON job_categories USING btree (
 
 
 --
+-- Name: index_job_subcategories_jobs_on_job_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_job_subcategories_jobs_on_job_id ON job_subcategories_jobs USING btree (job_id);
+
+
+--
+-- Name: index_job_subcategories_jobs_on_job_subcategory_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_job_subcategories_jobs_on_job_subcategory_id ON job_subcategories_jobs USING btree (job_subcategory_id);
+
+
+--
 -- Name: index_job_subcategories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1070,3 +1084,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130831104406');
 INSERT INTO schema_migrations (version) VALUES ('20130831120034');
 
 INSERT INTO schema_migrations (version) VALUES ('20130901024502');
+
+INSERT INTO schema_migrations (version) VALUES ('20130901040950');
