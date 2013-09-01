@@ -359,7 +359,8 @@ CREATE TABLE jobs (
     description text,
     source character varying(255),
     slug character varying(255),
-    external_apply_url character varying(255)
+    external_apply_url character varying(255),
+    tsv tsvector
 );
 
 
@@ -853,6 +854,27 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: addresses_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX addresses_city ON addresses USING gin (to_tsvector('english'::regconfig, (city)::text));
+
+
+--
+-- Name: addresses_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX addresses_state ON addresses USING gin (to_tsvector('english'::regconfig, (state)::text));
+
+
+--
+-- Name: addresses_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX addresses_street ON addresses USING gin (to_tsvector('english'::regconfig, (street)::text));
+
+
+--
 -- Name: delayed_jobs_priority; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -888,24 +910,10 @@ CREATE INDEX index_jobs_on_company_id ON jobs USING btree (company_id);
 
 
 --
--- Name: index_jobs_on_description; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_jobs_on_description ON jobs USING gin (to_tsvector('english'::regconfig, description));
-
-
---
 -- Name: index_jobs_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX index_jobs_on_slug ON jobs USING btree (slug);
-
-
---
--- Name: index_jobs_on_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_jobs_on_title ON jobs USING btree (title);
 
 
 --
@@ -951,10 +959,38 @@ CREATE INDEX index_users_roles_on_user_id_and_role_id ON users_roles USING btree
 
 
 --
+-- Name: job_subcategories_name; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX job_subcategories_name ON job_subcategories USING gin (to_tsvector('english'::regconfig, (name)::text));
+
+
+--
+-- Name: jobs_description; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX jobs_description ON jobs USING gin (to_tsvector('english'::regconfig, description));
+
+
+--
+-- Name: jobs_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX jobs_title ON jobs USING gin (to_tsvector('english'::regconfig, (title)::text));
+
+
+--
 -- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
+
+
+--
+-- Name: tsvectorupdate; Type: TRIGGER; Schema: public; Owner: -
+--
+
+CREATE TRIGGER tsvectorupdate BEFORE INSERT OR UPDATE ON jobs FOR EACH ROW EXECUTE PROCEDURE tsvector_update_trigger('tsv', 'pg_catalog.english', 'title', 'description');
 
 
 --
@@ -1028,3 +1064,9 @@ INSERT INTO schema_migrations (version) VALUES ('20130827015520');
 INSERT INTO schema_migrations (version) VALUES ('20130827072058');
 
 INSERT INTO schema_migrations (version) VALUES ('20130830045542');
+
+INSERT INTO schema_migrations (version) VALUES ('20130831104406');
+
+INSERT INTO schema_migrations (version) VALUES ('20130831120034');
+
+INSERT INTO schema_migrations (version) VALUES ('20130901024502');

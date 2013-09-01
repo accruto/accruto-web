@@ -34,6 +34,9 @@ class Address < ActiveRecord::Base
   	end
   end
 
+  include PgSearch
+  pg_search_scope :address_has, against: [:street, :city, :state]
+
   after_validation :geocode, if: :full_street_address_changed?
 
   def full_street_address

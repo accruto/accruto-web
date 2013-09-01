@@ -22,18 +22,6 @@ class Job < ActiveRecord::Base
 	require 'open-uri'
 	include PgSearch
 
- 	pg_search_scope :search_jobs, against: [
- 			[:title, 'A'],
-	    [:description, 'B'],
- 		],
- 		associated_against: {
- 			subcategories: :name
- 		},
- 	  using: { tsearch: {
- 	  		dictionary: "simple"
- 	  	}
- 		}
-
   attr_accessible :company_id, :expires_at, :external_job_id, :source,
   								:posted_at, :title, :description, :job_type, :company_attributes,
   								:subcategories_attributes, :address_attributes, :subcategory_ids, :address_id,
@@ -48,14 +36,10 @@ class Job < ActiveRecord::Base
  	belongs_to :company
  	belongs_to :address
 
- 	#has_and_belongs_to_many :subcategories, class_name: "JobSubcategory"
-
   has_many :job_subcategories_jobs
   has_many :subcategories, through: :job_subcategories_jobs, :source => :job_subcategory
-
   has_many :favourites
   has_many :favourite_users, through: :favourites, :source => :user
-
   has_many :applications, class_name: "JobApplication"
 
  	accepts_nested_attributes_for :company
@@ -63,35 +47,14 @@ class Job < ActiveRecord::Base
  	accepts_nested_attributes_for :address
 
  	scope :active, -> { where("expires_at > ?", DateTime.now) }
+  scope :search_by_job_title, lambda { |title_keyword| _title_has(title_keyword) if title_keyword.present? }
+  scope :filter_by_address, lambda { |address| joins(:address).merge(Address.address_has(address.to_s.downcase)).reorder('jobs.id') if address.present? }
+  scope :filter_by_days, lambda { |days| where("posted_at >= ?", days.to_i.days.ago) if days.present? }
 
  	def set_defaults
  		self.posted_at = DateTime.now if self.posted_at.nil?
  		self.expires_at = 30.days.from_now if self.expires_at.nil?
  	end
-
-	def self.search_by_job_title(job_title)
-		if job_title.present?
-			search_jobs(job_title.downcase)
-		else
-			scoped
-		end
-	end
-
-	def self.filter_by_address(address)
-		if address.present?
-			joins(:address).merge(Address.where("to_tsvector('simple', street) @@ plainto_tsquery(:q) or to_tsvector('simple', city) @@ plainto_tsquery(:q) or to_tsvector('simple', state) @@ plainto_tsquery(:q)", q: address.to_s.downcase ))
-		else
-			scoped
-		end
-	end
-
-	def self.filter_by_days(days)
-		if days.present?
-			where("posted_at >= ?", days.to_i.days.ago)
-		else
-			scoped
-		end
-	end
 
 	def self.sort_by(option)
 		case option
@@ -168,4 +131,17 @@ class Job < ActiveRecord::Base
     search_results
   end
 
+  private
+
+  pg_search_scope :_title_has, against: [
+      [:title, 'A'],
+      [:description, 'B']
+  ], associated_against: {
+      subcategories: :name
+  }, using: {
+      tsearch: {
+          dictionary: "english",
+          tsvector_column: 'tsv'
+      }
+  }
 end
