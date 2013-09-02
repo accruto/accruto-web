@@ -7,8 +7,8 @@ module JobsHelper
 		return Job.active.count
 	end
 
-	def number_of_jobs_in_category(category)
-		return "(#{category.subcategories.map { |s| s.jobs.count }.inject(:+)})" if Rails.env.development?
+  def number_of_jobs_in_category(category)
+    return "(#{category.subcategories.map { |s| s.jobs.count }.inject(:+)})" if Rails.env.development?
   end
 
   def selected_job_favourite(job)
