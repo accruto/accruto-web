@@ -19,6 +19,11 @@ jQuery ->
       # span_loader = $(span_loader)
       # loader_image_url = span_loader.data('image-url')
       # span_loader.html('<img src="'+loader_image_url+'" id="image-loader-'+job_id+'"/>')
+
+      if $(this).hasClass('favourite-job')
+        $(this).removeClass('favourite-job')
+      else
+        $(this).addClass('favourite-job')
       action = $(this).data('action')
       $.post(action, {job_id: job_id})
 
