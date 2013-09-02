@@ -189,6 +189,7 @@ class JobsController < ApplicationController
 
     if (params[:job_title].present? || params[:address].present?)
       if !existing_search.empty? && !existing_search.first.source.diff(source).empty?
+        updates = existing_search.first.source.diff(source)
         updates.each do |key, value|
           eval("existing_search.first.#{key.to_s} = '#{params[key]}'")
         end
