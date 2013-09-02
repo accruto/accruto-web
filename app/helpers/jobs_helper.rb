@@ -4,7 +4,7 @@ module JobsHelper
 	end
 
 	def total_jobs
-		return Job.count
+		return Job.active.count
 	end
 
 	def number_of_jobs_in_category(category)
