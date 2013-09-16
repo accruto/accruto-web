@@ -210,6 +210,13 @@
 		margin-top:10px;
 	}
 
+	.main-search-tab-jobs, .main-search-tab-candidates {
+		font-weight: 600;
+		font-size: 12px;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+	}
+
 	.main-headline {
 		@include heading-four;
 		font-weight: 500;
