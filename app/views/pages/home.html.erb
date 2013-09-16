@@ -66,6 +66,55 @@
 </div>
 <%= render 'layouts/shared/flash_messages' %>
 <div class="container">
+	<div class="how-it-works">
+		<div class="row">
+			<div class="align-center">
+				<h3 class="section-title">How It Works</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span6">
+				<div class="how-it-works-centered">
+					<h3>For job seekers</h3>
+					<%= image_tag "job_seeker_icon.png" %>
+				</div>
+				<div class="how-it-works-candidates">
+					<div class="row-fluid">
+						<div class="span1 offset3 line-candidates">
+						</div>
+						<div class="span6">
+							<ul>
+								<li>Search jobs</li>
+								<li>Add jobs to shortlist</li>
+								<li>Send personalised job application emails to employers</li>
+								<li>Get cash rewards for referring friends</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="span6">
+				<div class="how-it-works-centered">
+					<h3>For recruiters</h3>
+					<%= image_tag "employer_icon.png" %>
+				</div>
+				<div class="how-it-works-recruiters">
+					<div class="row-fluid">
+						<div class="span1 offset3 line-recruiters">
+						</div>
+						<div class="span6">
+							<ul>
+								<li>Search candidates</li>
+								<li>Add candidates to shortlist</li>
+								<li>Send personalised and company branded emails to candidates</li>
+								<li>Offer cash rewards to candidates that successfully refer their friends</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="browse-jobs">
 		<div class="row hidden-phone">
 			<div class="span6">
@@ -84,7 +133,6 @@
 			<% end %>
 		</div>
 	</div>
-
 	<!-- hr -->
 	<div class="customers hidden">
 		<div class="row">

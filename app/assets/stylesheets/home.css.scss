@@ -104,6 +104,45 @@
 	margin: 0 5px;
 }
 
+.how-it-works {
+	padding: 80px 0 30px 0;
+	h3.section-title {
+		line-height: 0;
+	}
+	h3 {
+		color: $blueBrandDark;
+	}
+	.how-it-works-centered {
+		text-align:center;
+		padding: 10px 0 30px 0;
+	}
+	.line-recruiters, .line-candidates {
+		background: $gray;
+		width:5px;
+	}
+	.line-recruiters {
+		height: 180px;
+	}
+	.line-candidates {
+		height: 160px;
+	}
+	ul {
+		list-style: none;
+		padding: 0px;
+		margin: 0 0 0 14px;
+		li {
+			text-indent: -21px;
+		}
+		li:before{
+			content:'\00b7';
+			font-size:100px;
+			display:inline-block;
+			margin-right: 20px;
+			color: $green;
+		}
+	}
+}
+
 .browse-jobs {
 	padding-top: 0px;
 }
@@ -183,7 +222,15 @@
 
 /* Larger ----------- */
 @media screen and (max-width: 1024px) {
-
+	.how-it-works ul {
+		margin: 0 0 0 18px;
+	}
+	.line-candidates {
+		height: 200px !important;
+	}
+	.line-recruiters {
+		height: 280px !important;
+	}
 }
 
 /* Smaller ----------- */
@@ -269,6 +316,20 @@
 	.contact-send {
 	padding: 20px 10px 0 10px ;
 	text-align: left;
+	}
+
+	.how-it-works {
+		padding: 20px;
+		ul {
+			text-align: left;
+			padding: 0 20px !important;
+		}
+	}
+	.line-candidates {
+		display: none !important;
+	}
+	.line-recruiters {
+		display: none !important;
 	}
 
 } /* end */

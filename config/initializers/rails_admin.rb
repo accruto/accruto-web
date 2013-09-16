@@ -33,7 +33,7 @@ RailsAdmin.config do |config|
   config.included_models = ['Address', 'CandidateSearchBetaUser', 'Company', 'Favourite', 'Job', 'JobApplication', 'JobCategory', 'JobSubcategory', 'ReferralSite', 'User']
 
   # Label methods for model instances:
-  # config.label_methods << :description # Default is [:name, :title]
+  config.label_methods = [:name, :title, :city]# Default is [:name, :title]
 
 
   ################  Model configuration  ################
