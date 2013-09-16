@@ -482,6 +482,42 @@ ALTER SEQUENCE preferences_id_seq OWNED BY preferences.id;
 
 
 --
+-- Name: rails_admin_histories; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE rails_admin_histories (
+    id integer NOT NULL,
+    message text,
+    username character varying(255),
+    item integer,
+    "table" character varying(255),
+    month smallint,
+    year bigint,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: rails_admin_histories_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE rails_admin_histories_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: rails_admin_histories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE rails_admin_histories_id_seq OWNED BY rails_admin_histories.id;
+
+
+--
 -- Name: recent_searches; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -740,6 +776,13 @@ ALTER TABLE ONLY preferences ALTER COLUMN id SET DEFAULT nextval('preferences_id
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY rails_admin_histories ALTER COLUMN id SET DEFAULT nextval('rails_admin_histories_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY recent_searches ALTER COLUMN id SET DEFAULT nextval('recent_searches_id_seq'::regclass);
 
 
@@ -869,6 +912,14 @@ ALTER TABLE ONLY preferences
 
 
 --
+-- Name: rails_admin_histories_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY rails_admin_histories
+    ADD CONSTRAINT rails_admin_histories_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: recent_searches_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -989,6 +1040,13 @@ CREATE INDEX index_jobs_on_company_id ON jobs USING btree (company_id);
 --
 
 CREATE UNIQUE INDEX index_jobs_on_slug ON jobs USING btree (slug);
+
+
+--
+-- Name: index_rails_admin_histories; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_rails_admin_histories ON rails_admin_histories USING btree (item, "table", month, year);
 
 
 --
@@ -1149,3 +1207,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130901024502');
 INSERT INTO schema_migrations (version) VALUES ('20130901040950');
 
 INSERT INTO schema_migrations (version) VALUES ('20130916010308');
+
+INSERT INTO schema_migrations (version) VALUES ('20130916044514');

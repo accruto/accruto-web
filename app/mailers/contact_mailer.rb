@@ -6,7 +6,7 @@ class ContactMailer < ActionMailer::Base
 
     mail(
       to: 'john@accruto.com',
-      subject: "A new contact form entry was created"
+      subject: "[Contact Form] New Submission"
     )
   end
 
@@ -15,7 +15,7 @@ class ContactMailer < ActionMailer::Base
 
     mail(
       to: 'john@accruto.com',
-      subject: "A beta signup for candidate search has been submitted"
+      subject: "[Candidate Search Beta] New Signup"
     )
   end
 end

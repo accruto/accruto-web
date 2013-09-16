@@ -1,4 +1,10 @@
 Accruto::Application.routes.draw do
+
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  devise_for :users
+
+
   get "api/jobs", format: :xml
   get "users/preference"
   get "users/applications"
@@ -6,8 +12,6 @@ Accruto::Application.routes.draw do
   put "users/update_preference" , as: 'preference'
 
   match "/delayed_job" => DelayedJobWeb, :anchor => false
-
-  devise_for :users
 
   get "jobs/category/:category", to: "jobs#search"
   get "/candidate_search/signup", to: "candidate_search_beta_users#signup", as: "candidate_search_signup"
@@ -34,12 +38,12 @@ Accruto::Application.routes.draw do
   resources :job_categories
   resources :job_subcategories
 
-  namespace :admin do
-  	resources :jobs
-  	resources :job_categories
-  	resources :job_subcategories
-    resources :referral_sites
-  end
+  # namespace :admin do
+  # 	resources :jobs
+  # 	resources :job_categories
+  # 	resources :job_subcategories
+  #   resources :referral_sites
+  # end
 
   get "pages/stylesheet"
   get "pages/modal_apply"

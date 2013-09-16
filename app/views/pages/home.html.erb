@@ -29,8 +29,8 @@
 			<% end %>
 		</div>
 		<div id="search-candidates_content" class="main-search-content main-search-candidates hidden">
-			<h1 class="main-headline hidden-phone">Search through a database of <br>more than 600,000 job seekers.</h1>
-			<h1 class="main-headline visible-phone">Search through a database of <br>more than 600,000 job seekers.</h1>
+			<h1 class="main-headline hidden-phone">Want to search through a database of <br>more than 600,000 job seekers?</h1>
+			<h1 class="main-headline visible-phone">Want to search through a database of <br>more than 600,000 job seekers?</h1>
 			<label class="main-headline"><span class="label">We are in a private BETA!</span>&nbsp;&nbsp;Drop your name and email address for a free trial.</label>
 			<%= form_for :candidate_search_beta_user, html: { id: "candidate_search_beta_user_form" }, url: candidate_search_signup_path, method: :get, remote: true do |f| %>
 			  <div class="row-fluid">
@@ -45,7 +45,7 @@
 			  		<%= text_field_tag :address, params[:address], placeholder: 'City or State' %>
 			  	</div> -->
 			  	<div class="span2">
-			  		<%= submit_tag "Sign Up", class: 'btn-primary btn-large btn-main-search-candidates', disable_with: "Submitting..." %>
+			  		<%= submit_tag "Submit", class: 'btn-primary btn-large btn-main-search-candidates', disable_with: "Submitting..." %>
 			  	</div>
 			  </div>
 			<% end %>
