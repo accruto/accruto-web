@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.0.0'
 
 gem 'rails', '3.2.13'
 gem 'pg', '~> 0.15.1'
@@ -50,7 +50,7 @@ end
 group :development do
 	gem 'binding_of_caller', '~> 0.7.2'
 	gem 'better_errors', '~> 0.9.0'
-	gem 'debugger', '~> 1.6.0'
+	gem "byebug", "~> 2.1.1"
 	gem 'annotate', '>=2.5.0'
 	gem 'rails-footnotes', '>= 3.7.9'
 	gem 'guard-livereload', '~> 1.4.0'

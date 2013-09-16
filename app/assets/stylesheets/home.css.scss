@@ -8,59 +8,102 @@
 
 .main-landing {
 	background-color: $blueBrandDark;
-	@extend %section-space;
+	margin-top:0;
 }
 
 .main-headline {
-	@include heading-one;
-	color: $blue;
+	text-align:center;
+	color: $blueBrandDark;
+	margin-bottom:30px;
+	font-size: 40px;
 }
 
-.main-search {
-	background-color: $yellow;
-	border: 1px solid $yellowDark;
-	padding-top: 26px;
+.main-search-jobs, .main-search-candidates {
+	padding:20px 30px 10px 30px;
+	border-radius: 3px;
+	border-top-left-radius: 0;
 
 	label {
 		color: $blueBrandDark;
 		font-weight: 600;
-		font-size: $fontSizeLarge;
+		font-size: 18px;
 
 	}
 	input[type="text"] {
 		border: 1px solid $yellowDark;
 		height: 40px;
+		padding-left:10px;
+	}
+}
+
+.main-search-jobs {
+	background-color: $yellow;
+}
+
+.main-search-tabs-container {
+	.main-search-tab-jobs, .main-search-tab-candidates {
+		display: inline-block;
+		margin-bottom:0px;
+		cursor:pointer;
+	}
+	.main-search-tab-jobs, .main-search-tab-candidates {
+		padding: 12px 20px;
+		font-weight: 600;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+	}
+	.main-search-tab-jobs {
+		background: $yellow;
+		color: $blueBrandDark;
+	}
+	.main-search-tab-candidates {
+		background: $blueBrandLight;
+		color: $white;
+	}
+}
+
+.main-search-candidates {
+	background-color: $blueBrandLight;
+	h1 { color: white; }
+	label { color: white; }
+	input[type="text"] {
+		border: 0px solid $blueBrandDark;
 	}
 }
 .btn-main-search {
 	margin-top: 30px;
+	width: 100% !important;
 }
 
-.customers, .browse-jobs, .job-ticker, .partner-companies {
+.customers, .browse-jobs, .partner-companies {
 	@extend %section-space;
-
 }
 
-.job-ticker h3 {
-	@include heading-three;
-	color: $grayDarker;
+.ticker {
+	padding: 20px 0;
+}
+.ticker h3 {
+	font-weight:100;
+	font-size: 28px;
+	color: white;
 }
 
 .updated-figures {
-	border-bottom: 2px dotted $blue;
-	font-weight: 500;
+	border-bottom: 2px dashed $blue;
+	margin: 0 5px;
 }
 
 .browse-jobs {
 	padding-top: 0px;
 }
 .sub-heading {
-	font-size: 16px;
+	font-size: 18px;
 	color: $blueBrandDark;
+	margin-top: 60px;
 }
 .category-list {
 	list-style-type: none;
-
+	margin: 0;
 	li {
 		margin: 10px 0;
 	}
@@ -132,14 +175,8 @@
 
 }
 
-
-/* Medium ------------ */
-@media screen and (max-width: 768px) {
-
-}
-
 /* Smaller ----------- */
-@media screen and (max-width : 650px) {
+@media screen and (max-width : 768px) {
 	%center-phone {
 		text-align: center;
 	}
@@ -176,7 +213,7 @@
 		padding: 0;
 	}
 
-	.customers, .job-ticker, .partner-companies {
+	.customers, .ticker, .partner-companies {
 		padding: 0px 15px;
 	}
 

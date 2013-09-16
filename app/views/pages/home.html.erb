@@ -1,45 +1,72 @@
 <% title "Accruto - Find Jobs and Kickstart Your New Career." %>
 <div class="main-landing">
 	<div class="container">
-		<div class="align-center">
-			<%= image_tag "/assets/logo-accruto-main.png", :class=> "hidden-phone" %>
-				<h1 class="main-headline hidden-phone">Join our 600,000 customers and kick-start your new career</h1>
-				<h1 class="main-headline visible-phone">It's time. Find your new career.</h1>
+		<div class="main-search-tabs-container">
+		<span id="search-jobs_tab" class="main-search-tab main-search-tab-jobs">
+			SEARCH JOBS
+		</span>
+		<span id="search-candidates_tab" class="main-search-tab main-search-tab-candidates">
+			SEARCH CANDIDATES
+		</span>
 		</div>
-	</div>
-</div>
-
-<div class="main-search">
-	<div class="container">
-		<%= form_tag search_jobs_path, method: :get do %>
-		  <div class="row-fluid">
-		  	<div class="span5">
-		  		<label>What's your next job title?</label>
-		  		<%= text_field_tag :job_title, params[:job_title], placeholder: 'Job Title' %>
-		  	</div>
-		  	<div class="span5">
-		  		<label>Where do you want to work?</label>
-		  		<%= text_field_tag :address, params[:address], placeholder: 'City or State' %>
-		  	</div>
-		  	<div class="span2">
-		  		<%= submit_tag "Search", class: 'btn-primary btn-large btn-main-search' %>
-		  	</div>
-		  </div>
-		<% end %>
+		<div id="search-jobs_content" class="main-search-content main-search-jobs">
+			<h1 class="main-headline hidden-phone">More than 600,000 job seekers use us to <br>search for their new career.</h1>
+			<h1 class="main-headline visible-phone">It's time. Find your new career.</h1>
+			<%= form_tag search_jobs_path, method: :get do %>
+			  <div class="row-fluid">
+			  	<div class="span5">
+			  		<label>What's your next job title?</label>
+			  		<%= text_field_tag :job_title, params[:job_title], placeholder: 'Job Title' %>
+			  	</div>
+			  	<div class="span5">
+			  		<label>Where do you want to work?</label>
+			  		<%= text_field_tag :address, params[:address], placeholder: 'City or State' %>
+			  	</div>
+			  	<div class="span2">
+			  		<%= submit_tag "Search", class: 'btn-primary btn-large btn-main-search' %>
+			  	</div>
+			  </div>
+			<% end %>
+		</div>
+		<div id="search-candidates_content" class="main-search-content main-search-candidates hidden">
+			<h1 class="main-headline hidden-phone">Search through a database of <br>more than 600,000 job seekers.</h1>
+			<h1 class="main-headline visible-phone">It's time. Find your new career.</h1>
+			<%= form_tag search_jobs_path, method: :get do %>
+			  <div class="row-fluid">
+			  	<div class="span6 offset2">
+			  		<label>Drop your email address for a free trial.</label>
+			  		<%= text_field_tag :job_title, params[:job_title], placeholder: 'Email Address' %>
+			  	</div>
+<!-- 			  	<div class="span5">
+			  		<label>Where?</label>
+			  		<%= text_field_tag :address, params[:address], placeholder: 'City or State' %>
+			  	</div> -->
+			  	<div class="span2">
+			  		<%= submit_tag "Submit", class: 'btn-primary btn-large btn-main-search' %>
+			  	</div>
+			  </div>
+			<% end %>
+		</div>
+		<div class="row ticker search-jobs_ticker">
+			<div class="align-center">
+				<h3>There are currently<span class="updated-figures"> <%= number_with_delimiter(total_jobs) %> </span>Australian Jobs posted on Accruto
+				</h3>
+			</div>
+		</div>
+		<div class="row ticker search-candidates_ticker hidden">
+			<div class="align-center">
+				<h3>There are currently<span class="updated-figures"> 343,400 </span>Australian Candidate Profiles on Accruto
+				</h3>
+			</div>
+		</div>
 	</div>
 </div>
 <%= render 'layouts/shared/flash_messages' %>
 <div class="container">
-	<div class="row job-ticker">
-		<div class="align-center">
-			<h3>There are currently<span class="updated-figures"> <%= number_with_delimiter(total_jobs) %> </span>Australian Jobs posted on Accruto
-			</h3>
-		</div>
-	</div>
 	<div class="browse-jobs">
 		<div class="row hidden-phone">
 			<div class="span6">
-				<h4 class="sub-heading">Browse Categories</h4>
+				<h4 class="sub-heading">Browse job categories</h4>
 			</div>
 		</div>
 		<div class="row hidden-phone visible-desktop visible-tablet">

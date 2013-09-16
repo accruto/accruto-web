@@ -11,4 +11,8 @@ module ApplicationHelper
   def generate_job_url(job)
     "#{request.protocol}#{request.host_with_port}/jobs/#{job.id}"
   end
+
+  def total_candidates
+    return User.count
+  end
 end
