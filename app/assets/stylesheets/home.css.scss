@@ -75,6 +75,17 @@
 	width: 100% !important;
 }
 
+.btn-main-search-candidates {
+	width: 100% !important;
+}
+
+.error-message {
+	color: $red; text-align: center;
+}
+.success-message {
+	color: $green; text-align:center;
+	margin-bottom: 20px;
+}
 .customers, .browse-jobs, .partner-companies {
 	@extend %section-space;
 }

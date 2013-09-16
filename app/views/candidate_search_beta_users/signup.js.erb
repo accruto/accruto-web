@@ -1,0 +1,8 @@
+<% if @success_message %>
+  $('#candidate_search_beta_user_form').parent().append("<div class='success-message'><%= @success_message %></div>");
+  $('#candidate_search_beta_user_form').hide();
+<% else %>
+  $('.error-message').hide();
+  $('#candidate_search_beta_user_form').append("<div class='error-message'><%= @failure_message %></div>")
+<% end %>
+

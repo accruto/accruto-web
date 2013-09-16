@@ -15,6 +15,7 @@ class PagesController < ApplicationController
 
   def home
 	  @categories = JobCategory.all
+    @candidate_search_beta_user = CandidateSearchBetaUser.new
 	  render :layout => 'home'
   end
 

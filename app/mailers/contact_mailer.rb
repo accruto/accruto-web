@@ -9,4 +9,13 @@ class ContactMailer < ActionMailer::Base
       subject: "A new contact form entry was created"
     )
   end
+
+  def candidate_search_beta(user)
+    @user = user
+
+    mail(
+      to: 'john@accruto.com',
+      subject: "A beta signup for candidate search has been submitted"
+    )
+  end
 end

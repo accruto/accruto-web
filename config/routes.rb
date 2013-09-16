@@ -10,6 +10,7 @@ Accruto::Application.routes.draw do
   devise_for :users
 
   get "jobs/category/:category", to: "jobs#search"
+  get "/candidate_search/signup", to: "candidate_search_beta_users#signup", as: "candidate_search_signup"
 
   resources :jobs do
   	resources :job_applications
