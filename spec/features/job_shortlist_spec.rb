@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'User Favourite' do
+feature 'Job shortlist' do
   before :each do
     ## initialize data
     @user = create(:user)
@@ -17,10 +17,10 @@ feature 'User Favourite' do
   context "user successfully" do
     scenario 'create favourite with valid data' do
       visit root_path
-      fill_in 'job_title', with: 'Office All Rounder'
+      fill_in 'job_title', with: 'office'
+      fill_in 'address', with: 'sydney'
       click_button 'Search'
-      expect(page).to have_content('There are a total of 1 jobs matching your search criteria')
-
+      expect(page).to have_content("There are 1 Office jobs in sydney")
       click_link "favourite-btn-#{@job.id}"
       ## TODO: ajax check result
     end

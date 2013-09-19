@@ -64,6 +64,9 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 1.0.0)
+    capybara-webkit (1.0.0)
+      capybara (~> 2.0, >= 2.0.2)
+      json
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -349,6 +352,7 @@ DEPENDENCIES
   byebug (~> 2.1.1)
   cancan (~> 1.6.10)
   capybara (~> 2.0.2)
+  capybara-webkit
   carrierwave (~> 0.9.0)
   chosen-rails (~> 1.0.0)
   coffee-rails (~> 3.2.1)
@@ -388,6 +392,7 @@ DEPENDENCIES
   rolify (~> 3.2.0)
   rspec-rails (~> 2.13.0)
   sass-rails (~> 3.2.3)
+  selenium-webdriver
   simple_form (~> 2.1.0)
   simplecov
   spork (~> 0.9.2)

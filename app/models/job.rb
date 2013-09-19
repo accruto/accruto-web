@@ -48,7 +48,7 @@ class Job < ActiveRecord::Base
 
  	scope :active, -> { where("expires_at > ?", DateTime.now) }
   scope :search_by_job_title, lambda { |title_keyword| _title_has(title_keyword) if title_keyword.present? }
-  scope :filter_by_address, lambda { |address| joins(:address).merge(Address.address_has(address.to_s.downcase)).reorder('jobs.id') if address.present? }
+  scope :filter_by_address, lambda { |address| joins(:address).where("addresses.city @@ :q or addresses.state @@ :q", q: address.downcase) if address.present? }
   scope :filter_by_days, lambda { |days| where("posted_at >= ?", days.to_i.days.ago) if days.present? }
 
  	def set_defaults
@@ -140,8 +140,8 @@ class Job < ActiveRecord::Base
       subcategories: :name
   }, using: {
       tsearch: {
-          dictionary: "english",
-          tsvector_column: 'tsv'
+        dictionary: "english",
+        tsvector_column: 'tsv'
       }
   }
 end

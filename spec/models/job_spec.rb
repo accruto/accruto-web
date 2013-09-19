@@ -32,26 +32,31 @@ describe Job do
 		expect(create(:job).address).to be_valid
 	end
 
-  it "has 2 subcategories" do
-		expect(create(:job).subcategories.count).to eq(2)
-	end
-
 	context "scopes" do
+		before(:each) do
+			@active_job = create(:job)
+			@inactive_job = create(:job_inactive)
+			@job_posted_29_days_ago = create(:job_posted_29_days_ago, title: "Office All Rounder 30 days ago")
+		end
+
 	  it "returns only active jobs" do
-	  	@active_job = create(:job)
-	  	@inactive_job = create(:job_inactive)
-			expect(Job.active).to eq([@active_job])
+			expect(Job.active).to include(@active_job)
 		end
 
 	  it "does not return inactive jobs" do
-	  	@active_job = create(:job)
-	  	@inactive_job = create(:job_inactive)
-			expect(Job.active).not_to eq([@inactive_job])
+			expect(Job.active).not_to include(@inactive_job)
 		end
 
-		it "returns jobs that matches searched job title"
-		it "returns jobs that matches searched address"
-		it "returns jobs that matches days filter"
+		it "returns jobs that matches searched job title" do
+			expect(Job.search_by_job_title("Office")).to include(@active_job)
+		end
+		it "returns jobs that matches searched address" do
+			expect(Job.filter_by_address("sydney")).to include(@active_job)
+		end
+		it "returns jobs that matches days filter" do
+			expect(Job.filter_by_days(30)).to include(@job_posted_29_days_ago)
+			expect(Job.filter_by_days(3)).not_to include(@job_posted_29_days_ago)
+		end
 	end
 
 	context "is valid" do
@@ -86,91 +91,6 @@ describe Job do
 
 		it "without a source" do
 			expect(build(:job, source: nil)).to have(1).errors_on(:source)
-		end
-	end
-
-	context "CareerOne Feed" do
-		before(:each) do
-			@response = Job.load_careerone_feed(15432)
-		end
-
-		context "Job Details" do
-			it "returns an object of job details" do
-				@response.each do |obj|
-					expect(obj).to be_a_kind_of(OpenStruct)
-				end
-			end
-			it "returns a title as a string" do
-				@response.each do |obj|
-					expect(obj.title).to be_a_kind_of(String)
-				end
-			end
-			it "returns a posted_at as a DateTime" do
-				@response.each do |obj|
-					expect(obj.posted_at).to be_a_kind_of(DateTime)
-				end
-			end
-			it "returns a expires_at as a DateTime" do
-				@response.each do |obj|
-					expect(obj.expires_at).to be_a_kind_of(DateTime)
-				end
-			end
-			it "returns an array of types" do
-				@response.each do |obj|
-					expect(obj.types).to be_a_kind_of(Array)
-				end
-			end
-			it "returns an array of industries" do
-				@response.each do |obj|
-					expect(obj.industries).to be_a_kind_of(Array)
-				end
-			end
-			it "returns a description as a string" do
-				@response.each do |obj|
-					expect(obj.description).to be_a_kind_of(String)
-				end
-			end
-			it "returns a street as string" do
-				@response.each do |obj|
-					if obj.street
-						expect(obj.street).to be_a_kind_of(String)
-					else
-						expect(obj.street).to eq(nil)
-					end
-				end
-			end
-			it "returns a city as string" do
-				@response.each do |obj|
-					expect(obj.city).to be_a_kind_of(String)
-				end
-			end
-			it "returns a postcode as integer" do
-				@response.each do |obj|
-					if obj.postcode
-						expect(obj.postcode).to be_a_kind_of(Integer)
-					else
-						expect(obj.postcode).to eq(nil)
-					end
-				end
-			end
-			it "returns a state as string" do
-				@response.each do |obj|
-					expect(obj.state).to be_a_kind_of(String)
-				end
-			end
-		end
-
-		context "Company Details" do
-			it "returns an object of company details" do
-				@response.each do |obj|
-					expect(obj.company).to be_a_kind_of(OpenStruct)
-				end
-			end
-			it "returns a name as string" do
-				@response.each do |obj|
-					expect(obj.company.name).to be_a_kind_of(String)
-				end
-			end
 		end
 	end
 

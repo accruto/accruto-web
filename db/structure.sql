@@ -99,6 +99,44 @@ ALTER SEQUENCE candidate_search_beta_users_id_seq OWNED BY candidate_search_beta
 
 
 --
+-- Name: candidates; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE candidates (
+    id integer NOT NULL,
+    first_name character varying(255),
+    last_name character varying(255),
+    phone character varying(255),
+    status character varying(255),
+    job_title character varying(255),
+    address_id integer,
+    visa character varying(255),
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    minimum_annual_salary integer
+);
+
+
+--
+-- Name: candidates_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE candidates_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: candidates_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE candidates_id_seq OWNED BY candidates.id;
+
+
+--
 -- Name: companies; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -699,6 +737,13 @@ ALTER TABLE ONLY candidate_search_beta_users ALTER COLUMN id SET DEFAULT nextval
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY candidates ALTER COLUMN id SET DEFAULT nextval('candidates_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY companies ALTER COLUMN id SET DEFAULT nextval('companies_id_seq'::regclass);
 
 
@@ -821,6 +866,14 @@ ALTER TABLE ONLY addresses
 
 ALTER TABLE ONLY candidate_search_beta_users
     ADD CONSTRAINT candidate_search_beta_users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: candidates_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY candidates
+    ADD CONSTRAINT candidates_pkey PRIMARY KEY (id);
 
 
 --
@@ -1209,3 +1262,7 @@ INSERT INTO schema_migrations (version) VALUES ('20130901040950');
 INSERT INTO schema_migrations (version) VALUES ('20130916010308');
 
 INSERT INTO schema_migrations (version) VALUES ('20130916044514');
+
+INSERT INTO schema_migrations (version) VALUES ('20130918053025');
+
+INSERT INTO schema_migrations (version) VALUES ('20130918061409');

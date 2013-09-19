@@ -29,8 +29,4 @@ describe Address do
   it "is invalid without a city" do
 		expect(build(:address, city: nil)).to have(1).errors_on(:city)
 	end
-
-  it "is invalid without a state" do
-		expect(build(:address, state: nil)).to have(1).errors_on(:state)
-	end
 end

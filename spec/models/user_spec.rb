@@ -42,7 +42,7 @@ describe User do
       @user.favourites.build(:user_id => @user.id, :job_id => @job.id)
       @user.save
       expect(@user.favourite_jobs.first).to be_valid
-      expect(@user.favourite_jobs.first.title).to eq("Office All Rounder")
+      expect(@user.favourite_jobs.first.title).to include("Office All Rounder")
     end
 
     it "has to be able to remove favourite" do
