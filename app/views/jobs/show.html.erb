@@ -2,10 +2,10 @@
 <%= description "Find #{@job.title} jobs in #{@job.address.city}, #{@job.address.state}. Use Accruto to search for #{@job.title} jobs and launch the next phase of your new career. Recruiters and employers from #{@job.company.name} in #{@job.address.city}, #{@job.address.state} use Accruto to source and hire new talents for their company every single day." %>
 <div class="container detail-show">
 	<div class="row-fluid">
-		<div class="span3 hidden-phone">
+		<div class="span2 hidden-phone">
 			<%= render 'shared/search_sidebar', favourite_jobs: @favourite_jobs %>
 		</div>
-		<div class="span9 job-container">
+		<div class="span10 job-container">
 			<%= link_to :back, class: 'go-back' do %>
 				<span class="job-detail-back"><i class="icon-mail-reply"></i> &nbsp;Back to search results</span>
 			<% end %>

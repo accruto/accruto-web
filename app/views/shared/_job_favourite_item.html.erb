@@ -6,7 +6,7 @@
 			<% else %>
 			  <a href="<%= job_path(job) %>">
 			<% end %>
-		    <span class="recent-role"><%= job.title %></span><br>at <span class="blue-accent"><%= job.company.name %></span>
+		    <span class="recent-role"><%= job.title %> at <%= job.company.name %></span>
 		  </a>
 		</div>
 		<div class="span1">

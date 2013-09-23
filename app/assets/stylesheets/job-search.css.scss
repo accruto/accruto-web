@@ -7,64 +7,6 @@
 		display: inline-block;
 	}
 }
-
-.search-box {
-	background-color: $grayLighter;
-	border: 1px solid $goldLight;
-	input[type="text"], input[type="submit"] {
-		width: 95%;
-	}
-	h4 {
-		padding: 0 20px;
-	}
-	form {
-		padding: 20px 20px;
-		background-color: $white;
-		margin: 0;
-	}
-}
-
-.sidebar-title {
-		font-size: $fontSizeLarge;
-		color: $blueBrandDark;
-		font-weight: 500;
-}
-
-.recent-searches, .favourite-roles {
-	margin: 20px 0;
-	border: 1px solid $goldLight;
-	font-size: 14px;
-	background-color: white;
-	p {
-		margin: 0;
-		padding: 15px 20px;
-		background: $grayLighter;
-	}
-	p.action {
-		background: $white;
-	}
-	ul {
-		list-style-type: none;
-		margin: 0;
-		background-color: $white;
-	}
-
-	li {
-		padding: 20px;
-		border-bottom: 1px solid $goldLight;
-	}
-
-	li:first-child {
-		border-top: 1px solid $goldLight;
-	}
-
-	li a {
-		color: $gray;
-	}
-	.recent-role {
-		color: $blueBrandDark;
-	}
-}
 .results-main ul.result-jobs {
 	padding: 0;
 }
@@ -96,7 +38,7 @@ ul.result-jobs {
 }
 
 .result-list {
-	padding-left: 30px;
+	padding: 0 20px 0 50px;
 }
 
 .role-title {

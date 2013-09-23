@@ -1,11 +1,11 @@
 <div class="search-box" xmlns="http://www.w3.org/1999/html">
-		<h4 class="sidebar-title">Refine your Search</h4>
+		<h5 class="sidebar-title">Refine Search</h5>
 	<%= form_tag "/jobs/search", method: :get do %>
-		<label class="brand-dark-blue-accent">Whats  your next job title?</label>
+		<label class="brand-dark-blue-accent">Job title?</label>
 		<%= text_field_tag :job_title, params[:job_title], placeholder: 'Job Title' %>
 		<label class="brand-dark-blue-accent">Where?</label>
 		<%= text_field_tag :address, params[:address], placeholder: 'City or State' %>
-		<label class="brand-dark-blue-accent">Date posted:</label>
+		<label class="brand-dark-blue-accent">Freshness:</label>
 		<%= select_tag :days, options_for_select(date_filter_options, params[:days]) %>
 		<label class="brand-dark-blue-accent">Sort by:</label>
 		<%= select_tag :sort, options_for_select(sort_filter_options, params[:sort]) %>
@@ -23,44 +23,32 @@
 </div>
 
 <div class="recent-searches">
-	<p><span class="sidebar-title">Recent Searches</span></p>
+	<h5 class="sidebar-title-small">Recent Searches</h5>
 	<ul id="searches-sidebar-list" class="recent-list">
     <% if @recent_searches.blank? %>
       <%= render 'shared/job_search_empty', show: true %>
     <% else %>
       <% @recent_searches.each do |recent_search| %>
         <li>
-        	<div class="row-fluid">
-        		<div class="span11">
-        			<a href="<%= build_search_params(recent_search) %>">
-        			  <span class="recent-role"><%= recent_search.job_title.try(:capitalize) %></span> <br>in
-        			  <% if recent_search.address.present? %>
-        			    <span class="recent-role"><%= recent_search.address.try(:capitalize) %></span>
-        			  <% else %>
-        			    <span class="recent-role">Australia</span>
-        			  <% end %>
-        			</a>
-        		</div>
-        		<div class="span1">
-              <span id="<%= "alert-loader-#{recent_search.id}" %>" data-image-url="<%= image_path("ajax-loader.gif") %>"></span>
-        			<a href="#" id="set-alert-<%= recent_search.id %>" class="set-alert-button <%= current_user ? '' : 'search-alert-blocked' %>" data-recent-search-id="<%= recent_search.id %>" data-action="<%= set_job_alert_jobs_path %>">
-                <span id="recent-search-alert-tooltip-<%= recent_search.id %>" class="" rel="tooltip" title="<%= recent_search.subscribed ? 'Alert active, click here to inactivate' : 'Alert inactive, click here to activate' %>">
-                  <i id="recent-search-alert-<%= recent_search.id %>" class="icon-bell-alt alert-icon-<%= recent_search.subscribed? ? 'active' : 'inactive' %>"></i>
-                </span>
-              </a>
-        		</div>
-        	</div>
+    			<a href="<%= build_search_params(recent_search) %>">
+    			  <span class="recent-search"><%= recent_search.job_title.try(:capitalize) %> in
+    			  <% if recent_search.address.present? %>
+    			    <%= recent_search.address.try(:capitalize) %></span>
+    			  <% else %>
+    			    Australia</span>
+    			  <% end %>
+    			</a>
         </li>
       <% end %>
     <% end %>
 	</ul>
 	<p id="remove-all-searches-wrapper" class="action align-right <%= 'hide' if @recent_searches.blank? %>">
-    <%= link_to 'Clear', clear_searches_jobs_path, id: 'remove-all-searches' %>
+    <%= link_to 'Clear', clear_searches_jobs_path, id: 'remove-all-searches', class: "clear" %>
   </p>
 </div>
 
 <div class="favourite-roles">
-	<p><span class="sidebar-title">Shortlisted Jobs</span></p>
+	<h5 class="sidebar-title-small">Shortlisted jobs</h5>
 	<ul id="favourites-sidebar-list" class="recent-list">
     <% unless favourite_jobs.blank? %>
       <%= render 'shared/job_favourite_empty', show: false %>
@@ -73,7 +61,7 @@
   </ul>
 
   <p id="remove-all-favourites-wrapper" class="action align-right <%= 'hide' if favourite_jobs.blank? %>">
-    <%= link_to 'Clear', clear_favourites_jobs_path, id: 'remove-all-favourites' %>
+    <%= link_to 'Clear', clear_favourites_jobs_path, id: 'remove-all-favourites', class: "clear" %>
   </p>
 
 </div>

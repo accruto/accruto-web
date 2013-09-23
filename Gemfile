@@ -53,6 +53,7 @@ group :development, :test do
   gem 'quiet_assets'
   gem "capybara-webkit"
   gem 'selenium-webdriver'
+  gem 'ffaker'
 end
 
 group :development do
@@ -66,7 +67,6 @@ group :development do
 end
 
 group :test do
-  gem 'faker', '~> 1.1.2'
   gem 'capybara', '~> 2.0.2'
   gem 'database_cleaner', '~> 0.9.1'
   gem 'launchy', '~> 2.2.0'

@@ -1,9 +1,9 @@
 <div class="container results-main">
 	<div class="row-fluid">
-		<div class="span3 hidden-phone">
+		<div class="span2 hidden-phone">
 			<%= render 'shared/search_sidebar', favourite_jobs: @favourite_jobs %>
 		</div>
-		<div class="span9 result-list">
+		<div class="span10 result-list">
 				<h4 class="result-sentence">There are <%= number_with_delimiter(total_search_result(@search_results)) %> <span class="result-number"><%= params[:job_title].blank? ? params[:category] : params[:job_title] %></span> jobs in <span class="result-number">
 					<%= params[:address].blank? ? "Australia" : params[:address] %>
 				</span></h4>

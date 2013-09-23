@@ -15,7 +15,6 @@ Spork.prefork do
 
   RSpec.configure do |config|
   	config.include FactoryGirl::Syntax::Methods
-    config.fixture_path = "#{::Rails.root}/spec/fixtures"
     config.infer_base_class_for_anonymous_controllers = false
     config.include Capybara::DSL
     config.use_transactional_fixtures = false
