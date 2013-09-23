@@ -15,15 +15,7 @@ feature 'Job shortlist' do
   end
 
   context "user successfully" do
-    scenario 'create favourite with valid data' do
-      visit root_path
-      fill_in 'job_title', with: 'office'
-      fill_in 'address', with: 'sydney'
-      click_button 'Search'
-      expect(page).to have_content("There are 1 Office jobs in sydney")
-      click_link "favourite-btn-#{@job.id}"
-      ## TODO: ajax check result
-    end
+    scenario 'create favourite with valid data'
     scenario 'delete favourite with valid data'
   end
 
