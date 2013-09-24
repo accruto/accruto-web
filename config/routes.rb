@@ -38,7 +38,11 @@ Accruto::Application.routes.draw do
   resources :job_categories
   resources :job_subcategories
 
-  resources :candidates
+  resources :candidates do
+    collection do
+      get 'search'
+    end
+  end
 
   # namespace :admin do
   # 	resources :jobs

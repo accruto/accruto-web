@@ -1,9 +1,9 @@
-<div class="row-fluid">
+<div class="row-fluid results-main">
   <div class="span2 hidden-phone">
     <%= render 'shared/search_sidebar', favourite_jobs: @favourite_jobs %>
   </div>
   <div class="span8 result-list">
-    <h4 class="result-sentence">There are <span class="result-number"><%= @candidates.count %></span> sales candidates in Australia
+    <h4 class="result-sentence">There are <span class="result-number"><%= @candidates.count %></span> <%= params[:job_title] %> candidates in Australia
     </span>
     </h4>
     <ul class="candidate-list">

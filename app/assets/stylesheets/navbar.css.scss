@@ -17,6 +17,12 @@
 			}
 		}
 	}
+  &.candidates {
+    border-bottom: 5px solid $yellow;
+  }
+  &.jobs {
+    border-bottom: 5px solid $blueBrandLight;
+  }
 }
 
 .navigation-bar ul.navbar-links li ul.dropdown-menu li {

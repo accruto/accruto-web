@@ -30,16 +30,16 @@
     background: $grayLighter;
     padding: 5px 8px;
   }
-  .status-available, .visa-valid, .visa-resident {
+  .status-immediately-available, .visa-valid-work-visa, .visa-australian-resident {
     background: $green;
     color: $white;
   }
-  .status-active, .visa-waiting {
-    background: $grayLighter;
-    color: $grayDark;
+  .status-happy-to-talk, .visa-no-work-visa {
+    background: $grayLight;
+    color: $grayDarker;
   }
-  .status-happy, .visa-needed {
-    background: $yellow;
+  .status-actively-looking {
+    background: $yellowLight;
     color: $grayDarker;
   }
   .candidate-info {

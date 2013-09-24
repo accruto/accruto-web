@@ -15,4 +15,8 @@ module ApplicationHelper
   def total_candidates
     return User.count
   end
+
+  def controller_class
+    return params[:controller].downcase
+  end
 end

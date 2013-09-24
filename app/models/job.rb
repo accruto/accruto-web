@@ -133,15 +133,15 @@ class Job < ActiveRecord::Base
 
   private
 
-  pg_search_scope :_title_has, against: [
-      [:title, 'A'],
-      [:description, 'B']
-  ], associated_against: {
-      subcategories: :name
-  }, using: {
-      tsearch: {
-        dictionary: "english",
-        tsvector_column: 'tsv'
-      }
-  }
+    pg_search_scope :_title_has, against: [
+        [:title, 'A'],
+        [:description, 'B']
+    ], associated_against: {
+        subcategories: :name
+    }, using: {
+        tsearch: {
+          dictionary: "english",
+          tsvector_column: 'tsv'
+        }
+    }
 end

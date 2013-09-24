@@ -9,33 +9,41 @@ feature 'Job search' do
 		scenario "job title exists in database" do
 			@job = create(:job)
 			visit root_path
-			fill_in 'job_title', with: 'office'
-			click_button 'Search'
-			expect(page).to have_content("There are 1 office jobs in Australia")
+      within(".main-search-jobs") do
+  			fill_in 'job_title', with: 'office'
+  			click_button 'Search'
+      end
+      expect(page).to have_content("There are 1 office jobs in Australia")
 		end
 		scenario "job title does not exist in database" do
 			visit root_path
-			fill_in 'job_title', with: 'office'
-			click_button 'Search'
-			expect(page).to have_content("There are 0 office jobs in Australia")
+      within(".main-search-jobs") do
+  			fill_in 'job_title', with: 'office'
+  			click_button 'Search'
+      end
+      expect(page).to have_content("There are 0 office jobs in Australia")
 		end
 	end
 	context "As a user, I should be able to search for a job by providing an address" do
-		scenario "address exists in database" do
+    scenario "address exists in database" do
 			@job = create(:job)
 			visit root_path
-			fill_in 'job_title', with: 'office'
-			fill_in 'address', with: 'sydney'
-			click_button 'Search'
-			expect(page).to have_content("There are 1 office jobs in sydney")
+      within(".main-search-jobs") do
+  			fill_in 'job_title', with: 'office'
+  			fill_in 'address', with: 'sydney'
+  			click_button 'Search'
+      end
+      expect(page).to have_content("There are 1 office jobs in sydney")
 		end
-		scenario "address does not exist in database" do
+		scenario "address does not exist in database" do    
 			@job = create(:job_outside_sydney)
 			visit root_path
-			fill_in 'job_title', with: 'office'
-			fill_in 'address', with: 'sydney'
-			click_button 'Search'
-			expect(page).to have_content("There are 0 office jobs in sydney")
+      within(".main-search-jobs") do
+  			fill_in 'job_title', with: 'office'
+  			fill_in 'address', with: 'sydney'
+  			click_button 'Search'
+      end
+      expect(page).to have_content("There are 0 office jobs in sydney")
 		end
 	end
 
@@ -46,9 +54,12 @@ feature 'Job search' do
 			@job_melbourne = create(:job_melbourne)
 
 			visit root_path
-			fill_in 'job_title', with: 'office'
-			fill_in 'address', with: 'sydney'
-			click_button 'Search'
+      within(".main-search-jobs") do
+  			fill_in 'job_title', with: 'office'
+  			fill_in 'address', with: 'sydney'
+  			click_button 'Search'
+      end
+      expect(page).to have_content(@job.title)
 		end
 		scenario "search with new job title" do
 			fill_in 'job_title', with: 'office'
