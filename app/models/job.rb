@@ -31,7 +31,7 @@ class Job < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
  	validates_presence_of :title, :job_type, :description, :company, :address, :source
-  #validates :title, :uniqueness => {:scope => :external_job_id}, length: { maximum: 70 }
+  validates :title, :uniqueness => {:scope => :external_job_id}, length: { maximum: 70 }
 
  	belongs_to :company
  	belongs_to :address
