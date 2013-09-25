@@ -13,7 +13,7 @@ feature 'Job search' do
   			fill_in 'job_title', with: 'office'
   			click_button 'Search'
       end
-      expect(page).to have_content("There are 1 office jobs in Australia")
+      expect(page).to have_content(@job.title)
 		end
 		scenario "job title does not exist in database" do
 			visit root_path
@@ -21,7 +21,7 @@ feature 'Job search' do
   			fill_in 'job_title', with: 'office'
   			click_button 'Search'
       end
-      expect(page).to have_content("There are 0 office jobs in Australia")
+      expect(page).to have_content("There are 0")
 		end
 	end
 	context "As a user, I should be able to search for a job by providing an address" do
@@ -29,21 +29,18 @@ feature 'Job search' do
 			@job = create(:job)
 			visit root_path
       within(".main-search-jobs") do
-  			fill_in 'job_title', with: 'office'
   			fill_in 'address', with: 'sydney'
   			click_button 'Search'
       end
-      expect(page).to have_content("There are 1 office jobs in sydney")
+      expect(page).to have_content(@job.title)
 		end
 		scenario "address does not exist in database" do    
-			@job = create(:job_outside_sydney)
 			visit root_path
       within(".main-search-jobs") do
-  			fill_in 'job_title', with: 'office'
   			fill_in 'address', with: 'sydney'
   			click_button 'Search'
       end
-      expect(page).to have_content("There are 0 office jobs in sydney")
+      expect(page).to have_content("There are 0")
 		end
 	end
 

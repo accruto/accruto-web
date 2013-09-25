@@ -36,19 +36,19 @@ feature 'Candidate search' do
         fill_in 'search_address', with: 'sydney'
         click_button 'Search'
       end
-      expect(page).not_to have_content('There are 1')
+      expect(page).to have_content("There are 0 candidates in Sydney")
     end
   end
 
   context "As a recruiter, I should be able to refine my search results" do
     before(:each) do
       @candidate = create(:candidate)
-      @candidate_no_work_visa = create(:candidate_no_work_visa, job_title: "Office All Rounder No work visa")
-      @candidate_happy_to_talk = create(:candidate_happy_to_talk, job_title: "Office All Rounder Happy to talk")
+      @candidate_no_work_visa = create(:candidate_no_work_visa)
+      @candidate_happy_to_talk = create(:candidate_happy_to_talk)
       @candidate_updated_29_days_ago = create(:candidate_updated_29_days_ago)
       @candidate_updated_2_months_ago = create(:candidate_updated_2_months_ago)
       @candidate_melbourne = create(:candidate_melbourne)
-      @candidate_cleaner = create(:candidate, job_title: "Cleaner")
+      @candidate_cleaner = create(:candidate_cleaner)
       visit root_path
       within(".main-search-candidates") do
         fill_in 'search_job_title', with: 'office'

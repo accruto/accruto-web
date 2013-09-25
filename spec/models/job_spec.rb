@@ -34,24 +34,24 @@ describe Job do
 
 	context "scopes" do
 		before(:each) do
-			@active_job = create(:job)
-			@inactive_job = create(:job_inactive)
-			@job_posted_29_days_ago = create(:job_posted_29_days_ago, title: "Office All Rounder 30 days ago")
+			@job_active = create(:job)
+			@job_inactive = create(:job_inactive)
+			@job_posted_29_days_ago = create(:job_posted_29_days_ago)
 		end
 
 	  it "returns only active jobs" do
-			expect(Job.active).to include(@active_job)
+			expect(Job.active).to include(@job_active)
 		end
 
 	  it "does not return inactive jobs" do
-			expect(Job.active).not_to include(@inactive_job)
+			expect(Job.active).not_to include(@job_inactive)
 		end
 
 		it "returns jobs that matches searched job title" do
-			expect(Job.search_by_job_title("Office")).to include(@active_job)
+			expect(Job.search_by_job_title("office")).to include(@job_active)
 		end
 		it "returns jobs that matches searched address" do
-			expect(Job.filter_by_address("sydney")).to include(@active_job)
+			expect(Job.filter_by_address("sydney")).to include(@job_active)
 		end
 		it "returns jobs that matches days filter" do
 			expect(Job.filter_by_days(30)).to include(@job_posted_29_days_ago)
