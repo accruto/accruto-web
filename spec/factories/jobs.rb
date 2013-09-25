@@ -11,7 +11,7 @@ FactoryGirl.define do
   	expires_at 1.day.from_now
   	external_job_id "123123"
   	source "CareerOne"
-  	job_type { "Fulltime" }
+  	job_type "Fulltime"
 
   	factory :job_with_one_subcategory do
       title "Office All Rounder One Subcategory"

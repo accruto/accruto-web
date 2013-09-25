@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :candidate do
+    association :address
     first_name "Test"
     last_name "Candidate"
     job_title "Office All Rounder"
@@ -7,7 +8,6 @@ FactoryGirl.define do
     status "Actively looking"
     visa "Valid work visa"
     minimum_annual_salary 80000
-    association :address
 
     factory :candidate_no_work_visa do
       job_title "Office All Rounder No Work Visa"

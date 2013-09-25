@@ -1,10 +1,6 @@
 require 'spec_helper'
 
 feature 'Job search' do
-	before :each do
-		@category = create(:job_category)
-	end
-
 	context "As a user, I should be able to search for a job by providing a job title" do
 		scenario "job title exists in database" do
 			@job = create(:job)
