@@ -36,7 +36,7 @@ feature 'Candidate search' do
         fill_in 'search_address', with: 'sydney'
         click_button 'Search'
       end
-      expect(page).to have_content("There are 0 candidates in Sydney")
+      expect(page).to have_content("There are 0 candidates in sydney")
     end
   end
 
