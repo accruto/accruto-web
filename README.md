@@ -1,3 +1,4 @@
+<img src="https://www.codeship.io/projects/c87638b0-0094-0131-75c3-5e90b9111110/status" />
 #Accruto Web App (accruto.com)
 
 1. Git clone this repo

@@ -45,7 +45,6 @@ feature 'Job search' do
 			@job = create(:job)
 			@job_posted_29_days_ago = create(:job_posted_29_days_ago)
 			@job_melbourne = create(:job_melbourne)
-
 			visit root_path
       within(".main-search-jobs") do
   			fill_in 'job_title', with: 'office'
