@@ -42,4 +42,37 @@ namespace 'accruto:candidates' do
       print "-----\n"
     end
   end
+
+  desc "Load recent candidates from linkme"
+  task :linkme => :environment do
+    link_me = LinkMe.new
+    candidates = link_me.recent_candidates
+    collected_users, collected_candidates = [], []
+    candidates.each do |candidate|
+      print "Queueing to process: #{candidate["Email"]}\n".yellow
+      collected_user__data = {
+        email: candidate["Email"],
+        password: 'w0rdup!'
+      }
+      collected_users << User.new(collected_user__data)
+
+      name = candidate["Name"].split(" ")
+
+      collected_candidate_data = {
+        first_name: name.first,
+        last_name: name.last,
+        job_title: candidate["DesiredJobTitle"],
+        status: candidate["Status"],
+        visa: Candidate::VISA[candidate["visaStatus"].to_i], ## TODO: map correct way for visa
+        minimum_annual_salary: candidate["Salary"],
+        address_id: nil ## TODO: parsing address and map it
+      }
+      collected_candidates << Candidate.new(collected_candidate_data)
+    end
+
+    print " Importing Users\n".green
+    User.import collected_users
+    print " Importing Candidate\n".green
+    Candidate.import collected_candidates
+  end
 end

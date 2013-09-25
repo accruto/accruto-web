@@ -30,8 +30,10 @@ gem 'delayed_job_active_record'
 gem 'delayed_job_web'
 gem 'colorize'
 gem 'activerecord-import', github: 'dferdian/activerecord-import'
-gem "carrierwave", "~> 0.9.0"
-gem "rails_admin", "~> 0.4.9"
+gem 'carrierwave', '~> 0.9.0'
+gem 'rails_admin', '~> 0.4.9'
+gem 'tiny_tds'
+gem 'activerecord-sqlserver-adapter'
 
 group :production do
   gem 'rails_12factor'
@@ -39,7 +41,7 @@ end
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem "compass-rails", "~> 1.0.3"
+  gem 'compass-rails', '~> 1.0.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
@@ -51,7 +53,7 @@ group :development, :test do
   gem 'guard-rspec', '~> 3.0.2'
   gem 'awesome_print'
   gem 'quiet_assets'
-  gem "capybara-webkit"
+  gem 'capybara-webkit'
   gem 'selenium-webdriver'
   gem 'ffaker'
 end
@@ -59,7 +61,7 @@ end
 group :development do
 	gem 'binding_of_caller', '~> 0.7.2'
 	gem 'better_errors', '~> 0.9.0'
-	gem "byebug", "~> 2.1.1"
+	gem 'byebug', '~> 2.1.1'
 	gem 'annotate', '>=2.5.0'
 	gem 'rails-footnotes', '>= 3.7.9'
 	gem 'guard-livereload', '~> 1.4.0'
