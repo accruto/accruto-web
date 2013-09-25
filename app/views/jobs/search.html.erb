@@ -1,11 +1,11 @@
 <div class="container results-main">
 	<div class="row-fluid">
 		<div class="span2 hidden-phone">
-			<%= render 'shared/search_sidebar', favourite_jobs: @favourite_jobs %>
+			<%= render 'shared/job_search_sidebar', favourite_jobs: @favourite_jobs %>
 		</div>
 		<div class="span10 result-list">
-				<h4 class="result-sentence">There are <%= number_with_delimiter(total_search_result(@search_results)) %> <span class="result-number"><%= params[:job_title].blank? ? params[:category] : params[:job_title] %></span> jobs in <span class="result-number">
-					<%= params[:address].blank? ? "Australia" : params[:address] %>
+				<h4 class="result-sentence">There are <%= number_with_delimiter(total_search_result(@search_results)) %> <span class="result-number"><%= params[:job_title] %></span> jobs in <span class="result-number">
+					<%= params[:address].present? ? params[:address] : "Australia" %>
 				</span></h4>
 				<%= simple_form_for :user do |f| %>
 				<%= f.submit "Create Job Alert", class: "btn btn-yellow btn-email-sub hidden" %>

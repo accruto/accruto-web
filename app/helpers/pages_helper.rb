@@ -1,7 +1,7 @@
 module PagesHelper
 	def date_filter_options
 		return [
-			["Any", nil],
+			["All", nil],
 			["Today", 1],
 			["Last 3 days", 3],
 			["Last 7 days", 7],

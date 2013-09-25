@@ -6,8 +6,10 @@
   li:first-child {
     border-top: 1px solid $grayLighter;
   }
-  li {
+  li:not(:last-child) {
     border-bottom: 1px solid $grayLighter;
+  }
+  li {
     padding: 25px 0 10px 0;
   }
   h4, p {

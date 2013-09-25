@@ -31,15 +31,15 @@
 		<div id="search-candidates_content" class="main-search-content main-search-candidates hidden">
 			<h1 class="main-headline hidden-phone">Want to search through a database of <br>more than 600,000 job seekers?</h1>
 			<h1 class="main-headline visible-phone">Want to search through a database of <br>more than 600,000 job seekers?</h1>
-			<%= form_tag search_candidates_path, method: :get do %>
+			<%= simple_form_for :search, url: search_candidates_path, method: :get do |f| %>
 			  <div class="row-fluid">
           <div class="span5">
             <label>Job title</label>
-            <%= text_field_tag :job_title, params[:job_title], placeholder: 'Job Title' %>
+            <%= f.input_field :job_title, placeholder: 'Job Title' %>
           </div>
           <div class="span5">
             <label>Location</label>
-            <%= text_field_tag :address, params[:address], placeholder: 'City or State' %>
+            <%= f.input_field :address, placeholder: 'City or State' %>
           </div>
           <div class="span2">
             <%= submit_tag "Search", class: 'btn-primary btn-large btn-main-search' %>

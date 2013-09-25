@@ -113,7 +113,8 @@ CREATE TABLE candidates (
     visa character varying(255),
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    minimum_annual_salary integer
+    minimum_annual_salary integer,
+    user_id integer
 );
 
 
@@ -1266,3 +1267,7 @@ INSERT INTO schema_migrations (version) VALUES ('20130916044514');
 INSERT INTO schema_migrations (version) VALUES ('20130918053025');
 
 INSERT INTO schema_migrations (version) VALUES ('20130918061409');
+
+INSERT INTO schema_migrations (version) VALUES ('20130925032510');
+
+INSERT INTO schema_migrations (version) VALUES ('20130925034531');

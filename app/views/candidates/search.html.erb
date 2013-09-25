@@ -1,9 +1,9 @@
 <div class="row-fluid results-main">
   <div class="span2 hidden-phone">
-    <%= render 'shared/search_sidebar', favourite_jobs: @favourite_jobs %>
+    <%= render 'shared/candidate_search_sidebar', favourite_jobs: @favourite_jobs %>
   </div>
   <div class="span8 result-list">
-    <h4 class="result-sentence">There are <span class="result-number"><%= @candidates.count %></span> <%= params[:job_title] %> candidates in Australia
+    <h4 class="result-sentence">There are <span class="result-number"><%= @candidates.count %></span> <%= params[:search][:job_title] %> candidates in <%= params[:search][:address].present? ? params[:search][:address] : "Australia" %>
     </span>
     </h4>
     <ul class="candidate-list">
@@ -22,7 +22,7 @@
             <div class="span2 candidate-info">
               <span class="salary-value"><%= number_to_currency(candidate.minimum_annual_salary, precision: 0) %></span><br>
               <span class="salary-desc">desired salary</small><br>
-              <i class="icon-phone"></i>&nbsp;&nbsp;&nbsp;<i class="icon-envelope-alt"></i>
+              <% if candidate.phone %><i class="icon-phone"></i><% end %>&nbsp;&nbsp;&nbsp;<i class="icon-envelope-alt"></i>
             </div>
             <div class="span3">
               <a href="#" target="new" class="btn btn-inverse btn-view-job hidden-phone"><i class="icon-mail-forward"></i>&nbsp;&nbsp;VIEW</a>

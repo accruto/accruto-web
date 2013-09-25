@@ -1,14 +1,23 @@
 class Candidate < ActiveRecord::Base
   include PgSearch
 
-  attr_accessible :address_id, :first_name, :job_title, :last_name,
-                  :phone, :status, :visa, :minimum_annual_salary
+  attr_accessible :address_id, :user_id, :first_name, :job_title, :last_name,
+                  :phone, :status, :visa, :minimum_annual_salary, :updated_at
   validates :first_name, :last_name, :job_title, :status, :visa, :minimum_annual_salary, presence: true
   belongs_to :address
+  belongs_to :user
 
   scope :search_by_job_title, lambda { |title_keyword| _title_has(title_keyword) if title_keyword.present? }
   scope :filter_by_address, lambda { |address| joins(:address).where("addresses.city @@ :q or addresses.state @@ :q", q: address.downcase) if address.present? }
-  scope :filter_by_days, lambda { |days| where("updated_at >= ?", days.to_i.days.ago) if days.present? }
+  scope :filter_by_updated_at, lambda { |days| where("updated_at >= ?", days.to_i.days.ago) if days.present? }
+  scope :filter_by_status, lambda { |status| where("status = ?", status) if status.present? }
+  scope :filter_by_visa, lambda { |visa| where("visa = ?", visa) if visa.present? }
+
+  def self.filter_by_minimum_annual_salary(min, max)
+    where(
+      "minimum_annual_salary >= :min AND minimum_annual_salary <= :max", min: min.to_i, max: max.to_i
+    )
+  end
 
   STATUS  = [
               "Immediately available",
