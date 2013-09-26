@@ -66,7 +66,7 @@ namespace 'accruto:candidates' do
         status: candidate["Status"],
         visa: Candidate::VISA[candidate["visaStatus"].to_i], ## TODO: map correct way for visa
         minimum_annual_salary: candidate["Salary"],
-        address_id: nil ## TODO: parsing address and map it
+        address_id: 95 ## TODO: parsing address and map it
       }
       collected_candidates << Candidate.new(collected_candidate_data)
     end
