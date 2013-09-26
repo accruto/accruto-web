@@ -9,6 +9,22 @@ class LinkMe
     @client = TinyTds::Client.new(username: db.user, password: db.password, host: db.host, timeout: 0)
   end
 
+  def candidate_resumes
+    query = %{
+      SELECT TOP 100 * FROM candidateresume
+      LEFT OUTER JOIN resume
+      on candidateresume.resume_id = resume.id
+    }
+    @client.execute(query)
+  end
+
+  def resumes
+    query = %{
+      SELECT TOP 100 * FROM resume
+    }
+    @client.execute(query)
+  end
+
   def candidate_searches
     query = %{
       DECLARE @startDate DATETIME

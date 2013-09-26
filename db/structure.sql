@@ -629,6 +629,49 @@ ALTER SEQUENCE referral_sites_id_seq OWNED BY referral_sites.id;
 
 
 --
+-- Name: resumes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE resumes (
+    id integer NOT NULL,
+    candidate_id integer,
+    courses text,
+    awards text,
+    skills text,
+    objective text,
+    summary text,
+    other character varying(255),
+    citizenship character varying(255),
+    affiliations text,
+    professional text,
+    interests text,
+    referees text,
+    updated_at_linkme timestamp without time zone,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: resumes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE resumes_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: resumes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE resumes_id_seq OWNED BY resumes.id;
+
+
+--
 -- Name: roles; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -843,6 +886,13 @@ ALTER TABLE ONLY referral_sites ALTER COLUMN id SET DEFAULT nextval('referral_si
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY resumes ALTER COLUMN id SET DEFAULT nextval('resumes_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq'::regclass);
 
 
@@ -990,6 +1040,14 @@ ALTER TABLE ONLY referral_sites
 
 
 --
+-- Name: resumes_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY resumes
+    ADD CONSTRAINT resumes_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1003,6 +1061,27 @@ ALTER TABLE ONLY roles
 
 ALTER TABLE ONLY users
     ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
+
+
+--
+-- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
+
+
+--
+-- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
 
 
 --
@@ -1052,13 +1131,6 @@ CREATE INDEX index_job_subcategories_jobs_on_job_id ON job_subcategories_jobs US
 --
 
 CREATE INDEX index_job_subcategories_jobs_on_job_subcategory_id ON job_subcategories_jobs USING btree (job_subcategory_id);
-
-
---
--- Name: index_job_subcategories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE UNIQUE INDEX index_job_subcategories_on_slug ON job_subcategories USING btree (slug);
 
 
 --
@@ -1257,3 +1329,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130918061409');
 INSERT INTO schema_migrations (version) VALUES ('20130925032510');
 
 INSERT INTO schema_migrations (version) VALUES ('20130925034531');
+
+INSERT INTO schema_migrations (version) VALUES ('20130926060517');

@@ -2,13 +2,14 @@
 #
 # Table name: job_subcategories
 #
-#  id                      :integer          not null, primary key
-#  name                    :string(255)
-#  job_category_id         :integer
-#  created_at              :datetime         not null
-#  updated_at              :datetime         not null
-#  external_subcategory_id :integer
-#  slug                    :string(255)
+#  id                       :integer          not null, primary key
+#  name                     :string(255)
+#  job_category_id          :integer
+#  created_at               :datetime         not null
+#  updated_at               :datetime         not null
+#  external_subcategory_id  :integer
+#  slug                     :string(255)
+#  external_subcategory_ids :text
 #
 
 class JobSubcategory < ActiveRecord::Base

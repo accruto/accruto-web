@@ -37,6 +37,7 @@ Accruto::Application.routes.draw do
 
   resources :job_categories
   resources :job_subcategories
+  resources :resumes
 
   resources :candidates do
     collection do

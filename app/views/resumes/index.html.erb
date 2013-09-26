@@ -1,0 +1,30 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Awards</th>
+      <th>Courses</th>
+      <th>Skills</th>
+      <th>Professional</th>
+      <th>Interests</th>
+      <th>Referees</th>
+      <th>Summary</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @resumes.each do |resume| %>
+      <tr>
+        <td><%= resume.id %></td>
+        <td><%=raw resume.awards.truncate(50) if resume.awards %></td>
+        <td><%=raw resume.courses.truncate(50) if resume.courses %></td>
+        <td><%=raw resume.skills.truncate(50) if resume.skills %></td>
+        <td><%=raw resume.professional.truncate(50) if resume.professional %></td>
+        <td><%=raw resume.interests.truncate(50) if resume.interests %></td>
+        <td><%=raw resume.referees.truncate(50) if resume.referees %></td>
+        <td><%=raw resume.summary.truncate(50) if resume.summary %></td>
+        <td><%= distance_of_time_in_words_to_now(resume.updated_at_linkme) %> ago</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
