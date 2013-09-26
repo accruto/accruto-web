@@ -56,7 +56,7 @@ namespace 'accruto:candidates' do
         password_confirmation: 'F2O3qi3R'
       }
       ## collected_users << User.new(collected_user_data)
-      user = User.create(collected_user_data)
+      user = User.create!(collected_user_data)
 
       name = candidate["Name"].split(" ")
       collected_candidate_data = {
