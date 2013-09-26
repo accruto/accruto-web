@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :resume do
-    candidate_id 1
+    association :candidate
     courses "MyText"
     awards "MyText"
     skills "MyText"
