@@ -55,10 +55,10 @@ namespace 'accruto:candidates' do
         password: 'F2O3qi3R',
         password_confirmation: 'F2O3qi3R'
       }
-      collected_users << User.new(collected_user_data)
+      ## collected_users << User.new(collected_user_data)
+      user = User.create(collected_user_data)
 
       name = candidate["Name"].split(" ")
-
       collected_candidate_data = {
         first_name: name.first,
         last_name: name.last,
@@ -66,13 +66,14 @@ namespace 'accruto:candidates' do
         status: candidate["Status"],
         visa: Candidate::VISA[candidate["visaStatus"].to_i], ## TODO: map correct way for visa
         minimum_annual_salary: candidate["Salary"],
-        address_id: 95 ## TODO: parsing address and map it
+        address_id: 95, ## TODO: parsing address and map it
+        user_id: user.id
       }
       collected_candidates << Candidate.new(collected_candidate_data)
     end
 
-    print " Importing Users\n".green
-    User.import collected_users, validate: false
+    #print " Importing Users\n".green
+    #User.import collected_users, validate: false
     print " Importing Candidate\n".green
     Candidate.import collected_candidates
   end
