@@ -2,18 +2,21 @@
 #
 # Table name: jobs
 #
-#  id              :integer          not null, primary key
-#  title           :string(255)
-#  address_id      :integer
-#  posted_at       :datetime
-#  expires_at      :datetime
-#  job_type        :string(255)
-#  company_id      :integer
-#  external_job_id :string(255)
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  description     :text
-#  source          :string(255)
+#  id                 :integer          not null, primary key
+#  title              :string(255)
+#  address_id         :integer
+#  posted_at          :datetime
+#  expires_at         :datetime
+#  job_type           :string(255)
+#  company_id         :integer
+#  external_job_id    :string(255)
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  description        :text
+#  source             :string(255)
+#  slug               :string(255)
+#  external_apply_url :string(255)
+#  tsv                :tsvector
 #
 
 require 'spec_helper'

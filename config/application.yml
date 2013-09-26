@@ -3,6 +3,7 @@ SMTP_ADDRESS: smtp.mandrillapp.com
 SMTP_USERNAME: john@accruto.com
 SMTP_PASSWORD: iqRxL3WiJL_4zDX9UDL_Tw
 CAREERONE_CAT_CODE: 1:EAAQZyQFf8jEXJ9WtzRkrCcuPhqurTr_Tc587b4Z66UWXcpVIXlbov2N9nVvWjN4xxyljwGigzAhsl2tPDBrf8e7jn99.0iIkRUmRFQ7Un4Gl_6dtdAqUfXiHUm0g4PDBvuM2_ysBk8eTlJ4vctXI_UtVw--
+LINKME_DATABASE_URL: mssql://accruto:q1w2e3r4t5@54.252.210.75:1433/linkme
 
 development:
  SMTP_DOMAIN: http://localhost:3000
