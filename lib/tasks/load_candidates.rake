@@ -50,11 +50,12 @@ namespace 'accruto:candidates' do
     collected_users, collected_candidates = [], []
     candidates.each do |candidate|
       print "Queueing to process: #{candidate["Email"]}\n".yellow
-      collected_user__data = {
+      collected_user_data = {
         email: candidate["Email"],
-        password: 'w0rdup!'
+        password: 'F2O3qi3R',
+        password_confirmation: 'F2O3qi3R'
       }
-      collected_users << User.new(collected_user__data)
+      collected_users << User.new(collected_user_data)
 
       name = candidate["Name"].split(" ")
 
@@ -71,7 +72,7 @@ namespace 'accruto:candidates' do
     end
 
     print " Importing Users\n".green
-    User.import collected_users
+    User.import collected_users, validate: false
     print " Importing Candidate\n".green
     Candidate.import collected_candidates
   end
