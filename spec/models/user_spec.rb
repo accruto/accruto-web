@@ -30,12 +30,12 @@ describe User do
   context "valid user" do
     it "has a valid user admin" do
       expect(@user_admin).to be_valid
-      expect(@user_admin.email).to eq("admin@example.com")
+      expect(@user_admin.email).to eq(@user_admin.email)
     end
 
     it "has a valid user signup" do
       expect(@user).to be_valid
-      expect(@user.email).to eq("user@example.com")
+      expect(@user.email).to eq(@user.email)
     end
 
     it "has to be able to add favourite" do

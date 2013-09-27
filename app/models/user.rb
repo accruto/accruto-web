@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :candidate_attributes
   # attr_accessible :title, :body
 
   has_many :favourites
@@ -34,6 +34,9 @@ class User < ActiveRecord::Base
   has_many :job_applications
 
   before_create :set_default_preference
+
+  has_one :candidate
+  accepts_nested_attributes_for :candidate
 
   def favourite_job?(job_id)
     favourites.map(&:job_id).include?(job_id.to_i)

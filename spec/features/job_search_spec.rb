@@ -6,7 +6,7 @@ feature 'Job search' do
 			@job = create(:job)
 			visit root_path
       within(".main-search-jobs") do
-  			fill_in 'job_title', with: 'office'
+  			fill_in 'job_title', with: @job.title
   			click_button 'Search'
       end
       expect(page).to have_content(@job.title)
