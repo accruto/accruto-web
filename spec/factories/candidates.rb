@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :candidate do
+    association :user
     association :address
     first_name "Test"
     last_name "Candidate"

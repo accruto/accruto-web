@@ -5,16 +5,18 @@ Accruto::Application.routes.draw do
   devise_for :users
 
 
-  get "api/jobs", format: :xml
-  get "users/preference"
-  get "users/applications"
-  post "users/update_preference" , as: 'preferences'
-  put "users/update_preference" , as: 'preference'
+  get 'api/jobs', format: :xml
+  get 'users/preference'
+  get 'profile/edit', to: 'users#edit_profile', as: 'edit_profile'
+  put 'update_profile', to: 'users#update_profile', as: 'update_profile'
+  get 'users/applications'
+  post 'users/update_preference' , as: 'preferences'
+  put 'users/update_preference' , as: 'preference'
 
-  match "/delayed_job" => DelayedJobWeb, :anchor => false
+  match '/delayed_job' => DelayedJobWeb, :anchor => false
 
-  get "jobs/category/:category", to: "jobs#search"
-  get "/candidate_search/signup", to: "candidate_search_beta_users#signup", as: "candidate_search_signup"
+  get 'jobs/category/:category', to: 'jobs#search'
+  get '/candidate_search/signup', to: 'candidate_search_beta_users#signup', as: 'candidate_search_signup'
 
   resources :jobs do
   	resources :job_applications
@@ -28,7 +30,7 @@ Accruto::Application.routes.draw do
       delete 'clear_favourites'
 	  	## GET
       get 'search'
-	  	get ':job_id/apply', to: "job_applications#new", as: "apply"
+	  	get ':job_id/apply', to: 'job_applications#new', as: 'apply'
       get 'shortlist'
       get 'list'
       get 'location'
@@ -52,17 +54,17 @@ Accruto::Application.routes.draw do
   #   resources :referral_sites
   # end
 
-  get "pages/stylesheet"
-  get "pages/modal_apply"
-  get "pages/modal_signup"
-  get "pages/modal_email_alert"
-  get "pages/home"
-  get "/about", to: "pages#about"
-  get "/faq", to: "pages#faq"
-  get "/privacy", to: "pages#privacy"
-  get "/terms", to: "pages#terms"
-  get "/contact", to: "pages#contact"
-  post "pages/send_contact_form"
+  get 'pages/stylesheet'
+  get 'pages/modal_apply'
+  get 'pages/modal_signup'
+  get 'pages/modal_email_alert'
+  get 'pages/home'
+  get '/about', to: 'pages#about'
+  get '/faq', to: 'pages#faq'
+  get '/privacy', to: 'pages#privacy'
+  get '/terms', to: 'pages#terms'
+  get '/contact', to: 'pages#contact'
+  post 'pages/send_contact_form'
 
 
   root :to => 'pages#home'

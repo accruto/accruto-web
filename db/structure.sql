@@ -114,7 +114,8 @@ CREATE TABLE candidates (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     minimum_annual_salary integer,
-    user_id integer
+    user_id integer,
+    profile_photo character varying(255)
 );
 
 
@@ -1331,3 +1332,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130925032510');
 INSERT INTO schema_migrations (version) VALUES ('20130925034531');
 
 INSERT INTO schema_migrations (version) VALUES ('20130926060517');
+
+INSERT INTO schema_migrations (version) VALUES ('20130927054409');
