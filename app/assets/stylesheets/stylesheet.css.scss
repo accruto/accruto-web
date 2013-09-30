@@ -11,7 +11,7 @@
 
 	.modal-signup, .modal-apply, .modal-email-alert {
 		margin-top: 130px;
-		background-color: $grayLighter;
+		background-color: $gray-lighter;
 	}
 	.modal-apply {
 
@@ -20,14 +20,14 @@
 		margin: 0 0 0;
 	}
 	label {
-		color: $blueBrandDark;
+		color: $blueDark;
 	}
 }
 
 .modal-header {
 	padding: 10px 20px;
-	background-color: $yellow;
-	border: 1px solid $yellowDark;
+	background-color: $brand-danger;
+	border: 1px solid $brand-danger;
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-top-right-radius: 4px;
 	-moz-border-radius-topleft: 4px;
@@ -36,21 +36,20 @@
 	border-top-right-radius: 4px;
 
 	.close {
-		color: $black;
+		color: black;
 	}
 
 	h3 {
-		@include heading-four;
-		color: $blueBrandDark;
+		color: $blueDark;
 	}
 }
 
 .short-job-apply {
-	border-bottom: 1px solid $grayLight;
+	border-bottom: 1px solid $gray-light;
 	padding: 10px 40px 20px 40px;
-	background-color: $white;
+	background-color: white;
 	h4 {
-		color: $blueBrandDark;
+		color: $blueDark;
 	}
 	p {
 		line-height: 0;

@@ -4,10 +4,10 @@
   list-style: none;
   margin: 0;
   li:first-child {
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid $gray-lighter;
   }
   li:not(:last-child) {
-    border-bottom: 1px solid $grayLighter;
+    border-bottom: 1px solid $gray-lighter;
   }
   li {
     padding: 25px 0 10px 0;
@@ -15,34 +15,24 @@
   h4, p {
     padding: 0 20px;
   }
-  h4 {
-    @include heading-four;
-    font-weight: 600;
-    color: $blueBrandDark;
-    line-height:20px;
-    margin: 0;
-  }
-  p {
-    font-size: $fontSizeSmall;
-  }
   .candidate-headshot {
     width: 45px;
   }
   .label {
-    background: $grayLighter;
+    background: $gray-lighter;
     padding: 5px 8px;
   }
   .status-immediately-available, .visa-valid-work-visa, .visa-australian-resident {
     background: $green;
-    color: $white;
+    color: white;
   }
   .status-happy-to-talk, .visa-no-work-visa {
-    background: $grayLight;
-    color: $grayDarker;
+    background: $gray-light;
+    color: $gray-darker;
   }
   .status-actively-looking {
-    background: $yellowLight;
-    color: $grayDarker;
+    background: $brand-warning;
+    color: $gray-darker;
   }
   .candidate-info {
     text-align: center;

@@ -6,12 +6,12 @@
 	.control-label, .about-listing {
 		margin-top: 30px;
 		font-weight: 600;
-		color: $blueBrandDark;
+		color: $blueDark;
 	}
 }
 
 .about-listing {
-	color: $grayDarker !important;
+	color: $gray-darker !important;
 }
 
 
@@ -28,17 +28,17 @@
 
 .highlight-indent {
 	padding: 20px 20px;
-	background: $grayLighter;
+	background: $gray-lighter;
 }
 
 .job-form-preview .result-jobs {
-	border: 1px solid $goldLight;
+	border: 1px solid $brand-danger;
 }
 
 .addon-choices {
-	background: $white;
+	background: white;
 	a {
-		color: $grayDark;
+		color: $gray-dark;
 		&:hover {
 		text-decoration: none;
 		}
@@ -48,17 +48,17 @@
 	ul {
 		list-style: none;
 		margin: 0 0;
-		border: 1px solid $grayLighter;
+		border: 1px solid $gray-lighter;
 		border-bottom: 0px;
 	}
 
 	li {
 		padding: 20px 30px;
-		border-bottom: 1px solid $grayLighter;
+		border-bottom: 1px solid $gray-lighter;
 		&:hover, &.selected {
-			background: $yellowLight;
-			border-left: 3px solid $yellowDark;
-			color: $grayDarker;
+			background: $brand-danger;
+			border-left: 3px solid $brand-danger;
+			color: $gray-darker;
 		}
 	}
 
@@ -77,25 +77,24 @@
 
 .ad-price {
 	font-weight: 600;
-	color: $blueBrandDark;
+	color: $blueDark;
 }
 
 .result-jobs {
 	padding: 10px 0 0 20px;
-	background: $white;
+	background: white;
 
 }
 
 
 
 .page-header-post {
-	background: $yellow;
-	border-bottom: 1px solid $yellowDark;
+	background: $brand-danger;
+	border-bottom: 1px solid $brand-danger;
 	padding: 20px 0;
 	margin: 0 0 30px 0;
 	h1 {
-		@include heading-one;
-		color: $blueBrandDark;
+		color: $blueDark;
 		font-weight: 600;
 		margin: 0 0;
 	}
@@ -119,15 +118,15 @@
 	text-align: left;
 	padding: 20px 0 0 30px;
 	h3 {
-		@include heading-three;
+
 		margin-top: 0;
 	}
 }
 
 .amount-due {
 	font-weight: 600;
-	color: $blueBrandDark;
-	border-bottom: 2px dotted $grayLight;
+	color: $blueDark;
+	border-bottom: 2px dotted $gray-light;
 }
 
 
@@ -148,7 +147,7 @@
 	.page-header-post {
 		padding: 10px 0;
 		h1 {
-		@include heading-three;
+
 		font-weight: 600;
 		text-align: center;
 		}
@@ -167,7 +166,7 @@
 	}
 
 	.about-listing {
-		border-bottom: 1px solid $grayLight;
+		border-bottom: 1px solid $gray-light;
 		padding-bottom: 20px;
 	}
 

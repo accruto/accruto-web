@@ -7,13 +7,13 @@
 }
 
 .main-landing {
-	background-color: $blueBrandDark;
+	background-color: $blueDark;
 	margin-top:0;
 }
 
 .main-headline {
 	text-align:center;
-	color: $blueBrandDark;
+	color: $blueDark;
 	margin-bottom:30px;
 	font-size: 40px;
 }
@@ -24,20 +24,20 @@
 	border-top-left-radius: 0;
 
 	label {
-		color: $blueBrandDark;
+		color: $blueDark;
 		font-weight: 600;
 		font-size: 18px;
 
 	}
 	input[type="text"] {
-		border: 1px solid $yellowDark;
+		border: 1px solid $brand-warning;
 		height: 40px;
 		padding-left:10px;
 	}
 }
 
 .main-search-jobs {
-	background-color: $yellow;
+	background-color: $brand-warning;
 }
 
 .main-search-tabs-container {
@@ -53,21 +53,21 @@
 		border-top-right-radius: 3px;
 	}
 	.main-search-tab-jobs {
-		background: $yellow;
-		color: $blueBrandDark;
+		background: $brand-warning;
+		color: $blueDark;
 	}
 	.main-search-tab-candidates {
-		background: $blueBrandLight;
-		color: $white;
+		background: $blueLight;
+		color: white;
 	}
 }
 
 .main-search-candidates {
-	background-color: $blueBrandLight;
+	background-color: $blueLight;
 	h1 { color: white; }
 	label { color: white; }
 	input[type="text"] {
-		border: 0px solid $blueBrandDark;
+		border: 0px solid $blueDark;
 	}
 }
 .btn-main-search {
@@ -80,7 +80,7 @@
 }
 
 .error-message {
-	color: $red; text-align: center;
+	color: $brand-danger; text-align: center;
 }
 .success-message {
 	color: $green; text-align:center;
@@ -110,7 +110,7 @@
 		line-height: 0;
 	}
 	h3 {
-		color: $blueBrandDark;
+		color: $blueDark;
 	}
 	.how-it-works-centered {
 		text-align:center;
@@ -148,7 +148,7 @@
 }
 .sub-heading {
 	font-size: 18px;
-	color: $blueBrandDark;
+	color: $blueDark;
 	margin-top: 60px;
 }
 .category-list {
@@ -158,33 +158,30 @@
 		margin: 10px 0;
 	}
 	li a {
-		color: $grayDark;
+		color: $gray-dark;
 	}
 	a:hover {
-		color: $grayDarker;
+		color: $gray-dark;
 	}
 }
 
 .section-title {
-	@include heading-three;
 	margin-bottom: 30px;
-	color: $blueBrandDark;
+	color: $blueDark;
 }
 
 .bodycopy {
-	color: $grayDarker;
+	color: $gray-dark;
 }
 
 
 .talent-hunter {
-	background-color: $goldLight;
 
 	h3 {
-	@include heading-three;
-	color: $grayDark;
+	color: $gray-dark;
 	}
 	.to-linked-me {
-		border-bottom: 2px solid $grayLight;
+		border-bottom: 2px solid $gray-light;
 	}
 }
 
@@ -207,16 +204,16 @@
 }
 
 .contact-description {
-	color: $blueBrandDark;
+	color: $blueDark;
 }
 
 .contact-send {
-	background-color: $white;
-	border: 1px solid $goldLight;
+	background-color: white;
+	border: 1px solid $brand-warning;
 	padding: 20px 40px 0 20px ;
 
 	label {
-		color: $blueBrandDark;
+		color: $blueDark;
 	}
 }
 
@@ -265,7 +262,6 @@
 	}
 
 	.main-headline {
-		@include heading-four;
 		font-weight: 500;
 		line-height: 28px;
 
@@ -287,7 +283,6 @@
 	}
 
 	.section-title {
-		@include heading-four;
 		font-weight: 600;
 	}
 
@@ -303,7 +298,6 @@
 		margin-top: 40px;
 
 		h3 {
-		@include heading-four;
 		line-height: 28px;
 		}
 	}

@@ -1,9 +1,6 @@
 Accruto::Application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
   devise_for :users
-
 
   get 'api/jobs', format: :xml
   get 'users/preference'

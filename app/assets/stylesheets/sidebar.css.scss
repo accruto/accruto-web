@@ -23,9 +23,9 @@
 }
 
 h5.sidebar-title, h5.sidebar-title-small {
-  color: $black;
+  color: black;
   font-weight: 600;
-  border-bottom: 1px solid $grayLighter;
+  border-bottom: 1px solid $gray-lighter;
   padding-bottom: 5px;
   font-size: 16px;
 }
@@ -48,7 +48,7 @@ h5.sidebar-title-small {
     font-size: 12px;
   }
   span.empty {
-    color: $grayDark;
+    color: $gray-dark;
     font-size: 14px;
   }
   ul {
