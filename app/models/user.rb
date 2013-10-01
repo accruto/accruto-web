@@ -34,6 +34,7 @@ class User < ActiveRecord::Base
   has_many :job_applications
 
   before_create :set_default_preference
+  after_create :assign_role
 
   has_one :candidate
   accepts_nested_attributes_for :candidate
@@ -112,5 +113,13 @@ class User < ActiveRecord::Base
 
   def set_default_preference
     build_preference(email_frequency: 'Daily', next_alert_date: Date.today)
+  end
+
+  def assign_role
+    if self.candidate
+      self.add_role :candidate
+    else self.recruiter
+      #add role recruiter
+    end
   end
 end

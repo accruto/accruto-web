@@ -1,330 +1,161 @@
 @import "bootstrap-variables";
-@import "bootstrap/mixins";
 
-
-%section-space {
-	padding: 50px 0px;
+.btn-apply-now {
+  background: $green;
+  color: white;
+  padding: 15px 25px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 30px;
+  &:hover {
+    color: white;
+    background: darken($green, 8%);
+    transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
+  }
+  &.large {
+    font-size: 28px;
+    float: right;
+    &:hover {
+      color: white;
+    }
+  }
 }
 
-.main-landing {
-	background-color: $blueDark;
-	margin-top:0;
+// tint main content image to be a lil dark
+.content-featured:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(67, 99, 112, 0.6);
+  height: 610px;
 }
 
-.main-headline {
-	text-align:center;
-	color: $blueDark;
-	margin-bottom:30px;
-	font-size: 40px;
+// main content image
+.content-featured {
+  background: url(truck-driver.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 100px 0;
+  height: 550px;
+  h1 {
+    color: white;
+  }
+  h3, p {
+    color: white;
+  }
+}
+.homepage-job-titles {
+  padding: 0;
+  margin-top: 45px;
+  z-index: 3;
+  li {
+    list-style: none;
+    display: inline;
+    padding-right: 30px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: white !important;
+    opacity: 0.45;
+  }
 }
 
-.main-search-jobs, .main-search-candidates {
-	padding:20px 30px 10px 30px;
-	border-radius: 3px;
-	border-top-left-radius: 0;
-
-	label {
-		color: $blueDark;
-		font-weight: 600;
-		font-size: 18px;
-
-	}
-	input[type="text"] {
-		border: 1px solid $brand-warning;
-		height: 40px;
-		padding-left:10px;
-	}
+.content-blue-bg {
+  padding: 30px 0 40px 0;
+  background: $blue;
+  .benefit-content {
+    h3, p {
+      color: white;
+    }
+    h3 {
+      border-bottom: 2px solid white;
+      padding-bottom: 7px;
+    }
+    padding: 0 60px 0 0;
+  }
+  .steps-content {
+  	border-top: 3px solid white;
+  	padding: 20px 0 0 0;
+  	margin: 20px 200px 0 0;
+  }
+  .steps-apply, .steps-recruited {
+  	font-weight: 600;
+  	font-size: 23px;
+  	letter-spacing: 3px;
+  	color: white;
+  }
+  .steps-apply:before {
+  	content: "";
+  	display:block;
+  	background: white;
+  	width: 15px;
+  	height: 15px;
+  	border-radius: 100px;
+  	position:absolute;
+  	margin-top:-29px;
+  	margin-left:20px;
+  }
+  .steps-apply {
+  	margin-left: -15px;
+  }
+  .steps-recruited:before {
+  	content: "";
+  	display:block;
+  	background: white;
+  	width: 15px;
+  	height: 15px;
+  	border-radius: 100px;
+  	position:absolute;
+  	margin-top:-29px;
+  	margin-left:130px;
+  }
+  .steps-recruited {
+  	float: right;
+  	margin-left: 30px;
+  }
 }
 
-.main-search-jobs {
-	background-color: $brand-warning;
+.content {
+  padding: 30px 0;
+  h3 {
+    margin-top: 0px;
+  }
+}
+.padding-lg {
+  padding: 80px 0;
 }
 
-.main-search-tabs-container {
-	.main-search-tab-jobs, .main-search-tab-candidates {
+.profile-screen-container {
+	padding: 40px 0;
+	p {
 		display: inline-block;
-		margin-bottom:0px;
-		cursor:pointer;
+		margin-top: 10px;
 	}
-	.main-search-tab-jobs, .main-search-tab-candidates {
-		padding: 12px 20px;
-		font-weight: 600;
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
+	.col-md-2, .col-md-8 {
+		padding: 0;
 	}
-	.main-search-tab-jobs {
-		background: $brand-warning;
-		color: $blueDark;
-	}
-	.main-search-tab-candidates {
-		background: $blueLight;
-		color: white;
-	}
-}
-
-.main-search-candidates {
-	background-color: $blueLight;
-	h1 { color: white; }
-	label { color: white; }
-	input[type="text"] {
-		border: 0px solid $blueDark;
-	}
-}
-.btn-main-search {
-	margin-top: 30px;
-	width: 100% !important;
-}
-
-.btn-main-search-candidates {
-	width: 100% !important;
-}
-
-.error-message {
-	color: $brand-danger; text-align: center;
-}
-.success-message {
-	color: $green; text-align:center;
-	margin-bottom: 20px;
-}
-.customers, .browse-jobs, .partner-companies {
-	@extend %section-space;
-}
-
-.ticker {
-	padding: 20px 0;
-}
-.ticker h3 {
-	font-weight:100;
-	font-size: 28px;
-	color: white;
-}
-
-.updated-figures {
-	border-bottom: 2px dashed $blue;
-	margin: 0 5px;
-}
-
-.how-it-works {
-	padding: 80px 0 30px 0;
-	h3.section-title {
-		line-height: 0;
-	}
-	h3 {
-		color: $blueDark;
-	}
-	.how-it-works-centered {
+	.col-md-8 {
 		text-align:center;
-		padding: 10px 0 30px 0;
 	}
-	.line-recruiters, .line-candidates {
-		background: $gray;
-		width:5px;
+	.profile-description-left {
+		text-align: right;
 	}
-	.line-recruiters {
-		height: 180px;
+	.profile-description-right {
+		text-align: left;
 	}
-	.line-candidates {
-		height: 160px;
+	.desc-1 {
+		margin-top: 150px;
 	}
-	ul {
-		list-style: none;
-		padding: 0px;
-		margin: 0 0 0 14px;
-		li {
-			text-indent: -21px;
-		}
-		li:before{
-			content:'\00b7';
-			font-size:100px;
-			display:inline-block;
-			margin-right: 20px;
-			color: $green;
-		}
+	.desc-2 {
+		margin-top: 130px;
+	}
+	.desc-3 {
+		margin-top: 160px;
 	}
 }
-
-.browse-jobs {
-	padding-top: 0px;
-}
-.sub-heading {
-	font-size: 18px;
-	color: $blueDark;
-	margin-top: 60px;
-}
-.category-list {
-	list-style-type: none;
-	margin: 0;
-	li {
-		margin: 10px 0;
-	}
-	li a {
-		color: $gray-dark;
-	}
-	a:hover {
-		color: $gray-dark;
-	}
-}
-
-.section-title {
-	margin-bottom: 30px;
-	color: $blueDark;
-}
-
-.bodycopy {
-	color: $gray-dark;
-}
-
-
-.talent-hunter {
-
-	h3 {
-	color: $gray-dark;
-	}
-	.to-linked-me {
-		border-bottom: 2px solid $gray-light;
-	}
-}
-
-.ui-autocomplete-loading {
-    background: white url('/assets/autocomplete-loader.gif') right center no-repeat;
-}
-
-.state-location {
-    font-size: 14px;
-    color: #A5A5A5;
-    margin-top: -4px;
-}
-
-.basic-site {
-	padding: 40px 0;
-}
-
-.contact-form-container {
-	padding: 40px 0;
-}
-
-.contact-description {
-	color: $blueDark;
-}
-
-.contact-send {
-	background-color: white;
-	border: 1px solid $brand-warning;
-	padding: 20px 40px 0 20px ;
-
-	label {
-		color: $blueDark;
-	}
-}
-
-/* Larger ----------- */
-@media screen and (max-width: 1024px) {
-	.how-it-works ul {
-		margin: 0 0 0 18px;
-	}
-	.line-candidates {
-		height: 200px !important;
-	}
-	.line-recruiters {
-		height: 280px !important;
-	}
-}
-
-/* Smaller ----------- */
-@media screen and (max-width : 768px) {
-	%center-phone {
-		text-align: center;
-	}
-
-	body {
-		padding: 0;
-	}
-
-	input {
-		width: 90%;
-	}
-
-	input[type="submit"] {
-		width: 90%;
-	}
-
-
-	.btn-main-search {
-		width: 90%;
-		margin-top:10px;
-	}
-
-	.main-search-tab-jobs, .main-search-tab-candidates {
-		font-weight: 600;
-		font-size: 12px;
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
-	}
-
-	.main-headline {
-		font-weight: 500;
-		line-height: 28px;
-
-	}
-	.main-landing {
-		padding: 0 10px;
-	}
-
-	.browse-jobs{
-		padding: 0;
-	}
-
-	.customers, .ticker, .partner-companies {
-		padding: 0px 15px;
-	}
-
-	.customers, .talent-hunter {
-		@extend %center-phone;
-	}
-
-	.section-title {
-		font-weight: 600;
-	}
-
-	.customer-avatar, .customer-avatar-two {
-		margin-bottom: 20px;
-	}
-
-	.customer-avatar-two {
-		margin-top: 60px;
-	}
-
-	.talent-hunter {
-		margin-top: 40px;
-
-		h3 {
-		line-height: 28px;
-		}
-	}
-
-	.contact-indent {
-		margin-top: 40px;
-	}
-
-
-	.contact-send {
-	padding: 20px 10px 0 10px ;
-	text-align: left;
-	}
-
-	.how-it-works {
-		padding: 20px;
-		ul {
-			text-align: left;
-			padding: 0 20px !important;
-		}
-	}
-	.line-candidates {
-		display: none !important;
-	}
-	.line-recruiters {
-		display: none !important;
-	}
-
-} /* end */
-

@@ -1,14 +1,16 @@
 Accruto::Application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
 
   get 'api/jobs', format: :xml
   get 'users/preference'
-  get 'profile/edit', to: 'users#edit_profile', as: 'edit_profile'
-  put 'update_profile', to: 'users#update_profile', as: 'update_profile'
-  get 'users/applications'
   post 'users/update_preference' , as: 'preferences'
   put 'users/update_preference' , as: 'preference'
+  get 'users/applications'
+
+  get 'profile/edit', to: 'users#edit_profile', as: 'edit_profile'
+  put 'profile/update', to: 'users#update_profile', as: 'update_profile'
+  get 'profile/create', to: "users#create_profile", as: "create_profile"
 
   match '/delayed_job' => DelayedJobWeb, :anchor => false
 
@@ -56,6 +58,7 @@ Accruto::Application.routes.draw do
   get 'pages/modal_signup'
   get 'pages/modal_email_alert'
   get 'pages/home'
+  get 'pages/home_new'
   get '/about', to: 'pages#about'
   get '/faq', to: 'pages#faq'
   get '/privacy', to: 'pages#privacy'

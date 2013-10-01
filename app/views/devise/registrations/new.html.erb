@@ -1,28 +1,44 @@
-<% title "Create your account" %>
-<div class="container sign-up">
-	<div class="span4 hidden-phone">&nbsp;</div>
-		<div class="span4 minor">
-			<div class="sign-up-form">
-				<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-				  <%= f.error_notification %>
+<% title "Accruto - Sign Up" %>
+<div class="content static-pages">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h2>Sign up for Accruto</h2>
+				<div class="user-selection">
+					<div class="btn-group btn-group-lg">
+	          <button type="button" class="btn btn-success">Job Seeker</button>
+	          <button type="button" class="btn btn-default">Employer</button>
+	        </div>
+        </div>
+				<div class="sign-up-form">
+					<%= simple_form_for @user, :url => registration_path(resource_name) do |f| %>
+					  <%= f.error_notification %>
+					  <div class="form-inputs">
+					  	<%= f.simple_fields_for :candidate do |c| %>
+					  		<div class="row">
+					  			<div class="col-md-6">
+					  				<%= c.input :first_name, :autofocus => true %>
+					  			</div>
+					  			<div class="col-md-6">
+					  				<%= c.input :last_name %>
+					  			</div>
+					  		</div>
+						    <%= f.input :email, :required => true %>
+						    <%= f.input :password, :required => true %>
+						    <%= c.input :phone, :required => true %>
+					    <% end %>
+					  </div>
 
-				  <div class="form-inputs">
-				    <%= f.input :email, :required => true, :autofocus => true %>
-				    <%= f.input :password, :required => true %>
-				    <%= f.input :password_confirmation, :required => true %>
-				  </div>
-
-				  <div class="form-actions">
-				    <%= f.button :submit, "Sign up", :class=>"btn btn-primary btn-signup", disable_with: "Signing up..." %>
-				  </div>
-				<% end %>
-
-				<div class="align-center">
-					<%= render "devise/shared/links"%>
+					  <div class="form-actions">
+					    <%= f.button :submit, "Sign up", :class=>"btn btn-success", disable_with: "Signing up..." %>
+					  </div>
+					<% end %>
+					<br>
+					<%= render "devise/shared/links" %>
+					<hr>
+					<p class="small-note">Thank you for signing up with Accruto. We are the biggest blue-collared and skilled trade job portal in Australia. Good luck on searching for your perfect job!</p>
 				</div>
-			<hr>
-				<p class="small-note">Thanks for signing up with Accruto. You will be able to setup and get free email alerts for the jobs most relevant to you. Good luck hunting!</p>
-
 			</div>
 		</div>
+	</div>
 </div>

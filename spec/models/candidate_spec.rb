@@ -40,18 +40,6 @@ describe Candidate do
     it "without a last_name" do
       expect(build(:candidate, last_name: nil)).to have(1).errors_on(:last_name)
     end
-    it "without a job_title" do
-      expect(build(:candidate, job_title: nil)).to have(1).errors_on(:job_title)
-    end
-    it "without a status" do
-      expect(build(:candidate, status: nil)).to have(1).errors_on(:status)
-    end
-    it "without a visa" do
-      expect(build(:candidate, visa: nil)).to have(1).errors_on(:visa)
-    end
-    it "without a minimum_annual_salary" do
-      expect(build(:candidate, minimum_annual_salary: nil)).to have(1).errors_on(:minimum_annual_salary)
-    end
   end
 
   context "scopes" do

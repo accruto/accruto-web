@@ -1,9 +1,11 @@
 <% title "Contact Us" %>
-<div class="container">
-  <div class="contact-form-container">
-  	<div class="row-fluid">
-  		<div class="span3">
-        <h4>We want to hear from you!</h4>
+<div class="content static-pages">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <hr>
+  	<div class="row">
+  		<div class="col-md-6">
+        <h3>We want to hear from you!</h3>
        	<p class="contact-description">
           <ul>
             <li>Do you have a comment?</li>
@@ -14,25 +16,22 @@
           </ul>
         </p>
         <br>
-        <h4>Accruto Pty Ltd</h4>
+        <h3>Accruto Pty Ltd</h3>
         <p>
           ABN: 68 157 823 722 <br>
           Phone: 02 9280 2108
         </p>
-
   		</div>
-  		<div class="span6">
-				<div class="highlight-indent contact-indent">
-				<div class="contact-send">
+  		<div class="col-md-4">
+        <div class="contact-form">
           <%= simple_form_for @contact_form, url: pages_send_contact_form_path do |f| %>
           	<%= f.error_notification %>
-	          <%= f.input :full_name, wrapper_html: { class: 'name' } %>
-	          <%= f.input :email, wrapper_html: { class: 'email' } %>
-	          <%= f.input :about, collection: ['Feedback', 'Partnership', 'General Enquiries'], prompt: "Please Select One", wrapper_html: { class: 'options' } %>
-	          <%= f.input :message, as: :text, :input_html => { :rows => 4}, placeholder: 'Please type in your message here', label: 'Your message' %>
-	          <%= f.submit "Send Message", class: "btn btn-primary btn-apply-job", disable_with: "Sending..." %>
-	        <% end %>
-				</div>
+            <%= f.input :full_name, wrapper_html: { class: 'name' } %>
+            <%= f.input :email, wrapper_html: { class: 'email' } %>
+            <%= f.input :about, collection: ['Feedback', 'Partnership', 'General Enquiries'], prompt: "Please Select One", wrapper_html: { class: 'options' } %>
+            <%= f.input :message, as: :text, :input_html => { :rows => 4}, placeholder: 'Please type in your message here', label: 'Your message' %>
+            <%= f.submit "Send Message", class: "btn btn-success", disable_with: "Sending..." %>
+          <% end %>
   			</div>
   		</div>
   	</div>

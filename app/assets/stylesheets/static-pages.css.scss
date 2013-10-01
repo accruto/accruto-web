@@ -1,0 +1,14 @@
+@import 'bootstrap-variables';
+
+.content {
+  &.static-pages {
+    padding: 30px 0 60px 0;
+  }
+}
+
+.privacy, .terms {
+  padding: 0 80px;
+  ol {
+    padding-bottom: 20px;
+  }
+}

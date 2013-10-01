@@ -11,30 +11,28 @@
 
 $gray-darker:            lighten(#000, 13.5%) !default; // #222
 $gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray-light:             lighten(#000, 60%) !default;   // #999
+$gray-light:             lighten(#000, 80%) !default;   // #999
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
 // Brand colors
 // -------------------------
 
 $brand-primary:         #2980b9  !default;
-$brand-success:         #2ecc71 !default;
+$brand-success:         #5fbba5 !default;
 $brand-warning:         #f1c40f !default;
 $brand-danger:          #e74c3c !default;
 $brand-info:            #3498db !default;
 
 $gray:                  #c2d1d8 !default;
-$blueLighter:           #e9f2f7 !default;
-$blueLight:             #7f95a0 !default;
-$blue:                  #27a0d5 !default;
-$blueDark:              #7a8c95 !default;
-$blueDarker:              #151a1d !default;
-$green:                 #aee118 !default;
+$blue:                  #436370 !default;
+$blue-dark:             #2b3f49 !default;
+$green:                 #5fbba5 !default;
+$yellow:                #fcd60c !default;
 // Scaffolding
 // -------------------------
 
 $body-bg:               #fff !default;
-$text-color:            $blueDarker !default;
+$text-color:            $blue-dark !default;
 
 // Links
 // -------------------------
@@ -243,10 +241,10 @@ $grid-float-breakpoint:     $screen-tablet !default;
 
 // Basics of a navbar
 $navbar-height:                    50px !default;
-$navbar-margin-bottom:             $line-height-computed !default;
-$navbar-default-color:             $gray !default;
+$navbar-margin-bottom:             0 !default;
+$navbar-default-color:             $gray-dark !default;
 $navbar-default-bg:                white !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-border:            transparent !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor($grid-gutter-width / 2) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
@@ -274,13 +272,13 @@ $navbar-default-toggle-border-color:       #ddd !default;
 // Inverted navbar
 //
 // Reset inverted navbar basics
-$navbar-inverse-color:                      $gray-light !default;
-$navbar-inverse-bg:                         #222 !default;
-$navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-color:                      white !default;
+$navbar-inverse-bg:                         $blue-dark !default;
+$navbar-inverse-border:                     transparent !default;
 
 // Inverted navbar links
-$navbar-inverse-link-color:                 $gray-light !default;
-$navbar-inverse-link-hover-color:           #fff !default;
+$navbar-inverse-link-color:                 white !default;
+$navbar-inverse-link-hover-color:           $yellow !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
@@ -368,20 +366,20 @@ $jumbotron-heading-color:        inherit !default;
 // Form states and alerts
 // -------------------------
 
-$state-warning-text:             white !default;
-$state-warning-bg:               #f1c40f !default;
+$state-warning-text:             $brand-warning !default;
+$state-warning-bg:               $brand-warning !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 3%) !default;
 
-$state-danger-text:              white !default;
-$state-danger-bg:                #e74c3c !default;
+$state-danger-text:              $brand-danger !default;
+$state-danger-bg:                $brand-danger !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 3%) !default;
 
-$state-success-text:             white !default;
-$state-success-bg:               #2ecc71 !default;
+$state-success-text:             $brand-success !default;
+$state-success-bg:               $brand-success !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
-$state-info-text:                white !default;
-$state-info-bg:                  #3498db !default;
+$state-info-text:                $brand-info !default;
+$state-info-bg:                  $brand-info !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
 
@@ -444,7 +442,7 @@ $modal-footer-border-color:   $modal-header-border-color !default;
 
 // Alerts
 // -------------------------
-$alert-padding:               15px !default;
+$alert-padding:               8px !default;
 $alert-border-radius:         $border-radius-base !default;
 $alert-link-font-weight:      bold !default;
 
@@ -624,6 +622,3 @@ $container-desktop:           ((940px + $grid-gutter-width)) !default;
 
 // Large screen / wide desktop
 $container-lg-desktop:        ((1140px + $grid-gutter-width)) !default;
-
-@import "bootstrap";
-@import "bootstrap/glyphicons";

@@ -14,6 +14,9 @@ class UsersController < ApplicationController
   	@job_applications = current_user.job_applications
   end
 
+  def create_profile
+  end
+
   def edit_profile
     @user = User.find(current_user.id)
     unless @user.candidate

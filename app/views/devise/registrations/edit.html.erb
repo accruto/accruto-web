@@ -1,19 +1,21 @@
 <% title "User Settings" %>
-<div class="container">
-	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-	  <%= f.error_notification %>
-	    <%= f.input :email, :required => true, :autofocus => true %>
-	    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-	      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-	    <% end %>
-	    <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-	    <%= f.input :password_confirmation, :required => false %>
-	    <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
-	    <%= f.button :submit, "Update" %>
-	<% end %>
-
-	<ul class="user-settings-links">
-		<li><%= link_to "Email Preferences", users_preference_path %></li>
-		<li><%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></li>
-	</ul>
+<div class="content">
+	<div class="container">
+		<h2>Edit Settings</h2>
+		<div class="col-md-4">
+			<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+			  <%= f.error_notification %>
+			    <%= f.input :email, :required => true, :autofocus => true %>
+			    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+			      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+			    <% end %>
+			    <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
+			    <%= f.input :password_confirmation, :required => false %>
+			    <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
+			    <%= f.button :submit, "Update", class: "btn btn-success" %>
+			<% end %>
+			<br>
+			<%= link_to "Email Preferences", users_preference_path %> | <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>
+		</div>
+	</div>
 </div>
