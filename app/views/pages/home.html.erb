@@ -1,183 +1,110 @@
-<% title "Accruto - Find Jobs and Kickstart Your New Career." %>
-<div class="main-landing">
-	<div class="container">
-		<div class="main-search-tabs-container">
-		<span id="search-jobs_tab" class="main-search-tab main-search-tab-jobs">
-			SEARCH JOBS
-		</span>
-		<span id="search-candidates_tab" class="main-search-tab main-search-tab-candidates">
-			SEARCH CANDIDATES
-		</span>
-		</div>
-		<div id="search-jobs_content" class="main-search-content main-search-jobs">
-			<h1 class="main-headline hidden-phone">More than 600,000 job seekers use us to <br>search for their new career.</h1>
-			<h1 class="main-headline visible-phone">It's time. Find your new career.</h1>
-			<%= form_tag search_jobs_path, method: :get do %>
-			  <div class="row-fluid">
-			  	<div class="span5">
-			  		<label>Job title</label>
-			  		<%= text_field_tag :job_title, params[:job_title], placeholder: 'Job Title' %>
-			  	</div>
-			  	<div class="span5">
-			  		<label>Location</label>
-			  		<%= text_field_tag :address, params[:address], placeholder: 'City or State' %>
-			  	</div>
-			  	<div class="span2">
-			  		<%= submit_tag "Search", class: 'btn-primary btn-large btn-main-search' %>
-			  	</div>
-			  </div>
-			<% end %>
-		</div>
-		<div id="search-candidates_content" class="main-search-content main-search-candidates hidden">
-			<h1 class="main-headline hidden-phone">Want to search through a database of <br>more than 600,000 job seekers?</h1>
-			<h1 class="main-headline visible-phone">Want to search through a database of <br>more than 600,000 job seekers?</h1>
-			<%= simple_form_for :search, url: search_candidates_path, method: :get do |f| %>
-			  <div class="row-fluid">
-          <div class="span5">
-            <label>Job title</label>
-            <%= f.input_field :job_title, placeholder: 'Job Title' %>
+<% title "Accelerating Recruitment for Skilled Trades." %>
+<div class="content-featured">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>Accelerating Recruitment <br>For Skilled Trades.</h1>
+        <h3>Get immediate job offers from top companies in Australia</h3>
+        <a href="<%= new_user_registration_path %>" class="btn btn-apply-now">APPLY NOW</a>
+        <ul class="homepage-job-titles">
+          <li>TRUCK DRIVERS</li>
+          <li>LABOURERS</li>
+          <li>FORKLIFT DRIVERS</li>
+          <li>AND MANY MORE</li>
+        </ul>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>
+<div class="content-blue-bg">
+  <div class="container">
+    <div class="col-md-3 benefit-content">
+      <h3>Community</h3>
+      <p>We only focus on matching sklled trades and technical job seekers with employers.</p>
+    </div>
+    <div class="col-md-3 benefit-content">
+      <h3>Get the right job</h3>
+      <p>The perfect job isn't about a paycheck. We help you find the right job that suits you.</p>
+    </div>
+    <div class="col-md-3 benefit-content">
+      <h3>Salary upfront</h3>
+      <p>Save time by knowing your future salary and overtime before you interview.</p>
+    </div>
+    <div class="col-md-3 benefit-content">
+      <h3>Privacy</h3>
+      <p>Your profile is not visible to the public or your current employer.</p>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="container">
+    <h2>How it works</h2>
+    <h3>Step 1 - Create your skilled trade profile.</h3>
+    <div class="profile-screen-container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="profile-description-left desc-1">
+            <strong>A profile page</strong> that tells your story.
           </div>
-          <div class="span5">
-            <label>Location</label>
-            <%= f.input_field :address, placeholder: 'City or State' %>
-          </div>
-          <div class="span2">
-            <%= submit_tag "Search", class: 'btn-primary btn-large btn-main-search' %>
+          <div class="profile-description-left desc-2">
+            <strong>Organise</strong> your work experience and skills in a very readable manner.
           </div>
         </div>
-			<% end %>
-		</div>
-		<div class="row ticker search-jobs_ticker">
-			<div class="align-center">
-				<h3>There are currently<span class="updated-figures"> <%= number_with_delimiter(total_jobs) %> </span>Australian Jobs posted on Accruto
-				</h3>
-			</div>
-		</div>
-		<div class="row ticker search-candidates_ticker hidden">
-			<div class="align-center">
-				<h3>There are currently<span class="updated-figures"> 343,400 </span>Australian Candidate Profiles on Accruto
-				</h3>
-			</div>
-		</div>
-	</div>
+        <div class="col-md-8">
+          <%= image_tag "profile-screen.png" %>
+          <p>Your profile is always hidden from current & past employers</p>
+        </div>
+        <div class="col-md-2">
+          <div class="profile-description-right desc-3">
+            <strong>One-click to export</strong> your profile into a word document for your offline use.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<%= render 'layouts/shared/flash_messages' %>
-<div class="container">
-	<div class="how-it-works">
-		<div class="row">
-			<div class="align-center">
-				<h3 class="section-title">How It Works</h3>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span6">
-				<div class="how-it-works-centered">
-					<h3>For job seekers</h3>
-					<%= image_tag "job_seeker_icon.png" %>
-				</div>
-				<div class="how-it-works-candidates">
-					<div class="row-fluid">
-						<div class="span1 offset3 line-candidates">
-						</div>
-						<div class="span6">
-							<ul>
-								<li>Search jobs</li>
-								<li>Add jobs to shortlist</li>
-								<li>Send personalised job application emails to employers</li>
-								<li>Get cash rewards for referring friends</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="span6">
-				<div class="how-it-works-centered">
-					<h3>For recruiters</h3>
-					<%= image_tag "employer_icon.png" %>
-				</div>
-				<div class="how-it-works-recruiters">
-					<div class="row-fluid">
-						<div class="span1 offset3 line-recruiters">
-						</div>
-						<div class="span6">
-							<ul>
-								<li>Search candidates</li>
-								<li>Add candidates to shortlist</li>
-								<li>Send personalised and company branded emails to candidates</li>
-								<li>Offer cash rewards to candidates that successfully refer their friends</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="browse-jobs">
-		<div class="row hidden-phone">
-			<div class="span6">
-				<h4 class="sub-heading">Browse job categories</h4>
-			</div>
-		</div>
-		<div class="row hidden-phone visible-desktop visible-tablet">
-			<% @categories.in_groups(4, false).each do |group| %>
-				<div class="span3">
-					<ul class="category-list">
-						<% group.each do |category| %>
-							<li><a href="/jobs/category/<%= category.slug %>"><%= category.name %></a></li>
-						<% end %>
-					</ul>
-				</div>
-			<% end %>
-		</div>
-	</div>
-	<!-- hr -->
-	<div class="customers hidden">
-		<div class="row">
-			<div class="align-center">
-				<h3 class="section-title">What Our Customers Say</h3>
-			</div>
-		</div>
-		<div class="row">
-				<div class="span2">
-					<div class="align-center">
-						<%= image_tag "/assets/placeholder-customer-1.png", :class=> "customer-avatar" %>
-					</div>
-				</div>
-				<div class="span4 ">
-					<p class="bodycopy ">This is an example of body copy. ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-					</br>
-					<span class="blue-accent">— K. Jackson, Brisbane QLD</span>
-				</div>
-				<div class="span2">
-					<div class="align-center">
-						<%= image_tag "/assets/placeholder-customer-2.png", :class=> "customer-avatar-two" %>
-					</div>
-				</div>
-				<div class="span4 ">
-					<p class="bodycopy ">This is an example of body copy. ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-					</br>
-					<span class="blue-accent">— K. Jackson, Brisbane QLD</span>
-				</div>
-			</div>
-	</div>
-	<!-- hr -->
-	<div class="row partner-companies hidden">
-		<div class="align-center">
-			<h3 class="section-title">Companies &amp; Hiring Partners</h3>
-			<%= image_tag "/assets/companies-logo.png" %>
-		</div>
-	</div>
+<div class="content-blue-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 benefit-content">
+        <h3>Step 1 - Create Profile</h3>
+        <p>Create and complete your skilled trade profile to be discovered by employers.</p>
+      </div>
+      <div class="col-md-3 benefit-content">
+        <h3>Step 2 - Get Offers</h3>
+        <p>Receive offers with info about the salary package, overtime pay and more.</p>
+      </div>
+      <div class="col-md-3 benefit-content">
+        <h3>Step 3 - Interview</h3>
+        <p>Choose which employers you want to interview with.</p>
+      </div>
+      <div class="col-md-3 benefit-content">
+        <h3>Find your new job</h3>
+        <p>Accept a job offer and start the next phase of your exciting career!</p>
+      </div>
+    </div>
+    <div class="row steps-content">
+      <div class="col-md-3">
+        <span class="steps-apply">APPLY</span>
+      </div>
+      <div class="col-md-3"></div>
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+        <span class="steps-recruited">RECRUITED</span>
+      </div>
+    </div>
+  </div>
 </div>
-
-<div class="talent-hunter hidden">
-	<div class="container">
-		<div class="row">
-			<div class="align-center">
-					<h3>Are you a Recruiter? Take a look at our custom solution, <a class="to-linked-me">Talent Hunter</a></h3>
-			</div>
-		</div>
-
-	</div>
+<div class="content padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="jumbo">Create your profile now and <br>start getting job offers.</h2>
+      </div>
+      <div class="col-md-3">
+        <a href="<%= new_user_registration_path %>" class="btn btn-apply-now large">APPLY NOW</a>
+      </div>
+    </div>
+  </div>
 </div>
-
-

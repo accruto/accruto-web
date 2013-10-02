@@ -1,13 +1,14 @@
 <% title "Email Preferences" %>
-<div class="container">
-  <%= simple_form_for @preference do |f| %>
-    <%= f.input :email_frequency, :as => :select, label: "How often should we send you job alert emails?" do %>
-      <%= f.select :email_frequency, Preference::EMAIL_FREQUENCY %>
+<div class="content">
+  <div class="container">
+    <h2>Email Preferences</h2>
+    <%= simple_form_for @preference do |f| %>
+      <%= f.input :email_frequency, :as => :select, label: "How often should we send you job alert emails?" do %>
+        <%= f.select :email_frequency, Preference::EMAIL_FREQUENCY %>
+      <% end %>
+      <%= f.button :submit, value: 'Update Preference', class: "btn btn-success btn-lg" %>
     <% end %>
-    <%= f.button :submit, value: 'Update Preference' %>
-  <% end %>
-
-  <ul class="user-settings-links">
-  	<li><%= link_to "User Settings", edit_user_registration_path %></li>
-  </ul>
+    <br>
+    <%= link_to "User Settings", edit_user_registration_path %>
+  </div>
 </div>

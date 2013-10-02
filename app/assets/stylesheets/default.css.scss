@@ -1,0 +1,100 @@
+@import 'bootstrap-variables';
+
+//site-wide styles
+.align-center {
+  text-align:center;
+}
+
+h1 {
+  font-size: 55px;
+  font-weight:600;
+}
+h2 {
+  font-weight: 600;
+  font-size: 30px;
+}
+h2.jumbo {
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.form-control {
+  color: $gray-dark;
+}
+
+.input-group-addon, input[type=text], input[type=email], input[type=email], input[type=password], input[type=tel], input[type=number], input[type=file], textarea {
+  border: 2px solid $gray-light !important;
+  box-shadow: none !important;
+  &:focus {
+    border: 2px solid $green !important;
+    transition: border .25s ease-in-out;
+    -moz-transition: border .25s ease-in-out;
+    -webkit-transition: border .25s ease-in-out;
+  }
+}
+
+.input-group-addon {
+  border-right: none !important;
+}
+
+.has-error {
+  .input-group-addon, input[type=text], input[type=email], input[type=email], input[type=password], input[type=tel], input[type=number], input[type=file], textarea {
+    border: 2px solid $brand-danger !important;
+  }
+}
+
+.alert {
+  color: white;
+  margin: 20px 0;
+  padding: 8px 12px;
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+  &.alert-prompt {
+    background: $yellow-light;
+    color: $yellow-dark;
+    a {
+      color: $gray-dark;
+    }
+  }
+}
+
+.help-block {
+  color: $brand-danger !important;
+}
+
+// sticky footer
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+footer {
+  height: 120px;
+}
+footer {
+  background-color: #eee;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+footer {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+}

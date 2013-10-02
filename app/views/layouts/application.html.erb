@@ -2,19 +2,13 @@
 <html>
 	<%= render 'layouts/shared/head_content' %>
 	<body>
-		<%= render 'layouts/shared/nav' %>
-		<div class="page-header-post">
-		    <div class="container ">
-		      <h1><%= yield(:title) %></h1>
-		    </div>
-		</div>
-		<div class="container">
-			<%= render 'layouts/shared/flash_messages' %>
-			<div class="row-fluid">
-				<div class="span12">
-					<%= yield %>
-				</div>
+		<div id="wrap">
+			<%= render 'layouts/shared/nav' %>
+			<div class="container">
+				<%= render 'layouts/shared/flash_messages' %>
 			</div>
+			<%= yield %>
+			<div id="push"></div>
 		</div>
 	  <%= render 'layouts/shared/footer' %>
 	  <% if Rails.env.production? %>

@@ -14,6 +14,8 @@
 #  updated_at            :datetime         not null
 #  minimum_annual_salary :integer
 #  user_id               :integer
+#  profile_photo         :string(255)
+#  summary               :text
 #
 
 class Candidate < ActiveRecord::Base
@@ -22,8 +24,9 @@ class Candidate < ActiveRecord::Base
 
   attr_accessible :address_id, :user_id, :first_name, :job_title, :last_name,
                   :phone, :status, :visa, :minimum_annual_salary, :updated_at,
-                  :profile_photo
-  validates :first_name, :last_name, :job_title, :status, :visa, :minimum_annual_salary, presence: true
+                  :profile_photo, :resume_attributes, :summary
+
+  validates :first_name, :last_name, presence: true
   belongs_to :address
   belongs_to :user
 

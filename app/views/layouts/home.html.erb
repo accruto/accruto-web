@@ -2,8 +2,11 @@
 <html>
 <%= render 'layouts/shared/head_content' %>
 <body>
-  <%= render 'layouts/shared/nav' %>
-  <%= yield %>
+  <div id="wrap">
+    <%= render 'layouts/shared/nav' %>
+    <%= yield %>
+    <div id="push"></div>
+  </div>
   <%= render 'layouts/shared/footer' %>
   <% if Rails.env.production? %>
   	<script>

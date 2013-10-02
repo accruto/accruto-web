@@ -1,13 +1,20 @@
 <footer>
-  <div class="align-center">
-    <ul class="inline">
-      <li><a href="<%= about_path %>">About Us</a></li>
-      <li class="hidden"><a href="#">Browse Jobs</a></li>
-      <li class="hidden-phone"><a href="<%= privacy_path %>">Privacy Policy</a></li>
-      <li class="hidden-phone"><a href="<%= terms_path %>">Terms</a></li>
-      <li><a href="<%= contact_path %>">Contact Us</a></li>
-      <li class="hidden-phone"><a href="<%= new_job_path %>">Post a free job ad</a></li>
-      <li class="hidden-phone hidden"><a href="#">Employee &amp; Recruiter Solutions</a></li>
-    </ul>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+        <%= image_tag "logo-footer.png", class: "logo-footer" %>
+      </div>
+      <div class="col-md-11">
+        <ul>
+          <li><a href="<%= about_path %>">About Us</a></li>
+          <li class="hidden"><a href="#">Browse Jobs</a></li>
+          <li class="hidden-phone"><a href="<%= privacy_path %>">Privacy Policy</a></li>
+          <li class="hidden-phone"><a href="<%= terms_path %>">Terms</a></li>
+          <li><a href="<%= contact_path %>">Contact Us</a></li>
+          <li class="hidden-phone hidden"><a href="#">Employee &amp; Recruiter Solutions</a></li>
+        </ul>
+      </div>
+      <p>Copyright Accruto Pty Ltd 2013 | Accelerating Recruitment.</p>
+    </div>
   </div>
 </footer>
