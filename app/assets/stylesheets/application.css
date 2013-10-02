@@ -14,5 +14,6 @@
  *= require dataTables/jquery.dataTables.bootstrap
  *= require chosen
  *= require jquery.ui.autocomplete
+ *= require select2
  */
 

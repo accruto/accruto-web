@@ -10,10 +10,35 @@
   }
 }
 
-.section {
+.section:not(:first-child) {
   padding: 20px 0;
 }
 
 .profile-summary {
   height: 200px !important;
+}
+
+.select2-container {
+  padding: 0;
+  border: 2px solid $gray;
+}
+.select2-choice {
+  border: 0px solid white !important;
+  background: transparent !important;
+  height: 100% !important;
+  padding-top: 4px !important;
+}
+.select2-drop {
+  border: 2px solid $gray !important;
+}
+.select2-search input[type=text] {
+  margin: 5px 0;
+  border: 2px solid $gray !important;
+}
+.select2-highlighted {
+  background: $green !important;
+}
+.select2-arrow {
+  background: transparent !important;
+  border: 0px solid $gray !important;
 }

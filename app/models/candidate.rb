@@ -30,6 +30,10 @@ class Candidate < ActiveRecord::Base
   belongs_to :address
   belongs_to :user
 
+  has_many :experiences
+  has_many :trade_qualifications
+  has_many :educations
+
   scope :search_by_job_title, lambda { |title_keyword| _title_has(title_keyword) if title_keyword.present? }
   scope :filter_by_address, lambda { |address| joins(:address).where("addresses.city @@ :q or addresses.state @@ :q", q: address.downcase) if address.present? }
   scope :filter_by_updated_at, lambda { |days| where("updated_at >= ?", days.to_i.days.ago) if days.present? }
@@ -49,7 +53,7 @@ class Candidate < ActiveRecord::Base
             ]
 
   VISA    = [
-              "Australian Resident",
+              "Australian Resident / Citizen",
               "Valid work visa",
               "No work visa"
             ]

@@ -26,11 +26,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def after_sign_up_path_for(resource)
-		if current_user.has_role? :candidate
-			create_profile_path
-		else
-			root_path
-		end
+		create_profile_path
 	end
 
 	def after_sign_out_path_for(resource)
@@ -38,10 +34,6 @@ class ApplicationController < ActionController::Base
 	end
 
 	def after_inactive_sign_up_path_for(resource)
-		if current_user.has_role? :candidate
-			create_profile_path
-		else
-			root_path
-		end
+		create_profile_path
 	end
 end
