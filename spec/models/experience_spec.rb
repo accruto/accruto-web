@@ -2,13 +2,15 @@
 #
 # Table name: experiences
 #
-#  id         :integer          not null, primary key
-#  company    :string(255)
-#  job_title  :string(255)
-#  started_at :datetime
-#  ended_at   :datetime
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id           :integer          not null, primary key
+#  company      :string(255)
+#  job_title    :string(255)
+#  started_at   :datetime
+#  ended_at     :datetime
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  current      :boolean
+#  candidate_id :integer
 #
 
 require 'spec_helper'

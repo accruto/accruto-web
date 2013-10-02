@@ -251,12 +251,13 @@ ALTER SEQUENCE delayed_jobs_id_seq OWNED BY delayed_jobs.id;
 
 CREATE TABLE educations (
     id integer NOT NULL,
-    instituition character varying(255),
+    institution character varying(255),
     qualification character varying(255),
-    type character varying(255),
+    qualification_type character varying(255),
     graduated_at timestamp without time zone,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    candidate_id integer
 );
 
 
@@ -290,7 +291,9 @@ CREATE TABLE experiences (
     started_at timestamp without time zone,
     ended_at timestamp without time zone,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    current boolean,
+    candidate_id integer
 );
 
 
@@ -754,7 +757,7 @@ CREATE TABLE schema_migrations (
 CREATE TABLE trade_qualifications (
     id integer NOT NULL,
     name character varying(255),
-    year timestamp without time zone,
+    attained_at timestamp without time zone,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     candidate_id integer
@@ -1438,3 +1441,15 @@ INSERT INTO schema_migrations (version) VALUES ('20131002042934');
 INSERT INTO schema_migrations (version) VALUES ('20131002043714');
 
 INSERT INTO schema_migrations (version) VALUES ('20131002043807');
+
+INSERT INTO schema_migrations (version) VALUES ('20131002044556');
+
+INSERT INTO schema_migrations (version) VALUES ('20131002050833');
+
+INSERT INTO schema_migrations (version) VALUES ('20131002060906');
+
+INSERT INTO schema_migrations (version) VALUES ('20131002061854');
+
+INSERT INTO schema_migrations (version) VALUES ('20131002063548');
+
+INSERT INTO schema_migrations (version) VALUES ('20131002064229');

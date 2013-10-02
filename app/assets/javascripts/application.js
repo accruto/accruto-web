@@ -17,4 +17,5 @@
 //= require dataTables/jquery.dataTables
 //= require dataTables/jquery.dataTables.bootstrap
 //= require chosen-jquery
+//= require select2
 //= require_tree .

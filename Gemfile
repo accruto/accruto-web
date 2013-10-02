@@ -33,6 +33,7 @@ gem 'carrierwave', '~> 0.9.0'
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
 gem 'virtus'
+gem "select2-rails", "~> 3.5.0"
 
 group :production do
   gem 'rails_12factor'
@@ -62,7 +63,6 @@ group :development do
 	gem 'better_errors', '~> 0.9.0'
 	gem 'byebug', '~> 2.1.1'
 	gem 'annotate', '>=2.5.0'
-	gem 'rails-footnotes', '>= 3.7.9'
 	gem 'guard-livereload', '~> 1.4.0'
 	gem 'rack-livereload', '~> 0.3.15'
 end

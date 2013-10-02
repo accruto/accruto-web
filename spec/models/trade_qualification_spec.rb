@@ -4,7 +4,7 @@
 #
 #  id           :integer          not null, primary key
 #  name         :string(255)
-#  year         :datetime
+#  attained_at  :datetime
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  candidate_id :integer
