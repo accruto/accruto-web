@@ -21,8 +21,8 @@
 #
 
 class Resume < ActiveRecord::Base
-  attr_accessible :affiliations, :awards, :candidate_id, :citizenship, 
-                  :courses, :interests, :objective, :other, :professional, 
+  attr_accessible :affiliations, :awards, :candidate_id, :citizenship,
+                  :courses, :interests, :objective, :other, :professional,
                   :referees, :skills, :summary, :updated_at_linkme
   belongs_to :candidate
 end

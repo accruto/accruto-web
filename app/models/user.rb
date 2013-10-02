@@ -15,6 +15,7 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  active                 :boolean
 #
 
 class User < ActiveRecord::Base
@@ -118,7 +119,6 @@ class User < ActiveRecord::Base
   def assign_role
     if self.candidate
       self.add_role :candidate
-    else self.recruiter
       #add role recruiter
     end
   end

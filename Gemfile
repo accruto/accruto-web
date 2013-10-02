@@ -32,6 +32,7 @@ gem 'activerecord-import', github: 'dferdian/activerecord-import'
 gem 'carrierwave', '~> 0.9.0'
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
+gem 'virtus'
 
 group :production do
   gem 'rails_12factor'

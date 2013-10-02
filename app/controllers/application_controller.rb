@@ -21,9 +21,7 @@ class ApplicationController < ActionController::Base
 		if current_user.has_role? :admin
 			admin_jobs_path
 		elsif current_user.has_role? :candidate
-			create_profile_path
-		else
-			session[:previous_url] || root_path
+			edit_profile_path
 		end
 	end
 

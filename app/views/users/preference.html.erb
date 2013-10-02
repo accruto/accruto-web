@@ -6,7 +6,7 @@
       <%= f.input :email_frequency, :as => :select, label: "How often should we send you job alert emails?" do %>
         <%= f.select :email_frequency, Preference::EMAIL_FREQUENCY %>
       <% end %>
-      <%= f.button :submit, value: 'Update Preference', class: "btn btn-success" %>
+      <%= f.button :submit, value: 'Update Preference', class: "btn btn-success btn-lg" %>
     <% end %>
     <br>
     <%= link_to "User Settings", edit_user_registration_path %>

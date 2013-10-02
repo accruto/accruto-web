@@ -14,6 +14,8 @@
 #  updated_at            :datetime         not null
 #  minimum_annual_salary :integer
 #  user_id               :integer
+#  profile_photo         :string(255)
+#  summary               :text
 #
 
 require 'spec_helper'
