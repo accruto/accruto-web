@@ -47,15 +47,15 @@ class Candidate < ActiveRecord::Base
   end
 
   STATUS  = [
-              "Immediately available",
-              "Actively looking",
-              "Happy to talk"
+              "Immediately Available",
+              "Actively Looking",
+              "Happy To Talk"
             ]
 
   VISA    = [
-              "Australian Resident / Citizen",
-              "Valid work visa",
-              "No work visa"
+              "Australian Residency or Citizenship",
+              "Valid Work Visa",
+              "No Work Visa"
             ]
 
   private

@@ -14,6 +14,7 @@ class Profile
   attr_reader :status
   attr_reader :visa
   attr_reader :minimum_annual_salary
+  attr_reader :profile_photo
 
   attr_reader :experience_company
   attr_reader :experience_job_title
@@ -38,6 +39,7 @@ class Profile
   attribute :status, String
   attribute :visa, String
   attribute :minimum_annual_salary, Integer
+  attribute :profile_photo, String
 
   attribute :experience_company, String
   attribute :experience_job_title, String
@@ -111,7 +113,8 @@ class Profile
         summary: summary,
         status: status,
         visa: visa,
-        minimum_annual_salary: minimum_annual_salary
+        minimum_annual_salary: minimum_annual_salary,
+        profile_photo: profile_photo
       }
 
       experience_attributes = {

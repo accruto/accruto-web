@@ -1,0 +1,74 @@
+<%= simple_form_for @profile, url: update_profile_path do |f| %>
+  <div class="container">
+    <div class="section">
+      <h3>Personal Information</h3>
+      <hr>
+      <div class="row">
+        <div class="col-md-3">
+          <%= f.input :first_name, :autofocus => true, :required => true %>
+        </div>
+        <div class="col-md-3">
+          <%= f.input :last_name %>
+        </div>
+        <div class="col-md-3">
+          <%= f.input :email %>
+        </div>
+        <div class="col-md-3">
+          <%= f.input :profile_photo, as: 'file' %>
+        </div>
+        <div class="col-md-3">
+          <%= f.input :job_title, label: "Current job title" %>
+        </div>
+        <div class="col-md-3">
+          <%= f.input :phone %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="alert alert-prompt">
+            Get 5-15+ offers in one week by including a detailed summary. <a href="#">Check out some real examples</a>.
+          </div>
+          <%= f.input :summary, input_html: { class: "profile-summary" }, as: 'text' %>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h3>Job Search Information</h3>
+      <hr>
+      <div class="row">
+        <div class="col-md-3">
+          <%= f.input :status, collection: Candidate::STATUS, label: "When can you start interviewing?", input_html: { class: "select2" } %>
+        </div>
+        <div class="col-md-3">
+          <%= f.input :visa, collection: Candidate::VISA, label: "Employment Eligibility Status", input_html: { class: "select2" } %>
+        </div>
+        <div class="col-md-3">
+          <label>Minimum annual salary</label>
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <%= f.input_field :minimum_annual_salary, as: 'string', class: "form-control" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h3>Work Experience</h3>
+      <hr>
+      <%= render 'users/profile_form_fields/experience_fields', f: f %>
+      <a href="#" class="add-field">+ Add work experience</a>
+    </div>
+    <div class="section">
+      <h3>Trade Qualification</h3>
+      <hr>
+      <%=  render 'users/profile_form_fields/trade_qualification_fields', f: f %>
+      <a href="#" class="add-field">+ Add trade qualification</a>
+    </div>
+    <div class="section">
+      <h3>Education</h3>
+      <hr>
+      <%= render 'users/profile_form_fields/education_fields', f: f %>
+      <a href="#" class="add-field">+ Add education</a>
+    </div>
+    <%= f.button :submit, value: 'Update Profile', disable_with: 'Updating Profile...', class: 'btn btn-success btn-lg' %>
+  </div>
+<% end %>
