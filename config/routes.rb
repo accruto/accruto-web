@@ -8,9 +8,9 @@ Accruto::Application.routes.draw do
   put 'users/update_preference' , as: 'preference'
   get 'users/applications'
 
-  get 'profile/edit', to: 'users#edit_profile', as: 'edit_profile'
-  post 'profile/update', to: 'users#update_profile', as: 'update_profile'
-  get 'profile/create', to: "users#create_profile", as: "create_profile"
+  get 'profile/edit', to: 'candidates#edit', as: 'edit_profile'
+  post 'profile/update', to: 'candidates#update', as: 'update_profile'
+  get 'profile/create', to: "candidates#create", as: "create_profile"
 
   match '/delayed_job' => DelayedJobWeb, :anchor => false
 
