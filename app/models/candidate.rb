@@ -21,12 +21,15 @@
 class Candidate < ActiveRecord::Base
   include PgSearch
   mount_uploader :profile_photo, ProfilePhotoUploader
+  serialize :desired_job_title, ActiveRecord::Coders::Hstore
 
   attr_accessible :address_id, :user_id, :first_name, :job_title, :last_name,
                   :phone, :status, :visa, :minimum_annual_salary, :updated_at,
-                  :profile_photo, :resume_attributes, :summary
+                  :profile_photo, :resume_attributes, :summary, :desired_job_title
 
   validates :first_name, :last_name, presence: true
+  validates :first_name, uniqueness: {scope: [:last_name, :job_title]}
+
   belongs_to :address
   belongs_to :user
 

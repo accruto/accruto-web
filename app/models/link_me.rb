@@ -20,7 +20,7 @@ class LinkMe
 
   def resumes
     query = %{
-      SELECT TOP 100 * FROM resume
+      SELECT TOP 5 * FROM resume
     }
     @client.execute(query)
   end
@@ -99,7 +99,7 @@ class LinkMe
         DECLARE @recentCandidateEndDate DATETIME
         SET @recentCandidateEndDate = '2013-09-09 00:00:00'
 
-        SELECT
+        SELECT TOP 50
           u.id AS Id,
           u.firstName + ' ' + u.lastName AS Name,
           u.emailAddress AS Email,
@@ -116,7 +116,19 @@ class LinkMe
           dbo.GetLocationDisplayText(a.locationReferenceId) AS Location,
           dbo.GetRelocationPreferenceDisplayText(c.relocationPreference) AS Relocation,
           c.visaStatus,
-          m.addressId
+          m.addressId,
+          lr.unstructuredLocation,
+          nl.displayName AS address_city,
+          cs.ShortDisplayName as address_state,
+          l.centroidLatitude AS address_latitude,
+          l.centroidLongitude AS address_longitude,
+          r.lensXml,
+          r.courses,
+          r.awards,
+          r.skills,
+          r.objective,
+          r.summary,
+          r.referees
         FROM
           dbo.RegisteredUser AS u
         INNER JOIN
@@ -129,6 +141,16 @@ class LinkMe
           dbo.Resume AS r ON r.id = cr.resumeId
         LEFT OUTER JOIN
           dbo.Address AS a ON a.id = m.addressId
+        LEFT OUTER JOIN
+          dbo.LocationReference AS lr ON lr.id = a.locationReferenceId
+        LEFT OUTER JOIN
+          dbo.NamedLocation AS nl ON nl.id = lr.namedLocationId
+        LEFT OUTER JOIN
+          dbo.CountrySubdivision AS cs ON cs.id = lr.countrySubdivisionId
+        LEFT OUTER JOIN
+          dbo.Locality AS l ON l.id = lr.localityId
+        LEFT OUTER JOIN
+          dbo.ParsedResume AS pr ON pr.resumeId = r.id
         WHERE
         (
           (u.createdTime >= @startDate AND u.createdTime < @recentCandidateEndDate)
