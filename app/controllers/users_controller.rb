@@ -47,6 +47,7 @@ class UsersController < ApplicationController
       @experiences = @candidate.experiences.first
       @trade_qualifications = @candidate.trade_qualifications.first
       @educations = @candidate.educations.first
+      #TODO : need to refactor this
       @profile = Profile.new(
         first_name: @candidate.first_name,
         last_name: @candidate.last_name,

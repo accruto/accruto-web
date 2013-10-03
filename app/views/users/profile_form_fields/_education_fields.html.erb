@@ -1,0 +1,16 @@
+<div class="partial-form-fields">
+  <div class="row">
+    <div class="col-md-3">
+      <%= f.input :education_institution, label: "School/College/University" %>
+    </div>
+    <div class="col-md-3">
+      <%= f.input :education_qualification, label: "Qualification" %>
+    </div>
+    <div class="col-md-3">
+      <%= f.input :education_qualification_type, collection: Education::TYPES, label: "Qualification Type", input_html: { class: "select2" } %>
+    </div>
+    <div class="col-md-3">
+      <%= f.input :education_graduated_at_in_years, label: "Graduated at", collection: Education::YEARS, input_html: { class: 'select2' } %>
+    </div>
+  </div>
+</div>
