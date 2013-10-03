@@ -33,7 +33,8 @@ gem 'carrierwave', '~> 0.9.0'
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
 gem 'virtus'
-gem "select2-rails", "~> 3.5.0"
+gem 'select2-rails', '~> 3.5.0'
+gem 'activerecord-postgres-hstore'
 
 group :production do
   gem 'rails_12factor'
