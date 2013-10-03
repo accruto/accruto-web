@@ -34,4 +34,8 @@ module ApplicationHelper
         flash_type.to_s
     end
   end
+
+  def datetime_in_years(datetime)
+    return datetime.strftime("%Y")
+  end
 end

@@ -1,5 +1,4 @@
 class CandidatesController < ApplicationController
-  layout 'search_results', only: [:search, :show]
 
   def search
     @candidates = Candidate.scoped
@@ -14,7 +13,7 @@ class CandidatesController < ApplicationController
 
   def show
     @user = User.find(current_user.id)
-    load_profile
+    @candidate = @user.candidate
   end
 
   def edit
@@ -29,7 +28,7 @@ class CandidatesController < ApplicationController
   def update
     @profile = Profile.new(params[:profile])
     if @profile.save(current_user)
-      redirect_to edit_profile_path, notice: 'Profile was successfully updated.'
+      redirect_to show_profile_path, notice: 'Profile was successfully updated.'
     else
       redirect_to edit_profile_path
     end
@@ -51,6 +50,7 @@ class CandidatesController < ApplicationController
         status: @candidate.status,
         visa: @candidate.visa,
         minimum_annual_salary: @candidate.minimum_annual_salary,
+        profile_photo: @candidate.profile_photo,
         experience_company: @experiences.try(:company),
         experience_job_title: @experiences.try(:job_title),
         experience_started_at: @experiences.try(:started_at),

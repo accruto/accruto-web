@@ -1,0 +1,10 @@
+<div class="partial-form-fields">
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :trade_qualification_name, label: "Trade qualification name" %>
+    </div>
+    <div class="col-md-3">
+      <%= f.input :trade_qualification_attained_at_in_years, label: "Attained at", collection: TradeQualification::YEARS, input_html: { class: 'select2' } %>
+    </div>
+  </div>
+</div>

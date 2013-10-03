@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="profile-container">
+        <div class="profile-area top">
+          <div class="summary">
+            <div class="row">
+              <div class="col-md-7">
+                <h2><%= @candidate.first_name %> <%= @candidate.last_name %></h2>
+                <p class="job-title-address"><a href="#job-title-search-link"><i class="glyphicon glyphicon-briefcase"></i><%= @candidate.job_title %></a> <a href="address-search-link"><%= "<i class='glyphicon glyphicon-globe'></i>#{@candidate.address.inspect}" unless @candidate.address.blank? %></a></p>
+              </div>
+              <%= image_tag @candidate.profile_photo.url, class: "profile-photo" unless @candidate.profile_photo.blank? %>
+            </div>
+          </div>
+        </div>
+        <div class="profile-area content tags">
+          <div class="row">
+            <div class="col-md-8">
+              <ul>
+                <%= "<li>Based in <span class='tag'>#{@candidate.address.inspect}</span></li>" unless @candidate.address.blank? %>
+                <li>Current job status: <span class='tag <%= @candidate.status.downcase.split(" ").join("-") %>'><%= @candidate.status %></span></li>
+                <li>Currently has <span class='tag <%= @candidate.visa.downcase.split(" ").join("-") %>'><%= @candidate.visa %></span></li>
+                <li>Looking for a job with salary more than <span class='tag'><%= number_to_currency(@candidate.minimum_annual_salary, precision: 0) %> pa</span></li>
+                <li><%= @candidate.first_name %> has the following skills:<br> <span class='tag'>CPA</span><span class='tag'>Certificate of First Aid</span><span class='tag'>Professionally Certified Cook</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="profile-area content work-experience">
+          <h4 class="fields-heading">WORK EXPERIENCE</h4>
+          <% @candidate.experiences.each do |experience| %>
+            <div class="fields-entry">
+              <div class="row">
+                <div class="col-md-8">
+                  <h5><strong><%= experience.job_title %></strong> at <%= experience.company %></h5>
+                </div>
+                <div class="col-md-4 align-right">
+                  <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;<%= datetime_in_years(experience.ended_at) %> to <%= datetime_in_years(experience.started_at) %><br>
+                  <%= distance_of_time_in_words(experience.ended_at, experience.started_at) %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="profile-area content trade-qualification">
+          <h4 class="fields-heading">TRADE QUALIFICATIONS</h4>
+          <% @candidate.trade_qualifications.each do |tq| %>
+            <div class="fields-entry">
+              <div class="row">
+                <div class="col-md-8">
+                  <h5><strong><%= tq.name %></strong></h5>
+                </div>
+                <div class="col-md-4 align-right">
+                  <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Attained in <%= datetime_in_years(tq.attained_at) %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="profile-area content education">
+          <h4 class="fields-heading">EDUCATION</h4>
+          <% @candidate.educations.each do |education| %>
+            <div class="fields-entry">
+              <div class="row">
+                <div class="col-md-8">
+                  <h5><strong><%= education.institution %></strong></h5>
+                  <p><%= education.qualification %></p>
+                </div>
+                <div class="col-md-4 align-right">
+                  <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Graduated in <%= datetime_in_years(education.graduated_at) %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-md-offset-1">
+      <div class="content">
+        <div class="well">
+          <ol>
+            <li class="completed">Complete your profile<br>
+            <a href="#">Read: Ways to improve your profile</a>
+            </li>
+            <li>Publish profile to employers <br>
+            <a href="#" class="btn btn-publish">PUBLISH</a>
+            </li>
+            <li>Accept interview with employers</li>
+            <li>Land a new job</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
