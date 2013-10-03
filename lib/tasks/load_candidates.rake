@@ -86,12 +86,15 @@ namespace 'accruto:candidates' do
   end
 
   def parse_resume_xml(candidate_lens_xml)
-    resume_xml = Hash.from_xml candidate_lens_xml
-    resume_xml = resume_xml["ResDoc"]["resume"]
-    if resume_xml && resume_xml["contact"]
-      phone = resume_xml["contact"]["phone"]
+    begin
+      resume_xml = Hash.from_xml candidate_lens_xml
+      resume_xml = resume_xml["ResDoc"]["resume"]
+      if resume_xml && resume_xml["contact"]
+        phone = resume_xml["contact"]["phone"]
+      end
+      [resume_xml, phone]
+    rescue
     end
-    [resume_xml, phone]
   end
 
   def create_candidate(user, candidate, address, phone)
