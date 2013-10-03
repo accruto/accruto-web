@@ -36,6 +36,8 @@ module ApplicationHelper
   end
 
   def datetime_in_years(datetime)
-    return datetime.strftime("%Y")
+    if datetime.present?
+      return datetime.strftime("%Y")
+    end
   end
 end
