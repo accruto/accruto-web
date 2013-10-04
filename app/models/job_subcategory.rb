@@ -23,6 +23,9 @@ class JobSubcategory < ActiveRecord::Base
   has_many :job_subcategories_jobs
   has_many :jobs, through: :job_subcategories_jobs
 
+  has_many :job_subcategories_candidates
+  has_many :candidates, through: :job_subcategories_candidates
+
   belongs_to :job_category
   validates_presence_of :name
   accepts_nested_attributes_for :category

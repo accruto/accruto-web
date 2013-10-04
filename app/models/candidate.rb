@@ -28,7 +28,7 @@ class Candidate < ActiveRecord::Base
                   :profile_photo, :resume_attributes, :summary, :desired_job_title
 
   validates :first_name, :last_name, presence: true
-  validates :first_name, uniqueness: {scope: [:last_name, :job_title]}
+  # validates :first_name, uniqueness: {scope: [:last_name, :job_title]}
 
   belongs_to :address
   belongs_to :user
@@ -36,6 +36,9 @@ class Candidate < ActiveRecord::Base
   has_many :experiences
   has_many :trade_qualifications
   has_many :educations
+
+  has_many :job_subcategories_candidates
+  has_many :subcategories, through: :job_subcategories_candidates, :source => :job_subcategory
 
   scope :search_by_job_title, lambda { |title_keyword| _title_has(title_keyword) if title_keyword.present? }
   scope :filter_by_address, lambda { |address| joins(:address).where("addresses.city @@ :q or addresses.state @@ :q", q: address.downcase) if address.present? }

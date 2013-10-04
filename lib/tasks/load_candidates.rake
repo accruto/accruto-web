@@ -47,22 +47,20 @@ namespace 'accruto:candidates' do
   task :linkme => :environment do
     link_me = LinkMe.new
     candidates = link_me.recent_candidates
-    #collected_candidates = []
-
-    candidates.each do |candidate|
-      print "Queueing to process: #{candidate["Email"]}\n".yellow
+    candidates.each do |data_candidate|
+      print "Queueing to process: #{data_candidate["Email"]}\n".yellow
 
       ## PARSE USER
-      user = parse_user(candidate)
+      user = parse_user(data_candidate)
 
       ## PARSE RESUME XML
-      resume_xml, phone = parse_resume_xml(candidate["lensXml"]) if candidate["lensXml"]
+      resume_xml, phone = parse_resume_xml(data_candidate["lensXml"]) if data_candidate["lensXml"]
 
       ## PARSE ADDRESS
-      address = parse_address(resume_xml, candidate)
+      address = parse_address(resume_xml, data_candidate)
 
       ## CREATE CANDIDATE
-      candidate = create_candidate(user, candidate, address, phone)
+      candidate = create_candidate(user, data_candidate, address, phone)
 
       ## PARSE EDUCATION
       education = parse_education(resume_xml, candidate) if resume_xml
@@ -72,6 +70,12 @@ namespace 'accruto:candidates' do
 
       ## PARSE EXPERIENCES
       parse_experiences(resume_xml, candidate) if resume_xml
+
+      ## ADD CANDIDATE INDUSTRY (CANDIDATE JOB SUBCATEGORIES)
+      if data_candidate["industry"]
+        job_subcategory = JobSubcategory.create(name: data_candidate["industry"])
+        JobSubcategoriesCandidate.create(candidate_id: candidate.id, job_subcategory_id: job_subcategory.id) if job_subcategory
+      end
     end
   end
 
@@ -86,7 +90,6 @@ namespace 'accruto:candidates' do
   end
 
   def parse_resume_xml(candidate_lens_xml)
-    print candidate_lens_xml
     resume_xml = Hash.from_xml(candidate_lens_xml)
     resume_xml = resume_xml["ResDoc"]["resume"]
     if resume_xml && resume_xml["contact"]
@@ -193,7 +196,7 @@ namespace 'accruto:candidates' do
               qualification_major: qualification_major,
               start_at: start_at,
               graduated_at: graduated_at,
-              candidate_id: (candidate['id'] if candidate)
+              candidate_id: (candidate.id if candidate)
             }
             Education.create(collected_education_data)
           end if education['school']

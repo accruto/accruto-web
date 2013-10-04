@@ -22,6 +22,20 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
+--
+-- Name: hstore; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS hstore WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION hstore; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION hstore IS 'data type for storing sets of (key, value) pairs';
+
+
 SET search_path = public, pg_catalog;
 
 SET default_tablespace = '';
@@ -116,6 +130,7 @@ CREATE TABLE candidates (
     minimum_annual_salary integer,
     user_id integer,
     profile_photo character varying(255),
+    desired_job_title hstore,
     summary text
 );
 
@@ -257,7 +272,9 @@ CREATE TABLE educations (
     graduated_at timestamp without time zone,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    candidate_id integer
+    candidate_id integer,
+    qualification_major character varying(255),
+    start_at timestamp without time zone
 );
 
 
@@ -293,7 +310,8 @@ CREATE TABLE experiences (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     current boolean,
-    candidate_id integer
+    candidate_id integer,
+    description text
 );
 
 
@@ -434,6 +452,38 @@ CREATE TABLE job_subcategories (
     slug character varying(255),
     external_subcategory_ids text
 );
+
+
+--
+-- Name: job_subcategories_candidates; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE job_subcategories_candidates (
+    id integer NOT NULL,
+    candidate_id integer,
+    job_subcategory_id integer,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: job_subcategories_candidates_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE job_subcategories_candidates_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: job_subcategories_candidates_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE job_subcategories_candidates_id_seq OWNED BY job_subcategories_candidates.id;
 
 
 --
@@ -922,6 +972,13 @@ ALTER TABLE ONLY job_subcategories ALTER COLUMN id SET DEFAULT nextval('job_subc
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY job_subcategories_candidates ALTER COLUMN id SET DEFAULT nextval('job_subcategories_candidates_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY job_subcategories_jobs ALTER COLUMN id SET DEFAULT nextval('job_subcategories_jobs_id_seq'::regclass);
 
 
@@ -1077,6 +1134,14 @@ ALTER TABLE ONLY job_categories
 
 
 --
+-- Name: job_subcategories_candidates_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY job_subcategories_candidates
+    ADD CONSTRAINT job_subcategories_candidates_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: job_subcategories_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1165,27 +1230,6 @@ ALTER TABLE ONLY users
 
 
 --
--- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
-
-
---
--- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
-
-
---
--- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
-
-
---
 -- Name: addresses_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1207,6 +1251,13 @@ CREATE INDEX addresses_street ON addresses USING gin (to_tsvector('english'::reg
 
 
 --
+-- Name: candidates_desired_job_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX candidates_desired_job_title ON candidates USING gin (desired_job_title);
+
+
+--
 -- Name: delayed_jobs_priority; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1221,6 +1272,20 @@ CREATE UNIQUE INDEX index_job_categories_on_slug ON job_categories USING btree (
 
 
 --
+-- Name: index_job_subcategories_candidates_on_candidate_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_job_subcategories_candidates_on_candidate_id ON job_subcategories_candidates USING btree (candidate_id);
+
+
+--
+-- Name: index_job_subcategories_candidates_on_job_subcategory_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_job_subcategories_candidates_on_job_subcategory_id ON job_subcategories_candidates USING btree (job_subcategory_id);
+
+
+--
 -- Name: index_job_subcategories_jobs_on_job_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1232,6 +1297,13 @@ CREATE INDEX index_job_subcategories_jobs_on_job_id ON job_subcategories_jobs US
 --
 
 CREATE INDEX index_job_subcategories_jobs_on_job_subcategory_id ON job_subcategories_jobs USING btree (job_subcategory_id);
+
+
+--
+-- Name: index_job_subcategories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_job_subcategories_on_slug ON job_subcategories USING btree (slug);
 
 
 --
@@ -1428,6 +1500,12 @@ INSERT INTO schema_migrations (version) VALUES ('20130926060517');
 
 INSERT INTO schema_migrations (version) VALUES ('20130927054409');
 
+INSERT INTO schema_migrations (version) VALUES ('20130929001747');
+
+INSERT INTO schema_migrations (version) VALUES ('20130929002304');
+
+INSERT INTO schema_migrations (version) VALUES ('20130929002928');
+
 INSERT INTO schema_migrations (version) VALUES ('20130930070808');
 
 INSERT INTO schema_migrations (version) VALUES ('20131002005453');
@@ -1453,3 +1531,9 @@ INSERT INTO schema_migrations (version) VALUES ('20131002061854');
 INSERT INTO schema_migrations (version) VALUES ('20131002063548');
 
 INSERT INTO schema_migrations (version) VALUES ('20131002064229');
+
+INSERT INTO schema_migrations (version) VALUES ('20131003162941');
+
+INSERT INTO schema_migrations (version) VALUES ('20131003201606');
+
+INSERT INTO schema_migrations (version) VALUES ('20131004065549');

@@ -99,7 +99,7 @@ class LinkMe
         DECLARE @recentCandidateEndDate DATETIME
         SET @recentCandidateEndDate = '2013-09-09 00:00:00'
 
-        SELECT
+        SELECT TOP 10
           u.id AS Id,
           u.firstName + ' ' + u.lastName AS Name,
           u.emailAddress AS Email,
@@ -128,7 +128,8 @@ class LinkMe
           r.skills,
           r.objective,
           r.summary,
-          r.referees
+          r.referees,
+          i.displayName AS industry
         FROM
           dbo.RegisteredUser AS u
         INNER JOIN
@@ -151,6 +152,11 @@ class LinkMe
           dbo.Locality AS l ON l.id = lr.localityId
         LEFT OUTER JOIN
           dbo.ParsedResume AS pr ON pr.resumeId = r.id
+        LEFT OUTER JOIN
+          dbo.CandidateIndustry AS ci ON ci.candidateId = c.id
+        LEFT OUTER JOIN
+          dbo.Industry AS i ON i.id = ci.industryId
+
         WHERE
         (
           (u.createdTime >= @startDate AND u.createdTime < @recentCandidateEndDate)
@@ -160,6 +166,19 @@ class LinkMe
           ((NOT r.lastEditedTime IS NULL) AND r.lastEditedTime >= @startDate AND r.lastEditedTime < @recentCandidateEndDate)
         )
       }
+
+    @client.execute(query)
+  end
+
+  def candidate_industries
+    query = %{
+      SELECT TOP 5 *
+      FROM CandidateIndustry ci
+      LEFT JOIN Industry i ON (i.id = ci.industryId)
+      LEFT JOIN Candidate c ON (c.id = ci.candidateId)
+      LEFT JOIN Member m ON m.id = c.id
+      LEFT JOIN RegisteredUser u ON u.id = m.id
+    }
 
     @client.execute(query)
   end
