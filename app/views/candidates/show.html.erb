@@ -17,7 +17,6 @@
           <div class="row">
             <div class="col-md-8">
               <ul>
-                <%= "<li>Based in <span class='tag'>#{@candidate.address.inspect}</span></li>" unless @candidate.address.blank? %>
                 <li>Current job status: <span class='tag <%= @candidate.status.downcase.split(" ").join("-") %>'><%= @candidate.status %></span></li>
                 <li>Currently has <span class='tag <%= @candidate.visa.downcase.split(" ").join("-") %>'><%= @candidate.visa %></span></li>
                 <li>Looking for a job with salary more than <span class='tag'><%= number_to_currency(@candidate.minimum_annual_salary, precision: 0) %> pa</span></li>
