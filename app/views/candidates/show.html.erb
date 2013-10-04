@@ -9,6 +9,7 @@
                 <h2><%= @candidate.first_name %> <%= @candidate.last_name %></h2>
                 <p class="job-title-address"><a href="#job-title-search-link"><i class="glyphicon glyphicon-briefcase"></i><%= @candidate.job_title %></a>
                   <% unless @candidate.address.blank? %>
+                    &nbsp;&nbsp;&nbsp;
                     <a href="address-search-link">
                     <i class='glyphicon glyphicon-globe'></i>
                     <%=  "#{@candidate.address.city}, #{@candidate.address.state} #{@candidate.address.postcode}" %>
@@ -60,7 +61,9 @@
                   <h5><strong><%= tq.name %></strong></h5>
                 </div>
                 <div class="col-md-4 align-right">
-                  <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Attained in <%= datetime_in_years(tq.attained_at) %></p>
+                  <% unless tq.attained_at.blank? %>
+                    <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Attained in <%= datetime_in_years(tq.attained_at) %></p>
+                  <% end %>
                 </div>
               </div>
             </div>
@@ -76,7 +79,9 @@
                   <p><%= education.qualification %></p>
                 </div>
                 <div class="col-md-4 align-right">
-                  <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Graduated in <%= datetime_in_years(education.graduated_at) %></p>
+                  <% unless education.graduated_at.blank? %>
+                    <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Graduated in <%= datetime_in_years(education.graduated_at) %></p>
+                  <% end %>
                 </div>
               </div>
             </div>
