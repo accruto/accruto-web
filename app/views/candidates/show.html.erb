@@ -7,10 +7,9 @@
             <div class="row">
               <div class="col-md-7">
                 <h2><%= @candidate.first_name %> <%= @candidate.last_name %></h2>
-                <p class="job-title-address"><a href="#job-title-search-link"><i class="glyphicon glyphicon-briefcase"></i><%= @candidate.job_title %></a>
+                <p class="job-title-address"><a class="job-title-search-link" href="#job-title-search-link"><i class="glyphicon glyphicon-briefcase"></i><%= @candidate.job_title %></a>
                   <% unless @candidate.address.blank? %>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="address-search-link">
+                    <a class="address-search-link" href="address-search-link">
                     <i class='glyphicon glyphicon-globe'></i>
                     <%=  "#{@candidate.address.city}, #{@candidate.address.state} #{@candidate.address.postcode}" %>
                     </a>
