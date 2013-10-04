@@ -7,7 +7,10 @@
             <div class="row">
               <div class="col-md-7">
                 <h2><%= @candidate.first_name %> <%= @candidate.last_name %></h2>
-                <p class="job-title-address"><a class="job-title-search-link" href="#job-title-search-link"><i class="glyphicon glyphicon-briefcase"></i><%= @candidate.job_title %></a>
+                <p class="job-title-address">
+                  <% unless @candidate.job_title.blank? %>
+                    <a class="job-title-search-link" href="#job-title-search-link"><i class="glyphicon glyphicon-briefcase"></i><%= @candidate.job_title %></a>
+                  <% end %>
                   <% unless @candidate.address.blank? %>
                     <a class="address-search-link" href="address-search-link">
                     <i class='glyphicon glyphicon-globe'></i>
@@ -24,66 +27,114 @@
           <div class="row">
             <div class="col-md-8">
               <ul>
+                <% if @candidate.status %>
                 <li>Current job status: <span class='tag <%= @candidate.status.downcase.split(" ").join("-") %>'><%= @candidate.status %></span></li>
+                <% end %>
+                <% if @candidate.visa %>
                 <li>Currently has <span class='tag <%= @candidate.visa.downcase.split(" ").join("-") %>'><%= @candidate.visa %></span></li>
+                <% end %>
                 <% unless @candidate.minimum_annual_salary.blank? %>
                   <li>Looking for a job with salary more than <span class='tag'><%= number_to_currency(@candidate.minimum_annual_salary, precision: 0) %> pa</span></li>
                 <% end %>
-                <li><%= @candidate.first_name %> has the following skills:<br> <span class='tag'>CPA</span><span class='tag'>Certificate of First Aid</span><span class='tag'>Professionally Certified Cook</span></li>
+                <li><%= @candidate.first_name %> has the following skills:<br> <span class='tag'>CSS3</span><span class='tag'>HTML5</span><span class='tag'>JavaScript</span><span class='tag'>Ruby</span><span class='tag'>Rails</span><span class='tag'>PostgreSQL</span><span class='tag'>RSpec</span><span class='tag'>Capybara</span><span class='tag'>First Aid Certificate</span><span class='tag'>Golf Handicap Certificate</span></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="profile-area content work-experience">
+          <h4 class="fields-heading">SUMMARY</h4>
+          <div class="fields-entry">
+            <div class="row">
+              <div class="col-md-12">
+                <p><%= @candidate.summary %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="profile-area content work-experience">
           <h4 class="fields-heading">WORK EXPERIENCE</h4>
-          <% @candidate.experiences.each do |experience| %>
+          <% if @candidate.experiences.blank? %>
             <div class="fields-entry">
               <div class="row">
                 <div class="col-md-8">
-                  <h5><strong><%= experience.job_title %></strong> at <%= experience.company %></h5>
-                </div>
-                <div class="col-md-4 align-right">
-                  <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;<%= datetime_in_years(experience.ended_at) %> to <%= datetime_in_years(experience.started_at) %><br>
-                  <%= distance_of_time_in_words(experience.ended_at, experience.started_at) %>
-                  </p>
+                  <p>No work experience added yet</p>
                 </div>
               </div>
             </div>
+          <% else %>
+            <% @candidate.experiences.each do |experience| %>
+              <div class="fields-entry">
+                <div class="row">
+                  <div class="col-md-8">
+                    <% unless experience.job_title.blank? %>
+                      <h5><strong><%= experience.job_title %></strong> at <%= experience.company %></h5>
+                    <% end %>
+                  </div>
+                  <div class="col-md-4 align-right">
+                    <% unless experience.ended_at.blank? %>
+                      <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;<%= datetime_in_years(experience.ended_at) %> to <%= datetime_in_years(experience.started_at) %><br>
+                      <%= distance_of_time_in_words(experience.ended_at, experience.started_at) %>
+                      </p>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
           <% end %>
         </div>
         <div class="profile-area content trade-qualification">
           <h4 class="fields-heading">TRADE QUALIFICATIONS</h4>
-          <% @candidate.trade_qualifications.each do |tq| %>
+          <% if @candidate.trade_qualifications.blank? %>
             <div class="fields-entry">
               <div class="row">
                 <div class="col-md-8">
-                  <h5><strong><%= tq.name %></strong></h5>
-                </div>
-                <div class="col-md-4 align-right">
-                  <% unless tq.attained_at.blank? %>
-                    <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Attained in <%= datetime_in_years(tq.attained_at) %></p>
-                  <% end %>
+                  <p>No trade qualifications added yet</p>
                 </div>
               </div>
             </div>
+          <% else %>
+            <% @candidate.trade_qualifications.each do |tq| %>
+              <div class="fields-entry">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5><strong><%= tq.name %></strong></h5>
+                  </div>
+                  <div class="col-md-4 align-right">
+                    <% unless tq.attained_at.blank? %>
+                      <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Attained in <%= datetime_in_years(tq.attained_at) %></p>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
           <% end %>
         </div>
         <div class="profile-area content education">
           <h4 class="fields-heading">EDUCATION</h4>
-          <% @candidate.educations.each do |education| %>
+          <% if @candidate.experiences.blank? %>
             <div class="fields-entry">
               <div class="row">
                 <div class="col-md-8">
-                  <h5><strong><%= education.institution %></strong></h5>
-                  <p><%= education.qualification %></p>
-                </div>
-                <div class="col-md-4 align-right">
-                  <% unless education.graduated_at.blank? %>
-                    <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Graduated in <%= datetime_in_years(education.graduated_at) %></p>
-                  <% end %>
+                  <p>No education added yet</p>
                 </div>
               </div>
             </div>
+          <% else %>
+            <% @candidate.educations.each do |education| %>
+              <div class="fields-entry">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5><strong><%= education.institution %></strong></h5>
+                    <p><%= education.qualification %></p>
+                  </div>
+                  <div class="col-md-4 align-right">
+                    <% unless education.graduated_at.blank? %>
+                      <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Graduated in <%= datetime_in_years(education.graduated_at) %></p>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
           <% end %>
         </div>
       </div>

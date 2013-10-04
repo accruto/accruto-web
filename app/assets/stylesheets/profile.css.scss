@@ -103,7 +103,7 @@ $profile-border-color: #ebebeb;
   margin-top: -5px;
   margin-bottom: 20px;
   font-size: 16px;
-  text-decoration: underline;
+  a { color: gray; }
   i { margin-right: 10px; }
 }
 .partial-form-fields {
