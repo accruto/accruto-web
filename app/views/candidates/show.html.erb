@@ -26,7 +26,9 @@
               <ul>
                 <li>Current job status: <span class='tag <%= @candidate.status.downcase.split(" ").join("-") %>'><%= @candidate.status %></span></li>
                 <li>Currently has <span class='tag <%= @candidate.visa.downcase.split(" ").join("-") %>'><%= @candidate.visa %></span></li>
-                <li>Looking for a job with salary more than <span class='tag'><%= number_to_currency(@candidate.minimum_annual_salary, precision: 0) %> pa</span></li>
+                <% unless @candidate.minimum_annual_salary.blank? %>
+                  <li>Looking for a job with salary more than <span class='tag'><%= number_to_currency(@candidate.minimum_annual_salary, precision: 0) %> pa</span></li>
+                <% end %>
                 <li><%= @candidate.first_name %> has the following skills:<br> <span class='tag'>CPA</span><span class='tag'>Certificate of First Aid</span><span class='tag'>Professionally Certified Cook</span></li>
               </ul>
             </div>
