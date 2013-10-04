@@ -7,7 +7,7 @@
             <div class="row">
               <div class="col-md-7">
                 <h2><%= @candidate.first_name %> <%= @candidate.last_name %></h2>
-                <p class="job-title-address"><a href="#job-title-search-link"><i class="glyphicon glyphicon-briefcase"></i><%= @candidate.job_title %></a> <a href="address-search-link"><%= "<i class='glyphicon glyphicon-globe'></i>#{@candidate.address.inspect}" unless @candidate.address.blank? %></a></p>
+                <p class="job-title-address"><a href="#job-title-search-link"><i class="glyphicon glyphicon-briefcase"></i><%= @candidate.job_title %></a> <a href="address-search-link"><%= "<i class='glyphicon glyphicon-globe'></i>#{@candidate.address.city}, #{@candidate.address.state} #{@candidate.address.postcode}" unless @candidate.address.blank? %></a></p>
               </div>
               <%= image_tag @candidate.profile_photo.url, class: "profile-photo" unless @candidate.profile_photo.blank? %>
             </div>
