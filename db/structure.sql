@@ -131,7 +131,8 @@ CREATE TABLE candidates (
     user_id integer,
     profile_photo character varying(255),
     desired_job_title hstore,
-    summary text
+    summary text,
+    state character varying(255) DEFAULT 'unpublished'::character varying
 );
 
 
@@ -1647,3 +1648,5 @@ INSERT INTO schema_migrations (version) VALUES ('20131003201606');
 INSERT INTO schema_migrations (version) VALUES ('20131004065549');
 
 INSERT INTO schema_migrations (version) VALUES ('20131006070837');
+
+INSERT INTO schema_migrations (version) VALUES ('20131006093339');

@@ -68,6 +68,19 @@ class Candidate < ActiveRecord::Base
     "No Work Visa"
   ]
 
+  state_machine :state, :initial => :unpublished do
+    event :publish do
+      transition all => :publish
+    end
+
+    event :unpublish do
+      transition all => :unpublished
+    end
+
+    state :publish
+    state :unpublish
+  end
+
   def self.filter_by_minimum_annual_salary(min, max)
     where(
       "minimum_annual_salary >= :min AND minimum_annual_salary <= :max", min: min.to_i, max: max.to_i
@@ -85,6 +98,11 @@ class Candidate < ActiveRecord::Base
 
   def skills=(lists)
     self.skill_list = lists
+  end
+
+  def self.set_default_unpublished
+    candidates = where("state IS NULL")
+    candidates.each {|candidate| candidate.unpublish! }
   end
 
   private

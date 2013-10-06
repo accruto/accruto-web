@@ -152,7 +152,11 @@
             <a href="#">Read: Ways to improve your profile</a>
             </li>
             <li>Publish profile to employers <br>
-            <a href="#" class="btn btn-publish">PUBLISH</a>
+            <% if @candidate.publish? %>
+              <%= link_to "UNPUBLISH", unpublish_profile_path, class: 'btn btn-publish' %>
+            <% else %>
+              <%= link_to "PUBLISH", publish_profile_path, class: 'btn btn-publish' %>
+            <% end %>
             </li>
             <li>Accept interview with employers</li>
             <li>Land a new job</li>

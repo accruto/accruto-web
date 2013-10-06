@@ -1,4 +1,5 @@
 class CandidatesController < ApplicationController
+  before_filter :authenticate_user!, except: :search
 
   def search
     @candidates = Candidate.scoped
@@ -29,11 +30,20 @@ class CandidatesController < ApplicationController
   end
 
   def update
-    ap params
     if @candidate = current_user.candidate.update_attributes(params[:candidate])
       redirect_to show_profile_path, notice: 'Profile was successfully updated.'
     else
       redirect_to edit_profile_path
     end
+  end
+
+  def publish
+    current_user.candidate.publish!
+    redirect_to show_profile_path, notice: 'Profile was successfully published.'
+  end
+
+  def unpublish
+    current_user.candidate.unpublish!
+    redirect_to show_profile_path, notice: 'Profile was successfully unpublished.'
   end
 end
