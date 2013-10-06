@@ -1,10 +1,16 @@
-<div class="partial-form-fields">
-  <div class="row">
-    <div class="col-md-6">
-      <%= f.input :trade_qualification_name, label: "Trade qualification name" %>
-    </div>
-    <div class="col-md-3">
-      <%= f.input :trade_qualification_attained_at_in_years, label: "Attained at", collection: TradeQualification::YEARS, input_html: { class: 'select2' } %>
+<div id="qualification-form-fields" class="qualification-form-fields">
+  <div class="partial-form-fields">
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.input :name, label: "Trade qualification name", input_html: {class: 'qualification_name'} %>
+      </div>
+      <div class="col-md-3">
+        <%= f.input :attained_at_text, label: "Attained at", collection: TradeQualification::YEARS, input_html: {class: 'select2 qualification_select qualification_year'} %>
+      </div>
+      <div class="col-md-2">
+        <i class="icon-remove qualification-row-remove <%= f.object.new_record? ? 'hide' : '' %>" data-toggle="tooltip" title="Delete"></i>
+      </div>
     </div>
   </div>
+  <%= f.hidden_field :_destroy %>
 </div>

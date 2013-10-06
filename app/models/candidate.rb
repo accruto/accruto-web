@@ -25,7 +25,10 @@ class Candidate < ActiveRecord::Base
 
   attr_accessible :address_id, :user_id, :first_name, :job_title, :last_name,
                   :phone, :status, :visa, :minimum_annual_salary, :updated_at,
-                  :profile_photo, :resume_attributes, :summary, :desired_job_title
+                  :profile_photo, :resume_attributes, :summary, :desired_job_title, :email,
+                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes
+
+  attr_writer :email
 
   validates :first_name, :last_name, presence: true
   # validates :first_name, uniqueness: {scope: [:last_name, :job_title]}
@@ -33,12 +36,15 @@ class Candidate < ActiveRecord::Base
   belongs_to :address
   belongs_to :user
 
-  has_many :experiences
-  has_many :trade_qualifications
-  has_many :educations
-
+  has_many :experiences, dependent: :destroy
+  has_many :trade_qualifications, dependent: :destroy
+  has_many :educations, dependent: :destroy
   has_many :job_subcategories_candidates
-  has_many :subcategories, through: :job_subcategories_candidates, :source => :job_subcategory
+  has_many :subcategories, through: :job_subcategories_candidates, source: :job_subcategory
+
+  accepts_nested_attributes_for :educations, reject_if: lambda { |a| a[:institution].blank? }, allow_destroy: true
+  accepts_nested_attributes_for :trade_qualifications, reject_if: lambda { |a| a[:name].blank? }, allow_destroy: true
+  accepts_nested_attributes_for :experiences, reject_if: lambda { |a| a[:company].blank? && a[:job_title].blank? }, allow_destroy: true
 
   scope :search_by_job_title, lambda { |title_keyword| _title_has(title_keyword) if title_keyword.present? }
   scope :filter_by_address, lambda { |address| joins(:address).where("addresses.city @@ :q or addresses.state @@ :q", q: address.downcase) if address.present? }
@@ -46,23 +52,32 @@ class Candidate < ActiveRecord::Base
   scope :filter_by_status, lambda { |status| where("status = ?", status) if status.present? }
   scope :filter_by_visa, lambda { |visa| where("visa = ?", visa) if visa.present? }
 
+  STATUS = [
+    "Immediately Available",
+    "Actively Looking",
+    "Happy To Talk"
+  ]
+
+  VISA = [
+    "Australian Residency or Citizenship",
+    "Valid Work Visa",
+    "No Work Visa"
+  ]
+
   def self.filter_by_minimum_annual_salary(min, max)
     where(
       "minimum_annual_salary >= :min AND minimum_annual_salary <= :max", min: min.to_i, max: max.to_i
     )
   end
 
-  STATUS  = [
-              "Immediately Available",
-              "Actively Looking",
-              "Happy To Talk"
-            ]
+  def email
+    @email || (user ? user.email : nil)
+  end
 
-  VISA    = [
-              "Australian Residency or Citizenship",
-              "Valid Work Visa",
-              "No Work Visa"
-            ]
+  def email=(email_value)
+    user.email = email_value if email_value.present?
+    user.save if user.email_changed?
+  end
 
   private
     pg_search_scope :_title_has, against: :job_title,

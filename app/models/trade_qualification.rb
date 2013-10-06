@@ -11,8 +11,16 @@
 #
 
 class TradeQualification < ActiveRecord::Base
-  attr_accessible :name, :attained_at, :candidate_id
+  attr_accessible :name, :attained_at, :candidate_id, :attained_at_text
   belongs_to :candidate
 
   YEARS = (1800..2016).to_a
+
+  def attained_at_text
+    @attained_at || self.attained_at.try(:year)
+  end
+
+  def attained_at_text=(time)
+    self.attained_at = Time.new(time.to_i) if time.present?
+  end
 end

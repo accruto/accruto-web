@@ -152,6 +152,9 @@ $profile-border-color: #ebebeb;
     text-decoration: underline;
   }
 }
+
+i.icon-remove { cursor: pointer; line-height: 73px; }
+
 @media (max-width: $screen-xs) {
   .summary {
     .profile-photo {

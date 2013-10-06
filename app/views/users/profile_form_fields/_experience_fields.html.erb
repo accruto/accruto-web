@@ -1,16 +1,22 @@
-<div class="partial-form-fields">
-  <div class="row">
-    <div class="col-md-3">
-      <%= f.input :experience_company, label: "Company name" %>
-    </div>
-    <div class="col-md-3">
-      <%= f.input :experience_job_title, label: "Job title" %>
-    </div>
-    <div class="col-md-3">
-      <%= f.input :experience_started_at_in_years, label: "Started", collection: Experience::YEARS, input_html: { class: 'select2' } %>
-    </div>
-    <div class="col-md-3">
-      <%= f.input :experience_ended_at_in_years, label: "Ended", collection: Experience::YEARS, input_html: { class: 'select2' } %>
+<div id="experience-form-fields" class="experience-form-fields">
+  <div class="partial-form-fields">
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.input :company, label: "Company name", input_html: {class: 'experiences_company'} %>
+      </div>
+      <div class="col-md-3">
+        <%= f.input :job_title, label: "Job title", input_html: {class: 'experiences_job_title'} %>
+      </div>
+      <div class="col-md-2">
+        <%= f.input :started_at_text, label: "Started", collection: Experience::YEARS, input_html: {class: 'select2 experience_select experience_start'} %>
+      </div>
+      <div class="col-md-2">
+        <%= f.input :ended_at_text, label: "Ended", collection: Experience::YEARS, input_html: {class: 'select2  experience_select experience_end'} %>
+      </div>
+      <div class="col-md-2">
+        <i class="icon-remove experience-row-remove <%= f.object.new_record? ? 'hide' : '' %>" data-toggle="tooltip" title="Delete"></i>
+      </div>
     </div>
   </div>
+  <%= f.hidden_field :_destroy %>
 </div>

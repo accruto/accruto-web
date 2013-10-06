@@ -1,4 +1,4 @@
-<%= simple_form_for @profile, url: update_profile_path do |f| %>
+<%= simple_form_for @candidate, url: update_profile_path do |f| %>
   <div class="container">
     <div class="section">
       <h3>Personal Information</h3>
@@ -51,23 +51,29 @@
         </div>
       </div>
     </div>
-    <div class="section">
+    <div id="work-experience-section" class="section">
       <h3>Work Experience</h3>
       <hr>
-      <%= render 'users/profile_form_fields/experience_fields', f: f %>
-      <a href="#" class="add-field">+ Add work experience</a>
+      <%= f.simple_fields_for :experiences do |e| %>
+        <%= render 'users/profile_form_fields/experience_fields', f: e %>
+      <% end %>
+      <a href="#" class="add-experience-field">+ Add work experience</a>
     </div>
     <div class="section">
       <h3>Trade Qualification</h3>
       <hr>
-      <%=  render 'users/profile_form_fields/trade_qualification_fields', f: f %>
-      <a href="#" class="add-field">+ Add trade qualification</a>
+      <%= f.simple_fields_for :trade_qualifications do |tq| %>
+        <%= render 'users/profile_form_fields/trade_qualification_fields', f: tq %>
+      <% end %>
+      <a href="#" class="add-qualification-field">+ Add trade qualification</a>
     </div>
     <div class="section">
       <h3>Education</h3>
       <hr>
-      <%= render 'users/profile_form_fields/education_fields', f: f %>
-      <a href="#" class="add-field">+ Add education</a>
+      <%= f.simple_fields_for :educations do |e| %>
+        <%= render 'users/profile_form_fields/education_fields', f: e %>
+      <% end %>
+      <a href="#" class="add-education-field">+ Add education</a>
     </div>
     <%= f.button :submit, value: 'Update Profile', disable_with: 'Updating Profile...', class: 'btn btn-success btn-lg' %>
   </div>
