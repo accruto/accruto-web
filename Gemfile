@@ -35,6 +35,7 @@ gem 'activerecord-sqlserver-adapter'
 gem 'virtus'
 gem 'select2-rails', '~> 3.5.0'
 gem 'activerecord-postgres-hstore'
+gem 'acts-as-taggable-on'
 
 group :production do
   gem 'rails_12factor'

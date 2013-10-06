@@ -20,15 +20,19 @@
 
 class Candidate < ActiveRecord::Base
   include PgSearch
+
+  acts_as_ordered_taggable
+  acts_as_ordered_taggable_on :skills
+
   mount_uploader :profile_photo, ProfilePhotoUploader
   serialize :desired_job_title, ActiveRecord::Coders::Hstore
 
   attr_accessible :address_id, :user_id, :first_name, :job_title, :last_name,
                   :phone, :status, :visa, :minimum_annual_salary, :updated_at,
                   :profile_photo, :resume_attributes, :summary, :desired_job_title, :email,
-                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes
+                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills
 
-  attr_writer :email
+  attr_writer :email, :skills
 
   validates :first_name, :last_name, presence: true
   # validates :first_name, uniqueness: {scope: [:last_name, :job_title]}
@@ -77,6 +81,10 @@ class Candidate < ActiveRecord::Base
   def email=(email_value)
     user.email = email_value if email_value.present?
     user.save if user.email_changed?
+  end
+
+  def skills=(lists)
+    self.skill_list = lists
   end
 
   private

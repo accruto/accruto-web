@@ -75,6 +75,14 @@
       <% end %>
       <a href="#" class="add-education-field">+ Add education</a>
     </div>
+
+    <div class="section">
+      <h3>Skills</h3>
+      <hr>
+      <%= label_tag "Skill Tags" %>
+      <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select'%>
+    </div>
+
     <%= f.button :submit, value: 'Update Profile', disable_with: 'Updating Profile...', class: 'btn btn-success btn-lg' %>
   </div>
 <% end %>

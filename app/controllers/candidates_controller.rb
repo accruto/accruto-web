@@ -29,6 +29,7 @@ class CandidatesController < ApplicationController
   end
 
   def update
+    ap params
     if @candidate = current_user.candidate.update_attributes(params[:candidate])
       redirect_to show_profile_path, notice: 'Profile was successfully updated.'
     else

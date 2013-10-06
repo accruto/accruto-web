@@ -99,8 +99,16 @@ jQuery ->
 
     $education_counter++
 
-  $('body').on 'click', '.experience-row-remove, .education-row-remove, .qualification-row-remove', (e) ->
+  $('form').on 'click', '.experience-row-remove, .education-row-remove, .qualification-row-remove', (e) ->
     e.preventDefault()
     closest_form_fields = $(this).closest('.partial-form-fields')
     closest_form_fields.next().attr('value', 'true')
     closest_form_fields.remove()
+
+  $('#skills-select').select2
+    width: "100%"
+    tags: []
+    tokenSeparators: [",", " "]
+    createSearchChoice: (term) ->
+      id: term
+      text: term
