@@ -36,7 +36,12 @@
                 <% unless @candidate.minimum_annual_salary.blank? %>
                   <li>Looking for a job with salary more than <span class='tag'><%= number_to_currency(@candidate.minimum_annual_salary, precision: 0) %> pa</span></li>
                 <% end %>
-                <li><%= @candidate.first_name %> has the following skills:<br> <span class='tag'>CSS3</span><span class='tag'>HTML5</span><span class='tag'>JavaScript</span><span class='tag'>Ruby</span><span class='tag'>Rails</span><span class='tag'>PostgreSQL</span><span class='tag'>RSpec</span><span class='tag'>Capybara</span><span class='tag'>First Aid Certificate</span><span class='tag'>Golf Handicap Certificate</span></li>
+                <li>
+                  <%= @candidate.first_name %> has the following skills:<br>
+                  <% @candidate.skill_list.each do |skill| %>
+                    <span class='tag'><%= skill %></span>
+                  <% end %>
+                </li>
               </ul>
             </div>
           </div>
