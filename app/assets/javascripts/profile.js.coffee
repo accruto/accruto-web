@@ -108,7 +108,27 @@ jQuery ->
   $('#skills-select').select2
     width: "100%"
     tags: []
-    tokenSeparators: [",", " "]
+    tokenSeparators: [","]
     createSearchChoice: (term) ->
       id: term
       text: term
+
+  $("#positions").select2
+    tags: true
+    tokenSeparators: [","]
+    createSearchChoice: (term, data) ->
+      if $(data).filter(->
+        @text.localeCompare(term) is 0
+      ).length is 0
+        id: term
+        text: term
+
+    multiple: true
+    ajax:
+      url: "/candidates/search_job_categories.json"
+      dataType: "json"
+      data: (term, page) ->
+        q: term
+
+      results: (data, page) ->
+        results: data

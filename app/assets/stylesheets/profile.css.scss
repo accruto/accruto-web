@@ -44,6 +44,10 @@ $profile-border-color: #ebebeb;
   border: 0px solid $gray !important;
 }
 
+.select2-fullwidth {
+  width: 100%
+}
+
 .candidates-show {
   background: #f2f2f2;
   color: #436370;

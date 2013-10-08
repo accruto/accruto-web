@@ -916,7 +916,8 @@ CREATE TABLE users (
     last_sign_in_ip character varying(255),
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    active boolean
+    active boolean,
+    authentication_token character varying(255)
 );
 
 
@@ -1458,6 +1459,13 @@ CREATE INDEX index_taggings_on_taggable_id_and_taggable_type_and_context ON tagg
 
 
 --
+-- Name: index_users_on_authentication_token; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_users_on_authentication_token ON users USING btree (authentication_token);
+
+
+--
 -- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1650,3 +1658,5 @@ INSERT INTO schema_migrations (version) VALUES ('20131004065549');
 INSERT INTO schema_migrations (version) VALUES ('20131006070837');
 
 INSERT INTO schema_migrations (version) VALUES ('20131006093339');
+
+INSERT INTO schema_migrations (version) VALUES ('20131008085037');

@@ -1,4 +1,17 @@
 <%= simple_form_for @candidate, url: update_profile_path do |f| %>
+  <% if f.object.errors.full_messages && f.object.errors.full_messages.length > 0 %>
+    <div class="alert error-summary">
+      <strong>Please review the problems below:</strong>
+        <ul>
+          <% f.object.errors.messages.each do |msg| %>
+            <% if msg[1][0].present? %>
+              <li><%=msg[1][0]%></li>
+            <% end %>
+          <% end %>
+        </ul>
+    </div>
+  <% end %>
+
   <div class="container">
     <div class="section">
       <h3>Personal Information</h3>
@@ -43,11 +56,20 @@
           <%= f.input :visa, collection: Candidate::VISA, label: "Employment Eligibility Status", input_html: { class: "select2" } %>
         </div>
         <div class="col-md-3">
-          <label>Minimum annual salary</label>
+          <div class="row">
+            <label>Minimum annual salary</label>
+          </div>
           <div class="input-group">
             <span class="input-group-addon">$</span>
             <%= f.input_field :minimum_annual_salary, as: 'string', class: "form-control" %>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <%= label_tag "What kind of position would you like in your next job?" %>
+          <%= text_field_tag "candidate[positions]", @candidate.position_list.to_s, id: 'positions', style: 'width: 100%' %>
+          <small><i>add multiple tags separated by comma</i></small>
         </div>
       </div>
     </div>
@@ -81,6 +103,7 @@
       <hr>
       <%= label_tag "Skill Tags" %>
       <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select'%>
+      <small><i>add multiple tags separated by comma</i></small>
     </div>
 
     <%= f.button :submit, value: 'Update Profile', disable_with: 'Updating Profile...', class: 'btn btn-success btn-lg' %>

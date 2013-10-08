@@ -15,6 +15,8 @@ Accruto::Application.routes.draw do
   get 'profile/create', to: 'candidates#create', as: 'create_profile'
   get 'profile/publish', to: 'candidates#publish', as: 'publish_profile'
   get 'profile/unpublish', to: 'candidates#unpublish', as: 'unpublish_profile'
+  get 'profile/activation/:auth_token', to: 'candidates#edit'
+  get '/candidates/search_job_categories', to: 'candidates#search_job_categories', as: 'search_job_categories'
 
   match '/delayed_job' => DelayedJobWeb, :anchor => false
 

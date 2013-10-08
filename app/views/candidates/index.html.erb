@@ -1,6 +1,6 @@
 <div class="row-fluid">
   <div class="span2 hidden-phone">
-    <%= render 'shared/search_sidebar', favourite_jobs: @favourite_jobs %>
+    <%= render 'shared/candidate_search_sidebar', favourite_jobs: @favourite_jobs %>
   </div>
   <div class="span8 result-list">
     <h4 class="result-sentence">There are <span class="result-number"><%= @candidates.count %></span> sales candidates in Australia
@@ -15,7 +15,7 @@
             </div>
             <div class="span6">
               <h4><%= candidate.job_title %></h4>
-              <p><i class="icon-map-marker"></i>&nbsp;&nbsp;<%=  candidate.address.city %>, <%= candidate.address.state %></p>
+              <p><i class="icon-map-marker"></i>&nbsp;&nbsp;<%=  candidate.address.try(:city) %>, <%= candidate.address.try(:state) %></p>
               <p><span class="label status-<%= candidate_label_class(candidate.status) %>"><%= candidate.status %></span>&nbsp;&nbsp;&nbsp;<span class="label visa-<%= candidate_label_class(candidate.visa) %>"><%= candidate.visa %></span></p>
               <p class="posted-date">Updated <%= distance_of_time_in_words_to_now(candidate.updated_at) %> ago</p>
             </div>
