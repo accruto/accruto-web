@@ -112,3 +112,5 @@ jQuery ->
     createSearchChoice: (term) ->
       id: term
       text: term
+
+  $('#subcategories-select').select2

@@ -27,21 +27,23 @@
           <div class="row">
             <div class="col-md-8">
               <ul>
-                <% if @candidate.status %>
+                <% unless @candidate.status.blank? %>
                 <li>Current job status: <span class='tag <%= @candidate.status.downcase.split(" ").join("-") %>'><%= @candidate.status %></span></li>
                 <% end %>
-                <% if @candidate.visa %>
+                <% unless @candidate.visa.blank? %>
                 <li>Currently has <span class='tag <%= @candidate.visa.downcase.split(" ").join("-") %>'><%= @candidate.visa %></span></li>
                 <% end %>
                 <% unless @candidate.minimum_annual_salary.blank? %>
                   <li>Looking for a job with salary more than <span class='tag'><%= number_to_currency(@candidate.minimum_annual_salary, precision: 0) %> pa</span></li>
                 <% end %>
+                <% unless @candidate.skill_list.blank? %>
                 <li>
                   <%= @candidate.first_name %> has the following skills:<br>
                   <% @candidate.skill_list.each do |skill| %>
                     <span class='tag'><%= skill %></span>
                   <% end %>
-                </li>
+                </li>  
+                <% end %>
               </ul>
             </div>
           </div>
@@ -67,17 +69,18 @@
               </div>
             </div>
           <% else %>
-            <% @candidate.experiences.each do |experience| %>
+            <% @candidate.experiences.sort_by_ended_at.each do |experience| %>
               <div class="fields-entry">
                 <div class="row">
                   <div class="col-md-8">
-                    <% unless experience.job_title.blank? %>
-                      <h5><strong><%= experience.job_title %></strong> at <%= experience.company %></h5>
+                    <h5><strong><%= experience.job_title %></strong> at <%= experience.company %></h5>
+                    <% unless experience.description.blank? %>
+                      <p><%= experience.description %></p>
                     <% end %>
                   </div>
                   <div class="col-md-4 align-right">
                     <% unless experience.ended_at.blank? %>
-                      <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;<%= datetime_in_years(experience.ended_at) %> to <%= datetime_in_years(experience.started_at) %><br>
+                      <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;<%= datetime_in_years(experience.started_at) %> to <%= datetime_in_years(experience.ended_at) %><br>
                       <%= distance_of_time_in_words(experience.ended_at, experience.started_at) %>
                       </p>
                     <% end %>
@@ -98,7 +101,7 @@
               </div>
             </div>
           <% else %>
-            <% @candidate.trade_qualifications.each do |tq| %>
+            <% @candidate.trade_qualifications.sort_by_attained_at.each do |tq| %>
               <div class="fields-entry">
                 <div class="row">
                   <div class="col-md-8">
@@ -116,7 +119,7 @@
         </div>
         <div class="profile-area content education">
           <h4 class="fields-heading">EDUCATION</h4>
-          <% if @candidate.experiences.blank? %>
+          <% if @candidate.educations.blank? %>
             <div class="fields-entry">
               <div class="row">
                 <div class="col-md-8">
@@ -125,7 +128,7 @@
               </div>
             </div>
           <% else %>
-            <% @candidate.educations.each do |education| %>
+            <% @candidate.educations.sort_by_graduated_at.each do |education| %>
               <div class="fields-entry">
                 <div class="row">
                   <div class="col-md-8">
@@ -148,17 +151,19 @@
       <div class="content">
         <div class="well">
           <ol>
-            <li class="completed">Complete your profile<br>
+            <li class="completed">Complete your profile</li>
             <a href="#">Read: Ways to improve your profile</a>
-            </li>
-            <li>Publish profile to employers <br>
             <% if @candidate.publish? %>
-              <%= link_to "UNPUBLISH", unpublish_profile_path, class: 'btn btn-publish' %>
+              <li class="completed">Publish profile to employers</li>
+                <p>Your profile is now published and interview requests should be appearing in your email.</p>
+                <%= link_to "Unpublish", unpublish_profile_path %>
+              </li>    
             <% else %>
-              <%= link_to "PUBLISH", publish_profile_path, class: 'btn btn-publish' %>
+              <li>Publish profile to employers <br>
+                <%= link_to "PUBLISH", publish_profile_path, class: 'btn btn-publish' %>
+              </li>
             <% end %>
-            </li>
-            <li>Accept interview with employers</li>
+            <li>Interview with employers</li>
             <li>Land a new job</li>
           </ol>
         </div>

@@ -16,11 +16,17 @@
         <div class="col-md-3">
           <%= f.input :profile_photo, as: 'file' %>
         </div>
+      </div>
+      <div class="row">  
         <div class="col-md-3">
           <%= f.input :job_title, label: "Current job title" %>
         </div>
         <div class="col-md-3">
           <%= f.input :phone %>
+        </div>
+        <div class="col-md-6">
+          <label>Languages, skills and specialisations <span class="label-description">(e.g. First Aid Training, BOSIET)</span> </label>
+          <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select'%>
         </div>
       </div>
       <div class="row">
@@ -37,10 +43,10 @@
       <hr>
       <div class="row">
         <div class="col-md-3">
-          <%= f.input :status, collection: Candidate::STATUS, label: "When can you start interviewing?", input_html: { class: "select2" } %>
+          <%= f.input :start_interviewing_at, collection: Candidate::START_INTERVIEWING_AT_OPTIONS, label: "When can you start interviewing?", input_html: { class: "select2" } %>
         </div>
         <div class="col-md-3">
-          <%= f.input :visa, collection: Candidate::VISA, label: "Employment Eligibility Status", input_html: { class: "select2" } %>
+          <%= f.input :visa, collection: Candidate::VISA_OPTIONS, label: "Employment Eligibility Status", input_html: { class: "select2" } %>
         </div>
         <div class="col-md-3">
           <label>Minimum annual salary</label>
@@ -48,6 +54,14 @@
             <span class="input-group-addon">$</span>
             <%= f.input_field :minimum_annual_salary, as: 'string', class: "form-control" %>
           </div>
+        </div>
+      </div>
+      <div class="row">  
+        <div class="col-md-12">
+          <label>What kind of position would you like in your next job?</label>
+          <%= f.simple_fields_for :subcategories do |sc| %>
+            <%= sc.input :name, collection: JobSubcategory.pluck('name'), input_html: { class: 'select2' }, label: false %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -74,13 +88,6 @@
         <%= render 'users/profile_form_fields/education_fields', f: e %>
       <% end %>
       <a href="#" class="add-education-field">+ Add education</a>
-    </div>
-
-    <div class="section">
-      <h3>Skills</h3>
-      <hr>
-      <%= label_tag "Skill Tags" %>
-      <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select'%>
     </div>
 
     <%= f.button :submit, value: 'Update Profile', disable_with: 'Updating Profile...', class: 'btn btn-success btn-lg' %>

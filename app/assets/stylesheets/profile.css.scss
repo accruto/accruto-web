@@ -21,7 +21,8 @@ $profile-border-color: #ebebeb;
 
 .select2-container {
   padding: 0;
-  border: 2px solid $gray;
+  border: 2px solid #cccccc;
+  border-radius: 4px;
 }
 .select2-choice {
   border: 0px solid white !important;
@@ -42,6 +43,10 @@ $profile-border-color: #ebebeb;
 .select2-arrow {
   background: transparent !important;
   border: 0px solid $gray !important;
+}
+.select2-choices {
+  border: 0px solid $gray !important;
+  background: transparent !important;
 }
 
 .candidates-show {
@@ -66,15 +71,20 @@ $profile-border-color: #ebebeb;
     }
   }
   ol>li {
-    margin-bottom: 15px;
-    &.completed {
-      text-decoration: line-through;
-      color: $gray-light;
-    }
+    margin: 10px 0 0 0; 
+    font-weight: 600;
     a:not(.btn) {
       text-decoration: underline;
     }
   }
+}
+.completed {
+  text-decoration: line-through;
+  color: $gray-light;
+}
+.label-description {
+  color: $gray-light;
+  font-weight: 400;
 }
 .profile-container {
   margin-top: 40px;

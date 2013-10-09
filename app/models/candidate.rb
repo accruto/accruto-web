@@ -30,7 +30,8 @@ class Candidate < ActiveRecord::Base
   attr_accessible :address_id, :user_id, :first_name, :job_title, :last_name,
                   :phone, :status, :visa, :minimum_annual_salary, :updated_at,
                   :profile_photo, :resume_attributes, :summary, :desired_job_title, :email,
-                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills
+                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills,
+                  :subcategories_attributes, :start_interviewing_at
 
   attr_writer :email, :skills
 
@@ -46,6 +47,7 @@ class Candidate < ActiveRecord::Base
   has_many :job_subcategories_candidates
   has_many :subcategories, through: :job_subcategories_candidates, source: :job_subcategory
 
+  accepts_nested_attributes_for :subcategories, reject_if: lambda { |a| a[:name].blank? }, allow_destroy: true
   accepts_nested_attributes_for :educations, reject_if: lambda { |a| a[:institution].blank? }, allow_destroy: true
   accepts_nested_attributes_for :trade_qualifications, reject_if: lambda { |a| a[:name].blank? }, allow_destroy: true
   accepts_nested_attributes_for :experiences, reject_if: lambda { |a| a[:company].blank? && a[:job_title].blank? }, allow_destroy: true
@@ -56,13 +58,21 @@ class Candidate < ActiveRecord::Base
   scope :filter_by_status, lambda { |status| where("status = ?", status) if status.present? }
   scope :filter_by_visa, lambda { |visa| where("visa = ?", visa) if visa.present? }
 
-  STATUS = [
-    "Immediately Available",
-    "Actively Looking",
-    "Happy To Talk"
+  STATUS_OPTIONS = [
+    "Immediately",
+    "Within One Week",
+    "Within One Month",
+    "After One Month",
   ]
 
-  VISA = [
+  START_INTERVIEWING_AT_OPTIONS = {
+    "After 6 months" => 6.months.from_now,
+    "After 1 month" => 1.month.from_now,
+    "After 1 week" => 1.week.from_now,
+    "Immediately" => DateTime.now
+  }
+
+  VISA_OPTIONS = [
     "Australian Residency or Citizenship",
     "Valid Work Visa",
     "No Work Visa"

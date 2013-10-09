@@ -15,6 +15,7 @@ class TradeQualification < ActiveRecord::Base
   belongs_to :candidate
 
   YEARS = (1800..2016).to_a
+  scope :sort_by_attained_at, -> { order("attained_at DESC") }
 
   def attained_at_text
     @attained_at || self.attained_at.try(:year)

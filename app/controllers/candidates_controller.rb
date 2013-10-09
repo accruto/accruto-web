@@ -23,6 +23,7 @@ class CandidatesController < ApplicationController
     @candidate.experiences.build
     @candidate.trade_qualifications.build
     @candidate.educations.build
+    @candidate.subcategories.build
   end
 
   def create
