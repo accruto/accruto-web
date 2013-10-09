@@ -53,11 +53,17 @@ class CandidatesController < ApplicationController
   end
 
   def search_job_categories
-    results = JobSubcategory.all.map {|sc| [sc.id, sc.name]}
-    compose_json = []
-    results.each do |result|
-      compose_json << {:id => result[0], :label => result[1] }
+    job_subcategories = JobSubcategory.all.map {|sc| [sc.id, sc.name]}
+    results = []
+    job_subcategories.each do |result|
+      results << { id: result[0], text: result[1] }
     end
+
+    compose_json = {
+        more: false,
+        results: results
+    }
+
     respond_to do |format|
       format.json { render json: compose_json }
     end

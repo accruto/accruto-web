@@ -8,9 +8,8 @@
         <%= f.input :attained_at_text, label: "Attained at", collection: TradeQualification::YEARS, input_html: {class: 'select2 qualification_select qualification_year'} %>
       </div>
       <div class="col-md-2">
-        <i class="icon-remove qualification-row-remove <%= f.object.new_record? ? 'hide' : '' %>" data-toggle="tooltip" title="Delete"></i>
+        <%= f.input :_destroy, as: :boolean, label: "(delete from profile)", wrapper_html: {class: "row-delete #{f.object.new_record? ? 'hide' : ''}"} %>
       </div>
     </div>
   </div>
-  <%= f.hidden_field :_destroy %>
 </div>
