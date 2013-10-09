@@ -34,7 +34,14 @@ jQuery ->
     new_object.find('.experience_end').val("").prop('selected', true)
       .attr('id', 'experience_end_' + $experience_counter).select2()
       .attr('name', 'candidate[experiences_attributes]['+$experience_counter+'][ended_at_text]')
-    new_object.find('.icon-remove').removeClass('hide')
+
+    row_delete = new_object.find('.row-delete')
+    checkbox_label = $(row_delete).children()[1]
+    $(checkbox_label).attr('for', 'trade_qualifications_delete_' + $qualification_counter)
+    checkbox_delete = $(checkbox_label).children()[0]
+    $(checkbox_delete).attr('id', 'trade_qualifications_delete_' + $qualification_counter)
+    $(row_delete).removeClass('hide')
+
     new_object.find('.experience_select').each ->
       $(this).removeClass('experience_select')
     new_object.insertBefore('.add-experience-field');
@@ -61,6 +68,14 @@ jQuery ->
     new_object.find('.qualification_year').val("").prop('selected', true)
       .attr('id', 'qualification_year_' + $qualification_counter).select2()
       .attr('name', 'candidate[trade_qualifications_attributes]['+$qualification_counter+'][attained_at_text]')
+
+    row_delete = new_object.find('.row-delete')
+    checkbox_label = $(row_delete).children()[1]
+    $(checkbox_label).attr('for', 'trade_qualifications_delete_' + $qualification_counter)
+    checkbox_delete = $(checkbox_label).children()[0]
+    $(checkbox_delete).attr('id', 'trade_qualifications_delete_' + $qualification_counter)
+    $(row_delete).removeClass('hide')
+
     new_object.insertBefore('.add-qualification-field')
     new_object.find('.icon-remove').removeClass('hide')
     qualification_form.find('.qualification_select').select2()
@@ -90,7 +105,14 @@ jQuery ->
     new_object.find('.graduated_at').val("").prop('selected', true)
       .attr('id', 'profile_education_graduated_at_in_years_' + $education_counter).select2()
       .attr('name', 'candidate[educations_attributes]['+$education_counter+'][graduated_at_text]')
-    new_object.find('.icon-remove').removeClass('hide')
+
+    row_delete = new_object.find('.row-delete')
+    checkbox_label = $(row_delete).children()[1]
+    $(checkbox_label).attr('for', 'candidate_educations_delete_' + $education_counter)
+    checkbox_delete = $(checkbox_label).children()[0]
+    $(checkbox_delete).attr('id', 'candidate_educations_delete_' + $education_counter)
+    $(row_delete).removeClass('hide')
+    # new_object.find('.icon-remove')
     new_object.find('.education_select').each ->
       $(this).removeClass('education_select')
     new_object.insertBefore('.add-education-field')
@@ -108,9 +130,35 @@ jQuery ->
   $('#skills-select').select2
     width: "100%"
     tags: []
-    tokenSeparators: [",", " "]
+    tokenSeparators: [","]
     createSearchChoice: (term) ->
       id: term
       text: term
 
-  $('#subcategories-select').select2
+  $("#positions").select2
+    tags: true
+    tokenSeparators: [","]
+    createSearchChoice: (term, data) ->
+      if $(data).filter(->
+        @text.localeCompare(term) is 0
+      ).length is 0
+        id: term
+        text: term
+
+    multiple: true
+    ajax:
+      url: "/candidates/search_job_categories.json"
+      dataType: "json"
+      data: (term, page) ->
+        q: term
+
+      results: (data, page) ->
+        results: data.results
+    formatResult: FormatResult
+    formatSelection: FormatSelection
+
+  FormatSelection = (data) ->
+    data.text
+
+  FormatResult = (data) ->
+    data.text

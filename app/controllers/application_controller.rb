@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 	  redirect_to root_url, :alert => exception.message
 	end
 
+  before_filter :after_token_authentication
 	after_filter :store_location
 
 	def store_location
@@ -35,5 +36,16 @@ class ApplicationController < ActionController::Base
 
 	def after_inactive_sign_up_path_for(resource)
 		create_profile_path
-	end
+  end
+
+  def after_token_authentication
+    if params[:auth_token].present?
+      user = User.find_by_authentication_token(params[:auth_token])
+      if user && sign_in(:user, user)
+        flash[:notice] = "You have successfully logged in"
+      else
+        root_path
+      end
+    end
+  end
 end

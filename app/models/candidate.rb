@@ -22,7 +22,7 @@ class Candidate < ActiveRecord::Base
   include PgSearch
 
   acts_as_ordered_taggable
-  acts_as_ordered_taggable_on :skills
+  acts_as_ordered_taggable_on :skills, :positions
 
   mount_uploader :profile_photo, ProfilePhotoUploader
   serialize :desired_job_title, ActiveRecord::Coders::Hstore
@@ -30,12 +30,14 @@ class Candidate < ActiveRecord::Base
   attr_accessible :address_id, :user_id, :first_name, :job_title, :last_name,
                   :phone, :status, :visa, :minimum_annual_salary, :updated_at,
                   :profile_photo, :resume_attributes, :summary, :desired_job_title, :email,
-                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills,
+                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills, :state, :positions,
                   :subcategories_attributes, :start_interviewing_at
 
   attr_writer :email, :skills
 
   validates :first_name, :last_name, presence: true
+  validates :minimum_annual_salary, presence: {message: 'Please fill in your minimum annual salary'}
+
   # validates :first_name, uniqueness: {scope: [:last_name, :job_title]}
 
   belongs_to :address

@@ -21,7 +21,7 @@
 class User < ActiveRecord::Base
   rolify
 
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :token_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
@@ -36,6 +36,7 @@ class User < ActiveRecord::Base
 
   before_create :set_default_preference
   after_create :assign_role
+  before_save :ensure_authentication_token
 
   has_one :candidate
   accepts_nested_attributes_for :candidate
