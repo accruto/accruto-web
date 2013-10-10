@@ -68,8 +68,8 @@
       <div class="row">
         <div class="col-md-12">
           <%= label_tag "What kind of position would you like in your next job?" %>
-          <%#= text_field_tag "candidate[positions]", @candidate.position_list.to_s, id: 'positions', style: 'width: 100%', class: 'input-xlarge' %>
-          <small><i>add multiple tags separated by comma</i></small>
+          <%= text_field_tag "candidate[positions]", @candidate.position_list.to_s, id: 'positions' %>
+          <small><i>add multiple positions separated by comma</i></small>
         </div>
       </div>
     </div>
@@ -102,7 +102,7 @@
       <h3>Skills</h3>
       <hr>
       <%= label_tag "Skill Tags" %>
-      <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select'%>
+      <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select' %>
       <small><i>add multiple tags separated by comma</i></small>
     </div>
 

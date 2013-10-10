@@ -30,9 +30,10 @@ class Candidate < ActiveRecord::Base
   attr_accessible :address_id, :user_id, :first_name, :job_title, :last_name,
                   :phone, :status, :visa, :minimum_annual_salary, :updated_at,
                   :profile_photo, :resume_attributes, :summary, :desired_job_title, :email,
-                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills, :state, :positions
+                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills, :state,
+                  :positions
 
-  attr_writer :email, :skills
+  attr_writer :email, :skills, :positions
 
   validates :first_name, :last_name, presence: true
   validates :minimum_annual_salary, presence: {message: 'Please fill in your minimum annual salary'}
@@ -105,6 +106,11 @@ class Candidate < ActiveRecord::Base
   def self.set_default_unpublished
     candidates = where("state IS NULL")
     candidates.each {|candidate| candidate.unpublish! }
+  end
+
+  def positions=(lists)
+    lists.split(",").each { |category| JobSubcategory.find_or_create_by_name(category) }
+    self.position_list = lists
   end
 
   private
