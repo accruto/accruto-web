@@ -369,6 +369,41 @@ ALTER SEQUENCE favourites_id_seq OWNED BY favourites.id;
 
 
 --
+-- Name: invites; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE invites (
+    id integer NOT NULL,
+    name character varying(255),
+    email character varying(255),
+    message text,
+    user_id integer,
+    status character varying(255),
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: invites_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE invites_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: invites_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE invites_id_seq OWNED BY invites.id;
+
+
+--
 -- Name: job_applications; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1054,6 +1089,13 @@ ALTER TABLE ONLY favourites ALTER COLUMN id SET DEFAULT nextval('favourites_id_s
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY invites ALTER COLUMN id SET DEFAULT nextval('invites_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY job_applications ALTER COLUMN id SET DEFAULT nextval('job_applications_id_seq'::regclass);
 
 
@@ -1239,6 +1281,14 @@ ALTER TABLE ONLY experiences
 
 ALTER TABLE ONLY favourites
     ADD CONSTRAINT favourites_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: invites_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY invites
+    ADD CONSTRAINT invites_pkey PRIMARY KEY (id);
 
 
 --
@@ -1738,3 +1788,9 @@ INSERT INTO schema_migrations (version) VALUES ('20131004065549');
 INSERT INTO schema_migrations (version) VALUES ('20131006070837');
 
 INSERT INTO schema_migrations (version) VALUES ('20131006093339');
+
+INSERT INTO schema_migrations (version) VALUES ('20131008042909');
+
+INSERT INTO schema_migrations (version) VALUES ('20131008085037');
+
+INSERT INTO schema_migrations (version) VALUES ('20131010005856');

@@ -30,8 +30,12 @@ class Candidate < ActiveRecord::Base
   attr_accessible :address_id, :user_id, :first_name, :job_title, :last_name,
                   :phone, :status, :visa, :minimum_annual_salary, :updated_at,
                   :profile_photo, :resume_attributes, :summary, :desired_job_title, :email,
-                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills, :state, :positions,
+<<<<<<< HEAD
+                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills,
                   :subcategories_attributes, :start_interviewing_at
+=======
+                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills, :state, :positions
+>>>>>>> 264c7a94ab1f608f64874977dab41524d48366d8
 
   attr_writer :email, :skills
 
@@ -80,8 +84,6 @@ class Candidate < ActiveRecord::Base
     "No Work Visa"
   ]
 
-  BOUNTY = "$858"
-
   state_machine :state, :initial => :unpublished do
     event :publish do
       transition all => :publish
@@ -99,10 +101,6 @@ class Candidate < ActiveRecord::Base
     where(
       "minimum_annual_salary >= :min AND minimum_annual_salary <= :max", min: min.to_i, max: max.to_i
     )
-  end
-
-  def full_name
-    return "#{self.first_name} #{self.last_name}"
   end
 
   def email

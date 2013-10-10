@@ -37,6 +37,12 @@ $profile-border-color: #ebebeb;
   margin: 5px 0;
   border: 2px solid $gray !important;
 }
+.select2-search-choice {
+  background: $yellow-light !important;
+  border-radius: 3px !important;
+  border: 0px solid #ccc !important;
+  display: inline-block !important;
+}
 .select2-highlighted {
   background: $green !important;
 }
@@ -54,7 +60,6 @@ $profile-border-color: #ebebeb;
 }
 
 .row-delete {
-  background-color: #EEEEEE;
   padding: 1px 5px 1px 7px;
   margin-top: 17px;
 }
@@ -73,12 +78,18 @@ $profile-border-color: #ebebeb;
     color: white;
     background: $green;
     margin-top:10px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    padding: 10px 20px;
     &:hover {
       background: darken($green, 8%);
       transition: background .25s ease-in-out;
       -moz-transition: background .25s ease-in-out;
       -webkit-transition: background .25s ease-in-out;
     }
+  }
+  ol {
+    margin-left: -12px;
   }
   ol>li {
     margin: 10px 0 0 0; 

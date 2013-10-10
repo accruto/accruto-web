@@ -52,6 +52,8 @@ Accruto::Application.routes.draw do
     end
   end
 
+  resources :invites
+
   # namespace :admin do
   # 	resources :jobs
   # 	resources :job_categories

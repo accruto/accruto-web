@@ -1,4 +1,3 @@
-<% title "Your Profile" %>
 <div class="container">
   <div class="row">
     <div class="col-md-8">
@@ -28,8 +27,8 @@
           <div class="row">
             <div class="col-md-8">
               <ul>
-                <% unless @candidate.start_interviewing_at.blank? %>
-                <li>Available for interviews in: <span class='tag <%= distance_of_time_in_words(@candidate.start_interviewing_at, DateTime.now) %>'><%=distance_of_time_in_words(@candidate.start_interviewing_at, DateTime.now) %></span></li>
+                <% unless @candidate.status.blank? %>
+                <li>Current job status: <span class='tag <%= @candidate.status.downcase.split(" ").join("-") %>'><%= @candidate.status %></span></li>
                 <% end %>
                 <% unless @candidate.visa.blank? %>
                 <li>Currently has <span class='tag <%= @candidate.visa.downcase.split(" ").join("-") %>'><%= @candidate.visa %></span></li>
@@ -37,6 +36,15 @@
                 <% unless @candidate.minimum_annual_salary.blank? %>
                   <li>Looking for a job with salary more than <span class='tag'><%= number_to_currency(@candidate.minimum_annual_salary, precision: 0) %> pa</span></li>
                 <% end %>
+<<<<<<< HEAD
+                <% unless @candidate.skill_list.blank? %>
+                <li>
+                  <%= @candidate.first_name %> has the following skills:<br>
+                  <% @candidate.skill_list.each do |skill| %>
+                    <span class='tag'><%= skill %></span>
+                  <% end %>
+                </li>  
+=======
                 <% unless @candidate.skill_list.empty? %>
                   <li>
                     <%= @candidate.first_name %> has the following skills:<br>
@@ -44,6 +52,7 @@
                       <span class='tag'><%= skill %></span>
                     <% end %>
                   </li>
+>>>>>>> 264c7a94ab1f608f64874977dab41524d48366d8
                 <% end %>
               </ul>
             </div>
@@ -152,18 +161,14 @@
       <div class="content">
         <div class="well">
           <ol>
+            <li class="completed">Complete your profile</li>
+            <a href="#">Read: Ways to improve your profile</a>
             <% if @candidate.publish? %>
-              <li class="completed">Complete your profile</li>
               <li class="completed">Publish profile to employers</li>
                 <p>Your profile is now published and interview requests should be appearing in your email.</p>
                 <%= link_to "Unpublish", unpublish_profile_path %>
-                <br><br>
-                <a href="<%= new_invite_path %>">Recommend your friends and earn <%= Candidate::BOUNTY %></a>
-                <br>
               </li>    
             <% else %>
-              <li>Complete your profile</li>
-              <a href="#">Read: Ways to improve your profile</a>
               <li>Publish profile to employers <br>
                 <%= link_to "PUBLISH", publish_profile_path, class: 'btn btn-publish' %>
               </li>

@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="content">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Invite your friends to Accruto</h2>
+        <p>Know someone who will be great for the same job? Use this form to invite your friends and colleagues to join.</p>
+
+        <p>We'll send an email on your behalf to the email address you specify below. When your friend signs up and finds a job through the Accruto platform, you'll be handsomely rewarded!</p>
+
+        <p>You receive:</p>
+        <ul>
+          <li><strong><%= Candidate::BOUNTY %></strong> for each hired referral.</li>
+        </ul>  
+        <p>They receive:</p>
+        <ul>
+          <li>Priority selection for potential jobs.</li>
+        </ul>
+        <%= simple_form_for @invite do |f| %>
+          <%= f.input :name, label: "Friend's name" %>
+          <%= f.input :email, label: "Friend's email address" %>
+          <%= f.input :message, label: "Personal message" %>
+          <%= f.submit "Send Invitation", class: "btn btn-lg btn-success" %>
+        <% end %>
+      </div> 
+      <div class="col-md-6">
+        <h4>Preview the email invitation here</h4>
+        <div class="well">
+        <p><strong>From:</strong><br>
+        "<%= @candidate.full_name %>" &lt;<%= @candidate.user.email %>&gt;<br>
+        <strong>To:</strong><br>
+        "Sarah" &lt;sarah@accruto.com&gt;<br>
+        <strong>Subject:</strong><br>
+        <%= @candidate.full_name %> has invited you to join Hired<br>
+        </p>
+
+        <p><strong>Body:</strong><br>
+        Hi Sarah,</p>
+
+        <p>You've been recommended for Accruto by your friend <%= @candidate.full_name %> (<%= @candidate.email %>). Accruto is the new way to discover new job opportunities for skilled trades and technical hires. Accruto currently works with 60 companies - including the likes of Woolworths, Target, Rio Tinto and many more.</p>
+
+        <p><%= @candidate.first_name %> wrote:<br> 
+        "--personal message here--"</p>
+
+        <p>Since you've been recommended, you get a special perk: priority selection of your profile and higher likelihood of invitation for an interview.</p>
+
+        <p>Join Accruto through your personal link:<br> 
+        http://accruto.com/invited/<%= @candidate.email %></p>
+
+        <p>Few things you should know about Accruto:</p>
+        <ul>
+          <li>Benefit 1</li>
+          <li>Benefit 2</li>
+          <li>Benefit 3</li>
+        </ul>
+        --- <br>
+        <p>This is a one-time email sent because <%= @candidate.full_name %> (<%= @candidate.email %>) recommended you. You have not been added to any email list.</p>
+        </div>
+      </div> 
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Invites</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Date Sent</th>
+              <th>Invitation Sent To</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @invites.each do |invite| %>
+              <tr>
+                <td><%= invite.created_at.to_s(:long_ordinal) %></td>
+                <td><%= invite.name %> &lt;<%= invite.email %>&gt;</td>
+                <td><%= invite.status %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
