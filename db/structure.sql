@@ -132,7 +132,8 @@ CREATE TABLE candidates (
     profile_photo character varying(255),
     desired_job_title hstore,
     summary text,
-    state character varying(255) DEFAULT 'unpublished'::character varying
+    state character varying(255) DEFAULT 'unpublished'::character varying,
+    start_interviewing_at timestamp without time zone
 );
 
 
@@ -365,6 +366,41 @@ CREATE SEQUENCE favourites_id_seq
 --
 
 ALTER SEQUENCE favourites_id_seq OWNED BY favourites.id;
+
+
+--
+-- Name: invites; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE invites (
+    id integer NOT NULL,
+    name character varying(255),
+    email character varying(255),
+    message text,
+    user_id integer,
+    status character varying(255),
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: invites_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE invites_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: invites_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE invites_id_seq OWNED BY invites.id;
 
 
 --
@@ -642,6 +678,42 @@ CREATE SEQUENCE preferences_id_seq
 --
 
 ALTER SEQUENCE preferences_id_seq OWNED BY preferences.id;
+
+
+--
+-- Name: rails_admin_histories; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE rails_admin_histories (
+    id integer NOT NULL,
+    message text,
+    username character varying(255),
+    item integer,
+    "table" character varying(255),
+    month smallint,
+    year bigint,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: rails_admin_histories_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE rails_admin_histories_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: rails_admin_histories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE rails_admin_histories_id_seq OWNED BY rails_admin_histories.id;
 
 
 --
@@ -1017,6 +1089,13 @@ ALTER TABLE ONLY favourites ALTER COLUMN id SET DEFAULT nextval('favourites_id_s
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY invites ALTER COLUMN id SET DEFAULT nextval('invites_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY job_applications ALTER COLUMN id SET DEFAULT nextval('job_applications_id_seq'::regclass);
 
 
@@ -1067,6 +1146,13 @@ ALTER TABLE ONLY pg_search_documents ALTER COLUMN id SET DEFAULT nextval('pg_sea
 --
 
 ALTER TABLE ONLY preferences ALTER COLUMN id SET DEFAULT nextval('preferences_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY rails_admin_histories ALTER COLUMN id SET DEFAULT nextval('rails_admin_histories_id_seq'::regclass);
 
 
 --
@@ -1198,6 +1284,14 @@ ALTER TABLE ONLY favourites
 
 
 --
+-- Name: invites_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY invites
+    ADD CONSTRAINT invites_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: job_applications_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1262,6 +1356,14 @@ ALTER TABLE ONLY preferences
 
 
 --
+-- Name: rails_admin_histories_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY rails_admin_histories
+    ADD CONSTRAINT rails_admin_histories_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: recent_searches_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1323,6 +1425,27 @@ ALTER TABLE ONLY trade_qualifications
 
 ALTER TABLE ONLY users
     ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
+
+
+--
+-- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
+
+
+--
+-- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
 
 
 --
@@ -1421,6 +1544,13 @@ CREATE INDEX index_jobs_on_company_id ON jobs USING btree (company_id);
 --
 
 CREATE UNIQUE INDEX index_jobs_on_slug ON jobs USING btree (slug);
+
+
+--
+-- Name: index_rails_admin_histories; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_rails_admin_histories ON rails_admin_histories USING btree (item, "table", month, year);
 
 
 --
@@ -1659,4 +1789,8 @@ INSERT INTO schema_migrations (version) VALUES ('20131006070837');
 
 INSERT INTO schema_migrations (version) VALUES ('20131006093339');
 
+INSERT INTO schema_migrations (version) VALUES ('20131008042909');
+
 INSERT INTO schema_migrations (version) VALUES ('20131008085037');
+
+INSERT INTO schema_migrations (version) VALUES ('20131010005856');

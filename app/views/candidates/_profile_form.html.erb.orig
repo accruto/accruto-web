@@ -71,11 +71,20 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+      <div class="row">  
+        <div class="col-md-12">
+          <label>What kind of position would you like in your next job?</label>
+          <%= f.simple_fields_for :subcategories do |sc| %>
+            <%= sc.input :name, collection: JobSubcategory.pluck('name'), input_html: { class: 'select2' }, label: false %>
+          <% end %>
+=======
       <div class="row">
         <div class="col-md-12">
           <%= label_tag "What kind of position would you like in your next job?" %>
-          <%= text_field_tag "candidate[positions]", @candidate.position_list.to_s, id: 'positions' %>
-          <small><i>add multiple positions separated by comma</i></small>
+          <%#= text_field_tag "candidate[positions]", @candidate.position_list.to_s, id: 'positions', style: 'width: 100%', class: 'input-xlarge' %>
+          <small><i>add multiple tags separated by comma</i></small>
+>>>>>>> 264c7a94ab1f608f64874977dab41524d48366d8
         </div>
       </div>
     </div>
@@ -104,14 +113,17 @@
       <a href="#" class="add-education-field">+ Add education</a>
     </div>
 
+<<<<<<< HEAD
+=======
     <div class="section">
       <h3>Skills</h3>
       <hr>
       <%= label_tag "Skill Tags" %>
-      <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select' %>
+      <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select'%>
       <small><i>add multiple tags separated by comma</i></small>
     </div>
 
+>>>>>>> 264c7a94ab1f608f64874977dab41524d48366d8
     <%= f.button :submit, value: 'Update Profile', disable_with: 'Updating Profile...', class: 'btn btn-success btn-lg' %>
   </div>
 <% end %>

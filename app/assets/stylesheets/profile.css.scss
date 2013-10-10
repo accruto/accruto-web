@@ -21,7 +21,8 @@ $profile-border-color: #ebebeb;
 
 .select2-container {
   padding: 0;
-  border: 2px solid $gray;
+  border: 2px solid #cccccc;
+  border-radius: 4px;
 }
 .select2-choice {
   border: 0px solid white !important;
@@ -36,6 +37,12 @@ $profile-border-color: #ebebeb;
   margin: 5px 0;
   border: 2px solid $gray !important;
 }
+.select2-search-choice {
+  background: $yellow-light !important;
+  border-radius: 3px !important;
+  border: 0px solid #ccc !important;
+  display: inline-block !important;
+}
 .select2-highlighted {
   background: $green !important;
 }
@@ -43,13 +50,16 @@ $profile-border-color: #ebebeb;
   background: transparent !important;
   border: 0px solid $gray !important;
 }
+.select2-choices {
+  border: 0px solid $gray !important;
+  background: transparent !important;
+}
 
 .select2-fullwidth {
   width: 100%
 }
 
 .row-delete {
-  background-color: #EEEEEE;
   padding: 1px 5px 1px 7px;
   margin-top: 17px;
 }
@@ -68,6 +78,9 @@ $profile-border-color: #ebebeb;
     color: white;
     background: $green;
     margin-top:10px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    padding: 10px 20px;
     &:hover {
       background: darken($green, 8%);
       transition: background .25s ease-in-out;
@@ -75,16 +88,24 @@ $profile-border-color: #ebebeb;
       -webkit-transition: background .25s ease-in-out;
     }
   }
+  ol {
+    margin-left: -12px;
+  }
   ol>li {
-    margin-bottom: 15px;
-    &.completed {
-      text-decoration: line-through;
-      color: $gray-light;
-    }
+    margin: 10px 0 0 0; 
+    font-weight: 600;
     a:not(.btn) {
       text-decoration: underline;
     }
   }
+}
+.completed {
+  text-decoration: line-through;
+  color: $gray-light;
+}
+.label-description {
+  color: $gray-light;
+  font-weight: 400;
 }
 .profile-container {
   margin-top: 40px;

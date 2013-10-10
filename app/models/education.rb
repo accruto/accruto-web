@@ -22,6 +22,8 @@ class Education < ActiveRecord::Base
   YEARS = (1800..2016).to_a
   TYPES = %w(Doctorate Masters Degree Bachelor Diploma Certificate School Course)
 
+  scope :sort_by_graduated_at, -> { order("graduated_at DESC") }
+
   def graduated_at_text
     @graduated_at || self.graduated_at.try(:year)
   end

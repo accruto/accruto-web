@@ -24,10 +24,16 @@ class CandidatesController < ApplicationController
   def edit
     @user = current_user
     @candidate = current_user.candidate
+<<<<<<< HEAD
+    @candidate.experiences.build
+    @candidate.trade_qualifications.build
+    @candidate.educations.build
+    @candidate.subcategories.build
+=======
     @candidate.experiences.build if @candidate.experiences.empty?
     @candidate.trade_qualifications.build if @candidate.trade_qualifications.empty?
     @candidate.educations.build if @candidate.educations.empty?
-    @candidate.subcategories.build
+>>>>>>> 264c7a94ab1f608f64874977dab41524d48366d8
   end
 
   def create
@@ -45,7 +51,7 @@ class CandidatesController < ApplicationController
 
   def publish
     current_user.candidate.publish!
-    redirect_to show_profile_path, notice: "Congratulations. Your profile was successfully published to potential employers.<br>In the meantime, <a href='#{new_invite_path}'>recommend your friends and receive #{Candidate::BOUNTY} for every friend that gets hired!</a>"
+    redirect_to show_profile_path, notice: 'Profile was successfully published.'
   end
 
   def unpublish
@@ -54,15 +60,10 @@ class CandidatesController < ApplicationController
   end
 
   def search_job_categories
-    job_subcategories = if params[:q].present?
-      JobSubcategory.where("name ILIKE ?", "%#{params[:q]}%").map {|sc| [sc.id, sc.name]}
-    else
-      JobSubcategory.all.map {|sc| [sc.id, sc.name]}
-    end
-
+    job_subcategories = JobSubcategory.all.map {|sc| [sc.id, sc.name]}
     results = []
     job_subcategories.each do |result|
-      results << { id: result[1], text: result[1] }
+      results << { id: result[0], text: result[1] }
     end
 
     compose_json = {

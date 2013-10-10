@@ -21,6 +21,8 @@ class Experience < ActiveRecord::Base
 
   YEARS = (1800..2016).to_a
 
+  scope :sort_by_ended_at, -> { order("ended_at DESC") }
+
   def started_at_text
     @started_at || self.started_at.try(:year)
   end
