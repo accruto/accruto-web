@@ -19,6 +19,7 @@ class InvitesController < ApplicationController
     @user.invites << @invite
     respond_to do |format|
       if @user.save
+        InviteMailer.invite_friend(@invite, @user).deliver
         format.html { redirect_to new_invite_path, notice: "Invitation was successfully sent to #{@invite.name} &lt;#{@invite.email}&gt;" }
       else
         format.html { render action: "new" }

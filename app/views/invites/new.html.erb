@@ -16,9 +16,9 @@
           <li>Priority selection for potential jobs.</li>
         </ul>
         <%= simple_form_for @invite do |f| %>
-          <%= f.input :name, label: "Friend's name" %>
-          <%= f.input :email, label: "Friend's email address" %>
-          <%= f.input :message, label: "Personal message" %>
+          <%= f.input :name, label: "Friend's name", placeholder: "John Doe" %>
+          <%= f.input :email, label: "Friend's email address", placeholder: "john.doe@gmail.com" %>
+          <%= f.input :message, label: "Personal message", input_html: { value: "This is the best source I've found for picking up solid job leads. Lots of companies that are serious about interviewing you and giving you details like salary and overtime pay upfront." } %>
           <%= f.submit "Send Invitation", class: "btn btn-lg btn-success" %>
         <% end %>
       </div> 
@@ -73,7 +73,7 @@
               <tr>
                 <td><%= invite.created_at.to_s(:long_ordinal) %></td>
                 <td><%= invite.name %> &lt;<%= invite.email %>&gt;</td>
-                <td><%= invite.status %></td>
+                <td><%= invite.status.split("_").map(&:capitalize).join(" ") %></td>
               </tr>
             <% end %>
           </tbody>

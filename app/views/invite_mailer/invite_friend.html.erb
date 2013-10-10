@@ -1,0 +1,24 @@
+<p>Hi <%= @invite.name %>,</p>
+
+<p>You've been recommended for Accruto by your friend <%= @candidate.full_name %> (<%= @candidate.email %>). Accruto is the new way to discover new job opportunities for skilled trades and technical hires. Accruto currently works with 60 companies - including the likes of Woolworths, Target, Rio Tinto and many more.</p>
+
+<p><%= @candidate.first_name %> wrote:<br> 
+<% if @invite.message %>
+  "<%= @invite.message %>"</p>
+<% else %>
+  "This is the best source I've found for picking up solid job leads. Lots of companies that are serious about interviewing you and giving you details like salary and overtime pay upfront."</p>
+<% end %>
+
+<p>Since you've been recommended, you get a special perk: priority selection of your profile and higher likelihood of invitation for an interview.</p>
+
+<p>Join Accruto through your personal link:<br> 
+http://accruto.com/invited/<%= @candidate.email %></p>
+
+<p>Few things you should know about Accruto:</p>
+<ul>
+  <li>Benefit 1</li>
+  <li>Benefit 2</li>
+  <li>Benefit 3</li>
+</ul>
+--- <br>
+<p>This is a one-time email sent because <%= @candidate.full_name %> (<%= @candidate.email %>) recommended you. You have not been added to any email list.</p>

@@ -17,6 +17,7 @@ class PagesController < ApplicationController
 	  @categories = JobCategory.all
     @candidate_search_beta_user = CandidateSearchBetaUser.new
 	  render :layout => 'home'
+    set_invited_by
   end
 
   def about
@@ -45,4 +46,10 @@ class PagesController < ApplicationController
 		  render :contact
 		end
 	end
+
+  private
+
+  def set_invited_by
+    session[:invited_by] = params[:invited_by] if params[:invited_by].present?
+  end
 end
