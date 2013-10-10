@@ -33,10 +33,12 @@ class Candidate < ActiveRecord::Base
                   :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills, :state, :positions,
                   :subcategories_attributes, :start_interviewing_at
 
-  attr_writer :email, :skills
+  attr_writer :email, :skills, :positions
 
   validates :first_name, :last_name, presence: true
   #validates :minimum_annual_salary, presence: {message: 'Please fill in your minimum annual salary'}
+  #validates :visa, presence: {message: 'Please fill in your visa'}
+  #validates :status, presence: {message: 'Please fill in your status'}
 
   # validates :first_name, uniqueness: {scope: [:last_name, :job_title]}
 
@@ -121,6 +123,11 @@ class Candidate < ActiveRecord::Base
   def self.set_default_unpublished
     candidates = where("state IS NULL")
     candidates.each {|candidate| candidate.unpublish! }
+  end
+
+  def positions=(lists)
+    lists.split(",").each { |category| JobSubcategory.find_or_create_by_name(category) }
+    self.position_list = lists
   end
 
   private

@@ -30,17 +30,19 @@ class Candidate < ActiveRecord::Base
   attr_accessible :address_id, :user_id, :first_name, :job_title, :last_name,
                   :phone, :status, :visa, :minimum_annual_salary, :updated_at,
                   :profile_photo, :resume_attributes, :summary, :desired_job_title, :email,
-<<<<<<< HEAD
-                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills,
+                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills, :state, :positions,
                   :subcategories_attributes, :start_interviewing_at
-=======
-                  :experiences_attributes, :trade_qualifications_attributes, :educations_attributes, :skills, :state, :positions
->>>>>>> 264c7a94ab1f608f64874977dab41524d48366d8
 
-  attr_writer :email, :skills
+  attr_writer :email, :skills, :positions
 
   validates :first_name, :last_name, presence: true
+<<<<<<< HEAD
+  #validates :minimum_annual_salary, presence: {message: 'Please fill in your minimum annual salary'}
+=======
   validates :minimum_annual_salary, presence: {message: 'Please fill in your minimum annual salary'}
+  validates :visa, presence: {message: 'Please fill in your visa'}
+  validates :status, presence: {message: 'Please fill in your status'}
+>>>>>>> 534a9e90eb65398835679ca199d1957dc772620f
 
   # validates :first_name, uniqueness: {scope: [:last_name, :job_title]}
 
@@ -84,6 +86,8 @@ class Candidate < ActiveRecord::Base
     "No Work Visa"
   ]
 
+  BOUNTY = "$858"
+
   state_machine :state, :initial => :unpublished do
     event :publish do
       transition all => :publish
@@ -103,6 +107,10 @@ class Candidate < ActiveRecord::Base
     )
   end
 
+  def full_name
+    return "#{self.first_name} #{self.last_name}"
+  end
+
   def email
     @email || (user ? user.email : nil)
   end
@@ -119,6 +127,11 @@ class Candidate < ActiveRecord::Base
   def self.set_default_unpublished
     candidates = where("state IS NULL")
     candidates.each {|candidate| candidate.unpublish! }
+  end
+
+  def positions=(lists)
+    lists.split(",").each { |category| JobSubcategory.find_or_create_by_name(category) }
+    self.position_list = lists
   end
 
   private

@@ -54,10 +54,15 @@ class CandidatesController < ApplicationController
   end
 
   def search_job_categories
-    job_subcategories = JobSubcategory.all.map {|sc| [sc.id, sc.name]}
+    job_subcategories = if params[:q].present?
+      JobSubcategory.where("name ILIKE ?", "%#{params[:q]}%").map {|sc| [sc.id, sc.name]}
+    else
+      JobSubcategory.all.map {|sc| [sc.id, sc.name]}
+    end
+
     results = []
     job_subcategories.each do |result|
-      results << { id: result[0], text: result[1] }
+      results << { id: result[1], text: result[1] }
     end
 
     compose_json = {

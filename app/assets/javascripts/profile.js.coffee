@@ -135,30 +135,29 @@ jQuery ->
       id: term
       text: term
 
-  $("#positions").select2
-    tags: true
+  $('#positions').select2
+    width: "100%"
+    tags: []
     tokenSeparators: [","]
-    createSearchChoice: (term, data) ->
-      if $(data).filter(->
-        @text.localeCompare(term) is 0
-      ).length is 0
-        id: term
-        text: term
-
-    multiple: true
+    createSearchChoice: (term) ->
+      id: term
+      text: term
+    initSelection: (element, callback) ->
+      data = []
+      $(element.val().split(",")).each ->
+        data.push
+          id: this
+          text: this
+      callback(data)
     ajax:
       url: "/candidates/search_job_categories.json"
       dataType: "json"
       data: (term, page) ->
         q: term
-
       results: (data, page) ->
         results: data.results
-    formatResult: FormatResult
-    formatSelection: FormatSelection
 
-  FormatSelection = (data) ->
-    data.text
-
-  FormatResult = (data) ->
-    data.text
+  if $('#positions').length > 0 and $('#positions').val() isnt ""
+    array_values = $('#positions').val().split(",")
+    array_values.pop()
+    $('#positions').val(array_values).trigger 'change'
