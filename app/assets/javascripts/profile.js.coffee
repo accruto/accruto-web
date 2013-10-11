@@ -131,6 +131,9 @@ jQuery ->
     width: "100%"
     tags: []
     tokenSeparators: [","]
+    createSearchChoice: (term) ->
+      id: term
+      text: term
 
   $('#positions').select2
     width: "100%"
