@@ -49,7 +49,7 @@ class CandidatesController < ApplicationController
 
   def publish
     current_user.candidate.publish!
-    redirect_to show_profile_path, notice: "Congratulations. Your profile was successfully submitted to potential employers.<br>In the meantime, <a href='#{new_invite_path}'>recommend your friends and receive #{Candidate::BOUNTY} for every friend that gets hired!</a>"
+    redirect_to show_profile_path, notice: "Congratulations. Your profile is now being submitted to potential employers.<br>In the meantime, <a href='#{new_invite_path}'>recommend your friends and receive #{Candidate::BOUNTY} for every friend that gets hired!</a>"
   end
 
   def unpublish
