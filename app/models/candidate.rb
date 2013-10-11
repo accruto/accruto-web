@@ -38,8 +38,8 @@ class Candidate < ActiveRecord::Base
   validates :first_name, :last_name, presence: true
 
   validates :minimum_annual_salary, presence: {message: 'Please fill in your minimum annual salary'}, unless: :validate_new_record
-  validates :visa, presence: {message: 'Please fill in your visa'}, unless: :validate_new_record
-  validates :status, presence: {message: 'Please fill in your status'}, unless: :validate_new_record
+  validates :visa, presence: {message: 'Please fill in your employment eligibility status'}, unless: :validate_new_record
+  validates :start_interviewing_at, presence: {message: 'Please update your timeline for taking interviews'}, unless: :validate_new_record
 
 
   # validates :first_name, uniqueness: {scope: [:last_name, :job_title]}

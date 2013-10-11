@@ -1,14 +1,16 @@
 <%= simple_form_for @candidate, url: update_profile_path do |f| %>
   <% if f.object.errors.full_messages && f.object.errors.full_messages.length > 0 %>
-    <div class="alert error-summary">
-      <strong>Please review the problems below:</strong>
-        <ul>
-          <% f.object.errors.messages.each do |msg| %>
-            <% if msg[1][0].present? %>
-              <li><%=msg[1][0]%></li>
+    <div class="container">
+      <div class="alert alert-danger">
+        <strong>Please review the problems below:</strong>
+          <ul>
+            <% f.object.errors.messages.each do |msg| %>
+              <% if msg[1][0].present? %>
+                <li><%=msg[1][0]%></li>
+              <% end %>
             <% end %>
-          <% end %>
-        </ul>
+          </ul>
+      </div>
     </div>
   <% end %>
 
