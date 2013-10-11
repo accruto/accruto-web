@@ -36,9 +36,9 @@ class Candidate < ActiveRecord::Base
   attr_writer :email, :skills, :positions
 
   validates :first_name, :last_name, presence: true
-  #validates :minimum_annual_salary, presence: {message: 'Please fill in your minimum annual salary'}
-  #validates :visa, presence: {message: 'Please fill in your visa'}
-  #validates :status, presence: {message: 'Please fill in your status'}
+  validates :minimum_annual_salary, presence: {message: 'Please fill in your minimum annual salary'}
+  validates :visa, presence: {message: 'Please fill in your visa'}
+  validates :status, presence: {message: 'Please fill in your status'}
 
   # validates :first_name, uniqueness: {scope: [:last_name, :job_title]}
 
