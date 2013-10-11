@@ -132,6 +132,22 @@ class Candidate < ActiveRecord::Base
     self.position_list = lists
   end
 
+  def self.generate_csv_report(host)
+    csv_header = %w{ first_name last_name email phone created_at job_subcategories positions skills educations trade_qualifications one_click_login_url }
+    csv_generated = CSV.generate do |csv|
+      csv << csv_header
+      Candidate.all.each do |candidate|
+        csv << [
+          candidate.first_name, candidate.last_name, candidate.user.email, candidate.phone, candidate.created_at,
+          "#{candidate.subcategories.pluck(:name).join(",").to_s}", "#{candidate.position_list}", "#{candidate.skill_list}",
+          "#{candidate.educations.map {|e| [e.institution, e.qualification, e.qualification_type] }.join(',').to_s}",
+          "#{candidate.trade_qualifications.map {|t| [t.name, t.attained_at] }.join(',').to_s}",
+          "http://#{host}/profile/activation/#{candidate.user.authentication_token}"
+        ]
+      end
+    end
+  end
+
   private
     pg_search_scope :_title_has, against: :job_title,
     using: {

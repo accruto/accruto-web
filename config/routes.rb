@@ -56,12 +56,12 @@ Accruto::Application.routes.draw do
 
   resources :invites
 
-  # namespace :admin do
-  # 	resources :jobs
-  # 	resources :job_categories
-  # 	resources :job_subcategories
-  #   resources :referral_sites
-  # end
+  namespace :admin do
+  	resources :jobs
+    #resources :job_categories
+    #resources :job_subcategories
+    #resources :referral_sites
+  end
 
   get 'pages/stylesheet'
   get 'pages/modal_apply'
@@ -75,7 +75,7 @@ Accruto::Application.routes.draw do
   get '/terms', to: 'pages#terms'
   get '/contact', to: 'pages#contact'
   post 'pages/send_contact_form'
-
+  get 'users/index', to: 'users#index'
 
   root :to => 'pages#home'
 end
