@@ -75,7 +75,6 @@
         <div class="col-md-12">
           <%= label_tag "What kind of position would you like in your next job?" %>
           <%= text_field_tag "candidate[positions]", @candidate.position_list.to_s, id: 'positions' %>
-          <small><i>add multiple positions separated by comma</i></small>
         </div>
       </div>
     </div>
@@ -102,14 +101,6 @@
         <%= render 'users/profile_form_fields/education_fields', f: e %>
       <% end %>
       <a href="#" class="add-education-field">+ Add education</a>
-    </div>
-
-    <div class="section">
-      <h3>Skills</h3>
-      <hr>
-      <%= label_tag "Skill Tags" %>
-      <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select' %>
-      <small><i>add multiple tags separated by comma</i></small>
     </div>
 
     <%= f.button :submit, value: 'Update Profile', disable_with: 'Updating Profile...', class: 'btn btn-success btn-lg' %>
