@@ -1,6 +1,7 @@
 @import 'bootstrap-variables';
 
 nav .navbar-nav {
+  float:right;
   margin-top: 5px;
   a {
     color: white;
@@ -11,5 +12,11 @@ nav .navbar-nav {
       -moz-transition: color .25s ease-in-out;
       -webkit-transition: color .25s ease-in-out;
     }
+  }
+}
+
+@media (max-width: $screen-md) {
+  nav .navbar-nav {
+    float: left;
   }
 }

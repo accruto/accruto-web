@@ -6,7 +6,7 @@
         <h1>Job Matchmaking <br>For Skilled Trades.</h1>
         <h3>Get invited to job interviews from <br>the largest employers in Australia.</h3>
         <a href="<%= new_user_registration_path %>" class="btn btn-apply-now">APPLY NOW</a>
-        <ul class="homepage-job-titles">
+        <ul class="homepage-job-titles visible-md">
           <li>TRUCK DRIVERS</li>
           <li>LABOURERS</li>
           <li>FORKLIFT DRIVERS</li>
@@ -43,7 +43,7 @@
     <h3>Step 1 - Create your skilled trade profile.</h3>
     <div class="profile-screen-container">
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 hidden-sm hidden-xs">
           <div class="profile-description-left desc-1">
             <strong>A profile page</strong> that tells your story.
           </div>
@@ -52,8 +52,16 @@
           </div>
         </div>
         <div class="col-md-8">
-          <%= image_tag "profile-screen.png" %>
-          <p>Your profile is always hidden from current & past employers</p>
+          <%= image_tag "profile-screen.png", class: 'profile-screen' %>
+          <p class="hidden-xs hidden-sm">Your profile is always hidden from current & past employers</p>
+        </div>
+        <div class="col-md-2 visible-sm visible-xs">
+          <div class="profile-description-left desc-1">
+            <strong>A profile page</strong> that tells your story.
+          </div>
+          <div class="profile-description-left desc-2">
+            <strong>Organise</strong> your work experience and skills in a very readable manner.
+          </div>
         </div>
         <div class="col-md-2">
           <div class="profile-description-right desc-3">
@@ -84,7 +92,7 @@
         <p>Accept the job offer you like the most and start the next phase of your exciting career!</p>
       </div>
     </div>
-    <div class="row steps-content">
+    <div class="row steps-content hidden-xs">
       <div class="col-md-3">
         <span class="steps-apply">APPLY</span>
       </div>

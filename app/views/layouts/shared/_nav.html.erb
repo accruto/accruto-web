@@ -13,14 +13,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <% if current_user %>
-        <ul class="nav navbar-nav pull-right ">
+        <ul class="nav navbar-nav">
           <li><%= link_to "EDIT PROFILE", edit_profile_path %></li>
           <li><%= link_to "VIEW PROFILE", show_profile_path %></li>
           <li><%= link_to "SETTINGS", edit_user_registration_path %></li>
           <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
         </ul>
       <% else %>
-        <ul class="nav navbar-nav pull-right ">
+        <ul class="nav navbar-nav">
           <li><%= link_to "FOR EMPLOYERS", "/employers" %></li>
           <li><%= link_to "ABOUT", about_path %></li>
           <li><%= link_to "SIGN IN", new_user_session_path %></li>

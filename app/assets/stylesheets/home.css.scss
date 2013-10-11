@@ -148,17 +148,61 @@
 	}
 	.profile-description-left {
 		text-align: right;
+    margin-right: 20px;
 	}
 	.profile-description-right {
 		text-align: left;
+    margin-left: 20px;
 	}
 	.desc-1 {
-		margin-top: 150px;
-	}
-	.desc-2 {
-		margin-top: 130px;
-	}
-	.desc-3 {
 		margin-top: 160px;
 	}
+	.desc-2 {
+		margin-top: 160px;
+	}
+	.desc-3 {
+		margin-top: 190px;
+	}
+}
+.profile-screen {
+  width: 100%;
+}
+
+
+@media (max-width: $screen-sm) {
+  .content-featured {
+    padding: 0 0 30px 0;
+    height: auto;
+  }
+  .content-blue-bg {
+    padding: 20px 0 40px 0;
+  }
+  .content-blue-bg .benefit-content {
+    padding: 0 10px;
+  }
+  .btn-apply-now.large {
+    float: left;
+  }
+  .content.padding-lg {
+    padding: 10px 0;
+  }
+  footer {
+    text-align:center;
+    ul {
+      margin: 0;
+      padding: 10px 0;
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .profile-screen-container {
+    padding-bottom: 0px;
+  }
+  .profile-screen-container .profile-description-left, .profile-screen-container .profile-description-right {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding: 20px;
+  }
 }
