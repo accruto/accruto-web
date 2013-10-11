@@ -36,13 +36,13 @@ class CandidatesController < ApplicationController
 
   def update
     @candidate = current_user.candidate
-    @candidate.experiences.build if @candidate.experiences.empty?
-    @candidate.trade_qualifications.build if @candidate.trade_qualifications.empty?
-    @candidate.educations.build if @candidate.educations.empty?
-    @candidate.subcategories.build
     if @candidate.update_attributes(params[:candidate])
       redirect_to show_profile_path, notice: 'Profile was successfully updated.'
     else
+      @candidate.experiences.build if @candidate.experiences.empty?
+      @candidate.trade_qualifications.build if @candidate.trade_qualifications.empty?
+      @candidate.educations.build if @candidate.educations.empty?
+      @candidate.subcategories.build
       render action: :edit
     end
   end
