@@ -28,18 +28,18 @@
         <p><strong>From:</strong><br>
         "<%= @candidate.full_name %>" &lt;<%= @candidate.user.email %>&gt;<br>
         <strong>To:</strong><br>
-        "Sarah" &lt;sarah@accruto.com&gt;<br>
+        <span id="invite-email-preview">"Sarah" &lt;sarah@accruto.com&gt;</span><br>
         <strong>Subject:</strong><br>
         <%= @candidate.full_name %> has invited you to join Hired<br>
         </p>
 
         <p><strong>Body:</strong><br>
-        Hi Sarah,</p>
+        Hi <span id="invite-name-preview">Sarah</span>,</p>
 
         <p>You've been recommended for Accruto by your friend <%= @candidate.full_name %> (<%= @candidate.email %>). Accruto is the new way to discover new job opportunities for skilled trades and technical hires. Accruto currently works with 60 companies - including the likes of Woolworths, Target, Rio Tinto and many more.</p>
 
-        <p><%= @candidate.first_name %> wrote:<br> 
-        "--personal message here--"</p>
+        <p><%= @candidate.first_name %> wrote:<br>
+        <span id="invite-message-preview"></span></p>
 
         <p>Since you've been recommended, you get a special perk: priority selection of your profile and higher likelihood of invitation for an interview.</p>
 
