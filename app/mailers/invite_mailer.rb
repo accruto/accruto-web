@@ -9,7 +9,7 @@ class InviteMailer < ActionMailer::Base
     mail(
       from: "#{@candidate.full_name} <#{@user.email}>",
       to: "#{@invite.name} <#{@invite.email}>",
-      subject: "#{@invite.name} has invited you to join Accruto"
+      subject: "#{@candidate.full_name} has invited you to join Accruto"
     )
   end
 end
