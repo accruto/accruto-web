@@ -159,5 +159,6 @@ jQuery ->
 
   if $('#positions').length > 0 and $('#positions').val() isnt ""
     array_values = $('#positions').val().split(",")
-    array_values.pop()
+    if (array_values.length > 1)
+      array_values.pop()
     $('#positions').val(array_values).trigger 'change'
