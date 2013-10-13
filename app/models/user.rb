@@ -22,10 +22,10 @@ class User < ActiveRecord::Base
   rolify
 
   devise :database_authenticatable, :registerable, :token_authenticatable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :candidate_attributes
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :candidate_attributes, :provider, :uid
   # attr_accessible :title, :body
 
   has_many :favourites
@@ -110,6 +110,12 @@ class User < ActiveRecord::Base
 
   def self.job_alert_subscribed
     joins(:preference).where("preferences.next_alert_date = ? AND preferences.email_frequency != 'Never'", Date.today)
+  end
+
+  def self.from_omniauth(auth)
+    user = find_by_email(auth.info.email)
+    user.update_attributes(provider: auth.provider, uid: auth.uid)
+    user
   end
 
   private

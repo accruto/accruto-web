@@ -24,10 +24,21 @@ class CandidatesController < ApplicationController
   def edit
     @user = current_user
     @candidate = current_user.candidate
-    @candidate.experiences.build if @candidate.experiences.empty?
-    @candidate.trade_qualifications.build if @candidate.trade_qualifications.empty?
-    @candidate.educations.build if @candidate.educations.empty?
-    @candidate.subcategories.build
+    @candidate = current_user.build_candidate if @candidate.nil?
+
+    if session["profile_attributes"]
+      @candidate = if current_user.candidate
+        current_user.candidate.assign_attributes(session["profile_attributes"])
+        current_user.candidate
+      else
+        current_user.build_candidate(session["profile_attributes"])
+      end
+    end
+
+    @candidate.experiences.build if @candidate && @candidate.experiences.empty?
+    @candidate.trade_qualifications.build if @candidate && @candidate.trade_qualifications.empty?
+    @candidate.educations.build if @candidate && @candidate.educations.empty?
+    @candidate.subcategories.build if @candidate && @candidate.subcategories.empty?
   end
 
   def create
@@ -35,14 +46,16 @@ class CandidatesController < ApplicationController
   end
 
   def update
+    session["profile_attributes"] = nil
     @candidate = current_user.candidate
+    @candidate = current_user.build_candidate(params[:candidate]) if @candidate.nil?
     if @candidate.update_attributes(params[:candidate])
       redirect_to show_profile_path, notice: 'Profile was successfully updated.'
     else
       @candidate.experiences.build if @candidate.experiences.empty?
       @candidate.trade_qualifications.build if @candidate.trade_qualifications.empty?
       @candidate.educations.build if @candidate.educations.empty?
-      @candidate.subcategories.build
+      @candidate.subcategories.build if @candidate && @candidate.subcategories.empty?
       render action: :edit
     end
   end

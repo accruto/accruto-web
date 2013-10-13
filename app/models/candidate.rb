@@ -114,8 +114,10 @@ class Candidate < ActiveRecord::Base
   end
 
   def email=(email_value)
-    user.email = email_value if email_value.present?
-    user.save if user.email_changed?
+    if user
+      user.email = email_value if email_value.present?
+      user.save if user.email_changed?
+    end
   end
 
   def skills=(lists)

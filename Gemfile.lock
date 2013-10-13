@@ -176,6 +176,7 @@ GEM
       spork (>= 0.8.4)
     haml (4.0.3)
       tilt
+    hashie (2.0.5)
     hike (1.2.3)
     http_parser.rb (0.5.3)
     i18n (0.6.1)
@@ -206,6 +207,15 @@ GEM
     newrelic_rpm (3.6.7.159)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    oauth (0.4.7)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    omniauth-linkedin (0.1.0)
+      omniauth-oauth (~> 1.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
     orm_adapter (0.4.0)
     pg (0.15.1)
     pg-hstore (1.2.0)
@@ -377,6 +387,8 @@ DEPENDENCIES
   launchy (~> 2.2.0)
   newrelic_rpm
   nokogiri (~> 1.6.0)
+  omniauth
+  omniauth-linkedin
   pg (~> 0.15.1)
   pg_search (~> 0.7.0)
   quiet_assets

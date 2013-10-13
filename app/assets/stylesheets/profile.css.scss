@@ -196,6 +196,18 @@ i.icon-remove { cursor: pointer; line-height: 73px; }
   border-radius: 4px;
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
 @media (max-width: $screen-xs) {
   .summary {
     .profile-photo {

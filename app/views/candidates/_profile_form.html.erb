@@ -1,4 +1,4 @@
-<%= simple_form_for @candidate, url: update_profile_path do |f| %>
+<%= simple_form_for @candidate, url: update_profile_path, method: :put do |f| %>
   <% if f.object.errors.full_messages && f.object.errors.full_messages.length > 0 %>
     <div class="container">
       <div class="alert alert-danger">
@@ -16,7 +16,9 @@
 
   <div class="container">
     <div class="section">
-      <h3>Personal Information</h3>
+      <div class="float-left"><h3>Personal Information</h3></div>
+      <div class="float-right"><%= link_to "Import data from LinkedIn", user_omniauth_authorize_path(:linkedin), class: "btn btn-large btn-success linkedin-button #{@from_linkedin ? 'disabled':''}", id: 'connect-to-linkedin' %></div>
+      <div class="clear"></div>
       <hr>
       <div class="row">
         <div class="col-md-3">
