@@ -170,6 +170,9 @@
 
 
 @media (max-width: $screen-sm) {
+  h1 {
+    font-size: 35px;
+  }
   .content-featured {
     padding: 0 0 30px 0;
     height: auto;

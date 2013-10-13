@@ -989,7 +989,9 @@ CREATE TABLE users (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     active boolean,
-    authentication_token character varying(255)
+    authentication_token character varying(255),
+    provider character varying(255),
+    uid character varying(255)
 );
 
 
@@ -1794,3 +1796,5 @@ INSERT INTO schema_migrations (version) VALUES ('20131008042909');
 INSERT INTO schema_migrations (version) VALUES ('20131008085037');
 
 INSERT INTO schema_migrations (version) VALUES ('20131010005856');
+
+INSERT INTO schema_migrations (version) VALUES ('20131013154301');

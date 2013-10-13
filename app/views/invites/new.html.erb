@@ -70,12 +70,16 @@
             </tr>
           </thead>
           <tbody>
-            <% @invites.each do |invite| %>
-              <tr>
-                <td><%= invite.created_at.to_s(:long_ordinal) %></td>
-                <td><%= invite.name %> &lt;<%= invite.email %>&gt;</td>
-                <td><%= invite.status.split("_").map(&:capitalize).join(" ") %></td>
-              </tr>
+            <% if @invites.empty? %>
+              <tr>No invites sent yet.</tr>
+            <% else %>
+              <% @invites.each do |invite| %>
+                <tr>
+                  <td><%= invite.created_at.to_s(:long_ordinal) %></td>
+                  <td><%= invite.name %> &lt;<%= invite.email %>&gt;</td>
+                  <td><%= invite.status.split("_").map(&:capitalize).join(" ") %></td>
+                </tr>
+              <% end %>
             <% end %>
           </tbody>
         </table>

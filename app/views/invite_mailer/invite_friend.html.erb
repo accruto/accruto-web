@@ -14,11 +14,7 @@
 <p>Join Accruto through your personal link:<br> 
 <%= ENV['SMTP_DOMAIN'] %>/invited/<%= @candidate.email %></p>
 
-<p>Few things you should know about Accruto:</p>
-<ul>
-  <li>Benefit 1</li>
-  <li>Benefit 2</li>
-  <li>Benefit 3</li>
-</ul>
+<p>
 --- <br>
-<p>This is a one-time email sent because <%= @candidate.full_name %> (<%= @candidate.email %>) recommended you. You have not been added to any email list.</p>
+This is a one-time email sent because <%= @candidate.full_name %> (<%= @candidate.email %>) recommended you. You have not been added to any email list.
+</p>
