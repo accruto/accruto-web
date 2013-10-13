@@ -18,6 +18,8 @@ class InvitesController < ApplicationController
     @invite = Invite.new(params[:invite])
     @user = current_user
     @user.invites << @invite
+    @candidate = current_user.candidate
+    @invites = Invite.scoped
     respond_to do |format|
       if @user.save
         InviteMailer.invite_friend(@invite, @user).deliver

@@ -1,6 +1,8 @@
 <p>Hi <%= @invite.name %>,</p>
 
-<p>You've been recommended for Accruto by your friend <%= @candidate.full_name %> (<%= @candidate.email %>). Accruto is the new way to discover new job opportunities for skilled trades and technical hires. Accruto currently works with 60 companies - including the likes of Woolworths, Target, Rio Tinto and many more.</p>
+<p>You've been recommended for Accruto by your friend <%= @candidate.full_name %> (<%= @candidate.email %>).</p>
+
+<p>Accruto is the new way to discover new job opportunities for skilled trades and technical hires. Accruto currently works with 60 companies - including the likes of Woolworths, Target, Rio Tinto and many more.</p>
 
 <p><%= @candidate.first_name %> wrote:<br> 
 <% if @invite.message %>

@@ -28,13 +28,13 @@
         <p><strong>From:</strong><br>
         "<%= @candidate.full_name %>" &lt;<%= @candidate.user.email %>&gt;<br>
         <strong>To:</strong><br>
-        <span id="invite-email-preview">"Sarah" &lt;sarah@accruto.com&gt;</span><br>
+        "<span class="invite-name-preview">Sarah</span>" &lt;<span class="invite-email-preview">sarah@accruto.com</span>&gt;<br>
         <strong>Subject:</strong><br>
         <%= @candidate.full_name %> has invited you to join Hired<br>
         </p>
 
         <p><strong>Body:</strong><br>
-        Hi <span id="invite-name-preview">Sarah</span>,</p>
+        Hi <span class="invite-name-preview">Sarah</span>,</p>
 
           <p>You've been recommended for Accruto by your friend <%= @candidate.full_name %> (<%= @candidate.email %>). Accruto is the new way to discover new job opportunities for skilled trades and technical hires. Accruto currently works with 60 companies - including the likes of Woolworths, Target, Rio Tinto and many more.</p>
 
@@ -46,12 +46,6 @@
           <p>Join Accruto through your personal link:<br> 
           http://accruto.com/invited/<%= @candidate.email %></p>
 
-          <p>Few things you should know about Accruto:</p>
-          <ul>
-            <li>Benefit 1</li>
-            <li>Benefit 2</li>
-            <li>Benefit 3</li>
-          </ul>
           --- <br>
           <p>This is a one-time email sent because <%= @candidate.full_name %> (<%= @candidate.email %>) recommended you. You have not been added to any email list.</p>
         </div>
