@@ -61,8 +61,12 @@ class CandidatesController < ApplicationController
   end
 
   def publish
-    current_user.candidate.publish!
-    redirect_to show_profile_path, notice: "Congratulations. Your profile is now being submitted to potential employers.<br>In the meantime, <a href='#{new_invite_path}'>recommend your friends and receive #{Candidate::BOUNTY} for every friend that gets hired!</a>"
+    if !current_user.candidate.educations.empty? && !current_user.candidate.experiences.empty?
+      current_user.candidate.publish!
+      redirect_to show_profile_path, notice: "Congratulations. Your profile is now being submitted to potential employers.<br>In the meantime, <a href='#{new_invite_path}'>recommend your friends and receive #{Candidate::BOUNTY} for every friend that gets hired!</a>"
+    else
+      redirect_to edit_profile_path, alert: "You need to fill up your work experience and education details before you can submit your profile to employers."
+    end
   end
 
   def unpublish
