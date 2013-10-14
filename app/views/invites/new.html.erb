@@ -65,7 +65,11 @@
           </thead>
           <tbody>
             <% if @invites.empty? %>
-              <tr><td>No invites sent yet.</td></tr>
+              <tr>
+                <td>No invites sent yet.</td>
+                <td></td>
+                <td></td>
+              </tr>
             <% else %>
               <% @invites.each do |invite| %>
                 <tr>

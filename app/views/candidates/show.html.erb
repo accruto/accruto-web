@@ -57,16 +57,18 @@
             </div>
           </div>
         </div>
-        <div class="profile-area content work-experience hidden">
-          <h4 class="fields-heading">SUMMARY</h4>
-          <div class="fields-entry">
-            <div class="row">
-              <div class="col-md-12">
-                <p><%= @candidate.summary %></p>
+        <% unless @candidate.summary.blank? %>
+          <div class="profile-area content work-experience hidden">
+            <h4 class="fields-heading">SUMMARY</h4>
+            <div class="fields-entry">
+              <div class="row">
+                <div class="col-md-12">
+                  <p><%= @candidate.summary %></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        <% end %>
         <div class="profile-area content work-experience">
           <h4 class="fields-heading">WORK EXPERIENCE</h4>
           <% if @candidate.experiences.blank? %>
@@ -99,33 +101,35 @@
             <% end %>
           <% end %>
         </div>
-        <div class="profile-area content trade-qualification">
-          <h4 class="fields-heading">TRADE QUALIFICATIONS</h4>
-          <% if @candidate.trade_qualifications.blank? %>
-            <div class="fields-entry">
-              <div class="row">
-                <div class="col-md-8">
-                  <p>No trade qualifications added yet</p>
-                </div>
-              </div>
-            </div>
-          <% else %>
-            <% @candidate.trade_qualifications.sort_by_attained_at.each do |tq| %>
+        <% unless @candidate.trade_qualifications.blank? %>
+          <div class="profile-area content trade-qualification">
+            <h4 class="fields-heading">TRADE QUALIFICATIONS</h4>
+            <% if @candidate.trade_qualifications.blank? %>
               <div class="fields-entry">
                 <div class="row">
                   <div class="col-md-8">
-                    <h5><strong><%= tq.name %></strong></h5>
-                  </div>
-                  <div class="col-md-4 align-right">
-                    <% unless tq.attained_at.blank? %>
-                      <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Attained in <%= datetime_in_years(tq.attained_at) %></p>
-                    <% end %>
+                    <p>No trade qualifications added yet</p>
                   </div>
                 </div>
               </div>
+            <% else %>
+              <% @candidate.trade_qualifications.sort_by_attained_at.each do |tq| %>
+                <div class="fields-entry">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <h5><strong><%= tq.name %></strong></h5>
+                    </div>
+                    <div class="col-md-4 align-right">
+                      <% unless tq.attained_at.blank? %>
+                        <p><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;Attained in <%= datetime_in_years(tq.attained_at) %></p>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
             <% end %>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
         <div class="profile-area content education">
           <h4 class="fields-heading">EDUCATION</h4>
           <% if @candidate.educations.blank? %>
