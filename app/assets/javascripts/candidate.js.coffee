@@ -1,0 +1,2 @@
+jQuery ->
+  $('#candidate-range').daterangepicker();

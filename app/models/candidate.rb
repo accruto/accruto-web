@@ -63,6 +63,7 @@ class Candidate < ActiveRecord::Base
   scope :filter_by_updated_at, lambda { |days| where("updated_at >= ?", days.to_i.days.ago) if days.present? }
   scope :filter_by_status, lambda { |status| where("status = ?", status) if status.present? }
   scope :filter_by_visa, lambda { |visa| where("visa = ?", visa) if visa.present? }
+  scope :get_candidates, ->(start_date, end_date, num = nil) { where("DATE(candidates.created_at) >= ? AND DATE(candidates.created_at) <= ?", start_date, end_date).limit(num) }
 
   STATUS_OPTIONS = [
     "Immediately",
@@ -134,17 +135,22 @@ class Candidate < ActiveRecord::Base
     self.position_list = lists
   end
 
-  def self.generate_csv_report(host)
+  def self.generate_csv_report(options = {})
     csv_header = %w{ first_name last_name email phone created_at job_subcategories positions skills educations trade_qualifications one_click_login_url }
     csv_generated = CSV.generate do |csv|
       csv << csv_header
-      Candidate.all.each do |candidate|
+      candidates = if options[:positions].presence
+        self.get_candidates(options[:start_date], options[:end_date], options[:limit]).tagged_with(options[:positions], any: true)
+      else
+        self.get_candidates(options[:start_date], options[:end_date], options[:limit])
+      end
+      candidates.each do |candidate|
         csv << [
           candidate.first_name, candidate.last_name, candidate.user.email, candidate.phone, candidate.created_at,
           "#{candidate.subcategories.pluck(:name).join(",").to_s}", "#{candidate.position_list}", "#{candidate.skill_list}",
           "#{candidate.educations.map {|e| [e.institution, e.qualification, e.qualification_type] }.join(',').to_s}",
           "#{candidate.trade_qualifications.map {|t| [t.name, t.attained_at] }.join(',').to_s}",
-          "http://#{host}/profile/activation/#{candidate.user.authentication_token}"
+          "http://#{options[:host]}/profile/activation/#{candidate.user.authentication_token}"
         ]
       end
     end
