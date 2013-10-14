@@ -4,7 +4,7 @@ class InvitesController < ApplicationController
   def new
     @candidate = current_user.candidate
     @invite = current_user.invites.build
-    @invites = Invite.scoped
+    @invites = current_user.invites
   end
 
   # GET /invites/1/edit

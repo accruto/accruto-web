@@ -19,7 +19,7 @@ class Experience < ActiveRecord::Base
 
   validates :job_title, uniqueness: {scope: :candidate_id}
 
-  YEARS = (1800..2016).to_a
+  YEARS = (1950..2016).to_a
 
   scope :sort_by_ended_at, -> { order("ended_at DESC") }
 
