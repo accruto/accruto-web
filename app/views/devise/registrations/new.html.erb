@@ -17,7 +17,7 @@
 					  				<%= c.input :last_name %>
 					  			</div>
 					  		</div>
-						    <%= f.input :email, :required => true %>
+						    <%= f.input :email, :required => true, input_html: { value: @invite.try(:email) } %>
 						    <%= f.input :password, :required => true %>
 						    <%= c.input :phone, :required => true %>
 					    <% end %>

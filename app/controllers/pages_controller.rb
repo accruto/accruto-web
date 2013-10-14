@@ -50,6 +50,6 @@ class PagesController < ApplicationController
   private
 
   def set_invited_by
-    session[:invited_by] = params[:invited_by] if params[:invited_by].present?
+    session[:invite_email] = params[:invite_email] if params[:invite_email].present?
   end
 end

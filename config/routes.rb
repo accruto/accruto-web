@@ -23,7 +23,7 @@ Accruto::Application.routes.draw do
   get 'jobs/category/:category', to: 'jobs#search'
   get '/candidate_search/signup', to: 'candidate_search_beta_users#signup', as: 'candidate_search_signup'
 
-  get '/invited/:invited_by', to: 'pages#home', :constraints => { :invited_by => /[^\/]+/ }
+  get '/invited/:invite_email', to: 'pages#home', :constraints => { :invite_email => /[^\/]+/ }
 
   resources :jobs do
   	resources :job_applications

@@ -2,13 +2,15 @@ class RegistrationsController < Devise::RegistrationsController
   def new
     @user = build_resource({})
     @user.build_candidate
+    @invite = get_invite_details
     respond_with self.resource
   end
 
   def create
     build_resource(params[:user])
     if resource.save
-      update_invite_signed_up
+      @invite = get_invite_details
+      @invite.signed_up!
       if resource.active_for_authentication?
         set_flash_message :notice, :signed_up if is_navigational_format?
         sign_in(resource_name, resource)
@@ -28,14 +30,9 @@ class RegistrationsController < Devise::RegistrationsController
     super
   end
 
-  def update_invite_signed_up
-    if session[:invited_by]
-      if @invited_by_user = User.where(email: session[:invited_by]).first
-        @invite = Invite.where(email: resource.email, user_id: @invited_by_user.id).first
-        if @invite
-          @invite.signed_up!
-        end
-      end
+  def get_invite_details
+    if session[:invite_email]
+      return Invite.where(email: session[:invite_email]).first
     end
   end
 end
