@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/dferdian/activerecord-import.git
-  revision: 97614dc439f81186101f3b12229433dc23fcd2e8
-  specs:
-    activerecord-import (0.4.1)
-      activerecord (>= 3.0)
-
-GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
   revision: 0e88056ac5d58fb0bbd23d3fe929eac01712d964
   branch: 3
@@ -324,7 +317,6 @@ GEM
       rack (>= 1.0.0)
     thor (0.18.1)
     tilt (1.4.1)
-    tiny_tds (0.6.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -346,7 +338,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-import!
   activerecord-postgres-hstore
   activerecord-sqlserver-adapter
   acts-as-taggable-on
@@ -406,7 +397,6 @@ DEPENDENCIES
   spork (~> 0.9.2)
   state_machine
   thin (~> 1.5.1)
-  tiny_tds
   uglifier (>= 1.0.3)
   virtus
   will_paginate (~> 3.0.4)
