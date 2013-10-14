@@ -29,7 +29,13 @@
         <tr>
           <td><%= candidate.full_name %></td>
           <td><%= candidate.email %></td>
-          <td><%= distance_of_time_in_words(candidate.start_interviewing_at, DateTime.now) %></td>
+          <td>
+          <% if candidate.start_interviewing_at %>
+            <%= distance_of_time_in_words(candidate.start_interviewing_at, DateTime.now) %>
+          <% else %>
+            Not specified
+          <% end %>
+          </td>
           <td><%= candidate.visa %></td>
           <td><%= candidate.created_at.to_s(:long) %></td>
           <td><%= candidate.state %></td>
