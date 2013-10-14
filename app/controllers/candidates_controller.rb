@@ -16,6 +16,11 @@ class CandidatesController < ApplicationController
                     .published.paginate(page: params[:page], per_page: 10)
   end
 
+  def show
+    @user = current_user
+    @candidate = @user.candidate
+  end
+
   def edit
     @user = current_user
     @candidate = current_user.candidate
