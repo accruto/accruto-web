@@ -84,7 +84,7 @@ class Candidate < ActiveRecord::Base
     "No Work Visa"
   ]
 
-  BOUNTY = "$858"
+  BOUNTY = "$#{Bounty.where(name: "Accruto Bounty").first.try(:value)}"
 
   state_machine :state, :initial => :unpublished do
     event :publish do
@@ -97,6 +97,10 @@ class Candidate < ActiveRecord::Base
 
     state :publish
     state :unpublish
+  end
+
+  def self.published_count
+    return Candidate.where(:state => 'publish').count
   end
 
   def self.filter_by_minimum_annual_salary(min, max)

@@ -1,0 +1,9 @@
+<h1>Editing bounty&nbsp;&nbsp;&nbsp;<%= link_to admin_bounties_path, :class => 'btn' do %>
+  <i class="icon-list-alt"></i>
+    Back
+<% end %>
+<%= link_to @bounty, :class => 'btn btn-primary' do %>
+  <i class="icon-info-sign icon-white"></i>
+  Show
+<% end %></h1>
+<%= render 'form' %>

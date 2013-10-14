@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
 	def after_sign_in_path_for(resource)
 		if current_user.has_role? :admin
-			admin_jobs_path
+			admin_root_path
 		else
 			edit_profile_path
 		end
@@ -46,6 +46,12 @@ class ApplicationController < ActionController::Base
       else
         root_path
       end
+    end
+  end
+
+  def verify_admin
+    unless current_user.has_role? :admin
+      redirect_to root_path
     end
   end
 end

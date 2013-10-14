@@ -1,0 +1,91 @@
+<h2>Admin Dashboard</h2>
+<div class="row">
+  <div class="col-md-3">
+    <div class="well admin-dashboard-metric">
+      <p class="dashboard-number"><%= number_with_delimiter(Candidate.count) %></p>
+      <p>Total Candidates</p>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="well admin-dashboard-metric">
+      <p class="dashboard-number"><%= number_with_delimiter(Candidate.published_count) %></p>
+      <p>Active Candidates</p>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="well admin-dashboard-metric">
+      <p class="dashboard-number"><%= number_with_delimiter(Invite.count) %></p>
+      <p>Invites Sent</p>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="well admin-dashboard-metric">
+      <p class="dashboard-number"><%= number_with_delimiter(Invite.signed_up_count) %></p>
+      <p>Invite Signups</p>
+    </div>
+  </div>
+</div>
+<div class="recent-candidate-signups">
+  <h4>Recent Candidate Signups</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date Signed Up</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @recent_candidates.empty? %>
+        <tr>
+          <td>No candidates signed up yet.</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <% else %>
+        <% @recent_candidates.each do |candidate| %>
+          <tr>
+            <td><%= candidate.full_name %></td>
+            <td><%= candidate.email %></td>
+            <td><%= candidate.created_at %></td>
+            <td><%= candidate.state %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class="recent-candidate-invites">
+  <h4>Recent Candidate Referrals</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Invited by</th>
+        <th>Invite sent to</th>
+        <th>Date Invited</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @recent_invites.empty? %>
+        <tr>
+          <td>No candidates invited yet.</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <% else %>
+        <% @recent_invites.each do |invite| %>
+          <tr>
+            <td><%= invite.name %></td>
+            <td><%= invite.email %></td>
+            <td><%= invite.created_at %></td>
+            <td><%= invite.status %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

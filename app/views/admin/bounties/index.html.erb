@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to new_admin_bounty_path, :class => 'btn btn-primary' do %>
+    <i class="icon-plus icon-white"></i>
+    New Bounty
+  <% end %>
+  <h2>Bounties</h2>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Bounty Name</th>
+      <th>Bounty Value</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+<% @bounties.each do |bounty| %>
+    <tr>
+      <td><%= bounty.name %></td>
+      <td><%= number_to_currency(bounty.value, precision: 0) %></td>
+      <td><%= link_to 'Edit', edit_admin_bounty_path(bounty) %></td>
+      <td><%= link_to 'Destroy', [:admin, bounty], confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

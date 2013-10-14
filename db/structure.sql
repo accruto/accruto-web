@@ -81,6 +81,38 @@ ALTER SEQUENCE addresses_id_seq OWNED BY addresses.id;
 
 
 --
+-- Name: bounties; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE bounties (
+    id integer NOT NULL,
+    name character varying(255),
+    value double precision,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: bounties_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE bounties_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: bounties_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE bounties_id_seq OWNED BY bounties.id;
+
+
+--
 -- Name: candidate_search_beta_users; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1035,6 +1067,13 @@ ALTER TABLE ONLY addresses ALTER COLUMN id SET DEFAULT nextval('addresses_id_seq
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY bounties ALTER COLUMN id SET DEFAULT nextval('bounties_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY candidate_search_beta_users ALTER COLUMN id SET DEFAULT nextval('candidate_search_beta_users_id_seq'::regclass);
 
 
@@ -1219,6 +1258,14 @@ ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regcl
 
 ALTER TABLE ONLY addresses
     ADD CONSTRAINT addresses_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: bounties_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY bounties
+    ADD CONSTRAINT bounties_pkey PRIMARY KEY (id);
 
 
 --
@@ -1798,3 +1845,5 @@ INSERT INTO schema_migrations (version) VALUES ('20131008085037');
 INSERT INTO schema_migrations (version) VALUES ('20131010005856');
 
 INSERT INTO schema_migrations (version) VALUES ('20131013154301');
+
+INSERT INTO schema_migrations (version) VALUES ('20131014033429');

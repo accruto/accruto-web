@@ -1,0 +1,37 @@
+<h2>Candidates&nbsp;&nbsp;&nbsp;<%= link_to new_admin_candidate_path, :class => 'btn btn-primary' do %>
+    <i class="icon-plus icon-white"></i>
+    New Candidate
+  <% end %></h2>
+<table class="table table-striped datatable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Interview Date</th>
+      <th>Visa</th>
+      <th>Date Signed Up</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @candidates.empty? %>
+      <tr>
+        <td>No candidates signed up yet.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    <% else %>
+      <% @candidates.each do |candidate| %>
+        <tr>
+          <td><%= candidate.full_name %></td>
+          <td><%= candidate.email %></td>
+          <td><%= candidate.visa %></td>
+          <td><%= candidate.created_at.to_s(:long) %></td>
+          <td><%= candidate.state.capitalized %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

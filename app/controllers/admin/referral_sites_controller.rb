@@ -1,6 +1,8 @@
 class Admin::ReferralSitesController < ApplicationController
   # GET /admin/referral_sites
   # GET /admin/referral_sites.json
+  load_and_authorize_resource
+
   def index
     @referral_sites = ReferralSite.all
 

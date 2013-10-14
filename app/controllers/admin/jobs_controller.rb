@@ -2,6 +2,7 @@ class Admin::JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   load_and_authorize_resource
+  layout 'admin'
 
   def index
     @jobs = Job.limit('100')

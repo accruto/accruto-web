@@ -1,0 +1,12 @@
+<%= simple_form_for [:admin, @bounty] do |f| %>
+  <%= f.error_notification %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.input :name %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :value %>
+    </div>
+  </div>
+  <%= f.button :submit, class: 'btn btn-success' %>
+<% end %>
