@@ -46,7 +46,7 @@ class Admin::BountiesController < ApplicationController
 
     respond_to do |format|
       if @bounty.save
-        format.html { redirect_to @bounty, notice: 'Bounty was successfully created.' }
+        format.html { redirect_to admin_bounties_path, notice: 'Bounty was successfully created.' }
         format.json { render json: @bounty, status: :created, location: @bounty }
       else
         format.html { render action: "new" }
@@ -62,7 +62,7 @@ class Admin::BountiesController < ApplicationController
 
     respond_to do |format|
       if @bounty.update_attributes(params[:bounty])
-        format.html { redirect_to @bounty, notice: 'Bounty was successfully updated.' }
+        format.html { redirect_to admin_bounties_path, notice: 'Bounty was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

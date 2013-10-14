@@ -7,10 +7,11 @@
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Interview Date</th>
+      <th>Start Interviewing In</th>
       <th>Visa</th>
       <th>Date Signed Up</th>
       <th>Status</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -21,15 +22,18 @@
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
       </tr>
     <% else %>
       <% @candidates.each do |candidate| %>
         <tr>
           <td><%= candidate.full_name %></td>
           <td><%= candidate.email %></td>
+          <td><%= distance_of_time_in_words(candidate.start_interviewing_at, DateTime.now) %></td>
           <td><%= candidate.visa %></td>
           <td><%= candidate.created_at.to_s(:long) %></td>
-          <td><%= candidate.state.capitalized %></td>
+          <td><%= candidate.state %></td>
+          <td><a href="<%= edit_admin_candidate_path(candidate) %>">View</a></td>
         </tr>
       <% end %>
     <% end %>

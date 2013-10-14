@@ -103,6 +103,15 @@ class Candidate < ActiveRecord::Base
     return Candidate.where(:state => 'publish').count
   end
 
+  def invited_by
+    @invite = Invite.where(email: self.email)
+    if @invite.empty?
+      return '-'
+    else
+      return @invite.first.user.email
+    end
+  end
+
   def self.filter_by_minimum_annual_salary(min, max)
     where(
       "minimum_annual_salary >= :min AND minimum_annual_salary <= :max", min: min.to_i, max: max.to_i

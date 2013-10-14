@@ -20,10 +20,10 @@ class Admin::CandidatesController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
-    @candidate = Candidate.new(params[:job])
+    @candidate = Candidate.new(params[:candidate])
 
     if @candidate.save
-      redirect_to admin_jobs_path, notice: 'Job was successfully created.'
+      redirect_to admin_candidates_path, notice: 'Candidate was successfully created.'
     else
       render action: "new"
     end
@@ -34,8 +34,8 @@ class Admin::CandidatesController < ApplicationController
   def update
     @candidate = Candidate.find(params[:id])
 
-    if @candidate.update_attributes(params[:job])
-      redirect_to admin_jobs_path, notice: 'Job was successfully updated.'
+    if @candidate.update_attributes(params[:candidate])
+      redirect_to admin_candidates_path, notice: 'Candidate was successfully updated.'
     else
       render action: "edit"
     end

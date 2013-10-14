@@ -32,8 +32,10 @@
       <tr>
         <th>Name</th>
         <th>Email</th>
-        <th>Date Signed Up</th>
+        <th>Date signed up</th>
         <th>Status</th>
+        <th>Invited by</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -43,14 +45,18 @@
           <td></td>
           <td></td>
           <td></td>
+          <td></td>
+          <td></td>
         </tr>
       <% else %>
         <% @recent_candidates.each do |candidate| %>
           <tr>
             <td><%= candidate.full_name %></td>
             <td><%= candidate.email %></td>
-            <td><%= candidate.created_at %></td>
+            <td><%= candidate.created_at.to_s(:long) %></td>
             <td><%= candidate.state %></td>
+            <td><%= candidate.invited_by if candidate.invited_by %></td>
+            <td><a href="<%= edit_admin_candidate_path(candidate) %>">View</a></td>
           </tr>
         <% end %>
       <% end %>
@@ -79,9 +85,9 @@
       <% else %>
         <% @recent_invites.each do |invite| %>
           <tr>
-            <td><%= invite.name %></td>
-            <td><%= invite.email %></td>
-            <td><%= invite.created_at %></td>
+            <td><%= invite.user.candidate.full_name %> (<%= invite.user.email %>)</td>
+            <td><%= invite.name %> (<%= invite.email %>)</td>
+            <td><%= invite.created_at.to_s(:long) %></td>
             <td><%= invite.status %></td>
           </tr>
         <% end %>

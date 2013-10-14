@@ -1,20 +1,53 @@
 <%= simple_form_for [:admin, @candidate] do |f| %>
   <%= f.error_notification %>
+  <h3>Personal Information</h3>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <%= f.input :first_name %>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <%= f.input :last_name %>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <%= f.input :email %>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <%= f.input :phone %>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.input :job_title %>
+    </div>
+    <div class="col-md-8">
+      <label>Languages, skills and specialisations <span class="label-description">(e.g. First Aid Training, BOSIET)</span> </label>
+      <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select'%>
+    </div>
+  </div>
+  <h3>Job Search Information</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.input :start_interviewing_at, collection: Candidate::START_INTERVIEWING_AT_OPTIONS, label: "When can you start interviewing?", :required => true, input_html: { class: "select2" } %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :visa, collection: Candidate::VISA_OPTIONS, :required => true, label: "Employment Eligibility Status", input_html: { class: "select2" } %>
+    </div>
+    <div class="col-md-4">
+      <div class="row">
+        <label>Minimum annual salary</label>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <%= f.input_field :minimum_annual_salary, :required => true, as: 'string', class: "form-control" %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%= label_tag "Job Positions" %>
+      <%= text_field_tag "candidate[positions]", @candidate.position_list.to_s, id: 'positions' %>
+    </div>
+  </div>
+  <br>
   <%= f.button :submit, class: 'btn btn-success' %>
 <% end %>
