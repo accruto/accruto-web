@@ -14,21 +14,21 @@ namespace 'accruto:candidates' do
       updated_at = [3.days.ago, 30.days.ago, 1.day.ago, 10.minutes.ago, 1.minute.ago, 5.months.ago, 1.year.ago].sample
 
       user = User.create(
-        email: email,
-        password: 'password'
+          email: email,
+          password: 'password'
       )
 
       Candidate.create(
-        first_name: first_name,
-        last_name: last_name,
-        job_title: job_title,
-        status: status,
-        visa: visa,
-        minimum_annual_salary: salary,
-        address_id: address.id,
-        user_id: user.id,
-        phone: phone,
-        updated_at: updated_at
+          first_name: first_name,
+          last_name: last_name,
+          job_title: job_title,
+          status: status,
+          visa: visa,
+          minimum_annual_salary: salary,
+          address_id: address.id,
+          user_id: user.id,
+          phone: phone,
+          updated_at: updated_at
       )
       print "Added candidate: #{first_name} #{last_name}\n".yellow
       print " Job title: #{job_title}\n".green
@@ -53,46 +53,44 @@ namespace 'accruto:candidates' do
       ## PARSE USER
       user = parse_user(data_candidate)
 
-      begin
-        ## PARSE RESUME XML
-        resume_xml, phone = parse_resume_xml(data_candidate["lensXml"]) if data_candidate["lensXml"]
+      ## PARSE RESUME XML
+      resume_xml, phone = parse_resume_xml(data_candidate["lensXml"]) if data_candidate["lensXml"]
 
-        ## PARSE ADDRESS
-        address = parse_address(resume_xml, data_candidate)
+      ## PARSE ADDRESS
+      address = parse_address(resume_xml, data_candidate)
 
-        ## CREATE CANDIDATE
-        candidate = create_candidate(user, data_candidate, address, phone)
+      ## CREATE CANDIDATE
+      candidate = create_candidate(user, data_candidate, address, phone)
 
-        ## PARSE EDUCATION
-        education = parse_education(resume_xml, candidate) if resume_xml
+      ## PARSE EDUCATION
+      education = parse_education(resume_xml, candidate) if resume_xml
 
-        ## PARSE TRADE QUALIFICATIONS
-        parse_trade_qualification(resume_xml, candidate) if resume_xml && resume_xml["skills"]
+      ## PARSE TRADE QUALIFICATIONS
+      parse_trade_qualification(resume_xml, candidate) if resume_xml && resume_xml["skills"]
 
-        ## PARSE EXPERIENCES
-        parse_experiences(resume_xml, candidate) if resume_xml
+      ## PARSE EXPERIENCES
+      parse_experiences(resume_xml, candidate) if resume_xml
 
-        ## ADD CANDIDATE INDUSTRY (CANDIDATE JOB SUBCATEGORIES)
-        if data_candidate["industry"]
-          job_subcategory = JobSubcategory.create(name: data_candidate["industry"])
-          JobSubcategoriesCandidate.create(candidate_id: candidate.id, job_subcategory_id: job_subcategory.id) if job_subcategory
-        end
-      rescue
+      ## ADD CANDIDATE INDUSTRY (CANDIDATE JOB SUBCATEGORIES)
+      if data_candidate["industry"]
+        job_subcategory = JobSubcategory.create(name: data_candidate["industry"])
+        JobSubcategoriesCandidate.create(candidate_id: candidate.id, job_subcategory_id: job_subcategory.id) if job_subcategory
       end
     end
   end
 
   def parse_user(candidate)
     collected_user_data = {
-      email: candidate["Email"],
-      password: 'F2O3qi3R',
-      password_confirmation: 'F2O3qi3R'
+        email: candidate["Email"],
+        password: 'F2O3qi3R',
+        password_confirmation: 'F2O3qi3R'
     }
     user = User.find_by_email(candidate["Email"])
     user ? user : User.create(collected_user_data)
   end
 
   def parse_resume_xml(candidate_lens_xml)
+    ap candidate_lens_xml
     resume_xml = Hash.from_xml(candidate_lens_xml)
     resume_xml = resume_xml["ResDoc"]["resume"]
     if resume_xml && resume_xml["contact"]
@@ -108,18 +106,18 @@ namespace 'accruto:candidates' do
       objective = candidate["objective"]
 
       collected_candidate_data = {
-        first_name: name.first,
-        last_name: name.last,
-        phone: phone,
-        status: candidate["Status"],
-        job_title: candidate["RecentJobTitle"],
-        address_id: address.id,
-        visa: Candidate::VISA[candidate["visaStatus"].to_i],
-        minimum_annual_salary: candidate["Salary"],
-        user_id: user.id,
-        profile_photo: '',
-        desired_job_title: candidate["DesiredJobTitle"] ? prepare_desired_job(candidate["DesiredJobTitle"]) : {},
-        summary: summary || objective
+          first_name: name.first,
+          last_name: name.last,
+          phone: phone,
+          status: candidate["Status"],
+          job_title: candidate["RecentJobTitle"],
+          address_id: address.id,
+          visa: Candidate::VISA[candidate["visaStatus"].to_i],
+          minimum_annual_salary: candidate["Salary"],
+          user_id: user.id,
+          profile_photo: '',
+          desired_job_title: candidate["DesiredJobTitle"] ? prepare_desired_job(candidate["DesiredJobTitle"]) : {},
+          summary: summary || objective
       }
       candidate = Candidate.find_by_user_id(user.id)
       candidate ? candidate : Candidate.create(collected_candidate_data)
@@ -138,21 +136,21 @@ namespace 'accruto:candidates' do
         longitude = resume_xml["contact"]["address"]["lon"] || candidate["address_longitude"]
 
         collected_address_data = {
-          street: street,
-          city: city,
-          postcode: postalcode,
-          state: state,
-          latitude: latitude,
-          longitude: longitude
+            street: street,
+            city: city,
+            postcode: postalcode,
+            state: state,
+            latitude: latitude,
+            longitude: longitude
         }
       else
         collected_address_data = {
-          street: '',
-          city: candidate["address_city"],
-          postcode: '',
-          state: candidate["address_state"],
-          latitude: candidate["address_latitude"],
-          longitude: candidate["address_longitude"]
+            street: '',
+            city: candidate["address_city"],
+            postcode: '',
+            state: candidate["address_state"],
+            latitude: candidate["address_latitude"],
+            longitude: candidate["address_longitude"]
         }
       end
       Address.create(collected_address_data)
@@ -193,13 +191,13 @@ namespace 'accruto:candidates' do
             end
 
             collected_education_data = {
-              institution: institution,
-              qualification: qualification,
-              qualification_type: qualification_type,
-              qualification_major: qualification_major,
-              start_at: start_at,
-              graduated_at: graduated_at,
-              candidate_id: (candidate.id if candidate)
+                institution: institution,
+                qualification: qualification,
+                qualification_type: qualification_type,
+                qualification_major: qualification_major,
+                start_at: start_at,
+                graduated_at: graduated_at,
+                candidate_id: (candidate.id if candidate)
             }
             Education.create(collected_education_data)
           end if education['school']
@@ -228,19 +226,19 @@ namespace 'accruto:candidates' do
           end
 
           collected_education_data = {
-            institution: institution,
-            qualification: qualification,
-            qualification_type: qualification_type,
-            qualification_major: qualification_major,
-            start_at: start_at,
-            graduated_at: graduated_at,
-            candidate_id: (candidate['id'] if candidate)
+              institution: institution,
+              qualification: qualification,
+              qualification_type: qualification_type,
+              qualification_major: qualification_major,
+              start_at: start_at,
+              graduated_at: graduated_at,
+              candidate_id: (candidate['id'] if candidate)
           }
 
           Education.create(collected_education_data)
         end
       end
-      #Education.create(collected_education_data) if collected_education_data
+        #Education.create(collected_education_data) if collected_education_data
     rescue
     end
   end
@@ -248,9 +246,9 @@ namespace 'accruto:candidates' do
   def parse_trade_qualification(resume_xml, candidate)
     begin
       trade_qualifications = resume_xml["skills"].split("\n")
-      trade_qualifications.each { |t| t.gsub('\t','').strip }
-      trade_qualifications.delete_if {|t| t.empty? }
-      trade_qualifications.delete_if {|t| t.downcase.include?("skill") }
+      trade_qualifications.each { |t| t.gsub('\t', '').strip }
+      trade_qualifications.delete_if { |t| t.empty? }
+      trade_qualifications.delete_if { |t| t.downcase.include?("skill") }
       trade_qualifications.each do |tr|
         TradeQualification.create(name: tr.strip, candidate_id: candidate.id)
       end
@@ -266,20 +264,20 @@ namespace 'accruto:candidates' do
           if job["daterange"]
             started_at = education_date_range(job["daterange"]["start"])
             ended_at = if job["daterange"]["end"] == "current"
-               Time.now
-             else
-               education_date_range(job["daterange"]["end"])
-             end
+                         Time.now
+                       else
+                         education_date_range(job["daterange"]["end"])
+                       end
             current_job = true if job["daterange"]["end"] == "current"
           end
           collected_user_data = {
-            job_title: job["title"],
-            description: job["description"],
-            company: job["employer"],
-            started_at: started_at,
-            ended_at: ended_at,
-            current: job["pos"] == "0" || current_job ? true : false,
-            candidate_id: candidate.id
+              job_title: job["title"],
+              description: job["description"],
+              company: job["employer"],
+              started_at: started_at,
+              ended_at: ended_at,
+              current: job["pos"] == "0" || current_job ? true : false,
+              candidate_id: candidate.id
           }
           Experience.create(collected_user_data)
         end
