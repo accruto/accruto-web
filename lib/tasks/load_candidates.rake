@@ -74,7 +74,7 @@ namespace 'accruto:candidates' do
       ## ADD CANDIDATE INDUSTRY (CANDIDATE JOB SUBCATEGORIES)
       if data_candidate["industry"]
         job_subcategory = JobSubcategory.create(name: data_candidate["industry"])
-        JobSubcategoriesCandidate.create(candidate_id: candidate.id, job_subcategory_id: job_subcategory.id) if job_subcategory
+        JobSubcategoriesCandidate.create(candidate_id: candidate.id, job_subcategory_id: job_subcategory.id) if candidate && job_subcategory
       end
     end
   end
@@ -120,7 +120,7 @@ namespace 'accruto:candidates' do
           summary: summary || objective
       }
       candidate = Candidate.find_by_user_id(user.id)
-      candidate ? candidate : Candidate.create(collected_candidate_data)
+      candidate ? candidate : Candidate.create!(collected_candidate_data)
     rescue
     end
   end
