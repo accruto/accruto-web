@@ -116,7 +116,7 @@ namespace 'accruto:candidates' do
           status: candidate["Status"],
           job_title: candidate["RecentJobTitle"],
           address_id: address.id,
-          visa: Candidate::VISA[candidate["visaStatus"].to_i],
+          visa: Candidate::VISA_OPTIONS[candidate["visaStatus"].to_i],
           minimum_annual_salary: candidate["Salary"],
           user_id: user.id,
           profile_photo: '',
