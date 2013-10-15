@@ -39,6 +39,7 @@ gem 'acts-as-taggable-on'
 gem 'state_machine'
 gem 'omniauth'
 gem 'omniauth-linkedin'
+gem 'awesome_print'
 
 group :production do
   gem 'rails_12factor'
@@ -56,7 +57,6 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.2.1'
   gem 'guard', '~> 1.8.1'
   gem 'guard-rspec', '~> 3.0.2'
-  gem 'awesome_print'
   gem 'quiet_assets'
   gem 'capybara-webkit'
   gem 'selenium-webdriver'

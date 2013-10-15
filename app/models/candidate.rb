@@ -41,8 +41,7 @@ class Candidate < ActiveRecord::Base
   validates :visa, presence: {message: 'Please fill in your employment eligibility status'}, unless: :validate_new_record
   validates :start_interviewing_at, presence: {message: 'Please update your availability for interviews'}, unless: :validate_new_record
 
-
-  # validates :first_name, uniqueness: {scope: [:last_name, :job_title]}
+  validates :first_name, uniqueness: {scope: [:last_name, :job_title, :user_id]}
 
   belongs_to :address
   belongs_to :user
@@ -85,7 +84,7 @@ class Candidate < ActiveRecord::Base
     "No Work Visa"
   ]
 
-  BOUNTY = "$858"
+  BOUNTY = "$#{Bounty.where(name: "Accruto Bounty").first.try(:value)}"
 
   state_machine :state, :initial => :unpublished do
     event :publish do
@@ -98,6 +97,19 @@ class Candidate < ActiveRecord::Base
 
     state :publish
     state :unpublish
+  end
+
+  def self.published_count
+    return Candidate.where(:state => 'publish').count
+  end
+
+  def invited_by
+    @invite = Invite.where(email: self.email)
+    if @invite.empty?
+      return '-'
+    else
+      return @invite.first.user.email
+    end
   end
 
   def self.filter_by_minimum_annual_salary(min, max)

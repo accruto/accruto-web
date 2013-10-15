@@ -1,0 +1,76 @@
+@import 'bootstrap-variables';
+
+.admin-sidebar, .admin-content {
+  margin-top: 40px;
+}
+
+.page-header {
+  margin-top: 0 !important;
+}
+
+.admin-content {
+  .admin-dashboard-metric {
+    padding: 10px 20px;
+  }
+  .dashboard-number {
+    font-size:30px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+  }
+  .recent-candidate-signups, .recent-candidate-invites {
+    padding-top: 20px;
+  }
+}
+#candidate-range, #limit {
+  padding: 6px;
+  border-radius: 3px;
+}
+#candidate-range {
+  width: 70%;
+}
+#positions {
+  width: 100%;
+}
+
+.admin-sidebar {
+  background: $blue-dark;
+  margin-right:20px;
+  margin-left: 20px;
+  a { color: white; text-decoration: none !important; }
+  ul {
+    li:not(:first-child) {
+      border-top: 1px solid white;
+    }
+    li {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    li.active {
+      border-left: 5px solid $yellow;
+      background: $blue;
+    }
+    a:hover li {
+      background: $blue;
+      color: white;
+      text-decoration: none !important;
+      transition: background .25s ease-in-out;
+      -moz-transition: background .25s ease-in-out;
+      -webkit-transition: background .25s ease-in-out;
+    }
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.pagination {
+  ul {
+    list-style:none ;
+    li { display: inline-block; padding: 5px; }
+    li.active {
+      background: $blue-dark;
+      a { color: white }
+    }
+  }
+}

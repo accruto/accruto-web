@@ -10,7 +10,7 @@
         <p>You receive:</p>
         <ul>
           <li><strong><%= Candidate::BOUNTY %></strong> for each hired referral.</li>
-        </ul>  
+        </ul>
         <p>They receive:</p>
         <ul>
           <li>Priority selection for potential jobs.</li>
@@ -21,7 +21,7 @@
           <%= f.input :message, label: "Personal message", input_html: { value: "This is the best source I've found for picking up solid job leads. Lots of companies that are serious about interviewing you and giving you details like salary and overtime pay upfront." } %>
           <%= f.submit "Send Invitation", class: "btn btn-lg btn-success", disable_with: "Sending Invitation..." %>
         <% end %>
-      </div> 
+      </div>
       <div class="col-md-6">
         <h4>Preview the email invitation here</h4>
         <div class="well">
@@ -30,7 +30,7 @@
         <strong>To:</strong><br>
         "<span class="invite-name-preview">Sarah</span>" &lt;<span class="invite-email-preview">sarah@accruto.com</span>&gt;<br>
         <strong>Subject:</strong><br>
-        <%= @candidate.full_name %> has invited you to join Hired<br>
+        <%= @candidate.full_name %> has invited you to join Accruto<br>
         </p>
 
         <p><strong>Body:</strong><br>
@@ -43,13 +43,13 @@
 
           <p>Since you've been recommended, you get a special perk: priority selection of your profile and higher likelihood of invitation for an interview.</p>
 
-          <p>Join Accruto through your personal link:<br> 
+          <p>Join Accruto through your personal link:<br>
           http://accruto.com/invited/<%= @candidate.email %></p>
 
           --- <br>
           <p>This is a one-time email sent because <%= @candidate.full_name %> (<%= @candidate.email %>) recommended you. You have not been added to any email list.</p>
         </div>
-      </div> 
+      </div>
     </div>
     <br>
     <div class="row content">
@@ -65,7 +65,11 @@
           </thead>
           <tbody>
             <% if @invites.empty? %>
-              <tr>No invites sent yet.</tr>
+              <tr>
+                <td>No invites sent yet.</td>
+                <td></td>
+                <td></td>
+              </tr>
             <% else %>
               <% @invites.each do |invite| %>
                 <tr>

@@ -33,7 +33,7 @@
           <%= f.input :profile_photo, as: 'file' %>
         </div>
       </div>
-      <div class="row">  
+      <div class="row">
         <div class="col-md-3">
           <%= f.input :job_title, label: "Current job title" %>
         </div>
@@ -59,10 +59,10 @@
       <hr>
       <div class="row">
         <div class="col-md-3">
-          <%= f.input :start_interviewing_at, collection: Candidate::START_INTERVIEWING_AT_OPTIONS, label: "When can you start interviewing?", input_html: { class: "select2" } %>
+          <%= f.input :start_interviewing_at, collection: Candidate::START_INTERVIEWING_AT_OPTIONS, label: "When can you start interviewing?", :required => true, input_html: { class: "select2" } %>
         </div>
         <div class="col-md-3">
-          <%= f.input :visa, collection: Candidate::VISA_OPTIONS, label: "Employment Eligibility Status", input_html: { class: "select2" } %>
+          <%= f.input :visa, collection: Candidate::VISA_OPTIONS, :required => true, label: "Employment Eligibility Status", input_html: { class: "select2" } %>
         </div>
         <div class="col-md-3">
           <div class="row">
@@ -70,7 +70,7 @@
           </div>
           <div class="input-group">
             <span class="input-group-addon">$</span>
-            <%= f.input_field :minimum_annual_salary, as: 'string', class: "form-control" %>
+            <%= f.input_field :minimum_annual_salary, :required => true, as: 'string', class: "form-control" %>
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ class TradeQualification < ActiveRecord::Base
   attr_accessible :name, :attained_at, :candidate_id, :attained_at_text
   belongs_to :candidate
 
-  YEARS = (1800..2016).to_a
+  YEARS = (1950..2016).to_a
   scope :sort_by_attained_at, -> { order("attained_at DESC") }
 
   def attained_at_text

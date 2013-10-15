@@ -19,7 +19,7 @@ class Education < ActiveRecord::Base
   belongs_to :candidate
   validates :qualification, uniqueness: {scope: :candidate_id}
 
-  YEARS = (1800..2016).to_a
+  YEARS = (1950..2016).to_a
   TYPES = %w(Doctorate Masters Degree Bachelor Diploma Certificate School Course)
 
   scope :sort_by_graduated_at, -> { order("graduated_at DESC") }

@@ -4,7 +4,7 @@ class Invite < ActiveRecord::Base
 
   validates :email, :name, presence: true
   validates_uniqueness_of :email, message: "This friend has already been invited"
-  
+
   state_machine :status, :initial => :invited do
     event :signed_up do
       transition all => :signed_up
@@ -12,5 +12,9 @@ class Invite < ActiveRecord::Base
 
     state :invited
     state :signed_up
+  end
+
+  def self.signed_up_count
+    return Invite.where(:status => "signed_up").count
   end
 end
