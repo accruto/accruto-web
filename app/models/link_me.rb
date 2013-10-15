@@ -99,7 +99,7 @@ class LinkMe
         DECLARE @recentCandidateEndDate DATETIME
         SET @recentCandidateEndDate = '2013-09-09 00:00:00'
 
-        SELECT TOP 5
+        SELECT TOP 3
           u.id AS Id,
           u.firstName + ' ' + u.lastName AS Name,
           u.emailAddress AS Email,
