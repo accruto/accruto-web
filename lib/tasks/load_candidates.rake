@@ -98,9 +98,7 @@ namespace 'accruto:candidates' do
       end
       [resume_xml, phone]
     rescue Exception => e
-      ap candidate_lens_xml
-      ap "================"
-      ap e
+      ap "invalid XML resume"
       [nil, nil]
     end
   end
