@@ -40,4 +40,8 @@ module ApplicationHelper
       return datetime.strftime("%Y")
     end
   end
+
+  def admin_sidebar_class(action)
+    return 'active' if action == "#{params[:controller]}-#{params[:action]}"
+  end
 end
