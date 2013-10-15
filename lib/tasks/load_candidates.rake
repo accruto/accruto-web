@@ -53,28 +53,31 @@ namespace 'accruto:candidates' do
       ## PARSE USER
       user = parse_user(data_candidate)
 
-      ## PARSE RESUME XML
-      resume_xml, phone = parse_resume_xml(data_candidate["lensXml"]) if data_candidate["lensXml"]
+      begin
+        ## PARSE RESUME XML
+        resume_xml, phone = parse_resume_xml(data_candidate["lensXml"]) if data_candidate["lensXml"]
 
-      ## PARSE ADDRESS
-      address = parse_address(resume_xml, data_candidate)
+        ## PARSE ADDRESS
+        address = parse_address(resume_xml, data_candidate)
 
-      ## CREATE CANDIDATE
-      candidate = create_candidate(user, data_candidate, address, phone)
+        ## CREATE CANDIDATE
+        candidate = create_candidate(user, data_candidate, address, phone)
 
-      ## PARSE EDUCATION
-      education = parse_education(resume_xml, candidate) if resume_xml
+        ## PARSE EDUCATION
+        education = parse_education(resume_xml, candidate) if resume_xml
 
-      ## PARSE TRADE QUALIFICATIONS
-      parse_trade_qualification(resume_xml, candidate) if resume_xml && resume_xml["skills"]
+        ## PARSE TRADE QUALIFICATIONS
+        parse_trade_qualification(resume_xml, candidate) if resume_xml && resume_xml["skills"]
 
-      ## PARSE EXPERIENCES
-      parse_experiences(resume_xml, candidate) if resume_xml
+        ## PARSE EXPERIENCES
+        parse_experiences(resume_xml, candidate) if resume_xml
 
-      ## ADD CANDIDATE INDUSTRY (CANDIDATE JOB SUBCATEGORIES)
-      if data_candidate["industry"]
-        job_subcategory = JobSubcategory.create(name: data_candidate["industry"])
-        JobSubcategoriesCandidate.create(candidate_id: candidate.id, job_subcategory_id: job_subcategory.id) if job_subcategory
+        ## ADD CANDIDATE INDUSTRY (CANDIDATE JOB SUBCATEGORIES)
+        if data_candidate["industry"]
+          job_subcategory = JobSubcategory.create(name: data_candidate["industry"])
+          JobSubcategoriesCandidate.create(candidate_id: candidate.id, job_subcategory_id: job_subcategory.id) if job_subcategory
+        end
+      rescue
       end
     end
   end
