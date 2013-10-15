@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="section">
+    <h3>Candidate CSV Export</h3>
+    <%= form_tag users_download_csv_path, class: 'form-horizontal' do %>
+      <fieldset>
+        <div class="control-group">
+          <label class="control-label" for="candidate-range">Candidates Range:</label>
+          <div class="controls">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-calendar"></i></span>
+              <input type="text" name="candidate[range]" id="candidate-range"/>
+            </div>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="candidate_positions">Job Subcategories</label>
+          <div class="controls">
+            <%= text_field_tag "candidate[positions]", "", id: 'positions' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="candidate_positions">Limit</label>
+          <div class="controls">
+            <%= text_field_tag "candidate[limit]", "", id: 'positions' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <br/>
+            <%= submit_tag "Download CSV" %>
+          </div>
+        </div>
+      </fieldset>
+    <% end %>
+  </div>
+</div>

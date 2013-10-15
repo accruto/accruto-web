@@ -22,6 +22,16 @@
     padding-top: 20px;
   }
 }
+#candidate-range, #limit {
+  padding: 6px;
+  border-radius: 3px;
+}
+#candidate-range {
+  width: 70%;
+}
+#positions {
+  width: 100%;
+}
 
 .admin-sidebar {
   background: $blue;
