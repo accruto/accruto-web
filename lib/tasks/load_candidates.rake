@@ -125,7 +125,8 @@ namespace 'accruto:candidates' do
       }
       candidate = Candidate.find_by_user_id(user.id)
       candidate ? candidate : Candidate.create!(collected_candidate_data)
-    rescue
+    rescue Exception => e
+      ap e
     end
   end
 
