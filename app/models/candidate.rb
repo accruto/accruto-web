@@ -157,7 +157,7 @@ class Candidate < ActiveRecord::Base
         self.get_candidates(options[:start_date], options[:end_date], options[:limit])
       end
       candidates.each do |candidate|
-        if candidate.user.email
+        if candidate.try(:user).try(:email)
           csv << [
             candidate.first_name, candidate.last_name, candidate.user.email, candidate.phone, candidate.created_at,
             "#{candidate.subcategories.pluck(:name).join(",").to_s}", "#{candidate.position_list}", "#{candidate.skill_list}",
