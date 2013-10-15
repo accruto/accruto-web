@@ -22,9 +22,19 @@
     padding-top: 20px;
   }
 }
+#candidate-range, #limit {
+  padding: 6px;
+  border-radius: 3px;
+}
+#candidate-range {
+  width: 70%;
+}
+#positions {
+  width: 100%;
+}
 
 .admin-sidebar {
-  background: $blue;
+  background: $blue-dark;
   margin-right:20px;
   margin-left: 20px;
   a { color: white; text-decoration: none !important; }
@@ -36,8 +46,12 @@
       padding: 10px 20px;
       cursor: pointer;
     }
+    li.active {
+      border-left: 5px solid $yellow;
+      background: $blue;
+    }
     a:hover li {
-      background: $blue-dark;
+      background: $blue;
       color: white;
       text-decoration: none !important;
       transition: background .25s ease-in-out;

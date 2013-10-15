@@ -61,7 +61,11 @@ Accruto::Application.routes.draw do
     #resources :job_categories
     #resources :job_subcategories
     resources :referral_sites
-    resources :candidates
+    resources :candidates do
+      collection do
+        get 'csv'
+      end
+    end
     resources :bounties
     root :to => 'pages#dashboard'
   end
@@ -78,7 +82,8 @@ Accruto::Application.routes.draw do
   get '/terms', to: 'pages#terms'
   get '/contact', to: 'pages#contact'
   post 'pages/send_contact_form'
-  get 'users/index', to: 'users#index'
+  get 'users/csv', to: 'users#csv'
+  post 'users/download_csv', to: 'users#download_csv'
 
   root :to => 'pages#home'
 end
