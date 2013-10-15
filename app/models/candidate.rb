@@ -145,13 +145,15 @@ class Candidate < ActiveRecord::Base
         self.get_candidates(options[:start_date], options[:end_date], options[:limit])
       end
       candidates.each do |candidate|
-        csv << [
-          candidate.first_name, candidate.last_name, candidate.user.email, candidate.phone, candidate.created_at,
-          "#{candidate.subcategories.pluck(:name).join(",").to_s}", "#{candidate.position_list}", "#{candidate.skill_list}",
-          "#{candidate.educations.map {|e| [e.institution, e.qualification, e.qualification_type] }.join(',').to_s}",
-          "#{candidate.trade_qualifications.map {|t| [t.name, t.attained_at] }.join(',').to_s}",
-          "http://#{options[:host]}/profile/activation/#{candidate.user.authentication_token}"
-        ]
+        if candidate.user.email
+          csv << [
+            candidate.first_name, candidate.last_name, candidate.user.email, candidate.phone, candidate.created_at,
+            "#{candidate.subcategories.pluck(:name).join(",").to_s}", "#{candidate.position_list}", "#{candidate.skill_list}",
+            "#{candidate.educations.map {|e| [e.institution, e.qualification, e.qualification_type] }.join(',').to_s}",
+            "#{candidate.trade_qualifications.map {|t| [t.name, t.attained_at] }.join(',').to_s}",
+            "http://#{options[:host]}/profile/activation/#{candidate.user.authentication_token}"
+          ]
+        end
       end
     end
   end
