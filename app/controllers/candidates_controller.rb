@@ -42,7 +42,11 @@ class CandidatesController < ApplicationController
   end
 
   def create
-    ##
+    user = current_user
+
+    if user.provider.presence && user.uid.presence
+      redirect_to edit_profile_path
+    end
   end
 
   def update
