@@ -987,7 +987,9 @@ CREATE TABLE users (
     active boolean,
     authentication_token character varying(255),
     provider character varying(255),
-    uid character varying(255)
+    uid character varying(255),
+    linkedin_token character varying(255),
+    linkedin_secret character varying(255)
 );
 
 
@@ -1768,3 +1770,5 @@ INSERT INTO schema_migrations (version) VALUES ('20131010005856');
 INSERT INTO schema_migrations (version) VALUES ('20131013154301');
 
 INSERT INTO schema_migrations (version) VALUES ('20131014033429');
+
+INSERT INTO schema_migrations (version) VALUES ('20131016145859');

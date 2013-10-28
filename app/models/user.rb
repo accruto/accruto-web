@@ -25,8 +25,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :candidate_attributes, :provider, :uid
-  # attr_accessible :title, :body
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :candidate_attributes, :provider, :uid,
+                  :linkedin_token, :linkedin_secret
 
   has_many :favourites
   has_many :favourite_jobs, through: :favourites, :source => :job
@@ -114,7 +114,7 @@ class User < ActiveRecord::Base
 
   def self.from_omniauth(auth)
     user = find_by_email(auth.info.email)
-    user.update_attributes(provider: auth.provider, uid: auth.uid)
+    user.update_attributes(provider: auth.provider, uid: auth.uid, linkedin_token: auth.credentials.token, linkedin_secret: auth.credentials.secret)
     user
   end
 

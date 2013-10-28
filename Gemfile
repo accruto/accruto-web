@@ -39,6 +39,7 @@ gem 'acts-as-taggable-on'
 gem 'state_machine'
 gem 'omniauth'
 gem 'omniauth-linkedin'
+gem 'linkedin'
 gem 'awesome_print'
 
 group :production do
