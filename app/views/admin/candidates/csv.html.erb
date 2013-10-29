@@ -29,7 +29,12 @@
       <div class="control-group">
         <label class="control-label" for="candidate_positions">Industries:</label>
         <div class="controls">
-          <%= text_field_tag "candidate[positions]", "", id: 'positions' %>
+          <% @industries.each do |industry| %>
+            <div>
+              <%= check_box_tag "industry[]", industry.name, false, id: "industry-#{industry.id}" %>
+              <label for="industry-<%= industry.id %>"><%= industry.name %> (<%= industry.count %>)</label>
+            </div>
+          <% end %> 
         </div>
       </div>
     </div>

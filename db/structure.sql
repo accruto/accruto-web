@@ -3,6 +3,7 @@
 --
 
 SET statement_timeout = 0;
+SET lock_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
@@ -1428,6 +1429,27 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: address_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_city ON addresses USING gin (to_tsvector('simple'::regconfig, (city)::text));
+
+
+--
+-- Name: address_state; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_state ON addresses USING gin (to_tsvector('simple'::regconfig, (state)::text));
+
+
+--
+-- Name: address_street; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX address_street ON addresses USING gin (to_tsvector('simple'::regconfig, (street)::text));
+
+
+--
 -- Name: addresses_city; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1704,8 +1726,6 @@ INSERT INTO schema_migrations (version) VALUES ('20130901024502');
 INSERT INTO schema_migrations (version) VALUES ('20130901040950');
 
 INSERT INTO schema_migrations (version) VALUES ('20130916010308');
-
-INSERT INTO schema_migrations (version) VALUES ('20130916044514');
 
 INSERT INTO schema_migrations (version) VALUES ('20130918053025');
 
