@@ -1,0 +1,272 @@
+@import 'bootstrap-variables';
+@import 'compass/css3';
+/* @tags */
+.tag {
+  background: $gray-lighter;
+  border-left: 0;
+  color: $gray;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 0px 3px 3px 0px;
+  margin-right: 10px;
+  margin-bottom: 6px;
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+  }
+  &:after {
+    content: " ";
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 12px 12px 12px 0;
+    border-color: transparent $gray-lighter transparent transparent;
+    margin-top:-21px;
+    margin-left: -22px;
+  }
+  &:before {
+    content: " ";
+    position:absolute;
+    z-index: 1;
+    background: white;
+    width:5px;
+    height: 5px;
+    border-radius:10px;
+    margin-top: 5px;
+    margin-left: -10px;
+  }
+  &.tag-yellow {
+    background: $yellow-light;
+    &:after {
+      border-color: transparent $yellow-light transparent transparent;
+    }
+  }
+  &.tag-green {
+    background: $green-light;
+    color: #459481;
+    &:after {
+      border-color: transparent $green-light transparent transparent;
+    }
+  }
+}
+/* @end */
+
+/* @sidebar panel */
+.sidebar-panel {
+  background: $panel-bg;
+  padding: 30px 15px 15px 15px;
+  margin-left: 10px;
+  border-bottom: 2px solid $panel-shadow;
+  border-radius: 3px;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+.sidebar-panel .header {
+  margin: -30px 15px 15px 15px;
+}
+.sidebar-panel .content {
+  margin-top: 20px;
+}
+.sidebar-panel .header {
+  i {
+    background: $blue-dark;
+    padding: 12px;
+    color: white;
+    border-radius: 30px;
+    font-size:18px;
+    margin-left:-50px;
+    z-index: 1;
+    position: relative;
+  }
+  .header-title {
+    display: inline-block;
+    background: $gray-lighter;
+    color: $gray-dark;
+    font-size: 16px;
+    padding: 3px 15px;
+    margin-left: -12px;
+    z-index: 0;
+    border-radius: 3px 0px 3px 3px;
+  }
+}
+/* @end */
+
+/* @candidates search */
+.candidates-search-left-sidebar, .candidates-search-content, .sidebar-panel {
+  margin-top: 40px;
+  h5 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+/* @end */
+
+/* @candidates search sidebar */
+.candidates-search-sidebar {
+
+}
+.candidates-search-sidebar {
+  .recent-searches {
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+  }
+}
+/* @end */
+
+/* @candidates search content */
+.candidates-search-content {
+  .candidates-result-number {
+    color: $green;
+  }
+  .candidates-search-pagination {
+    text-align:left;
+    margin-top: 0px;
+  }
+  hr {
+    margin: 10px 0 15px 0;
+  }
+  .candidate-list {
+    padding: 0;
+  }
+  .candidate-list .candidate-entry {
+    background: $panel-bg;
+    border-bottom: 2px solid $panel-shadow;
+    border-radius: 3px;
+    list-style: none;
+    margin: 10px 0;
+    padding: 15px 15px 20px 15px;
+  }
+  .candidate-detail {
+    display: none;
+    .contact-detail-list {
+      padding: 0;
+      font-size: 12px;
+      list-style: none;
+      margin: 10px 0;
+    }
+  }
+  .candidate-list .candidate-entry .right-column {
+    border-left: 1px solid $gray-lighter;
+    padding: 2px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+  }
+  .candidate-list .candidate-entry .right-column {
+    &:before {
+      content: " ";
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 48px 48px 0;
+      border-color: transparent $gray-lighter transparent transparent;
+      position: absolute;
+      right: 0;
+      margin-top: -16px;
+      z-index: 2;
+      cursor: pointer;
+    }
+    a .icon-zoom-in, a .icon-zoom-out {
+      position: absolute;
+      font-size: 18px;
+      color: $gray-light;
+      right: 0;
+      margin-top:-10px;
+      margin-right: 5px;
+      z-index: 3;
+    }
+    a:hover {
+      text-decoration: none;
+      .icon-zoom-in, .icon-zoom-out {
+        color: $green;
+      }
+    }
+    .candidate-verification {
+      list-style: none;
+      font-size: 10px;
+      padding: 0;
+      margin: 10px 0 15px 0;
+      li {
+        display: block;
+        padding: 3px 10px;
+        margin-bottom: 5px;
+        border-radius: 3px;
+      }
+    }
+  }
+    h4 {
+      margin: 0 0 2px 0;
+    }
+    .address {
+      color: $gray;
+    }
+    .headshot {
+      margin: 0px;
+      width: 75px;
+      height: 75px;
+    }
+    .desired-salary-description {
+      font-size: 12px;
+    }
+    .desired-salary-value {
+      font-size:20px;
+    }
+    .btn-candidate-shortlist {
+      background: $green;
+      border-color: #4db39b;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+      &:hover {
+        text-decoration: none;
+        background: darken($green, 8%);
+      }
+    }
+    .updated-date {
+      font-size:12px;
+      color: $gray;
+    }
+    .info-available {
+      background: $green-light;
+      width:20px;
+      height:20px;
+      border-radius:25px;
+      content: " ";
+    }
+}
+/* @end */
+
+/* @candidates shortlist */
+.candidate-shortlist {
+  width: 230px;
+  background:
+    linear-gradient(-135deg, $panel-bg 5px, transparent 0) 0 5px,
+    linear-gradient(135deg, $panel-bg 5px, #fff 0) 0 5px;
+  background-color: $panel-bg;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 10px 10px;
+  border-bottom: 0px solid $panel-shadow;
+  > .header {
+    i {
+      background: $green;
+    }
+    .header-title {
+      display: inline-block;
+      background: $blue-headings;
+      color: white;
+      font-size: 16px;
+      padding: 3px 15px;
+      margin-left: -12px;
+      z-index: 0;
+      border-radius: 3px 0px 3px 3px;
+    }
+  }
+}
+/* @end */

@@ -37,7 +37,10 @@ class Candidate < ActiveRecord::Base
 
   validates :first_name, :last_name, presence: true
 
-  validates :minimum_annual_salary, presence: {message: 'Please fill in your minimum annual salary'}, unless: :validate_new_record
+  validates :minimum_annual_salary,
+    presence: {message: 'Please fill in your minimum annual salary'},
+    unless: :validate_new_record,
+    numericality: { greater_than: 10000, message: 'Minimum annual salary has to be greater than 10,000' }
   validates :visa, presence: {message: 'Please fill in your employment eligibility status'}, unless: :validate_new_record
   validates :start_interviewing_at, presence: {message: 'Please update your availability for interviews'}, unless: :validate_new_record
 
@@ -63,6 +66,8 @@ class Candidate < ActiveRecord::Base
   scope :filter_by_status, lambda { |status| where("status = ?", status) if status.present? }
   scope :filter_by_visa, lambda { |visa| where("visa = ?", visa) if visa.present? }
   scope :get_candidates, ->(start_date, end_date, num = nil) { where("DATE(candidates.created_at) >= ? AND DATE(candidates.created_at) <= ?", start_date, end_date).limit(num) }
+  scope :published, -> { where("state = ?", "publish") }
+  scope :only_with_job_titles, -> { where("job_title IS NOT NULL") }
 
   STATUS_OPTIONS = [
     "Immediately",

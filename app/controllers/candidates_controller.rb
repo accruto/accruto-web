@@ -1,8 +1,8 @@
 class CandidatesController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :search]
+  before_filter :authenticate_user!
 
   def index
-    @candidates = Candidate.paginate(page: params[:page], per_page: 10)
+    @candidates = Candidate.published.paginate(page: params[:page], per_page: 10)
   end
 
   def search
@@ -13,7 +13,7 @@ class CandidatesController < ApplicationController
                     .filter_by_updated_at(params[:search][:updated_at])
                     .filter_by_status(params[:search][:status])
                     .filter_by_visa(params[:search][:visa])
-                    .published.paginate(page: params[:page], per_page: 10)
+                    .paginate(page: params[:page], per_page: 10)
   end
 
   def show

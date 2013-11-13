@@ -13,99 +13,113 @@
       </div>
     </div>
   <% end %>
-
   <div class="container">
-    <div class="section">
-      <h3>Personal Information</h3>
-      <div class="clear"></div>
-      <hr>
-      <div class="row">
-        <div class="col-md-3">
-          <%= f.input :first_name, :autofocus => true, :required => true %>
-        </div>
-        <div class="col-md-3">
-          <%= f.input :last_name %>
-        </div>
-        <div class="col-md-3">
-          <%= f.input :email %>
-        </div>
-        <div class="col-md-3">
-          <%= f.input :profile_photo, as: 'file' %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <%= f.input :job_title, label: "Current job title" %>
-        </div>
-        <div class="col-md-3">
-          <%= f.input :phone %>
-        </div>
-        <div class="col-md-6">
-          <label>List your languages, skills and specialisations <span class="label-description">(e.g. First Aid Training, BOSIET)</span> </label>
-          <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select'%>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="alert alert-prompt hidden">
-            Get more interview request by including more details in your profile. <a href="#">Read: Ways to improve your profile</a>.
-          </div>
-          <%#= f.input :summary, input_html: { class: "profile-summary" }, as: 'text' %>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <h3>Job Search Information</h3>
-      <hr>
-      <div class="row">
-        <div class="col-md-3">
-          <%= f.input :start_interviewing_at, collection: Candidate::START_INTERVIEWING_AT_OPTIONS, label: "When can you start interviewing?", :required => true, input_html: { class: "select2" } %>
-        </div>
-        <div class="col-md-3">
-          <%= f.input :visa, collection: Candidate::VISA_OPTIONS, :required => true, label: "Employment Eligibility Status", input_html: { class: "select2" } %>
-        </div>
-        <div class="col-md-3">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="section">
+          <h3>Personal Information</h3>
+          <div class="clear"></div>
+          <hr>
           <div class="row">
-            <label>Minimum annual salary</label>
+            <div class="col-md-3">
+              <%= f.input :first_name, :autofocus => true, :required => true %>
+            </div>
+            <div class="col-md-3">
+              <%= f.input :last_name %>
+            </div>
+            <div class="col-md-3">
+              <%= f.input :email %>
+            </div>
+            <div class="col-md-3">
+              <%= f.input :profile_photo, as: 'file' %>
+            </div>
           </div>
-          <div class="input-group">
-            <span class="input-group-addon">$</span>
-            <%= f.input_field :minimum_annual_salary, :required => true, as: 'string', class: "form-control" %>
+          <div class="row">
+            <div class="col-md-3">
+              <%= f.input :job_title, label: "Current job title" %>
+            </div>
+            <div class="col-md-3">
+              <%= f.input :phone %>
+            </div>
+            <div class="col-md-6">
+              <label>List your languages, skills and specialisations <span class="label-description">(e.g. First Aid Training, BOSIET)</span> </label>
+              <%= text_field_tag "candidate[skills]", @candidate.skill_list.to_s, id: 'skills-select'%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="alert alert-prompt hidden">
+                Get more interview request by including more details in your profile. <a href="#">Read: Ways to improve your profile</a>.
+              </div>
+              <%#= f.input :summary, input_html: { class: "profile-summary" }, as: 'text' %>
+            </div>
           </div>
         </div>
+        <div class="section">
+          <h3>Job Search Information</h3>
+          <hr>
+          <div class="row">
+            <div class="col-md-3">
+              <%= f.input :start_interviewing_at, collection: Candidate::START_INTERVIEWING_AT_OPTIONS, label: "When to start interviewing?", :required => true, input_html: { class: "select2" } %>
+            </div>
+            <div class="col-md-3">
+              <%= f.input :visa, collection: Candidate::VISA_OPTIONS, :required => true, label: "Employment Eligibility Status", input_html: { class: "select2" } %>
+            </div>
+            <div class="col-md-3">
+              <div class="row">
+                <label>Minimum annual salary</label>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <%= f.input_field :minimum_annual_salary, :required => true, as: 'string', class: "form-control" %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <%= label_tag "What kind of position would you like in your next job?" %>
+              <%= text_field_tag "candidate[positions]", @candidate.position_list.to_s, id: 'positions' %>
+            </div>
+          </div>
+        </div>
+        <div id="work-experience-section" class="section">
+          <h3>Work Experience</h3>
+          <hr>
+          <%= f.simple_fields_for :experiences do |e| %>
+            <%= render 'users/profile_form_fields/experience_fields', f: e %>
+          <% end %>
+          <a href="#" class="add-experience-field">+ Add work experience</a>
+        </div>
+        <div class="section">
+          <h3>Trade Qualification</h3>
+          <hr>
+          <%= f.simple_fields_for :trade_qualifications do |tq| %>
+            <%= render 'users/profile_form_fields/trade_qualification_fields', f: tq %>
+          <% end %>
+          <a href="#" class="add-qualification-field">+ Add trade qualification</a>
+        </div>
+        <div class="section">
+          <h3>Education</h3>
+          <hr>
+          <%= f.simple_fields_for :educations do |e| %>
+            <%= render 'users/profile_form_fields/education_fields', f: e %>
+          <% end %>
+          <a href="#" class="add-education-field">+ Add education</a>
+        </div>
+        <%= f.button :submit, value: 'Update Profile', disable_with: 'Updating Profile...', class: 'btn btn-success btn-lg' %>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <%= label_tag "What kind of position would you like in your next job?" %>
-          <%= text_field_tag "candidate[positions]", @candidate.position_list.to_s, id: 'positions' %>
+      <div class="col-md-2">
+        <div class="section jobscore" data-spy="affix">
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+              <span class="sr-only">90% Complete</span>
+            </div>
+          </div>
+          <h1>90%</h1>
+          <p>profile completion</p>
+          <a href="#" class="hidden btn btn-success btn-md btn-block" disabled>Submit</a>
         </div>
       </div>
     </div>
-    <div id="work-experience-section" class="section">
-      <h3>Work Experience</h3>
-      <hr>
-      <%= f.simple_fields_for :experiences do |e| %>
-        <%= render 'users/profile_form_fields/experience_fields', f: e %>
-      <% end %>
-      <a href="#" class="add-experience-field">+ Add work experience</a>
-    </div>
-    <div class="section">
-      <h3>Trade Qualification</h3>
-      <hr>
-      <%= f.simple_fields_for :trade_qualifications do |tq| %>
-        <%= render 'users/profile_form_fields/trade_qualification_fields', f: tq %>
-      <% end %>
-      <a href="#" class="add-qualification-field">+ Add trade qualification</a>
-    </div>
-    <div class="section">
-      <h3>Education</h3>
-      <hr>
-      <%= f.simple_fields_for :educations do |e| %>
-        <%= render 'users/profile_form_fields/education_fields', f: e %>
-      <% end %>
-      <a href="#" class="add-education-field">+ Add education</a>
-    </div>
-
-    <%= f.button :submit, value: 'Update Profile', disable_with: 'Updating Profile...', class: 'btn btn-success btn-lg' %>
   </div>
 <% end %>

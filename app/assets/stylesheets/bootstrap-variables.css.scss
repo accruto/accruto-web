@@ -2,7 +2,6 @@
 // Variables
 // --------------------------------------------------
 
-
 // Global values
 // --------------------------------------------------
 
@@ -10,9 +9,11 @@
 // -------------------------
 
 $gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray-light:             lighten(#000, 80%) !default;   // #999
+$gray-dark:              lighten(#000, 20%)   !default;   // #333
+$gray:                   lighten(#000, 50%)   !default;
+$gray-light:             lighten(#000, 80%)   !default;   // #999
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+$gray-lightest:           lighten(#000, 97%) !default; // #eee
 
 // Brand colors
 // -------------------------
@@ -23,14 +24,21 @@ $brand-warning:         #f1c40f !default;
 $brand-danger:          #e74c3c !default;
 $brand-info:            #3498db !default;
 
-$gray:                  #c2d1d8 !default;
-$blue-light:            #96c6da !default;
+$blue-primary:          #2980BD !default;
 $blue:                  #436370 !default;
 $blue-dark:             #2b3f49 !default;
+$blue-headings:         #3DA1C0 !default;
+
+$green-dark:            #518655 !default;
 $green:                 #5fbba5 !default;
+$green-light:           #DFEBE1 !default;
 $yellow:                #fcd60c !default;
 $yellow-light:          #FAF2D2 !default;
 $yellow-dark:           #C5A214 !default;
+
+$panel-bg:              $gray-lightest;
+$panel-shadow:          $gray-lighter;
+
 // Scaffolding
 // -------------------------
 
