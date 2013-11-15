@@ -4,39 +4,51 @@ namespace 'accruto:candidates' do
   desc "Load recent candidates from linkme"
   task :linkme => :environment do
     link_me = LinkMe.new
+
+    start_processing_time = Time.now
+    current_candidate_emails = User.scoped.pluck('email')
+    print "All Candidates Email Query time: #{Time.now - start_processing_time}\n".blue
+
     candidates = link_me.recent_candidates
+    print "LinkME DB Query time: #{Time.now - start_processing_time}\n".blue
+    binding.pry
     candidates.each do |data_candidate|
-      print "Queueing to process: #{data_candidate["Email"]}\n".yellow
+      if current_candidate_emails.include? data_candidate["Email"]
+        print "#{data_candidate["Email"]} already processed\n".red
+      else
+        print "Queueing to process: #{data_candidate["Email"]}\n".yellow
 
-      ## PARSE USER
-      user = parse_user(data_candidate)
+        ## PARSE USER
+        user = parse_user(data_candidate)
 
-      ## PARSE RESUME XML
-      resume_xml, phone = parse_resume_xml(data_candidate["lensXml"]) if data_candidate["lensXml"]
+        ## PARSE RESUME XML
+        resume_xml, phone = parse_resume_xml(data_candidate["lensXml"]) if data_candidate["lensXml"]
 
-      ## PARSE ADDRESS
-      address = parse_address(resume_xml, data_candidate)
+        ## PARSE ADDRESS
+        address = parse_address(resume_xml, data_candidate)
 
-      ## CREATE CANDIDATE
-      candidate = create_candidate(user, data_candidate, address, phone)
+        ## CREATE CANDIDATE
+        candidate = create_candidate(user, data_candidate, address, phone)
 
-      ## PARSE EDUCATION
-      education = parse_education(resume_xml, candidate) if resume_xml
+        ## PARSE EDUCATION
+        education = parse_education(resume_xml, candidate) if resume_xml
 
-      ## PARSE TRADE QUALIFICATIONS
-      parse_trade_qualification(resume_xml, candidate) if resume_xml && resume_xml["skills"]
+        ## PARSE TRADE QUALIFICATIONS
+        parse_trade_qualification(resume_xml, candidate) if resume_xml && resume_xml["skills"]
 
-      ## PARSE EXPERIENCES
-      parse_experiences(resume_xml, candidate) if resume_xml
+        ## PARSE EXPERIENCES
+        parse_experiences(resume_xml, candidate) if resume_xml
 
-      ## ADD CANDIDATE INDUSTRY (CANDIDATE JOB SUBCATEGORIES)
-      if data_candidate["industry"]
-        begin
-          job_subcategory = JobSubcategory.create(name: data_candidate["industry"])
-          JobSubcategoriesCandidate.create(candidate_id: candidate.id, job_subcategory_id: job_subcategory.id) if candidate && job_subcategory
-        rescue
+        ## ADD CANDIDATE INDUSTRY (CANDIDATE JOB SUBCATEGORIES)
+        if data_candidate["industry"]
+          begin
+            job_subcategory = JobSubcategory.create(name: data_candidate["industry"])
+            JobSubcategoriesCandidate.create(candidate_id: candidate.id, job_subcategory_id: job_subcategory.id) if candidate && job_subcategory
+          rescue
+          end
         end
       end
+
     end
   end
 

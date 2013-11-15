@@ -10,3 +10,9 @@ jQuery ->
     $("#candidate-#{id}-detail").hide()
     $("#candidate-#{id}-preview").show().addClass('animated flipInY')
     return false
+
+  # shortlisting candidates
+  $('.btn-candidate-shortlist').click (e) ->
+    e.preventDefault()
+    candidate_id = $(this).closest('.candidate-entry').attr('id').split("-")[1]
+    console.log candidate_id

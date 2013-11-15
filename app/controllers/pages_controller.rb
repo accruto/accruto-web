@@ -4,6 +4,9 @@ class PagesController < ApplicationController
   def stylesheet
   end
 
+  def shortlist
+  end
+
   def modal_apply
   end
 

@@ -268,5 +268,17 @@
       border-radius: 3px 0px 3px 3px;
     }
   }
+  .content {
+    list-style: disc;
+    margin: 5px 20px;
+    li {
+      margin: 10px 0;
+      .icon-remove-sign {
+        float:right;
+        top: 0;
+        color: $gray-light;
+      }
+    }
+  }
 }
 /* @end */
