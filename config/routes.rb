@@ -76,7 +76,8 @@ Accruto::Application.routes.draw do
   get 'pages/modal_email_alert'
   get 'pages/home'
   get 'pages/home_new'
-  get '/shortlist', to: 'pages#shortlist'
+  get '/shortlist', to: 'shortlists#index'
+  get '/shortlist/start', to: 'shortlists#start', as: "shortlists_start"
   get '/about', to: 'pages#about'
   get '/faq', to: 'pages#faq'
   get '/privacy', to: 'pages#privacy'

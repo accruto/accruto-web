@@ -1,6 +1,18 @@
 @import 'bootstrap-variables';
+/* @globals */
+.top {
+  padding: 10px 0;
+  h1 {
+    font-size: 35px;
+    margin: 40px auto;
+  }
+}
+.top, .avatar, .how-it-works, .customers, .bottom {
+  text-align: center;
+}
+/* @end */
 
-/* @top section of shortlist */
+/* @shortlist */
 .content.shortlist {
   .btn-cta {
     background: $green;
@@ -24,16 +36,6 @@
   .cta-price {
     margin: 10px auto;
     color: $gray;
-  }
-  &.top, &.avatar, &.how-it-works, &.customers, &.bottom {
-    text-align: center;
-  }
-  &.top {
-    padding: 10px 0;
-    h1 {
-      font-size: 35px;
-      margin: 40px auto;
-    }
   }
   &.avatar {
     padding: 20px 0;
@@ -80,6 +82,47 @@
 }
 /* @end */
 
+/* @start */
+.content.start {
+  &.top {
+    padding: 0;
+    .expert {
+      text-align: left;
+    }
+    .avatar {
+      text-align: right;
+    }
+    .avatar img {
+      width: 80px;
+      height: 80px;
+      border-radius: 100px;
+    }
+    .message {
+      background: $gray-lightest;
+      padding: 20px;
+      border-radius: 5px;
+      &:after {
+        content: " ";
+        position:absolute;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent $gray-lightest transparent transparent;
+        margin-left:-182px;
+        margin-top:-25px;
+      }
+    }
+  }
+  &.form-container {
+    .form-content {
+      background: $gray-lightest;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  }
+}
+/* @end */
 
 
 @media (max-width: $screen-xs) {
