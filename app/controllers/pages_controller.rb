@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   def modal_email_alert
   end
 
-  def home
+  def candidates_landing
 	  @categories = JobCategory.all
     @candidate_search_beta_user = CandidateSearchBetaUser.new
 	  render :layout => 'home'
