@@ -1,84 +1,54 @@
 namespace 'accruto:candidates' do
   desc "Seed database with candidates"
-  task :seed => :environment do
-    200.times do
-      first_name = Faker::Name.first_name
-      last_name = Faker::Name.last_name
-      email = "#{first_name}.#{last_name}@example.com"
-      job_title = Faker::Job.title
-      salary = [30000, 40000, 50000, 60000, 70000, 80000, 90000].sample
-      status = Candidate::STATUS.sample
-      visa = Candidate::VISA.sample
-      address = Address.all.sample
-      phone = ["0410888888", "0410111111", nil].sample
-      updated_at = [3.days.ago, 30.days.ago, 1.day.ago, 10.minutes.ago, 1.minute.ago, 5.months.ago, 1.year.ago].sample
-
-      user = User.create(
-          email: email,
-          password: 'password'
-      )
-
-      Candidate.create(
-          first_name: first_name,
-          last_name: last_name,
-          job_title: job_title,
-          status: status,
-          visa: visa,
-          minimum_annual_salary: salary,
-          address_id: address.id,
-          user_id: user.id,
-          phone: phone,
-          updated_at: updated_at
-      )
-      print "Added candidate: #{first_name} #{last_name}\n".yellow
-      print " Job title: #{job_title}\n".green
-      print " Email address: #{email}\n".green
-      print " Salary: #{salary}\n".green
-      print " Status: #{status}\n".green
-      print " Visa: #{visa}\n".green
-      print " City: #{address.city}\n".green
-      print " Phone: #{phone}\n".green
-      print " Updated at: #{updated_at}\n".green
-      print "-----\n"
-    end
-  end
 
   desc "Load recent candidates from linkme"
   task :linkme => :environment do
     link_me = LinkMe.new
+
+    start_processing_time = Time.now
+    current_candidate_emails = User.scoped.pluck('email')
+    print "All Candidates Email Query time: #{Time.now - start_processing_time}\n".blue
+
     candidates = link_me.recent_candidates
+    print "LinkME DB Query time: #{Time.now - start_processing_time}\n".blue
+    binding.pry
     candidates.each do |data_candidate|
-      print "Queueing to process: #{data_candidate["Email"]}\n".yellow
+      if current_candidate_emails.include? data_candidate["Email"]
+        print "#{data_candidate["Email"]} already processed\n".red
+      else
+        print "Queueing to process: #{data_candidate["Email"]}\n".yellow
 
-      ## PARSE USER
-      user = parse_user(data_candidate)
+        ## PARSE USER
+        user = parse_user(data_candidate)
 
-      ## PARSE RESUME XML
-      resume_xml, phone = parse_resume_xml(data_candidate["lensXml"]) if data_candidate["lensXml"]
+        ## PARSE RESUME XML
+        resume_xml, phone = parse_resume_xml(data_candidate["lensXml"]) if data_candidate["lensXml"]
 
-      ## PARSE ADDRESS
-      address = parse_address(resume_xml, data_candidate)
+        ## PARSE ADDRESS
+        address = parse_address(resume_xml, data_candidate)
 
-      ## CREATE CANDIDATE
-      candidate = create_candidate(user, data_candidate, address, phone)
+        ## CREATE CANDIDATE
+        candidate = create_candidate(user, data_candidate, address, phone)
 
-      ## PARSE EDUCATION
-      education = parse_education(resume_xml, candidate) if resume_xml
+        ## PARSE EDUCATION
+        education = parse_education(resume_xml, candidate) if resume_xml
 
-      ## PARSE TRADE QUALIFICATIONS
-      parse_trade_qualification(resume_xml, candidate) if resume_xml && resume_xml["skills"]
+        ## PARSE TRADE QUALIFICATIONS
+        parse_trade_qualification(resume_xml, candidate) if resume_xml && resume_xml["skills"]
 
-      ## PARSE EXPERIENCES
-      parse_experiences(resume_xml, candidate) if resume_xml
+        ## PARSE EXPERIENCES
+        parse_experiences(resume_xml, candidate) if resume_xml
 
-      ## ADD CANDIDATE INDUSTRY (CANDIDATE JOB SUBCATEGORIES)
-      if data_candidate["industry"]
-        begin
-          job_subcategory = JobSubcategory.create(name: data_candidate["industry"])
-          JobSubcategoriesCandidate.create(candidate_id: candidate.id, job_subcategory_id: job_subcategory.id) if candidate && job_subcategory
-        rescue
+        ## ADD CANDIDATE INDUSTRY (CANDIDATE JOB SUBCATEGORIES)
+        if data_candidate["industry"]
+          begin
+            job_subcategory = JobSubcategory.create(name: data_candidate["industry"])
+            JobSubcategoriesCandidate.create(candidate_id: candidate.id, job_subcategory_id: job_subcategory.id) if candidate && job_subcategory
+          rescue
+          end
         end
       end
+
     end
   end
 

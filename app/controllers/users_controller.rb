@@ -25,14 +25,13 @@ class UsersController < ApplicationController
     start_date = Date.strptime(candidate_range[0].strip, "%m/%d/%Y")
     end_date = Date.strptime(candidate_range[1].strip, "%m/%d/%Y")
     limit = params[:candidate][:limit].present? ? params[:candidate][:limit] : nil
-    positions = params[:candidate][:positions].split(",")
 
     send_data Candidate.generate_csv_report({
                                                 host: request.host_with_port,
                                                 start_date: start_date,
                                                 end_date: end_date,
                                                 limit: limit,
-                                                positions: positions
+                                                positions: params[:industry]
                                             }),
               type: 'text/csv; charset=iso-8859-1; header=present',
               disposition: "attachment; filename=candidates.csv"

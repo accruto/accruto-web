@@ -1,0 +1,44 @@
+<li id="candidate-<%= candidate.id %>-preview" class="candidate-preview candidate-entry">
+  <div class="row">
+    <div class="col-md-2 col-xs-4">
+      <%= image_tag candidate.profile_photo.url, class: "headshot" %>
+    </div>
+    <div class="col-md-6 col-xs-8">
+      <h4><%= candidate.job_title %></h4>
+      <% if candidate.address %>
+        <p class="address"><i class="icon-map-marker"></i>&nbsp;&nbsp;<%= candidate.address.try(:city) %>, <%= candidate.address.try(:state) %></p>
+        <p>
+      <% end %>
+      <p><%= truncate(candidate.summary, length: 180) %></p>
+        <% if candidate.status %>
+          <span class="tag <%= candidate_label_class(candidate.status) %>"><%= candidate.status %></span>
+        <% end %>
+        <% if candidate.visa %>
+          <span class="tag <%= candidate_label_class(candidate.visa) %>"><%= candidate.visa %></span>
+        <% end %>
+      </p>
+    </div>
+    <div class="col-md-4 col-xs-12">
+      <div class="right-column">
+        <a href="#" class="flip-in-candidate"><i class="icon-zoom-in"></i></a>
+        <p class="updated-date">Updated<br><%= distance_of_time_in_words_to_now(candidate.updated_at) %> ago</p>
+        <span class="desired-salary-description">Desired salary:</span><br>
+        <% if candidate.minimum_annual_salary && candidate.minimum_annual_salary > 0 %>
+          <span class="desired-salary-value"><%= number_to_currency(candidate.minimum_annual_salary, precision: 0) %> pa.</span><br>
+        <% else %>
+          <span class="desired-salary-value">Unspecified</span><br>
+        <% end %>
+        <span class="info-available"></span>
+        <ul class="candidate-verification">
+          <% unless candidate.phone.blank? %>
+            <li class="tag tag-yellow">Phone available</li>
+          <% end %>
+          <% unless candidate.email.blank? %>
+            <li class="tag tag-yellow">Email available</li>
+          <% end %>
+        </ul>
+        <a href="#" target="new" class="btn-candidate-shortlist">+ Shortlist</a>
+      </div>
+    </div>
+  </div>
+</li>

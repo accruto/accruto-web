@@ -1,14 +1,25 @@
 module CandidatesHelper
   def candidate_label_class(label)
-    return label.downcase.split(" ").join("-")
+    positive_details = [
+      'Australian Residency or Citizenship',
+      'Valid Work Visa',
+      'Immediately',
+      'After 1 week',
+      'After 1 month',
+      'Actively looking',
+      'Available immediately'
+    ]
+    if positive_details.any? { |w| label[w] }
+      return 'tag-yellow'
+    end
   end
 
   def status_filter_options
-    return Candidate::STATUS
+    return Candidate::STATUS_OPTIONS
   end
 
   def visa_filter_options
-    return Candidate::VISA
+    return Candidate::VISA_OPTIONS
   end
 
   def updated_at_filter_options

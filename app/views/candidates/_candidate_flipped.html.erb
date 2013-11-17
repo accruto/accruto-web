@@ -1,0 +1,43 @@
+<li id="candidate-<%= candidate.id %>-detail" class="candidate-detail candidate-entry flipped">
+  <div class="row">
+    <div class="col-md-7 col-xs-8">
+      <ul>
+      <% if candidate.position_list.empty? %>
+        <li>No interested positions added yet</li>
+      <% else %>
+        <li>
+          Work positions that this <%= candidate.job_title %> is interested in:<br>
+          <% candidate.position_list.each do |position| %>
+            <span class='tag'><%= position %></span>
+          <% end %>
+        </li>
+      <% end %>
+      <% if candidate.skill_list.empty? %>
+        <li>No skills added yet</li>
+      <% else %>
+        <li>
+          This <%= candidate.job_title %> has the following skills:<br>
+          <% candidate.skill_list.each do |skill| %>
+            <span class='tag'><%= skill %></span>
+          <% end %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+    <div class="col-md-5 col-xs-12">
+      <div class="right-column">
+        <a href="#" class="flip-out-candidate"><i class="icon-zoom-out"></i></a>
+        <ul class="contact-detail-list">
+          <% unless candidate.email.blank? %>
+            <li><i class="icon-envelope"></i>&nbsp;&nbsp;&nbsp;<a href="#"><%= candidate.email %></a></li>
+          <% end %>
+          <% unless candidate.phone.blank? %>
+            <li><i class="icon-phone"></i>&nbsp;&nbsp;&nbsp;<a href="#"><%= candidate.phone %></a></li>
+          <% end %>
+        </ul>
+        <p class="updated-date">Interested in this candidate? Add him/her to your shortlist</p>
+        <a href="#" target="new" class="btn-candidate-shortlist">+ Shortlist</a>
+      </div>
+    </div>
+  </div>
+</li>

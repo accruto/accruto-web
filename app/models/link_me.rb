@@ -95,7 +95,7 @@ class LinkMe
   def recent_candidates
     query = %{
         DECLARE @startDate DATETIME
-        SET @startDate = '2013-08-01 00:00:00'
+        SET @startDate = '2012-01-01 00:00:00'
         DECLARE @recentCandidateEndDate DATETIME
         SET @recentCandidateEndDate = '2013-09-09 00:00:00'
 

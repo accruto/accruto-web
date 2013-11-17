@@ -48,4 +48,8 @@ class Admin::CandidatesController < ApplicationController
     @candidate.destroy
     redirect_to admin_jobs_url
   end
+
+  def csv
+    @industries = Candidate.skill_counts
+  end
 end

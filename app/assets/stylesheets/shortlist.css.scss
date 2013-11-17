@@ -1,0 +1,134 @@
+@import 'bootstrap-variables';
+/* @globals */
+.top {
+  padding: 10px 0;
+  h1 {
+    font-size: 35px;
+    margin: 40px auto;
+  }
+}
+.top, .avatar, .how-it-works, .customers, .bottom {
+  text-align: center;
+}
+/* @end */
+
+/* @shortlist */
+.content.shortlist {
+  .btn-cta {
+    background: $green;
+    color: white;
+    display: inline-block;
+    &:hover {
+      background: darken($green, 5%);
+      text-decoration: none;
+    }
+    &.medium {
+      padding: 12px 70px;
+      font-size: 20px;
+      border-radius: 5px;
+    }
+    &.large {
+      padding: 15px 80px;
+      font-size: 20px;
+      border-radius: 5px;
+    }
+  }
+  .cta-price {
+    margin: 10px auto;
+    color: $gray;
+  }
+  &.avatar {
+    padding: 20px 0;
+    .avatar-job-title {
+      border: 2px solid $gray;
+      color: $gray;
+      padding: 10px;
+      background: white;
+      border-radius: 5px;
+      margin: auto 30px;
+      font-size:16px;
+    }
+    h2 {
+      font-size: 30px;
+      font-weight: 300;
+      margin-top: 40px;
+    }
+  }
+  &.how-it-works {
+    border-top: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-lighter;
+    margin: auto 150px;
+  }
+  &.how-it-works .steps {
+    .steps-number {
+      margin: auto;
+      border: 2px solid $gray-light;
+      padding: 5px;
+      width:  30px;
+      height: 30px;
+      border-radius: 50px;
+      color: $gray-light;
+      font-weight: 600;
+    }
+    .steps-description {
+      margin: 15px 50px;
+    }
+  }
+  &.customers {
+    .customer-logo {
+      margin: 20px;
+    }
+  }
+}
+/* @end */
+
+/* @start */
+.content.start {
+  &.top {
+    padding: 0;
+    .expert {
+      text-align: left;
+    }
+    .avatar {
+      text-align: right;
+    }
+    .avatar img {
+      width: 80px;
+      height: 80px;
+      border-radius: 100px;
+    }
+    .message {
+      background: $gray-lightest;
+      padding: 20px;
+      border-radius: 5px;
+      &:after {
+        content: " ";
+        position:absolute;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent $gray-lightest transparent transparent;
+        margin-left:-182px;
+        margin-top:-25px;
+      }
+    }
+  }
+  &.form-container {
+    .form-content {
+      background: $gray-lightest;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  }
+}
+/* @end */
+
+
+@media (max-width: $screen-xs) {
+  .content.shortlist {
+    &.how-it-works {
+      margin: 0;
+    }
+  }
+}

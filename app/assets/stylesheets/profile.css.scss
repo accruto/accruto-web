@@ -31,11 +31,11 @@ $profile-border-color: #ebebeb;
   padding-top: 4px !important;
 }
 .select2-drop {
-  border: 2px solid $gray !important;
+  border: 2px solid $gray-light !important;
 }
 .select2-search input[type=text] {
   margin: 5px 0;
-  border: 2px solid $gray !important;
+  border: 2px solid $gray-light !important;
 }
 .select2-search-choice {
   background: $yellow-light !important;
@@ -92,7 +92,7 @@ $profile-border-color: #ebebeb;
     margin-left: -12px;
   }
   ol>li {
-    margin: 10px 0 0 0; 
+    margin: 10px 0 0 0;
     font-weight: 600;
     a:not(.btn) {
       text-decoration: underline;
@@ -164,25 +164,25 @@ $profile-border-color: #ebebeb;
 .fields-entry:not(:nth-child(2)) {
   padding-top: 10px;
 }
-.tag {
-  background: $yellow-light;
-  padding: 0px 10px;
-  margin: 2px 3px;
-  border-radius: 3px;
-  display: inline-block;
-  cursor: pointer;
-  &.actively-looking, &.immediately-available, &.australian-residency-or-citizenship, &.valid-work-visa {
-    background: $green;
-    color: white;
-  }
-  &.happy-to-talk, &.no-work-visa {
-    background: $gray-lighter;
-    color: #436370;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-}
+// .tag {
+//   background: $yellow-light;
+//   padding: 0px 10px;
+//   margin: 2px 3px;
+//   border-radius: 3px;
+//   display: inline-block;
+//   cursor: pointer;
+//   &.actively-looking, &.immediately-available, &.australian-residency-or-citizenship, &.valid-work-visa {
+//     background: $green;
+//     color: white;
+//   }
+//   &.happy-to-talk, &.no-work-visa {
+//     background: $gray-lighter;
+//     color: #436370;
+//   }
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
 
 i.icon-remove { cursor: pointer; line-height: 73px; }
 
@@ -206,6 +206,18 @@ i.icon-remove { cursor: pointer; line-height: 73px; }
 
 .clear {
   clear: both;
+}
+
+.jobscore {
+  padding: 25px 25px 15px 25px;
+  border: 2px solid $gray-lighter;
+  border-radius: 3px;
+  h1 {
+    margin-bottom: 0px;
+  }
+  p {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: $screen-xs) {

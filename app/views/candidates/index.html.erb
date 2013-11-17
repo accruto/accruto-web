@@ -1,44 +1,34 @@
-<div class="row-fluid">
-  <div class="span2 hidden-phone">
-    <%= render 'shared/candidate_search_sidebar', favourite_jobs: @favourite_jobs %>
-  </div>
-  <div class="span8 result-list">
-    <h4 class="result-sentence">There are <span class="result-number"><%= @candidates.count %></span> sales candidates in Australia
-    </span>
-    </h4>
-    <ul class="candidate-list">
-      <% @candidates.each do |candidate| %>
-        <li>
-          <div class="row-fluid">
-            <div class="span1">
-              <%= image_tag "accruto-logo-default.png", class: "candidate-headshot" %>
-            </div>
-            <div class="span6">
-              <h4><%= candidate.job_title %></h4>
-              <p><i class="icon-map-marker"></i>&nbsp;&nbsp;<%=  candidate.address.try(:city) %>, <%= candidate.address.try(:state) %></p>
-              <p><span class="label status-<%= candidate_label_class(candidate.status) %>"><%= candidate.status %></span>&nbsp;&nbsp;&nbsp;<span class="label visa-<%= candidate_label_class(candidate.visa) %>"><%= candidate.visa %></span></p>
-              <p class="posted-date">Updated <%= distance_of_time_in_words_to_now(candidate.updated_at) %> ago</p>
-            </div>
-            <div class="span2 candidate-info">
-              <span class="salary-value"><%= number_to_currency(candidate.minimum_annual_salary, precision: 0) %></span><br>
-              <span class="salary-desc">desired salary</span><br>
-              <i class="icon-phone"></i>&nbsp;&nbsp;&nbsp;<i class="icon-envelope-alt"></i>
-            </div>
-            <div class="span3">
-              <a href="#" target="new" class="btn btn-inverse btn-view-job hidden-phone"><i class="icon-mail-forward"></i>&nbsp;&nbsp;VIEW</a>
-              <a href="#" class="btn btn-inverse">
-                <span class="" data-image-url="<%= image_path("ajax-loader.gif") %>"></span>
-                <i class="icon-star"></i>
-              </a>
-            </div>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-    <%= will_paginate @candidates %>
-  </div>
-  <div class="span2">
-    <%= image_tag "http://placehold.it/160x600" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 hidden-phone">
+      <div class="candidates-search-left-sidebar">
+        <%= render 'shared/candidate_search_sidebar', favourite_jobs: @favourite_jobs %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="candidates-search-content">
+        <h4 class="result-sentence"><span class="candidates-result-number"><%= number_with_delimiter(@candidates.count) %></span> product management executive candidates in Australia
+        </span>
+        </h4>
+        <hr>
+        <div class="candidates-search-pagination">
+          <%= will_paginate @candidates %>
+        </div>
+        <ul class="candidate-list">
+          <% @candidates.each do |candidate| %>
+            <%= render 'candidate_preview', candidate: candidate %>
+            <%= render 'candidate_flipped', candidate: candidate %>
+          <% end %>
+        </ul>
+        <div class="candidates-search-pagination">
+          <%= will_paginate @candidates %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <%= render 'candidate_shortlist' %>
+    </div>
   </div>
 </div>
+
 

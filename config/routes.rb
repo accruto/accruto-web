@@ -76,6 +76,9 @@ Accruto::Application.routes.draw do
   get 'pages/modal_email_alert'
   get 'pages/home'
   get 'pages/home_new'
+  get '/candidate/start', to: "pages#candidates_landing", as: "candidates_landing"
+  get '/shortlist', to: 'shortlists#index'
+  get '/shortlist/start', to: 'shortlists#start', as: "shortlists_start"
   get '/about', to: 'pages#about'
   get '/faq', to: 'pages#faq'
   get '/privacy', to: 'pages#privacy'
@@ -85,7 +88,7 @@ Accruto::Application.routes.draw do
   get 'users/csv', to: 'users#csv'
   post 'users/download_csv', to: 'users#download_csv'
 
-  root :to => 'pages#home'
+  root :to => 'shortlists#index'
 end
 #== Route Map
 # Generated on 14 Oct 2013 14:51
