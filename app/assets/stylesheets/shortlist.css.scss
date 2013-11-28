@@ -85,6 +85,20 @@
   cursor: pointer;
 }
 
+a.disabled {
+  background: $gray !important;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($gray-light), to($gray-lightest)) !important;
+  border-top: 1px solid #c5c5c5 !important;
+  border-right: 1px solid #cecece !important;
+  border-bottom: 1px solid #d9d9d9 !important;
+  border-left: 1px solid #cecece !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  cursor: not-allowed;
+  text-shadow: 0 -1px 1px #ebebeb !important;
+}
+
 /* @end */
 
 /* @start */

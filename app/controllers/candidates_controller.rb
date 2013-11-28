@@ -3,6 +3,7 @@ class CandidatesController < ApplicationController
 
   def index
     @candidates = Candidate.published.paginate(page: params[:page], per_page: 10)
+    @shortlists = current_user.shortlists.includes(:candidate)
   end
 
   def search
