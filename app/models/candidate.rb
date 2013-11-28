@@ -54,6 +54,7 @@ class Candidate < ActiveRecord::Base
   has_many :educations, dependent: :destroy
   has_many :job_subcategories_candidates
   has_many :subcategories, through: :job_subcategories_candidates, source: :job_subcategory
+  has_many :shortlists
 
   accepts_nested_attributes_for :subcategories, reject_if: lambda { |a| a[:name].blank? }, allow_destroy: true
   accepts_nested_attributes_for :educations, reject_if: lambda { |a| a[:institution].blank? }, allow_destroy: true
@@ -173,6 +174,10 @@ class Candidate < ActiveRecord::Base
         end
       end
     end
+  end
+
+  def shortlisted(current_user_id)
+    shortlists.where(user_id: current_user_id)
   end
 
   private

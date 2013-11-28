@@ -37,7 +37,7 @@
             <li class="tag tag-yellow">Email available</li>
           <% end %>
         </ul>
-        <a href="#" target="new" class="btn-candidate-shortlist">+ Shortlist</a>
+        <a href="#" target="new" id="candidate-shortlist-<%= candidate.id %>" class="btn-candidate-shortlist <%= 'hide' if candidate.shortlisted(current_user).presence %>" data-job-title="<%= candidate.job_title %>" data-candidate-id="<%= candidate.id %>">+ Shortlist</a>
       </div>
     </div>
   </div>

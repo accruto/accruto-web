@@ -14,6 +14,8 @@ class CandidatesController < ApplicationController
                     .filter_by_status(params[:search][:status])
                     .filter_by_visa(params[:search][:visa])
                     .paginate(page: params[:page], per_page: 10)
+
+    @shortlists = current_user.shortlists.includes(:candidate)
   end
 
   def show

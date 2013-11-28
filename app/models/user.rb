@@ -34,6 +34,7 @@ class User < ActiveRecord::Base
   has_one :preference
   has_many :job_applications
   has_many :invites
+  has_many :shortlists
 
   before_create :set_default_preference
   after_create :assign_role

@@ -3,9 +3,17 @@
     <i class="icon-ok"></i>
     <span class="header-title">Candidate Shortlist</span>
   </div>
-  <ul class="content">
-    <li><i class="icon-remove-sign"></i>National Account Manager</li>
-    <li><i class="icon-remove-sign"></i>OPERATIONS Manager / $90,000 pa / 2 years exp</li>
-    <a href="#" class="btn btn-success btn-block"><i class="icon-envelope-alt"></i>&nbsp;&nbsp;&nbsp;Email Candidates</a>
+  <ul class="content shortlists">
+    <% if !@shortlists.empty? %>
+        <% @shortlists.each do |shortlist| %>
+            <li><i class="icon-remove-sign shortlist-remove pointer" data-shortlist-id="<%= shortlist.id %>" data-toggle="tooltip" title="remove from shortlist"></i><%= shortlist.candidate.try(:job_title) %></li>
+        <% end %>
+    <% else %>
+        <li>No shortlisted candidates</li>
+    <% end %>
+    <!--
+    <a href="#" class="btn btn-success btn-block"><i class="icon-envelope-alt"></i>&nbsp;&nbsp;&nbsp;Email Shortlists</a>
+    <a href="#" class="btn btn-success btn-block"><i class="icon-envelope-alt"></i>&nbsp;&nbsp;&nbsp;Export Shortlists</a>
+    -->
   </ul>
 </div>

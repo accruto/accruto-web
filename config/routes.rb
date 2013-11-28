@@ -79,6 +79,8 @@ Accruto::Application.routes.draw do
   get '/candidate/start', to: "pages#candidates_landing", as: "candidates_landing"
   get '/shortlist', to: 'shortlists#index'
   get '/shortlist/start', to: 'shortlists#start', as: "shortlists_start"
+  post '/shortlists/create'
+  delete '/shortlists/destroy'
   get '/about', to: 'pages#about'
   get '/faq', to: 'pages#faq'
   get '/privacy', to: 'pages#privacy'

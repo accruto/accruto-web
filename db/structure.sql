@@ -166,7 +166,8 @@ CREATE TABLE candidates (
     desired_job_title hstore,
     summary text,
     state character varying(255) DEFAULT 'unpublished'::character varying,
-    start_interviewing_at timestamp without time zone
+    start_interviewing_at timestamp without time zone,
+    published_at timestamp without time zone
 );
 
 
@@ -871,6 +872,38 @@ CREATE TABLE schema_migrations (
 
 
 --
+-- Name: shortlists; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE shortlists (
+    id integer NOT NULL,
+    user_id integer,
+    candidate_id integer,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: shortlists_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE shortlists_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: shortlists_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE shortlists_id_seq OWNED BY shortlists.id;
+
+
+--
 -- Name: taggings; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1188,6 +1221,13 @@ ALTER TABLE ONLY roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq'::regcl
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY shortlists ALTER COLUMN id SET DEFAULT nextval('shortlists_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY taggings ALTER COLUMN id SET DEFAULT nextval('taggings_id_seq'::regclass);
 
 
@@ -1394,6 +1434,14 @@ ALTER TABLE ONLY resumes
 
 ALTER TABLE ONLY roles
     ADD CONSTRAINT roles_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: shortlists_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY shortlists
+    ADD CONSTRAINT shortlists_pkey PRIMARY KEY (id);
 
 
 --
@@ -1792,3 +1840,7 @@ INSERT INTO schema_migrations (version) VALUES ('20131013154301');
 INSERT INTO schema_migrations (version) VALUES ('20131014033429');
 
 INSERT INTO schema_migrations (version) VALUES ('20131016145859');
+
+INSERT INTO schema_migrations (version) VALUES ('20131018034945');
+
+INSERT INTO schema_migrations (version) VALUES ('20131127222156');
