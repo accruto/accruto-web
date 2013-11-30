@@ -176,6 +176,52 @@ class Candidate < ActiveRecord::Base
     end
   end
 
+  def self.generate_csv_shortlist(options = {})
+    csv_header = %w{ email first_name last_name job_title status visa minimum_annual_salary phone address city state
+                     postcode company job_title started_at ended_at institution qualification graduated_at profile_link}
+
+    csv_generated = CSV.generate do |csv|
+      csv << csv_header
+      user = options[:recruiter]
+      shortlisted_candidates = user.shortlists.includes(:candidate)
+      shortlisted_candidates.each do |shortlist|
+        candidate = shortlist.candidate
+        candidate_email = candidate.try(:user).try(:email) ? candidate.user.email : ''
+        if !candidate.experiences.empty?
+          company = candidate.experiences[0].company
+          job_title = candidate.experiences[0].job_title
+          started_at = candidate.experiences[0].started_at
+          ended_at = candidate.experiences[0].ended_at
+        else
+          company = job_title = started_at = ended_at = ""
+        end
+
+        if !candidate.educations.empty?
+          institution = candidate.educations[0].institution
+          qualification = candidate.educations[0].qualification
+          graduated_at = candidate.educations[0].graduated_at
+        else
+          institution = qualification = graduated_at = ""
+        end
+
+        if !candidate.address.nil?
+          street = candidate.address.street
+          city = candidate.address.city
+          state = candidate.address.state
+          postcode = candidate.address.postcode
+        else
+          street = city = state = postcode = ""
+        end
+        csv << [
+          candidate_email, candidate.first_name, candidate.last_name, candidate.job_title, candidate.status, candidate.visa,
+          candidate.minimum_annual_salary, candidate.phone, street, city, state, postcode,
+          company, job_title, started_at, ended_at, institution, qualification, graduated_at,
+          "http://#{options[:host]}/candidate/#{candidate.id}"
+        ]
+      end
+    end
+  end
+
   def shortlisted(current_user_id)
     shortlists.where(user_id: current_user_id).first
   end

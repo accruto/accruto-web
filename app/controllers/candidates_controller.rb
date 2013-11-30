@@ -102,4 +102,10 @@ class CandidatesController < ApplicationController
       format.json { render json: compose_json }
     end
   end
+
+  def download_shortlisted_csv
+    send_data Candidate.generate_csv_shortlist({host: request.host_with_port, recruiter: current_user}),
+              type: 'text/csv; charset=iso-8859-1; header=present',
+              disposition: "attachment; filename=shortlisted_candidates.csv"
+  end
 end
