@@ -23,18 +23,27 @@ jQuery ->
         if (data.success)
           if (shortlists.first().text() == 'No shortlisted candidates')
             shortlists.first().remove()
-          $('ul.shortlists').append('<li><i class="icon-remove-sign shortlist-remove pointer" data-shortlist-id="'+data.shortlist.id+'" data-toggle="tooltip" title="remove from shortlist"></i>'+job_title+'</li>')
+          $('ul.shortlists').append('<li id="shortlist-list-'+data.shortlist.id+'"><i class="icon-remove-sign shortlist-remove pointer" data-shortlist-id="'+data.shortlist.id+'" data-toggle="tooltip" title="remove from shortlist"></i>'+job_title+'</li>')
           target_object = $('#candidate-shortlist-'+candidate_id+', #candidate-shortlist-flipped-'+candidate_id)
-          target_object.addClass('disabled')
-          target_object.text('Shortlisted')
+          target_object.addClass('disabled').text('Shortlisted').attr('title', 'remove from shortlist')
+          $("a[data-candidate-id='#{candidate_id}']").each (e) ->
+            $(this).attr('data-shortlist-id', data.shortlist.id)
+    else
+      shortlist_id = $(this).attr('data-shortlist-id')
+      $.post '/shortlists/destroy', { _method: 'delete', shortlist_id: shortlist_id}, (data) ->
+        $("a[data-shortlist-id='#{shortlist_id}']").each (e) ->
+          $(this).removeClass('disabled').text('+ Shortlist').attr('data-shortlist-id', '').attr('title', 'add to shortlist')
+        $("#shortlist-list-#{shortlist_id}, #shortlist-list-flipped-#{shortlist_id}").remove()
+        shortlists = $('ul.shortlists').children()
+        if (shortlists.length == 0)
+          $('ul.shortlists').append('<li>No shortlisted candidates</li>')
 
   $(document).on "click", ".shortlist-remove", ->
     $(this).parent().remove()
     shortlists = $('ul.shortlists').children()
     shortlist_id = $(this).data('shortlist-id')
     $.post '/shortlists/destroy', { _method: 'delete', shortlist_id: shortlist_id}, (data) ->
-      target_object = $('#candidate-shortlist-'+data.candidate_id+', #candidate-shortlist-flipped-'+data.candidate_id)
-      target_object.removeClass('disabled')
-      target_object.text('+ Shortlist')
+      target_object = $("#candidate-shortlist-#{data.candidate_id}, #candidate-shortlist-flipped-#{data.candidate_id}")
+      target_object.removeClass('disabled').text('+ Shortlist').attr('title', 'add to shortlist')
     if (shortlists.length == 0)
       $('ul.shortlists').append('<li>No shortlisted candidates</li>')

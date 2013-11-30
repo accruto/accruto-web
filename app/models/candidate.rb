@@ -177,7 +177,7 @@ class Candidate < ActiveRecord::Base
   end
 
   def shortlisted(current_user_id)
-    shortlists.where(user_id: current_user_id)
+    shortlists.where(user_id: current_user_id).first
   end
 
   private

@@ -37,9 +37,9 @@
         </ul>
         <p class="updated-date">Interested in this candidate? Add him/her to your shortlist</p>
         <% if candidate.shortlisted(current_user).presence %>
-            <a href="#" target="new" id="candidate-shortlist-flipped-<%= candidate.id %>" class="btn-candidate-shortlist disabled" data-job-title="<%= candidate.job_title %>" data-candidate-id="<%= candidate.id %>">Shortlisted</a>
+            <a href="#" target="new" id="candidate-shortlist-flipped-<%= candidate.id %>" class="btn-candidate-shortlist disabled" data-job-title="<%= candidate.job_title %>" data-candidate-id="<%= candidate.id %>" data-shortlist-id="<%= candidate.shortlisted(current_user).id %>">Shortlisted</a>
         <% else %>
-            <a href="#" target="new" id="candidate-shortlist-flipped-<%= candidate.id %>" class="btn-candidate-shortlist" data-job-title="<%= candidate.job_title %>" data-candidate-id="<%= candidate.id %>">+ Shortlist</a>
+            <a href="#" target="new" id="candidate-shortlist-flipped-<%= candidate.id %>" class="btn-candidate-shortlist" data-job-title="<%= candidate.job_title %>" data-candidate-id="<%= candidate.id %>" data-shortlist-id="">+ Shortlist</a>
         <% end %>
       </div>
     </div>

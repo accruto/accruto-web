@@ -5,11 +5,11 @@
   </div>
   <ul class="content shortlists">
     <% if !@shortlists.empty? %>
-        <% @shortlists.each do |shortlist| %>
-            <li><i class="icon-remove-sign shortlist-remove pointer" data-shortlist-id="<%= shortlist.id %>" data-toggle="tooltip" title="remove from shortlist"></i><%= shortlist.candidate.try(:job_title) %></li>
-        <% end %>
+      <% @shortlists.each do |shortlist| %>
+        <li id="shortlist-list-<%= shortlist.id %>"><i class="icon-remove-sign shortlist-remove pointer" data-shortlist-id="<%= shortlist.id %>" data-toggle="tooltip" title="remove from shortlist"></i><%= shortlist.candidate.try(:job_title) %></li>
+      <% end %>
     <% else %>
-        <li>No shortlisted candidates</li>
+      <li>No shortlisted candidates</li>
     <% end %>
     <!--
     <a href="#" class="btn btn-success btn-block"><i class="icon-envelope-alt"></i>&nbsp;&nbsp;&nbsp;Email Shortlists</a>
