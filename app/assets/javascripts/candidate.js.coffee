@@ -28,6 +28,9 @@ jQuery ->
           target_object.addClass('disabled').text('Shortlisted').attr('title', 'remove from shortlist')
           $("a[data-candidate-id='#{candidate_id}']").each (e) ->
             $(this).attr('data-shortlist-id', data.shortlist.id)
+          shortlists = $('ul.shortlists').children()
+          if (shortlists.length > 0)
+            $('#download-shortlist-btn').removeClass('hide')
     else
       shortlist_id = $(this).attr('data-shortlist-id')
       $.post '/shortlists/destroy', { _method: 'delete', shortlist_id: shortlist_id}, (data) ->
@@ -37,6 +40,7 @@ jQuery ->
         shortlists = $('ul.shortlists').children()
         if (shortlists.length == 0)
           $('ul.shortlists').append('<li>No shortlisted candidates</li>')
+          $('#download-shortlist-btn').addClass('hide')
 
   $(document).on "click", ".shortlist-remove", ->
     $(this).parent().remove()
@@ -47,3 +51,4 @@ jQuery ->
       target_object.removeClass('disabled').text('+ Shortlist').attr('title', 'add to shortlist')
     if (shortlists.length == 0)
       $('ul.shortlists').append('<li>No shortlisted candidates</li>')
+      $('#download-shortlist-btn').addClass('hide')

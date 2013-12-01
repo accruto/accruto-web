@@ -15,5 +15,5 @@
     <a href="#" class="btn btn-success btn-block"><i class="icon-envelope-alt"></i>&nbsp;&nbsp;&nbsp;Email Shortlists</a>
     -->
   </ul>
-  <a href="/candidates/download_shortlisted_csv" class="btn btn-success btn-block <%= 'hide' if @shortlists.empty? %>"><i class="icon-envelope-alt"></i>&nbsp;&nbsp;&nbsp;Export Shortlists</a>
+  <a href="/candidates/download_shortlisted_csv" id="download-shortlist-btn" class="btn btn-success btn-block <%= 'hide' if @shortlists.empty? %>"><i class="icon-envelope-alt"></i>&nbsp;&nbsp;&nbsp;Export Shortlists</a>
 </div>
