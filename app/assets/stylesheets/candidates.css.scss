@@ -10,6 +10,7 @@
   border-radius: 0px 3px 3px 0px;
   margin-right: 10px;
   margin-bottom: 6px;
+  margin-left: 12px;
   display: inline-block;
   &:hover {
     text-decoration: none;
@@ -280,5 +281,9 @@
       }
     }
   }
+}
+
+.text-left {
+  text-align: left;
 }
 /* @end */

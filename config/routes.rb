@@ -18,6 +18,7 @@ Accruto::Application.routes.draw do
   get 'profile/activation/:auth_token', to: 'candidates#create'
   get '/candidates/search_job_categories', to: 'candidates#search_job_categories', as: 'search_job_categories'
   get '/candidates/download_shortlisted_csv'
+  get '/candidate/:id', to: 'candidates#public_profile'
   match '/auth/callback', to: 'users#create_linkedin_connection'
   match '/delayed_job' => DelayedJobWeb, :anchor => false
 

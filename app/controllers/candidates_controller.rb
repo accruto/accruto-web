@@ -108,4 +108,9 @@ class CandidatesController < ApplicationController
               type: 'text/csv; charset=iso-8859-1; header=present',
               disposition: "attachment; filename=shortlisted_candidates.csv"
   end
+
+  def public_profile
+    @user = current_user
+    @candidate = Candidate.find(params[:id])
+  end
 end
