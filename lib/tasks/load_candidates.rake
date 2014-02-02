@@ -11,7 +11,7 @@ namespace 'accruto:candidates' do
 
     candidates = link_me.recent_candidates
     print "LinkME DB Query time: #{Time.now - start_processing_time}\n".blue
-    binding.pry
+
     candidates.each do |data_candidate|
       if current_candidate_emails.include? data_candidate["Email"]
         print "#{data_candidate["Email"]} already processed\n".red
