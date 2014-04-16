@@ -14,9 +14,9 @@ namespace 'accruto:candidates' do
 
     candidates.each do |data_candidate|
       if current_candidate_emails.include? data_candidate["Email"]
-        print "#{data_candidate["Email"]} already processed\n".red
+        print "#{data_candidate["Id"]} - #{data_candidate["createdTime"]} - #{data_candidate["Email"]} already processed\n".red
       else
-        print "Queueing to process: #{data_candidate["Email"]}\n".yellow
+        print "Queueing to process: #{data_candidate["Id"]} - #{data_candidate["createdTime"]} - #{data_candidate["Email"]}\n".yellow
 
         ## PARSE USER
         user = parse_user(data_candidate)
@@ -48,7 +48,7 @@ namespace 'accruto:candidates' do
           end
         end
       end
-
+      MigrationTrack.create!(last_data_time: data_candidate["createdTime"].to_s.split(" +").first.strip, email: data_candidate["Email"])
     end
   end
 

@@ -92,15 +92,20 @@ class LinkMe
     @client.execute(query)
   end
 
-  def recent_candidates
+  def recent_candidates #(datetime)
+    limit = 2500
+    last_migrate = MigrationTrack.last
+    last_migrated_time = last_migrate && last_migrate.last_data_time ? last_migrate.last_data_time : '2005-06-10 00:00:00'
+
     query = %{
         DECLARE @startDate DATETIME
         SET @startDate = '2012-01-01 00:00:00'
         DECLARE @recentCandidateEndDate DATETIME
-        SET @recentCandidateEndDate = '2013-09-09 00:00:00'
+        SET @recentCandidateEndDate = '2014-05-05 00:00:00'
 
         SELECT
           u.id AS Id,
+          u.createdTime as createdTime,
           u.firstName + ' ' + u.lastName AS Name,
           u.emailAddress AS Email,
           u.emailAddressVerified AS VerifiedEmail,
@@ -164,7 +169,13 @@ class LinkMe
           ((NOT c.lastEditedTime IS NULL) AND c.lastEditedTime >= @startDate AND c.lastEditedTime < @recentCandidateEndDate)
           OR
           ((NOT r.lastEditedTime IS NULL) AND r.lastEditedTime >= @startDate AND r.lastEditedTime < @recentCandidateEndDate)
+          AND
+          u.createdTime > '#{last_migrated_time}'
         )
+
+        ORDER BY createdTime
+        OFFSET #{limit} ROWS
+        FETCH NEXT #{limit} ROWS ONLY
       }
 
     @client.execute(query)

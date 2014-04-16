@@ -649,6 +649,38 @@ ALTER SEQUENCE jobs_id_seq OWNED BY jobs.id;
 
 
 --
+-- Name: migration_tracks; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE migration_tracks (
+    id integer NOT NULL,
+    last_data_time character varying(255),
+    email character varying(255),
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: migration_tracks_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE migration_tracks_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: migration_tracks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE migration_tracks_id_seq OWNED BY migration_tracks.id;
+
+
+--
 -- Name: pg_search_documents; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -1179,6 +1211,13 @@ ALTER TABLE ONLY jobs ALTER COLUMN id SET DEFAULT nextval('jobs_id_seq'::regclas
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY migration_tracks ALTER COLUMN id SET DEFAULT nextval('migration_tracks_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY pg_search_documents ALTER COLUMN id SET DEFAULT nextval('pg_search_documents_id_seq'::regclass);
 
 
@@ -1386,6 +1425,14 @@ ALTER TABLE ONLY job_subcategories
 
 ALTER TABLE ONLY jobs
     ADD CONSTRAINT jobs_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: migration_tracks_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY migration_tracks
+    ADD CONSTRAINT migration_tracks_pkey PRIMARY KEY (id);
 
 
 --
@@ -1844,3 +1891,5 @@ INSERT INTO schema_migrations (version) VALUES ('20131016145859');
 INSERT INTO schema_migrations (version) VALUES ('20131018034945');
 
 INSERT INTO schema_migrations (version) VALUES ('20131127222156');
+
+INSERT INTO schema_migrations (version) VALUES ('20140416195725');
