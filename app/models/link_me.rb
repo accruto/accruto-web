@@ -162,6 +162,8 @@ class LinkMe
         LEFT OUTER JOIN
           dbo.Industry AS i ON i.id = ci.industryId
 
+        WHERE u.createdTime > '#{last_migrated_time}'
+
         ORDER BY createdTime
         OFFSET #{limit} ROWS
         FETCH NEXT #{limit} ROWS ONLY

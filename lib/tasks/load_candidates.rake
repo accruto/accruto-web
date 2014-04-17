@@ -48,7 +48,7 @@ namespace 'accruto:candidates' do
           end
         end
       end
-      MigrationTrack.create!(last_data_time: data_candidate["createdTime"].to_s.split(" +").first.strip, email: data_candidate["Email"])
+      MigrationTrack.last.update_attributes(last_data_time: data_candidate["createdTime"].to_s.split(" +").first.strip, email: data_candidate["Email"])
     end
   end
 
