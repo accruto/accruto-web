@@ -87,7 +87,7 @@ namespace 'accruto:candidates' do
           phone: phone,
           status: candidate["Status"],
           job_title: candidate["RecentJobTitle"],
-          address_id: address.id,
+          address_id: address ? address.id : '',
           visa: Candidate::VISA_OPTIONS[candidate["visaStatus"].to_i],
           minimum_annual_salary: candidate["Salary"],
           user_id: user.id,

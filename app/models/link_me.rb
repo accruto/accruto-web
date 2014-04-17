@@ -162,21 +162,20 @@ class LinkMe
         LEFT OUTER JOIN
           dbo.Industry AS i ON i.id = ci.industryId
 
-        WHERE
-        (
-          (u.createdTime >= @startDate AND u.createdTime < @recentCandidateEndDate)
-          OR
-          ((NOT c.lastEditedTime IS NULL) AND c.lastEditedTime >= @startDate AND c.lastEditedTime < @recentCandidateEndDate)
-          OR
-          ((NOT r.lastEditedTime IS NULL) AND r.lastEditedTime >= @startDate AND r.lastEditedTime < @recentCandidateEndDate)
-          AND
-          u.createdTime > '#{last_migrated_time}'
-        )
-
         ORDER BY createdTime
         OFFSET #{limit} ROWS
         FETCH NEXT #{limit} ROWS ONLY
       }
+
+    #(
+    #(u.createdTime >= @startDate AND u.createdTime < @recentCandidateEndDate)
+    #OR
+    #((NOT c.lastEditedTime IS NULL) AND c.lastEditedTime >= @startDate AND c.lastEditedTime < @recentCandidateEndDate)
+    #OR
+    #((NOT r.lastEditedTime IS NULL) AND r.lastEditedTime >= @startDate AND r.lastEditedTime < @recentCandidateEndDate)
+    #AND
+    #u.createdTime > '2009-01-06 20:23:52'
+    #)
 
     @client.execute(query)
   end
