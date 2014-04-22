@@ -95,7 +95,7 @@ class LinkMe
   def recent_candidates #(datetime)
     limit = 10000
     last_migrate = MigrationTrack.last
-    last_migrated_time = last_migrate && last_migrate.last_data_time ? last_migrate.last_data_time : '2005-06-10 00:00:00'
+    last_migrated_time = last_migrate && last_migrate.last_data_time ? last_migrate.last_data_time : '1990-01-01 00:00:00'
 
     query = %{
         DECLARE @startDate DATETIME
